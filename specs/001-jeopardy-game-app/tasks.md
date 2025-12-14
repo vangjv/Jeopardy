@@ -125,17 +125,17 @@
 
 ### Implementation for User Story 3
 
-- [ ] T061 [US3] Add buzzer key validation in ValidationService.validateBuzzerKey() to detect conflicts
-- [ ] T062 [US3] Implement real-time key conflict checking in PlayerSetupComponent during key assignment
-- [ ] T063 [US3] Add first-buzz detection with DOMHighResTimeStamp comparison in BuzzerService
-- [ ] T064 [US3] Implement buzz lock logic to prevent duplicate buzzes in BuzzerService
-- [ ] T065 [US3] Add lockout tracking in GameStateService (lockedOutPlayerIds Set)
-- [ ] T066 [US3] Implement contestant lockout on incorrect response (configurable) in ScoreAdjudicationComponent
-- [ ] T067 [US3] Add lockout validation in BuzzerService to prevent locked-out contestants from buzzing
-- [ ] T068 [US3] Implement buzz reset functionality in GameStateService.resetBuzz() to clear locks
-- [ ] T069 [US3] Add lockout reset button in BuzzerPanelComponent to clear all lockouts
-- [ ] T070 [US3] Update BuzzIndicatorComponent to show lockout status on board display
-- [ ] T071 [US3] Add visual indicators for locked-out contestants in ScoreDisplayComponent
+- [X] T061 [US3] Add buzzer key validation in ValidationService.validateBuzzerKey() to detect conflicts
+- [X] T062 [US3] Implement real-time key conflict checking in PlayerSetupComponent during key assignment
+- [X] T063 [US3] Add first-buzz detection with DOMHighResTimeStamp comparison in BuzzerService
+- [X] T064 [US3] Implement buzz lock logic to prevent duplicate buzzes in BuzzerService
+- [X] T065 [US3] Add lockout tracking in GameStateService (lockedOutPlayerIds Set)
+- [X] T066 [US3] Implement contestant lockout on incorrect response (configurable) in ScoreAdjudicationComponent
+- [X] T067 [US3] Add lockout validation in BuzzerService to prevent locked-out contestants from buzzing
+- [X] T068 [US3] Implement buzz reset functionality in GameStateService.resetBuzz() to clear locks
+- [X] T069 [US3] Add lockout reset button in BuzzerPanelComponent to clear all lockouts
+- [X] T070 [US3] Update BuzzIndicatorComponent to show lockout status on board display
+- [X] T071 [US3] Add visual indicators for locked-out contestants in ScoreDisplayComponent
 
 **Checkpoint**: All P1 user stories complete - core game fully functional with robust buzzer system
 
