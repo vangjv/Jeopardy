@@ -480,18 +480,19 @@ export class GameStateService {
    */
   setDailyDoubleWager(wager: number): void {
     const state = this.getCurrentState();
-    this.updateState(() => ({ 
-      dailyDoubleWager: wager,
-      buzzerEnabled: true, // Enable buzzer after wager set
-    }));
-
-    // Broadcast Daily Double wager event (T080)
+    
+    // Broadcast Daily Double wager event (T080) before state update to avoid race conditions
     if (this.syncService && state.controlPlayerId) {
       const player = state.players.find(p => p.id === state.controlPlayerId);
       if (player) {
         this.syncService.broadcastDailyDoubleWager(wager, player.id, player.name);
       }
     }
+    
+    this.updateState(() => ({ 
+      dailyDoubleWager: wager,
+      buzzerEnabled: true, // Enable buzzer after wager set
+    }));
   }
 
   /**

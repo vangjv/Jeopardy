@@ -10,7 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatError } from '@angular/material/form-field';
+
 import { GameStateService } from '../../../shared/services/game-state.service';
 import { ValidationService } from '../../../shared/services/validation.service';
 import { Player } from '../../../shared/models/player.model';
@@ -28,8 +28,7 @@ import { Subscription } from 'rxjs';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule,
-    MatError
+    MatFormFieldModule
   ],
   templateUrl: './daily-double-wager.component.html',
   styleUrl: './daily-double-wager.component.scss'
@@ -81,18 +80,15 @@ export class DailyDoubleWagerComponent implements OnInit, OnDestroy {
         const player = state.players.find(p => p.id === state.controlPlayerId);
         this.controlPlayer.set(player || null);
 
-        // Calculate wager limits and set default only for new Daily Double clues
-        if (player && isDailyDouble && !this.wagerInitialized) {
-          this.minWager.set(getMinDailyDoubleWager());
-          this.maxWager.set(getMaxDailyDoubleWager(player, state));
+        if (player) {
+          // Update wager limits
+          this.updateWagerLimits(player, state);
           
-          // Default wager to max (only once per Daily Double)
-          this._wagerAmount.set(this.maxWager());
-          this.wagerInitialized = true;
-        } else if (player) {
-          // Update limits without changing wager amount
-          this.minWager.set(getMinDailyDoubleWager());
-          this.maxWager.set(getMaxDailyDoubleWager(player, state));
+          // Set default only for new Daily Double clues
+          if (isDailyDouble && !this.wagerInitialized) {
+            this._wagerAmount.set(this.maxWager());
+            this.wagerInitialized = true;
+          }
         }
       } else {
         this.controlPlayer.set(null);
@@ -103,6 +99,14 @@ export class DailyDoubleWagerComponent implements OnInit, OnDestroy {
         this.showWagerInput.set(false);
       }
     });
+  }
+
+  /**
+   * Update wager min/max limits (DRY principle)
+   */
+  private updateWagerLimits(player: Player, state: any): void {
+    this.minWager.set(getMinDailyDoubleWager());
+    this.maxWager.set(getMaxDailyDoubleWager(player, state));
   }
 
   /**
