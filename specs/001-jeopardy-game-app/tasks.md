@@ -17,10 +17,10 @@
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Verify Angular 19 project structure and configuration in angular.json
-- [ ] T002 Install required dependencies (@angular/material, ajv for validation) via npm
-- [ ] T003 [P] Configure TypeScript strict mode in tsconfig.json
-- [ ] T004 [P] Create global styles structure in src/styles.scss (CSS variables, theme colors)
+- [X] T001 Verify Angular 19 project structure and configuration in angular.json
+- [X] T002 Install required dependencies (@angular/material, ajv for validation) via npm
+- [X] T003 [P] Configure TypeScript strict mode in tsconfig.json
+- [X] T004 [P] Create global styles structure in src/styles.scss (CSS variables, theme colors)
 
 ---
 
