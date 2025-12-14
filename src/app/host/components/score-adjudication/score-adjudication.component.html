@@ -1,0 +1,57 @@
+<mat-card class="score-adjudication">
+  <mat-card-header>
+    <mat-card-title>Score Adjudication</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    @if (!canAdjudicate()) {
+      <p class="no-adjudication">Waiting for player to buzz in...</p>
+    } @else {
+      <div class="adjudication-info">
+        <div class="player-info">
+          <span class="label">Player:</span>
+          <span class="player-name">{{ lockedPlayer()?.name }}</span>
+        </div>
+        
+        <div class="clue-info">
+          <span class="label">Value:</span>
+          <span class="value">${{ activeClue()?.value }}</span>
+        </div>
+        
+        <div class="correct-response">
+          <span class="label">Correct Response:</span>
+          <span class="response">{{ activeClue()?.correctResponse }}</span>
+        </div>
+      </div>
+      
+      <div class="actions">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="markCorrect()"
+          class="correct-btn"
+        >
+          <mat-icon>check_circle</mat-icon>
+          Correct
+        </button>
+        
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="markIncorrect()"
+          class="incorrect-btn"
+        >
+          <mat-icon>cancel</mat-icon>
+          Incorrect
+        </button>
+        
+        <button
+          mat-button
+          (click)="skipClue()"
+        >
+          Skip
+        </button>
+      </div>
+    }
+  </mat-card-content>
+</mat-card>

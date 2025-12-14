@@ -1,4 +1,15 @@
 <div class="board-container">
-  <h1>Jeopardy Board Display</h1>
-  <p>Phase 2 Complete - Board display will be implemented in Phase 3</p>
+  <!-- Show clue display when a clue is active -->
+  @if (showClue()) {
+    <app-clue-display></app-clue-display>
+  } @else {
+    <!-- Show clue board when no clue is active -->
+    <app-clue-board></app-clue-board>
+  }
+
+  <!-- Score display always visible at bottom -->
+  <app-score-display></app-score-display>
+
+  <!-- Buzz indicator overlay when player buzzes -->
+  <app-buzz-indicator></app-buzz-indicator>
 </div>
