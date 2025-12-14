@@ -3,7 +3,7 @@
  * Host owns this state, board receives synchronized copies
  */
 
-import { Injectable, Inject, Optional } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { GameState, GamePhase, GameRules, DEFAULT_GAME_RULES, ActiveClue, FinalJeopardyState } from '../models/game-state.model';
 import { Player } from '../models/player.model';
@@ -11,8 +11,18 @@ import { GameSet, RoundType, Clue } from '../models/game-content.model';
 import { ValidationResult } from '../models/validation.model';
 import { generateUUID, getWinner, isRoundComplete } from '../utils/game-helpers';
 
-// Forward reference to avoid circular dependency
-let SyncServiceRef: any = null;
+/**
+ * Interface for SyncService to avoid circular dependency
+ */
+interface ISyncService {
+  broadcastStateSync(state: GameState): void;
+  broadcastClueSelected(clue: ActiveClue): void;
+  broadcastClueCleared(): void;
+  broadcastBuzzEnabled(enabled: boolean): void;
+  broadcastBuzzLocked(playerId: string, playerName: string, timestamp: number): void;
+  broadcastBuzzReset(): void;
+  broadcastScoresUpdated(players: Player[]): void;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +30,7 @@ let SyncServiceRef: any = null;
 export class GameStateService {
   private stateSubject: BehaviorSubject<GameState>;
   public state$: Observable<GameState>;
-  private syncService: any = null;
+  private syncService: ISyncService | null = null;
 
   constructor() {
     // Initialize with default empty state
@@ -32,7 +42,7 @@ export class GameStateService {
   /**
    * Set sync service reference (called from host component to avoid circular dependency)
    */
-  setSyncService(syncService: any): void {
+  setSyncService(syncService: ISyncService): void {
     this.syncService = syncService;
   }
 

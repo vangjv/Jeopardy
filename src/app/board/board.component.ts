@@ -55,47 +55,10 @@ export class BoardComponent implements OnInit, OnDestroy {
       })
     );
 
-    // Subscribe to clue selected events (T046)
-    this.subscriptions.push(
-      this.syncService.onClueSelected().subscribe(activeClue => {
-        this.showClue.set(true);
-      })
-    );
-
-    // Subscribe to clue cleared events (T048)
-    this.subscriptions.push(
-      this.syncService.onClueCleared().subscribe(() => {
-        this.showClue.set(false);
-      })
-    );
-
-    // Subscribe to buzz enabled events (T050)
-    this.subscriptions.push(
-      this.syncService.onBuzzEnabled().subscribe(enabled => {
-        // Board components will read this from game state
-      })
-    );
-
-    // Subscribe to buzz locked events (T052)
-    this.subscriptions.push(
-      this.syncService.onBuzzLocked().subscribe(buzzEvent => {
-        // Board components will read this from game state
-      })
-    );
-
-    // Subscribe to buzz reset events (T054)
-    this.subscriptions.push(
-      this.syncService.onBuzzReset().subscribe(() => {
-        // Board components will read this from game state
-      })
-    );
-
-    // Subscribe to scores updated events (T056)
-    this.subscriptions.push(
-      this.syncService.onScoresUpdated().subscribe(players => {
-        // Board components will read this from game state
-      })
-    );
+    // Note: Individual event subscriptions (T046, T048, T050, T052, T054, T056)
+    // are not needed because all state updates come through onStateSync() above.
+    // Child components (ClueDisplayComponent, BuzzIndicatorComponent, ScoreDisplayComponent)
+    // subscribe to GameStateService.getState() to render the synchronized state.
 
     // Subscribe to game state for local display updates
     this.subscriptions.push(
@@ -121,7 +84,7 @@ export class BoardComponent implements OnInit, OnDestroy {
    * Monitor connection health and handle reconnection (T059, T060)
    */
   private startConnectionMonitoring(): void {
-    this.connectionCheckInterval = window.setInterval(() => {
+    this.connectionCheckInterval = setInterval(() => {
       const timeSinceLastSync = performance.now() - this.lastSyncTimestamp;
       
       // If no sync in 5 seconds during active game, mark as disconnected
