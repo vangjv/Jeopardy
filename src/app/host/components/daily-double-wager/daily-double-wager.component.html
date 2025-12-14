@@ -22,6 +22,7 @@
             matInput 
             type="number" 
             [(ngModel)]="wagerAmount"
+            (blur)="onWagerBlur()"
             [min]="minWager()"
             [max]="maxWager()"
             step="100"

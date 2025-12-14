@@ -3,7 +3,7 @@
  * Allows host to enter wager for Daily Double clues (T073)
  */
 
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, OnDestroy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -17,6 +17,7 @@ import {
   getMinDailyDoubleWager, 
   getMaxDailyDoubleWager 
 } from '../../../shared/utils/wager-calculator';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-daily-double-wager',
@@ -31,13 +32,15 @@ import {
   templateUrl: './daily-double-wager.component.html',
   styleUrl: './daily-double-wager.component.scss'
 })
-export class DailyDoubleWagerComponent implements OnInit {
+export class DailyDoubleWagerComponent implements OnInit, OnDestroy {
   protected readonly showWagerInput = signal(false);
   protected readonly controlPlayer = signal<Player | null>(null);
   private readonly _wagerAmount = signal<number>(0);
   protected readonly minWager = signal<number>(5);
   protected readonly maxWager = signal<number>(1000);
   protected readonly errorMessage = signal<string | null>(null);
+  
+  private stateSubscription?: Subscription;
 
   // Getter/setter for two-way binding with validation
   protected get wagerAmount(): number {
@@ -46,7 +49,7 @@ export class DailyDoubleWagerComponent implements OnInit {
   
   protected set wagerAmount(value: number) {
     this._wagerAmount.set(value);
-    this.onWagerChange();
+    // Validation will be triggered on blur or submit to avoid excessive calls
   }
 
   constructor(
@@ -55,7 +58,7 @@ export class DailyDoubleWagerComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.gameStateService.getState().subscribe(state => {
+    this.stateSubscription = this.gameStateService.getState().subscribe(state => {
       // Show wager input when Daily Double is active and wager not yet set
       const isDailyDouble = state.activeClue?.isDailyDouble || false;
       const wagerNotSet = state.dailyDoubleWager === null;
@@ -126,9 +129,16 @@ export class DailyDoubleWagerComponent implements OnInit {
   }
 
   /**
-   * Validate wager on input change
+   * Validate wager on blur (avoids excessive validation on every keystroke)
    */
-  protected onWagerChange(): void {
+  protected onWagerBlur(): void {
     this.validateCurrentWager();
+  }
+
+  /**
+   * Clean up subscription to prevent memory leaks
+   */
+  ngOnDestroy(): void {
+    this.stateSubscription?.unsubscribe();
   }
 }
