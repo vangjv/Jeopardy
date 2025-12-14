@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatError } from '@angular/material/form-field';
 import { GameStateService } from '../../../shared/services/game-state.service';
 import { ValidationService } from '../../../shared/services/validation.service';
 import { Player } from '../../../shared/models/player.model';
@@ -27,7 +28,8 @@ import { Subscription } from 'rxjs';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatError
   ],
   templateUrl: './daily-double-wager.component.html',
   styleUrl: './daily-double-wager.component.scss'
@@ -41,6 +43,8 @@ export class DailyDoubleWagerComponent implements OnInit, OnDestroy {
   protected readonly errorMessage = signal<string | null>(null);
   
   private stateSubscription?: Subscription;
+  private wagerInitialized = false;
+  private lastActiveClueId: string | null = null;
 
   // Getter/setter for two-way binding with validation
   protected get wagerAmount(): number {
@@ -62,19 +66,33 @@ export class DailyDoubleWagerComponent implements OnInit, OnDestroy {
       // Show wager input when Daily Double is active and wager not yet set
       const isDailyDouble = state.activeClue?.isDailyDouble || false;
       const wagerNotSet = state.dailyDoubleWager === null;
+      const currentClueId = state.activeClue?.clue.id || null;
+      
+      // Detect when a new Daily Double clue is selected
+      const isNewClue = currentClueId !== this.lastActiveClueId;
+      if (isNewClue) {
+        this.lastActiveClueId = currentClueId;
+        this.wagerInitialized = false;
+      }
+      
       this.showWagerInput.set(isDailyDouble && wagerNotSet);
 
       if (state.controlPlayerId) {
         const player = state.players.find(p => p.id === state.controlPlayerId);
         this.controlPlayer.set(player || null);
 
-        // Calculate wager limits
-        if (player) {
+        // Calculate wager limits and set default only for new Daily Double clues
+        if (player && isDailyDouble && !this.wagerInitialized) {
           this.minWager.set(getMinDailyDoubleWager());
           this.maxWager.set(getMaxDailyDoubleWager(player, state));
           
-          // Default wager to max
+          // Default wager to max (only once per Daily Double)
           this._wagerAmount.set(this.maxWager());
+          this.wagerInitialized = true;
+        } else if (player) {
+          // Update limits without changing wager amount
+          this.minWager.set(getMinDailyDoubleWager());
+          this.maxWager.set(getMaxDailyDoubleWager(player, state));
         }
       } else {
         this.controlPlayer.set(null);
