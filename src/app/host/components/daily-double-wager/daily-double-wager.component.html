@@ -22,7 +22,6 @@
             matInput 
             type="number" 
             [(ngModel)]="wagerAmount"
-            (ngModelChange)="onWagerChange()"
             [min]="minWager()"
             [max]="maxWager()"
             step="100"

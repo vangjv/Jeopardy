@@ -34,10 +34,20 @@ import {
 export class DailyDoubleWagerComponent implements OnInit {
   protected readonly showWagerInput = signal(false);
   protected readonly controlPlayer = signal<Player | null>(null);
-  protected readonly wagerAmount = signal<number>(0);
+  private readonly _wagerAmount = signal<number>(0);
   protected readonly minWager = signal<number>(5);
   protected readonly maxWager = signal<number>(1000);
   protected readonly errorMessage = signal<string | null>(null);
+
+  // Getter/setter for two-way binding with validation
+  protected get wagerAmount(): number {
+    return this._wagerAmount();
+  }
+  
+  protected set wagerAmount(value: number) {
+    this._wagerAmount.set(value);
+    this.onWagerChange();
+  }
 
   constructor(
     private readonly gameStateService: GameStateService,
@@ -61,7 +71,7 @@ export class DailyDoubleWagerComponent implements OnInit {
           this.maxWager.set(getMaxDailyDoubleWager(player, state));
           
           // Default wager to max
-          this.wagerAmount.set(this.maxWager());
+          this._wagerAmount.set(this.maxWager());
         }
       } else {
         this.controlPlayer.set(null);
@@ -75,20 +85,18 @@ export class DailyDoubleWagerComponent implements OnInit {
   }
 
   /**
-   * Submit wager (T078)
+   * Validate current wager (DRY principle)
    */
-  protected submitWager(): void {
+  private validateCurrentWager(): boolean {
     const player = this.controlPlayer();
-    const wager = this.wagerAmount();
+    const wager = this._wagerAmount();
     
     if (!player) {
       this.errorMessage.set('No player selected');
-      return;
+      return false;
     }
 
     const state = this.gameStateService.getCurrentState();
-    
-    // Validate wager (T076)
     const validation = this.validationService.validateDailyDoubleWager(
       player.id, 
       wager, 
@@ -98,26 +106,29 @@ export class DailyDoubleWagerComponent implements OnInit {
     if (!validation.valid) {
       const errorMsg = validation.errors.map(e => e.message).join(', ');
       this.errorMessage.set(errorMsg);
+      return false;
+    }
+
+    this.errorMessage.set(null);
+    return true;
+  }
+
+  /**
+   * Submit wager (T078)
+   */
+  protected submitWager(): void {
+    if (!this.validateCurrentWager()) {
       return;
     }
 
-    // Clear error and set wager
-    this.errorMessage.set(null);
-    this.gameStateService.setDailyDoubleWager(wager);
+    // Set wager in game state
+    this.gameStateService.setDailyDoubleWager(this._wagerAmount());
   }
 
   /**
    * Validate wager on input change
    */
   protected onWagerChange(): void {
-    const wager = this.wagerAmount();
-    const min = this.minWager();
-    const max = this.maxWager();
-
-    if (wager < min || wager > max) {
-      this.errorMessage.set(`Wager must be between $${min} and $${max}`);
-    } else {
-      this.errorMessage.set(null);
-    }
+    this.validateCurrentWager();
   }
 }
