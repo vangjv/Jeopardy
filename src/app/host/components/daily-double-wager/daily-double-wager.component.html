@@ -1,0 +1,49 @@
+@if (showWagerInput()) {
+  <mat-card class="daily-double-wager">
+    <mat-card-header>
+      <mat-card-title>Daily Double Wager</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      @if (controlPlayer()) {
+        <div class="player-info">
+          <strong>{{ controlPlayer()!.name }}</strong>
+          <span class="score">Current Score: ${{ controlPlayer()!.score }}</span>
+        </div>
+
+        <div class="wager-limits">
+          <span>Min: ${{ minWager() }}</span>
+          <span>Max: ${{ maxWager() }}</span>
+        </div>
+
+        <mat-form-field appearance="outline" class="wager-input">
+          <mat-label>Wager Amount</mat-label>
+          <input 
+            matInput 
+            type="number" 
+            [(ngModel)]="wagerAmount"
+            (ngModelChange)="onWagerChange()"
+            [min]="minWager()"
+            [max]="maxWager()"
+            step="100"
+          />
+          <span matTextPrefix>$</span>
+          @if (errorMessage()) {
+            <mat-error>{{ errorMessage() }}</mat-error>
+          }
+        </mat-form-field>
+      }
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button 
+        mat-raised-button 
+        color="primary" 
+        (click)="submitWager()"
+        [disabled]="!!errorMessage()"
+      >
+        Set Wager
+      </button>
+    </mat-card-actions>
+  </mat-card>
+}

@@ -16,6 +16,7 @@ import {
   BuzzLockedPayload,
   ScoresUpdatedPayload,
   CorrectResponseRevealedPayload,
+  DailyDoubleWagerPayload,
   FinalPhaseChangedPayload,
   WinnerAnnouncedPayload,
 } from '../models/sync-event.model';
@@ -167,6 +168,13 @@ export class SyncService {
   }
 
   /**
+   * Broadcast Daily Double wager set (T080)
+   */
+  broadcastDailyDoubleWager(wager: number, playerId: string, playerName: string): void {
+    this.sendEvent<DailyDoubleWagerPayload>('DAILY_DOUBLE_WAGER', { wager, playerId, playerName });
+  }
+
+  /**
    * Broadcast round changed
    */
   broadcastRoundChanged(round: RoundType): void {
@@ -284,6 +292,13 @@ export class SyncService {
     return this.getEventObservable<CorrectResponseRevealedPayload>('CORRECT_RESPONSE_REVEALED').pipe(
       map(payload => payload.correctResponse)
     );
+  }
+
+  /**
+   * Subscribe to Daily Double wager events (T080)
+   */
+  onDailyDoubleWager(): Observable<{ wager: number; playerId: string; playerName: string }> {
+    return this.getEventObservable<DailyDoubleWagerPayload>('DAILY_DOUBLE_WAGER');
   }
 
   /**

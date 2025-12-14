@@ -15,6 +15,7 @@ import { GameBoardControlComponent } from './components/game-board-control/game-
 import { BuzzerPanelComponent } from './components/buzzer-panel/buzzer-panel.component';
 import { ScoreAdjudicationComponent } from './components/score-adjudication/score-adjudication.component';
 import { GameImportComponent } from './components/game-import/game-import.component';
+import { DailyDoubleWagerComponent } from './components/daily-double-wager/daily-double-wager.component';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -28,7 +29,8 @@ import { Subscription } from 'rxjs';
     GameBoardControlComponent,
     BuzzerPanelComponent,
     ScoreAdjudicationComponent,
-    GameImportComponent
+    GameImportComponent,
+    DailyDoubleWagerComponent
   ],
   templateUrl: './host.component.html',
   styleUrl: './host.component.scss'

@@ -29,6 +29,7 @@ export type SyncEventType =
   | 'SCORES_UPDATED'            // Score changes
   | 'BOARD_READY'               // Board requests sync
   | 'CORRECT_RESPONSE_REVEALED' // Answer shown
+  | 'DAILY_DOUBLE_WAGER'        // Daily Double wager set
   | 'FINAL_PHASE_CHANGED'       // Final Jeopardy phase change
   | 'WINNER_ANNOUNCED';         // Game complete with winner
 
@@ -69,6 +70,12 @@ export interface ScoresUpdatedPayload {
 
 export interface CorrectResponseRevealedPayload {
   correctResponse: string;
+}
+
+export interface DailyDoubleWagerPayload {
+  wager: number;
+  playerId: string;
+  playerName: string;
 }
 
 export interface FinalPhaseChangedPayload {

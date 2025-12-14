@@ -22,6 +22,7 @@ interface ISyncService {
   broadcastBuzzLocked(playerId: string, playerName: string, timestamp: number): void;
   broadcastBuzzReset(): void;
   broadcastScoresUpdated(players: Player[]): void;
+  broadcastDailyDoubleWager(wager: number, playerId: string, playerName: string): void;
 }
 
 @Injectable({
@@ -475,13 +476,22 @@ export class GameStateService {
   // ========== Daily Double ==========
 
   /**
-   * Set Daily Double wager
+   * Set Daily Double wager (T078)
    */
   setDailyDoubleWager(wager: number): void {
+    const state = this.getCurrentState();
     this.updateState(() => ({ 
       dailyDoubleWager: wager,
       buzzerEnabled: true, // Enable buzzer after wager set
     }));
+
+    // Broadcast Daily Double wager event (T080)
+    if (this.syncService && state.controlPlayerId) {
+      const player = state.players.find(p => p.id === state.controlPlayerId);
+      if (player) {
+        this.syncService.broadcastDailyDoubleWager(wager, player.id, player.name);
+      }
+    }
   }
 
   /**
