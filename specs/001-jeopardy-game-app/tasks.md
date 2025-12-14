@@ -149,16 +149,16 @@
 
 ### Implementation for User Story 4
 
-- [ ] T072 [P] [US4] Add Daily Double UI indicator in ClueDisplayComponent for both host and board
-- [ ] T073 [P] [US4] Create DailyDoubleWagerComponent for wager input in src/app/host/components/daily-double-wager/daily-double-wager.component.ts
-- [ ] T074 [US4] Implement Daily Double detection in GameStateService.selectClue() when clue.dailyDouble is true
-- [ ] T075 [US4] Disable buzzing for non-selecting contestants in GameStateService when Daily Double active
-- [ ] T076 [US4] Implement wager validation logic in ValidationService.validateDailyDoubleWager()
-- [ ] T077 [US4] Add wager min/max calculation (negative score handling) in shared/utils/wager-calculator.ts
-- [ ] T078 [US4] Wire wager input to GameStateService.setDailyDoubleWager() in DailyDoubleWagerComponent
-- [ ] T079 [US4] Modify score adjudication to use dailyDoubleWager instead of clue.value in ScoreAdjudicationComponent
-- [ ] T080 [US4] Broadcast DAILY_DOUBLE_WAGER sync event in SyncService
-- [ ] T081 [US4] Display Daily Double indicator and wager on board (if rules allow) in ClueDisplayComponent
+- [X] T072 [P] [US4] Add Daily Double UI indicator in ClueDisplayComponent for both host and board
+- [X] T073 [P] [US4] Create DailyDoubleWagerComponent for wager input in src/app/host/components/daily-double-wager/daily-double-wager.component.ts
+- [X] T074 [US4] Implement Daily Double detection in GameStateService.selectClue() when clue.dailyDouble is true
+- [X] T075 [US4] Disable buzzing for non-selecting contestants in GameStateService when Daily Double active
+- [X] T076 [US4] Implement wager validation logic in ValidationService.validateDailyDoubleWager()
+- [X] T077 [US4] Add wager min/max calculation (negative score handling) in shared/utils/wager-calculator.ts
+- [X] T078 [US4] Wire wager input to GameStateService.setDailyDoubleWager() in DailyDoubleWagerComponent
+- [X] T079 [US4] Modify score adjudication to use dailyDoubleWager instead of clue.value in ScoreAdjudicationComponent
+- [X] T080 [US4] Broadcast DAILY_DOUBLE_WAGER sync event in SyncService
+- [X] T081 [US4] Display Daily Double indicator and wager on board (if rules allow) in ClueDisplayComponent
 
 **Checkpoint**: Daily Double functionality complete and integrated with core game
 
