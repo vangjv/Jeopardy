@@ -6,3 +6,14 @@
     </div>
   </div>
 }
+
+@if (lockedOutPlayers().length > 0) {
+  <div class="lockout-indicator">
+    <div class="lockout-title">🚫 Locked Out</div>
+    <div class="lockout-list">
+      @for (player of lockedOutPlayers(); track player.id) {
+        <div class="lockout-player">{{ player.name }}</div>
+      }
+    </div>
+  </div>
+}

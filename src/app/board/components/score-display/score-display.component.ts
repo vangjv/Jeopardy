@@ -16,12 +16,14 @@ import { Player } from '../../../shared/models/player.model';
 })
 export class ScoreDisplayComponent implements OnInit {
   protected readonly players = signal<Player[]>([]);
+  protected readonly lockedOutPlayerIds = signal<Set<string>>(new Set());
 
   constructor(private readonly gameStateService: GameStateService) {}
 
   ngOnInit(): void {
     this.gameStateService.getState().subscribe(state => {
       this.players.set(state.players);
+      this.lockedOutPlayerIds.set(state.lockedOutPlayerIds);
     });
   }
 
@@ -39,5 +41,12 @@ export class ScoreDisplayComponent implements OnInit {
     if (score > 0) return 'positive';
     if (score < 0) return 'negative';
     return 'zero';
+  }
+
+  /**
+   * Check if player is locked out (T071)
+   */
+  protected isLockedOut(playerId: string): boolean {
+    return this.lockedOutPlayerIds().has(playerId);
   }
 }

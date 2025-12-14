@@ -17,6 +17,7 @@ import { Player } from '../../../shared/models/player.model';
 export class BuzzIndicatorComponent implements OnInit {
   protected readonly buzzActive = signal(false);
   protected readonly lockedPlayer = signal<Player | null>(null);
+  protected readonly lockedOutPlayers = signal<Player[]>([]);
 
   constructor(private readonly gameStateService: GameStateService) {}
 
@@ -30,6 +31,12 @@ export class BuzzIndicatorComponent implements OnInit {
       } else {
         this.lockedPlayer.set(null);
       }
+
+      // Track locked-out players (T070)
+      const lockedOut = state.players.filter(p =>
+        state.lockedOutPlayerIds.has(p.id)
+      );
+      this.lockedOutPlayers.set(lockedOut);
     });
   }
 }
