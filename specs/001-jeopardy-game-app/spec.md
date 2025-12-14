@@ -51,6 +51,7 @@ Contestants and audience members need to see the current game board, clues, cont
 3. **Given** the board display is open, **When** a contestant buzzes in, **Then** the board display immediately indicates which contestant buzzed
 4. **Given** the board display is open, **When** scores change due to correct/incorrect responses, **Then** the board display immediately reflects the updated scores
 5. **Given** the board display has been closed or refreshed, **When** it reconnects, **Then** it requests and receives the current game state and resumes synchronized operation
+6. **Given** the host interface is running, **When** the host clicks the "Open Board Display" launch button, **Then** the board display opens in a new popup window at /board route and immediately synchronizes with the current game state
 
 ---
 
@@ -191,7 +192,7 @@ Game organizers need to create and import custom game content (categories, clues
 - **FR-004**: System MUST display a game board with 6 categories and 5 clue value tiers per category
 - **FR-005**: System MUST support two main rounds (Round 1 with values 200-1000, Round 2 with values 400-2000) plus Final Jeopardy, with configurable value sets
 - **FR-006**: System MUST allow the host to select clues and display the clue text to all participants
-- **FR-007**: System MUST enable/disable buzzer input on host command
+- **FR-007**: System MUST enable/disable buzzer input on host command (controls when contestants can initiate buzzes)
 - **FR-008**: System MUST accurately detect and lock in the first contestant to press their buzzer key when buzzing is enabled
 - **FR-009**: System MUST allow the host to adjudicate responses as correct, incorrect, or no response
 - **FR-010**: System MUST increase a contestant's score by the clue value when marked correct
@@ -206,14 +207,14 @@ Game organizers need to create and import custom game content (categories, clues
 - **FR-019**: System MUST display current contestant scores on both host and board interfaces
 - **FR-020**: System MUST indicate which contestant currently has board control (right to select next clue)
 - **FR-021**: System MUST allow the host to manually override board control
-- **FR-022**: System MUST allow the host to reset buzz locks and clear contestant lockouts
-- **FR-023**: System MUST optionally lock out contestants who answered incorrectly until the host resets (configurable)
+- **FR-022**: System MUST allow the host to reset buzz locks and clear contestant lockouts (resets state after a contestant has buzzed; distinct from FR-007 which controls whether buzzing is initially enabled)
+- **FR-023**: System MUST optionally lock out contestants who answered incorrectly for the current clue only; lockouts automatically clear when returning to board or can be manually cleared via FR-022 (configurable)
 - **FR-024**: System MUST import game content from JSON files
-- **FR-025**: System MUST validate imported game content (6 categories × 5 clues per round, correct value assignments, exactly 1 Daily Double in Round 1 and 2 Daily Doubles in Round 2)
+- **FR-025**: System MUST validate imported game content (6 categories × 5 clues per round, correct value assignments, exactly 1 Daily Double in Round 1 and 2 Daily Doubles in Round 2) and return structured validation results with error severity (CRITICAL/WARNING), field path (e.g., 'round1.categories[2].clues[4]'), and descriptive message
 - **FR-026**: System MUST display validation warnings without crashing when invalid game content is imported
-- **FR-027**: System MUST support media (images, audio, video) in clues
-- **FR-028**: System MUST display the correct response on the host interface at all times
-- **FR-029**: System MUST hide the correct response on the board display by default until the host explicitly reveals it (optionally configurable to auto-reveal)
+- **FR-027**: System MUST support media (images, audio, video) in clues with the following constraints: max file size 10MB, supported formats (images: png/jpg/gif/webp, audio: mp3/wav/ogg, video: mp4/webm), graceful fallback display with error message on load failure
+- **FR-028**: System MUST display the correct response on the host interface at all times (see also FR-029 for board visibility)
+- **FR-029**: System MUST hide the correct response on the board display by default until the host explicitly reveals it (optionally configurable to auto-reveal; see also FR-028, FR-037)
 - **FR-030**: System MUST allow the host to manually adjust contestant scores
 - **FR-031**: System MUST allow the host to mark/unmark clues as used (admin override)
 - **FR-032**: System MUST support configurable rule toggles (wrong answer penalty, lockout behavior, visibility settings, timer durations)
@@ -240,13 +241,13 @@ Game organizers need to create and import custom game content (categories, clues
 ### Measurable Outcomes
 
 - **SC-001**: A host can configure contestants and start a game within 2 minutes
-- **SC-002**: The system accurately detects the first buzz within 10 milliseconds when multiple contestants buzz simultaneously
+- **SC-002**: The system accurately detects the first buzz within 10 milliseconds when multiple contestants buzz simultaneously (measured as timestamp delta between buzzer events, not end-to-end UI processing latency)
 - **SC-003**: The board display synchronizes with host actions in under 100 milliseconds for local same-machine setups
 - **SC-004**: A complete game (2 rounds + Final Jeopardy, 60 total clues) can be run without errors or crashes
 - **SC-005**: The board display successfully reconnects and resynchronizes state within 2 seconds after a refresh or connection loss
 - **SC-006**: Imported game content validation identifies 100% of structural errors (missing clues, incorrect value counts) without crashing
 - **SC-007**: The game system supports offline operation after initial page load
-- **SC-008**: The board display interface is optimized for 1080p and 4K displays with readable text from 10+ feet away
+- **SC-008**: The board display interface is optimized for 1080p and 4K displays with readable text from 10+ feet away (minimum font sizes: clue text 3rem/48px, category headers 2rem/32px, scores 1.5rem/24px; WCAG AAA contrast ratio 7:1)
 - **SC-009**: Host can adjudicate a response and update scores within 3 button clicks/actions
 - **SC-010**: System prevents accidental game interruption by warning before navigation/close 100% of the time when a game is active
 

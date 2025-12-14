@@ -14,7 +14,7 @@ Build a dual-window synchronized Angular application for running Jeopardy-style 
 **Language/Version**: TypeScript 5.9+ / Angular 19+  
 **Primary Dependencies**: 
   - @angular/core, @angular/router (routing), @angular/forms (reactive forms)
-  - @angular/material (optional, for host UI controls)
+  - @angular/material (required for host UI controls and form elements)
   - ngx-layout or native CSS Grid/Flexbox (responsive layouts)
 **Storage**: Browser LocalStorage (optional for saved settings), in-memory state management with services  
 **Testing**: Jasmine/Karma (configured via Angular CLI), manual dual-window QA for synchronization  
