@@ -1,4 +1,27 @@
 <div class="host-container">
-  <h1>Host Control Console</h1>
-  <p>Phase 2 Complete - Host interface will be implemented in Phase 3</p>
+  <mat-toolbar color="primary" class="host-toolbar">
+    <span>Jeopardy Host Console</span>
+    <span class="toolbar-spacer"></span>
+    <button mat-raised-button (click)="openBoard()">
+      <mat-icon>open_in_new</mat-icon>
+      Open Board Display
+    </button>
+    <button mat-raised-button color="accent" (click)="startGame()">
+      <mat-icon>play_arrow</mat-icon>
+      Start Game
+    </button>
+  </mat-toolbar>
+
+  <div class="host-content">
+    <div class="left-column">
+      <app-player-setup></app-player-setup>
+      <app-game-import></app-game-import>
+      <app-buzzer-panel></app-buzzer-panel>
+      <app-score-adjudication></app-score-adjudication>
+    </div>
+
+    <div class="right-column">
+      <app-game-board-control></app-game-board-control>
+    </div>
+  </div>
 </div>

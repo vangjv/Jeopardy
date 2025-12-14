@@ -3,7 +3,7 @@
  */
 
 import { GamePhase } from '../models/game-state.model';
-import { RoundType } from '../models/game-content.model';
+import { RoundType, Round, FinalRound } from '../models/game-content.model';
 
 /**
  * Check if value is a valid game phase
@@ -33,6 +33,13 @@ export function isFinalJeopardy(phase: GamePhase): boolean {
  */
 export function isValidRoundType(round: string): round is RoundType {
   return ['round1', 'round2', 'final'].includes(round);
+}
+
+/**
+ * Check if a round object is a regular Round (not FinalRound)
+ */
+export function isRound(round: Round | FinalRound): round is Round {
+  return 'categories' in round;
 }
 
 /**

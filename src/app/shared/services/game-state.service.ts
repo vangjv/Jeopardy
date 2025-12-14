@@ -181,6 +181,17 @@ export class GameStateService {
   }
 
   /**
+   * Update player properties
+   */
+  updatePlayer(playerId: string, updates: Partial<Omit<Player, 'id'>>): void {
+    const state = this.getCurrentState();
+    const players = state.players.map(p => 
+      p.id === playerId ? { ...p, ...updates } : p
+    );
+    this.updateState(() => ({ players }));
+  }
+
+  /**
    * Update player score by delta
    */
   updatePlayerScore(playerId: string, delta: number): void {
@@ -373,6 +384,15 @@ export class GameStateService {
   clearLockouts(): void {
     this.updateState(() => ({ 
       lockedOutPlayerIds: new Set<string>(),
+    }));
+  }
+
+  /**
+   * Set locked-out players
+   */
+  setLockedOutPlayers(playerIds: Set<string>): void {
+    this.updateState(() => ({ 
+      lockedOutPlayerIds: playerIds,
     }));
   }
 

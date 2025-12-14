@@ -1,0 +1,29 @@
+<div class="clue-display">
+  @if (clue()) {
+    <div class="clue-container">
+      @if (clue()!.dailyDouble) {
+        <div class="daily-double">
+          <h2>DAILY DOUBLE!</h2>
+        </div>
+      }
+      
+      <div class="category">
+        {{ clue()!.categoryTitle }}
+      </div>
+      
+      <div class="value">
+        ${{ clue()!.value }}
+      </div>
+      
+      <div class="clue-text">
+        {{ clue()!.clueText }}
+      </div>
+      
+      @if (clue()!.showResponse) {
+        <div class="correct-response">
+          {{ clue()!.correctResponse }}
+        </div>
+      }
+    </div>
+  }
+</div>

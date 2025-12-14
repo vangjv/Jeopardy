@@ -1,0 +1,41 @@
+<mat-card class="game-board-control">
+  <mat-card-header>
+    <mat-card-title>Game Board - {{ currentRound() === 'round1' ? 'Jeopardy' : 'Double Jeopardy' }}</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    @if (categories().length === 0) {
+      <p class="no-game">No game loaded. Import game content to start.</p>
+    } @else {
+      <div class="board-grid">
+        <!-- Category headers -->
+        <div class="category-row">
+          @for (category of categories(); track category.id) {
+            <div class="category-header">
+              {{ category.title }}
+            </div>
+          }
+        </div>
+        
+        <!-- Clue rows -->
+        @for (row of clueGrid(); track $index) {
+          <div class="clue-row">
+            @for (cell of row; track cell.clue.id) {
+              <button
+                mat-raised-button
+                [class]="getCellClass(cell)"
+                [disabled]="cell.used || !canSelectClues()"
+                (click)="selectClue(cell)"
+              >
+                @if (cell.dailyDouble && !cell.used) {
+                  <span class="dd-indicator">DD</span>
+                }
+                <span class="value">${{ cell.clue.value }}</span>
+              </button>
+            }
+          </div>
+        }
+      </div>
+    }
+  </mat-card-content>
+</mat-card>

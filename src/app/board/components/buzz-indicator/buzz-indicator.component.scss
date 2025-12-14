@@ -1,0 +1,51 @@
+.buzz-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 215, 0, 0.95);
+  padding: 3rem 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: buzzIn 0.3s ease-out;
+  
+  .buzz-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+    .buzz-icon {
+      font-size: 6rem;
+      animation: ring 0.5s ease-in-out infinite;
+    }
+    
+    .player-name {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #000;
+      text-align: center;
+    }
+  }
+}
+
+@keyframes buzzIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes ring {
+  0%, 100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}

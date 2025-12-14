@@ -1,0 +1,59 @@
+<mat-card class="player-setup">
+  <mat-card-header>
+    <mat-card-title>Player Setup</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    @if (players().length === 0) {
+      <p class="no-players">No players added yet. Add 2-3 players to start.</p>
+    }
+    
+    @for (player of players(); track player.id) {
+      <div class="player-row">
+        <mat-form-field class="player-name">
+          <mat-label>Player Name</mat-label>
+          <input 
+            matInput 
+            [value]="player.name"
+            (blur)="updatePlayerName(player.id, $any($event.target).value)"
+            placeholder="Enter name"
+          />
+        </mat-form-field>
+        
+        <mat-form-field class="buzz-key">
+          <mat-label>Buzzer Key</mat-label>
+          <input 
+            matInput 
+            [value]="player.buzzerKey"
+            (input)="updateBuzzKey(player.id, $any($event.target).value)"
+            maxlength="1"
+            placeholder="Key"
+            [class.error]="hasKeyConflict(player.buzzerKey)"
+          />
+          @if (hasKeyConflict(player.buzzerKey)) {
+            <mat-error>Key conflict!</mat-error>
+          }
+        </mat-form-field>
+        
+        <button 
+          mat-icon-button 
+          color="warn"
+          (click)="removePlayer(player.id)"
+          aria-label="Remove player"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    }
+    
+    <button 
+      mat-raised-button 
+      color="primary"
+      (click)="addPlayer()"
+      [disabled]="!canAddPlayer()"
+    >
+      <mat-icon>add</mat-icon>
+      Add Player
+    </button>
+  </mat-card-content>
+</mat-card>

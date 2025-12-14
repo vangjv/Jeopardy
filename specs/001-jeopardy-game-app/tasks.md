@@ -56,28 +56,28 @@
 
 ### Implementation for User Story 1
 
-- [ ] T018 [P] [US1] Create HostComponent main container in src/app/host/host.component.ts
-- [ ] T019 [P] [US1] Create BoardComponent main container in src/app/board/board.component.ts
-- [ ] T020 [P] [US1] Create PlayerSetupComponent for contestant configuration in src/app/host/components/player-setup/player-setup.component.ts
-- [ ] T021 [P] [US1] Create GameBoardControlComponent for clue selection in src/app/host/components/game-board-control/game-board-control.component.ts
-- [ ] T022 [P] [US1] Create BuzzerService for keyboard event handling in src/app/shared/services/buzzer.service.ts
-- [ ] T023 [P] [US1] Create BuzzerPanelComponent for buzz detection display in src/app/host/components/buzzer-panel/buzzer-panel.component.ts
-- [ ] T024 [P] [US1] Create ScoreAdjudicationComponent for correct/incorrect buttons in src/app/host/components/score-adjudication/score-adjudication.component.ts
-- [ ] T025 [P] [US1] Create ClueBoardComponent for board display in src/app/board/components/clue-board/clue-board.component.ts
-- [ ] T026 [P] [US1] Create ClueDisplayComponent for full-screen clue view in src/app/board/components/clue-display/clue-display.component.ts
-- [ ] T027 [P] [US1] Create ScoreDisplayComponent for contestant scores in src/app/board/components/score-display/score-display.component.ts
-- [ ] T028 [P] [US1] Create BuzzIndicatorComponent for buzz-in display in src/app/board/components/buzz-indicator/buzz-indicator.component.ts
-- [ ] T029 [US1] Implement contestant configuration logic (add/remove players, assign buzzer keys) in PlayerSetupComponent
-- [ ] T030 [US1] Implement clue selection logic in GameBoardControlComponent with used clue marking
-- [ ] T031 [US1] Implement buzzer key detection with timestamp ordering in BuzzerService
-- [ ] T032 [US1] Wire buzzer events to GameStateService.lockBuzz() in HostComponent
-- [ ] T033 [US1] Implement score adjudication handlers (correct/incorrect) in ScoreAdjudicationComponent
-- [ ] T034 [US1] Connect score updates to GameStateService.updatePlayerScore() in HostComponent
-- [ ] T035 [US1] Implement clue board rendering with 6 categories × 5 values in ClueBoardComponent
-- [ ] T036 [US1] Implement clue selection display with categoryTitle in ClueDisplayComponent
-- [ ] T037 [US1] Add correct response reveal logic in ClueDisplayComponent (host interface only initially)
-- [ ] T038 [US1] Style host interface layout with Angular Material components in src/app/host/host.component.scss
-- [ ] T039 [US1] Style board display for 1080p+ readability in src/app/board/board.component.scss
+- [X] T018 [P] [US1] Create HostComponent main container in src/app/host/host.component.ts
+- [X] T019 [P] [US1] Create BoardComponent main container in src/app/board/board.component.ts
+- [X] T020 [P] [US1] Create PlayerSetupComponent for contestant configuration in src/app/host/components/player-setup/player-setup.component.ts
+- [X] T021 [P] [US1] Create GameBoardControlComponent for clue selection in src/app/host/components/game-board-control/game-board-control.component.ts
+- [X] T022 [P] [US1] Create BuzzerService for keyboard event handling in src/app/shared/services/buzzer.service.ts
+- [X] T023 [P] [US1] Create BuzzerPanelComponent for buzz detection display in src/app/host/components/buzzer-panel/buzzer-panel.component.ts
+- [X] T024 [P] [US1] Create ScoreAdjudicationComponent for correct/incorrect buttons in src/app/host/components/score-adjudication/score-adjudication.component.ts
+- [X] T025 [P] [US1] Create ClueBoardComponent for board display in src/app/board/components/clue-board/clue-board.component.ts
+- [X] T026 [P] [US1] Create ClueDisplayComponent for full-screen clue view in src/app/board/components/clue-display/clue-display.component.ts
+- [X] T027 [P] [US1] Create ScoreDisplayComponent for contestant scores in src/app/board/components/score-display/score-display.component.ts
+- [X] T028 [P] [US1] Create BuzzIndicatorComponent for buzz-in display in src/app/board/components/buzz-indicator/buzz-indicator.component.ts
+- [X] T029 [US1] Implement contestant configuration logic (add/remove players, assign buzzer keys) in PlayerSetupComponent
+- [X] T030 [US1] Implement clue selection logic in GameBoardControlComponent with used clue marking
+- [X] T031 [US1] Implement buzzer key detection with timestamp ordering in BuzzerService
+- [X] T032 [US1] Wire buzzer events to GameStateService.lockBuzz() in HostComponent
+- [X] T033 [US1] Implement score adjudication handlers (correct/incorrect) in ScoreAdjudicationComponent
+- [X] T034 [US1] Connect score updates to GameStateService.updatePlayerScore() in HostComponent
+- [X] T035 [US1] Implement clue board rendering with 6 categories × 5 values in ClueBoardComponent
+- [X] T036 [US1] Implement clue selection display with categoryTitle in ClueDisplayComponent
+- [X] T037 [US1] Add correct response reveal logic in ClueDisplayComponent (host interface only initially)
+- [X] T038 [US1] Style host interface layout with Angular Material components in src/app/host/host.component.scss
+- [X] T039 [US1] Style board display for 1080p+ readability in src/app/board/board.component.scss
 
 **Checkpoint**: At this point, User Story 1 should be fully functional - basic game playable end-to-end
 

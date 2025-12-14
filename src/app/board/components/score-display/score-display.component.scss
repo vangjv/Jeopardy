@@ -1,0 +1,39 @@
+.score-display {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: #000;
+  border-top: 4px solid white;
+  
+  .player-score {
+    flex: 1;
+    text-align: center;
+    
+    .player-name {
+      font-size: 2rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    
+    .score {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      
+      &.positive {
+        color: #00ff00;
+      }
+      
+      &.negative {
+        color: #ff4444;
+      }
+      
+      &.zero {
+        color: white;
+      }
+    }
+  }
+}

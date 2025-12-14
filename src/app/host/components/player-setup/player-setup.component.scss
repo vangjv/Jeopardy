@@ -1,0 +1,29 @@
+.player-setup {
+  margin: 1rem;
+  
+  .no-players {
+    color: var(--mat-sys-on-surface-variant, #666);
+    font-style: italic;
+    margin: 1rem 0;
+  }
+  
+  .player-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    
+    .player-name {
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    .buzz-key {
+      width: 80px;
+      
+      input.error {
+        color: var(--mat-sys-error, red);
+      }
+    }
+  }
+}
