@@ -1,0 +1,57 @@
+.game-import {
+  margin: 1rem;
+  
+  .success-message,
+  .error-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    
+    mat-icon {
+      font-size: 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  
+  .success-message {
+    background: var(--mat-sys-success-container, #e8f5e9);
+    color: var(--mat-sys-on-success-container, #1b5e20);
+    
+    mat-icon {
+      color: var(--mat-sys-success, #4caf50);
+    }
+  }
+  
+  .error-message {
+    background: var(--mat-sys-error-container, #ffebee);
+    color: var(--mat-sys-on-error-container, #b71c1c);
+    
+    mat-icon {
+      color: var(--mat-sys-error, #f44336);
+    }
+  }
+  
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+    
+    button {
+      mat-icon {
+        margin-right: 0.5rem;
+      }
+    }
+    
+    .file-upload-btn {
+      display: inline-block;
+      cursor: pointer;
+      
+      button {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -13,6 +13,7 @@ import { PlayerSetupComponent } from './components/player-setup/player-setup.com
 import { GameBoardControlComponent } from './components/game-board-control/game-board-control.component';
 import { BuzzerPanelComponent } from './components/buzzer-panel/buzzer-panel.component';
 import { ScoreAdjudicationComponent } from './components/score-adjudication/score-adjudication.component';
+import { GameImportComponent } from './components/game-import/game-import.component';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -25,7 +26,8 @@ import { Subscription } from 'rxjs';
     PlayerSetupComponent,
     GameBoardControlComponent,
     BuzzerPanelComponent,
-    ScoreAdjudicationComponent
+    ScoreAdjudicationComponent,
+    GameImportComponent
   ],
   templateUrl: './host.component.html',
   styleUrl: './host.component.scss'
