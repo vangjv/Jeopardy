@@ -1,4 +1,17 @@
 <div class="board-container">
+  <!-- Connection status indicator (T060) -->
+  <div class="connection-status" [class.connected]="connectionStatus() === 'connected'" 
+       [class.disconnected]="connectionStatus() === 'disconnected'"
+       [class.connecting]="connectionStatus() === 'connecting'">
+    @if (connectionStatus() === 'connected') {
+      <span class="status-icon">●</span> Connected
+    } @else if (connectionStatus() === 'disconnected') {
+      <span class="status-icon">●</span> Disconnected - Refresh to reconnect
+    } @else {
+      <span class="status-icon">●</span> Connecting...
+    }
+  </div>
+
   <!-- Show clue display when a clue is active -->
   @if (showClue()) {
     <app-clue-display></app-clue-display>

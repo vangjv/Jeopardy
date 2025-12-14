@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { GameStateService } from '../shared/services/game-state.service';
 import { BuzzerService } from '../shared/services/buzzer.service';
+import { SyncService } from '../shared/services/sync.service';
 import { PlayerSetupComponent } from './components/player-setup/player-setup.component';
 import { GameBoardControlComponent } from './components/game-board-control/game-board-control.component';
 import { BuzzerPanelComponent } from './components/buzzer-panel/buzzer-panel.component';
@@ -34,14 +35,22 @@ import { Subscription } from 'rxjs';
 })
 export class HostComponent implements OnInit, OnDestroy {
   private buzzSubscription?: Subscription;
+  private boardReadySubscription?: Subscription;
   private boardWindow: Window | null = null;
 
   constructor(
     private readonly gameStateService: GameStateService,
-    private readonly buzzerService: BuzzerService
+    private readonly buzzerService: BuzzerService,
+    private readonly syncService: SyncService
   ) {}
 
   ngOnInit(): void {
+    // Initialize SyncService as host (T040)
+    this.syncService.initialize('host');
+
+    // Set sync service reference in GameStateService
+    this.gameStateService.setSyncService(this.syncService);
+
     // Subscribe to game state to configure buzzer keys
     this.gameStateService.getState().subscribe(state => {
       const keyMap = new Map<string, string>();
@@ -72,10 +81,18 @@ export class HostComponent implements OnInit, OnDestroy {
     this.buzzSubscription = this.buzzerService.getBuzzEvents().subscribe(buzzEvent => {
       this.gameStateService.lockBuzz(buzzEvent.playerId, buzzEvent.timestamp);
     });
+
+    // Subscribe to BOARD_READY messages to respond with full state (T043)
+    this.boardReadySubscription = this.syncService.onBoardReady().subscribe(() => {
+      const currentState = this.gameStateService.getCurrentState();
+      this.syncService.broadcastStateSync(currentState);
+    });
   }
 
   ngOnDestroy(): void {
     this.buzzSubscription?.unsubscribe();
+    this.boardReadySubscription?.unsubscribe();
+    this.syncService.destroy();
   }
 
   /**
