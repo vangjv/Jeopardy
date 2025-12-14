@@ -91,27 +91,27 @@
 
 ### Implementation for User Story 2
 
-- [ ] T040 [US2] Initialize SyncService as 'host' role in HostComponent.ngOnInit()
-- [ ] T041 [US2] Initialize SyncService as 'board' role in BoardComponent.ngOnInit()
-- [ ] T042 [US2] Implement STATE_SYNC broadcast in GameStateService on state updates
-- [ ] T043 [US2] Implement BOARD_READY request handler in HostComponent to respond with full state
-- [ ] T044 [US2] Subscribe to onStateSync() in BoardComponent to receive full state updates
-- [ ] T045 [US2] Implement CLUE_SELECTED broadcast when host selects clue in GameStateService
-- [ ] T046 [US2] Subscribe to onClueSelected() in BoardComponent to display clue
-- [ ] T047 [US2] Implement CLUE_CLEARED broadcast when host closes clue in GameStateService
-- [ ] T048 [US2] Subscribe to onClueCleared() in BoardComponent to return to board view
-- [ ] T049 [US2] Implement BUZZ_ENABLED broadcast in GameStateService
-- [ ] T050 [US2] Subscribe to onBuzzEnabled() in BoardComponent to show/hide buzz indicator
-- [ ] T051 [US2] Implement BUZZ_LOCKED broadcast in GameStateService
-- [ ] T052 [US2] Subscribe to onBuzzLocked() in BoardComponent to highlight contestant
-- [ ] T053 [US2] Implement BUZZ_RESET broadcast in GameStateService
-- [ ] T054 [US2] Subscribe to onBuzzReset() in BoardComponent to clear buzz state
-- [ ] T055 [US2] Implement SCORES_UPDATED broadcast in GameStateService
-- [ ] T056 [US2] Subscribe to onScoresUpdated() in BoardComponent to update score displays
-- [ ] T057 [US2] Add popup window launch button in HostComponent to open /board route
-- [ ] T058 [US2] Implement BOARD_READY message send in BoardComponent.ngOnInit() to request state sync
-- [ ] T059 [US2] Handle board reconnection/refresh with full state resync in BoardComponent
-- [ ] T060 [US2] Add connection status indicator in BoardComponent showing sync health
+- [X] T040 [US2] Initialize SyncService as 'host' role in HostComponent.ngOnInit()
+- [X] T041 [US2] Initialize SyncService as 'board' role in BoardComponent.ngOnInit()
+- [X] T042 [US2] Implement STATE_SYNC broadcast in GameStateService on state updates
+- [X] T043 [US2] Implement BOARD_READY request handler in HostComponent to respond with full state
+- [X] T044 [US2] Subscribe to onStateSync() in BoardComponent to receive full state updates
+- [X] T045 [US2] Implement CLUE_SELECTED broadcast when host selects clue in GameStateService
+- [X] T046 [US2] Subscribe to onClueSelected() in BoardComponent to display clue
+- [X] T047 [US2] Implement CLUE_CLEARED broadcast when host closes clue in GameStateService
+- [X] T048 [US2] Subscribe to onClueCleared() in BoardComponent to return to board view
+- [X] T049 [US2] Implement BUZZ_ENABLED broadcast in GameStateService
+- [X] T050 [US2] Subscribe to onBuzzEnabled() in BoardComponent to show/hide buzz indicator
+- [X] T051 [US2] Implement BUZZ_LOCKED broadcast in GameStateService
+- [X] T052 [US2] Subscribe to onBuzzLocked() in BoardComponent to highlight contestant
+- [X] T053 [US2] Implement BUZZ_RESET broadcast in GameStateService
+- [X] T054 [US2] Subscribe to onBuzzReset() in BoardComponent to clear buzz state
+- [X] T055 [US2] Implement SCORES_UPDATED broadcast in GameStateService
+- [X] T056 [US2] Subscribe to onScoresUpdated() in BoardComponent to update score displays
+- [X] T057 [US2] Add popup window launch button in HostComponent to open /board route
+- [X] T058 [US2] Implement BOARD_READY message send in BoardComponent.ngOnInit() to request state sync
+- [X] T059 [US2] Handle board reconnection/refresh with full state resync in BoardComponent
+- [X] T060 [US2] Add connection status indicator in BoardComponent showing sync health
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should work - full synchronized dual-window game
 

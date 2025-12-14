@@ -3,7 +3,7 @@
  * Host owns this state, board receives synchronized copies
  */
 
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, Optional } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { GameState, GamePhase, GameRules, DEFAULT_GAME_RULES, ActiveClue, FinalJeopardyState } from '../models/game-state.model';
 import { Player } from '../models/player.model';
@@ -11,18 +11,29 @@ import { GameSet, RoundType, Clue } from '../models/game-content.model';
 import { ValidationResult } from '../models/validation.model';
 import { generateUUID, getWinner, isRoundComplete } from '../utils/game-helpers';
 
+// Forward reference to avoid circular dependency
+let SyncServiceRef: any = null;
+
 @Injectable({
   providedIn: 'root'
 })
 export class GameStateService {
   private stateSubject: BehaviorSubject<GameState>;
   public state$: Observable<GameState>;
+  private syncService: any = null;
 
   constructor() {
     // Initialize with default empty state
     const initialState = this.createInitialState();
     this.stateSubject = new BehaviorSubject<GameState>(initialState);
     this.state$ = this.stateSubject.asObservable();
+  }
+
+  /**
+   * Set sync service reference (called from host component to avoid circular dependency)
+   */
+  setSyncService(syncService: any): void {
+    this.syncService = syncService;
   }
 
   /**
@@ -72,6 +83,18 @@ export class GameStateService {
     const updates = updater(currentState);
     const newState = { ...currentState, ...updates };
     this.stateSubject.next(newState);
+    
+    // Broadcast state sync if sync service is available (T042)
+    if (this.syncService) {
+      this.syncService.broadcastStateSync(newState);
+    }
+  }
+
+  /**
+   * Load complete state (used by board for synchronization)
+   */
+  loadState(state: GameState): void {
+    this.stateSubject.next(state);
   }
 
   // ========== Game Lifecycle ==========
@@ -200,6 +223,11 @@ export class GameStateService {
       p.id === playerId ? { ...p, score: p.score + delta } : p
     );
     this.updateState(() => ({ players }));
+
+    // Broadcast scores updated event (T055)
+    if (this.syncService) {
+      this.syncService.broadcastScoresUpdated(players);
+    }
   }
 
   /**
@@ -211,6 +239,11 @@ export class GameStateService {
       p.id === playerId ? { ...p, score } : p
     );
     this.updateState(() => ({ players }));
+
+    // Broadcast scores updated event (T055)
+    if (this.syncService) {
+      this.syncService.broadcastScoresUpdated(players);
+    }
   }
 
   /**
@@ -277,6 +310,11 @@ export class GameStateService {
       lockedPlayerId: null,
       lockedOutPlayerIds: new Set<string>(),
     }));
+
+    // Broadcast clue selected event (T045)
+    if (this.syncService) {
+      this.syncService.broadcastClueSelected(activeClue);
+    }
   }
 
   /**
@@ -301,6 +339,11 @@ export class GameStateService {
       lockedOutPlayerIds: new Set<string>(),
       dailyDoubleWager: null,
     }));
+
+    // Broadcast clue cleared event (T047)
+    if (this.syncService) {
+      this.syncService.broadcastClueCleared();
+    }
   }
 
   /**
@@ -325,6 +368,11 @@ export class GameStateService {
       buzzLocked: false,
       lockedPlayerId: null,
     }));
+
+    // Broadcast buzzer enabled event (T049)
+    if (this.syncService) {
+      this.syncService.broadcastBuzzEnabled(true);
+    }
   }
 
   /**
@@ -332,6 +380,11 @@ export class GameStateService {
    */
   disableBuzzer(): void {
     this.updateState(() => ({ buzzerEnabled: false }));
+
+    // Broadcast buzzer disabled event (T049)
+    if (this.syncService) {
+      this.syncService.broadcastBuzzEnabled(false);
+    }
   }
 
   /**
@@ -350,6 +403,14 @@ export class GameStateService {
       lockedPlayerId: playerId,
       buzzerEnabled: false,
     }));
+
+    // Broadcast buzz locked event (T051)
+    if (this.syncService) {
+      const player = state.players.find(p => p.id === playerId);
+      if (player) {
+        this.syncService.broadcastBuzzLocked(playerId, player.name, timestamp);
+      }
+    }
   }
 
   /**
@@ -361,6 +422,11 @@ export class GameStateService {
       lockedPlayerId: null,
       buzzerEnabled: true,
     }));
+
+    // Broadcast buzz reset event (T053)
+    if (this.syncService) {
+      this.syncService.broadcastBuzzReset();
+    }
   }
 
   /**
