@@ -1,0 +1,15 @@
+<div class="score-display">
+  @for (player of players(); track player.id) {
+    <div class="player-score" [class.locked-out]="isLockedOut(player.id)">
+      <div class="player-name">
+        {{ player.name }}
+        @if (isLockedOut(player.id)) {
+          <span class="lockout-badge">🚫</span>
+        }
+      </div>
+      <div class="score" [class]="getScoreClass(player.score)">
+        {{ formatScore(player.score) }}
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,89 @@
+.buzz-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 215, 0, 0.95);
+  padding: 3rem 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: buzzIn 0.3s ease-out;
+  
+  .buzz-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+    .buzz-icon {
+      font-size: 6rem;
+      animation: ring 0.5s ease-in-out infinite;
+    }
+    
+    .player-name {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #000;
+      text-align: center;
+    }
+  }
+}
+
+@keyframes buzzIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes ring {
+  0%, 100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+// T070: Lockout indicator styles
+.lockout-indicator {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(255, 68, 68, 0.95);
+  padding: 1.5rem 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  
+  .lockout-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.75rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .lockout-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+    .lockout-player {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0.5rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+  }
+}

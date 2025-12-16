@@ -1,0 +1,51 @@
+<mat-card class="game-import">
+  <mat-card-header>
+    <mat-card-title>Game Content</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    @if (success()) {
+      <div class="success-message">
+        <mat-icon>check_circle</mat-icon>
+        <span>Game loaded successfully!</span>
+      </div>
+    }
+    
+    @if (error()) {
+      <div class="error-message">
+        <mat-icon>error</mat-icon>
+        <span>{{ error() }}</span>
+      </div>
+    }
+    
+    <div class="actions">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="loadSampleGame()"
+        [disabled]="loading()"
+      >
+        <mat-icon>download</mat-icon>
+        Load Sample Game
+      </button>
+      
+      <label class="file-upload-btn">
+        <input
+          type="file"
+          accept=".json"
+          (change)="onFileSelected($event)"
+          style="display: none"
+          [disabled]="loading()"
+        />
+        <button
+          mat-raised-button
+          [disabled]="loading()"
+          type="button"
+        >
+          <mat-icon>upload_file</mat-icon>
+          Import JSON File
+        </button>
+      </label>
+    </div>
+  </mat-card-content>
+</mat-card>

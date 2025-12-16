@@ -1,0 +1,19 @@
+@if (buzzActive() && lockedPlayer()) {
+  <div class="buzz-indicator">
+    <div class="buzz-content">
+      <div class="buzz-icon">🔔</div>
+      <div class="player-name">{{ lockedPlayer()!.name }}</div>
+    </div>
+  </div>
+}
+
+@if (lockedOutPlayers().length > 0) {
+  <div class="lockout-indicator">
+    <div class="lockout-title">🚫 Locked Out</div>
+    <div class="lockout-list">
+      @for (player of lockedOutPlayers(); track player.id) {
+        <div class="lockout-player">{{ player.name }}</div>
+      }
+    </div>
+  </div>
+}

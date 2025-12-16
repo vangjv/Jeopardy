@@ -1,0 +1,77 @@
+.score-display {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: #000;
+  border-top: 4px solid white;
+  
+  .player-score {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    
+    .player-name {
+      font-size: 2rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      
+      .lockout-badge {
+        font-size: 1.5rem;
+        animation: pulse 1s ease-in-out infinite;
+      }
+    }
+    
+    .score {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      
+      &.positive {
+        color: #00ff00;
+      }
+      
+      &.negative {
+        color: #ff4444;
+      }
+      
+      &.zero {
+        color: white;
+      }
+    }
+    
+    // T071: Lockout visual indicator
+    &.locked-out {
+      background: rgba(255, 68, 68, 0.2);
+      border: 2px solid rgba(255, 68, 68, 0.5);
+      
+      .player-name {
+        color: #ff8888;
+      }
+      
+      .score {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,29 @@
+<div class="clue-board">
+  <div class="board-header">
+    <h1>{{ getRoundTitle() }}</h1>
+  </div>
+  
+  <div class="board-grid">
+    <!-- Category headers -->
+    <div class="category-row">
+      @for (category of categories(); track category.id) {
+        <div class="category-header">
+          {{ category.title }}
+        </div>
+      }
+    </div>
+    
+    <!-- Clue rows -->
+    @for (row of clueGrid(); track $index) {
+      <div class="clue-row">
+        @for (cell of row; track cell.id) {
+          <div class="clue-cell" [class.used]="cell.used">
+            @if (!cell.used) {
+              <span class="value">${{ cell.value }}</span>
+            }
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

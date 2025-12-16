@@ -1,0 +1,54 @@
+<mat-card class="buzzer-panel">
+  <mat-card-header>
+    <mat-card-title>Buzzer Status</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <div class="status-row">
+      <span class="status-label">Buzzer:</span>
+      <span [class]="buzzerEnabled() ? 'status-enabled' : 'status-disabled'">
+        {{ buzzerEnabled() ? 'ENABLED' : 'DISABLED' }}
+      </span>
+    </div>
+    
+    @if (buzzLocked() && lockedPlayer()) {
+      <div class="buzz-info">
+        <mat-icon class="buzz-icon">campaign</mat-icon>
+        <span class="player-name">{{ lockedPlayer()?.name }} buzzed in!</span>
+      </div>
+    }
+    
+    @if (lockedOutPlayers().length > 0) {
+      <div class="lockout-info">
+        <span class="lockout-label">Locked Out:</span>
+        <div class="lockout-list">
+          @for (player of lockedOutPlayers(); track player.id) {
+            <span class="lockout-player">{{ player.name }}</span>
+          }
+        </div>
+      </div>
+    }
+    
+    <div class="controls">
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="resetBuzz()"
+        [disabled]="!buzzLocked()"
+      >
+        <mat-icon>refresh</mat-icon>
+        Reset Buzzer
+      </button>
+      
+      @if (lockedOutPlayers().length > 0) {
+        <button
+          mat-raised-button
+          (click)="clearLockouts()"
+        >
+          <mat-icon>lock_open</mat-icon>
+          Clear Lockouts
+        </button>
+      }
+    </div>
+  </mat-card-content>
+</mat-card>
