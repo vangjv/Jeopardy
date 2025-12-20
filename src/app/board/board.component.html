@@ -1,6 +1,6 @@
 <div class="board-container">
   <!-- Connection status indicator (T060) -->
-  <div class="connection-status" [class.connected]="connectionStatus() === 'connected'" 
+  <div class="connection-status" [class.connected]="connectionStatus() === 'connected'"
        [class.disconnected]="connectionStatus() === 'disconnected'"
        [class.connecting]="connectionStatus() === 'connecting'">
     @if (connectionStatus() === 'connected') {
@@ -12,16 +12,24 @@
     }
   </div>
 
-  <!-- Show clue display when a clue is active -->
-  @if (showClue()) {
+  <!-- T083, T090: Show round transition overlay when round changes -->
+  @if (showRoundTransition()) {
+    <app-round-transition [round]="currentRound()"></app-round-transition>
+  }
+
+  <!-- Show Final Jeopardy display when in Final Jeopardy phase (T108-T110) -->
+  @if (showFinalJeopardy()) {
+    <app-final-jeopardy-display [gameState]="gameStateService.getCurrentState()"></app-final-jeopardy-display>
+  } @else if (showClue()) {
+    <!-- Show clue display when a clue is active -->
     <app-clue-display></app-clue-display>
   } @else {
     <!-- Show clue board when no clue is active -->
     <app-clue-board></app-clue-board>
-  }
 
-  <!-- Score display always visible at bottom -->
-  <app-score-display></app-score-display>
+    <!-- Score display always visible at bottom -->
+    <app-score-display></app-score-display>
+  }
 
   <!-- Buzz indicator overlay when player buzzes -->
   <app-buzz-indicator></app-buzz-indicator>

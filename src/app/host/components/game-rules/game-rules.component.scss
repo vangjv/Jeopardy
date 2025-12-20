@@ -1,0 +1,149 @@
+.game-rules-container {
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.rules-card {
+  mat-card-header {
+    margin-bottom: 1rem;
+
+    mat-card-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+
+      mat-icon {
+        font-size: 1.75rem;
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+    }
+  }
+
+  mat-card-content {
+    mat-expansion-panel {
+      margin-bottom: 0.5rem;
+
+      mat-expansion-panel-header {
+        mat-panel-title {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-weight: 600;
+
+          mat-icon {
+            color: var(--primary-color, #3b82f6);
+          }
+        }
+      }
+    }
+  }
+
+  mat-card-actions {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+
+    button {
+      mat-icon {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.rules-section {
+  padding: 1rem 0;
+}
+
+.rule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 2rem;
+
+  .rule-info {
+    flex: 1;
+
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-color, #1e293b);
+      margin-bottom: 0.25rem;
+    }
+
+    .rule-description {
+      font-size: 0.875rem;
+      color: var(--text-secondary, #64748b);
+      margin: 0;
+      line-height: 1.4;
+    }
+  }
+
+  mat-slide-toggle {
+    flex-shrink: 0;
+  }
+
+  mat-form-field {
+    width: 120px;
+    flex-shrink: 0;
+  }
+}
+
+.values-config {
+  padding: 1rem 0;
+
+  h4 {
+    color: var(--primary-color, #3b82f6);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .value-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+
+    mat-form-field {
+      width: 100%;
+    }
+  }
+}
+
+mat-divider {
+  margin: 0.5rem 0;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .game-rules-container {
+    padding: 0.5rem;
+  }
+
+  .rule-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    mat-slide-toggle,
+    mat-form-field {
+      width: 100%;
+    }
+  }
+
+  .value-inputs {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  mat-card-actions {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+    }
+  }
+}

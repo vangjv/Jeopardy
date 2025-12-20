@@ -16,7 +16,36 @@
     <div class="left-column">
       <app-player-setup></app-player-setup>
       <app-game-import></app-game-import>
+
+      <!-- T082: Round transition controls -->
+      <mat-card class="round-controls">
+        <mat-card-header>
+          <mat-card-title>Round Controls</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="round-buttons">
+            <button mat-raised-button color="primary" (click)="startRound1()">
+              <mat-icon>looks_one</mat-icon>
+              Start Round 1
+            </button>
+            <button mat-raised-button color="primary" (click)="startRound2()">
+              <mat-icon>looks_two</mat-icon>
+              Start Round 2
+            </button>
+            <button mat-raised-button color="accent" (click)="advanceRound()" [disabled]="!isRoundComplete()">
+              <mat-icon>skip_next</mat-icon>
+              Advance Round
+            </button>
+          </div>
+          @if (isRoundComplete()) {
+            <p class="round-complete-message">Round complete! Ready to advance.</p>
+          }
+        </mat-card-content>
+      </mat-card>
+
       <app-daily-double-wager></app-daily-double-wager>
+      <app-final-jeopardy></app-final-jeopardy>
+      <app-game-rules></app-game-rules>
       <app-buzzer-panel></app-buzzer-panel>
       <app-score-adjudication></app-score-adjudication>
     </div>

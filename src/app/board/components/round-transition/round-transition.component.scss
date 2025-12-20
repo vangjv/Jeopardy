@@ -1,0 +1,75 @@
+/**
+ * RoundTransitionComponent styles
+ * Optimized for 1080p+ displays with large, readable text
+ */
+
+.round-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #0c1445 0%, #1e3a8a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.transition-content {
+  text-align: center;
+  color: white;
+  animation: scaleIn 0.8s ease-out;
+}
+
+.round-title {
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #ffd700;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.round-subtitle {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 600;
+  margin: 2rem 0 0;
+  color: #e0e0e0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5),
+                 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+  to {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5),
+                 0 0 40px rgba(255, 215, 0, 0.8);
+  }
+}

@@ -1,0 +1,273 @@
+.final-jeopardy-display {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0c0e27 0%, #1a1d3a 100%);
+  color: white;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  overflow: hidden;
+}
+
+// Category Reveal Phase
+.category-reveal {
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+
+  .final-jeopardy-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: #fbbf24;
+    text-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+    margin-bottom: 3rem;
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  .category-name {
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #60a5fa;
+    text-transform: uppercase;
+    padding: 2rem 4rem;
+    background: rgba(96, 165, 250, 0.1);
+    border: 3px solid #60a5fa;
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(96, 165, 250, 0.3);
+  }
+
+  .instruction {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: #cbd5e1;
+    margin-top: 2rem;
+    font-style: italic;
+  }
+}
+
+// Clue Reveal Phase
+.clue-reveal {
+  text-align: center;
+  max-width: 90vw;
+  animation: fadeIn 1s ease-in;
+
+  .category-header {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #fbbf24;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 3rem;
+  }
+
+  .clue-text {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    line-height: 1.4;
+    color: white;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .instruction {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: #cbd5e1;
+    margin-top: 2rem;
+    font-style: italic;
+  }
+}
+
+// Results Display Phase
+.results-display {
+  width: 90vw;
+  max-width: 1400px;
+  animation: fadeIn 1s ease-in;
+
+  .category-header {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: #fbbf24;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .correct-response-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(96, 165, 250, 0.15);
+    border: 2px solid #60a5fa;
+    border-radius: 12px;
+
+    .correct-label {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      color: #93c5fd;
+      margin-bottom: 0.5rem;
+    }
+
+    .correct-text {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  .players-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .player-result {
+    background: rgba(255, 255, 255, 0.05);
+    border: 3px solid;
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+
+    .player-name {
+      font-size: clamp(1.2rem, 2.5vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .player-response,
+    .player-wager {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: #cbd5e1;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    .player-adjudication {
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      font-weight: 700;
+      text-align: center;
+      padding: 0.75rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+
+      &.correct {
+        background: rgba(16, 185, 129, 0.2);
+        color: #10b981;
+        border: 2px solid #10b981;
+      }
+
+      &.incorrect {
+        background: rgba(239, 68, 68, 0.2);
+        color: #ef4444;
+        border: 2px solid #ef4444;
+      }
+    }
+
+    .player-final-score {
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      font-weight: 700;
+      color: white;
+      text-align: center;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+// Winner Display
+.winner-display {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 10px 50px rgba(251, 191, 36, 0.5);
+  animation: scaleIn 0.8s ease-out, glow 2s ease-in-out infinite;
+
+  .winner-trophy {
+    font-size: clamp(4rem, 10vw, 8rem);
+    margin-bottom: 1rem;
+    animation: bounce 1s ease-in-out infinite;
+  }
+
+  .winner-text {
+    .winner-title {
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      font-weight: 900;
+      color: white;
+      letter-spacing: 0.2em;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .winner-name {
+      font-size: clamp(2rem, 6vw, 5rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .winner-score {
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 50px rgba(251, 191, 36, 0.8);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .players-results {
+    grid-template-columns: 1fr !important;
+  }
+
+  .category-reveal,
+  .clue-reveal {
+    padding: 1rem;
+  }
+}

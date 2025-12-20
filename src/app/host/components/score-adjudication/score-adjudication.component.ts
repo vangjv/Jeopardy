@@ -54,12 +54,18 @@ export class ScoreAdjudicationComponent implements OnInit {
   protected markCorrect(): void {
     const player = this.lockedPlayer();
     const clue = this.activeClue();
-    
+    const state = this.gameStateService.getCurrentState();
+
     if (!player || !clue) return;
 
     // Add points
     this.gameStateService.updatePlayerScore(player.id, clue.value);
-    
+
+    // T120: Auto-reveal correct response if rule is enabled
+    if (state.rules.showCorrectResponseOnBoard) {
+      this.gameStateService.revealCorrectResponse();
+    }
+
     // Close clue and reset buzzer
     this.gameStateService.clearActiveClue();
     this.gameStateService.resetBuzz();
@@ -72,7 +78,7 @@ export class ScoreAdjudicationComponent implements OnInit {
     const player = this.lockedPlayer();
     const clue = this.activeClue();
     const state = this.gameStateService.getCurrentState();
-    
+
     if (!player || !clue) return;
 
     // Subtract points if rule is enabled

@@ -172,17 +172,17 @@
 
 ### Implementation for User Story 5
 
-- [ ] T082 [P] [US5] Add round transition UI controls in HostComponent (Start Round 1, Start Round 2)
-- [ ] T083 [P] [US5] Create RoundTransitionComponent for round change display in src/app/board/components/round-transition/round-transition.component.ts
-- [ ] T084 [US5] Implement GameStateService.startRound(roundType) method to transition rounds
-- [ ] T085 [US5] Implement round completion detection in GameStateService.isRoundComplete()
-- [ ] T086 [US5] Load Round 2 categories and clues from gameSet.round2 in GameStateService
-- [ ] T087 [US5] Update ClueBoardComponent to display current round's categories and values
-- [ ] T088 [US5] Handle doubled values (400-2000) for Round 2 in ClueBoardComponent
-- [ ] T089 [US5] Broadcast ROUND_CHANGED sync event in SyncService
-- [ ] T090 [US5] Subscribe to onRoundChanged() in BoardComponent to update display
-- [ ] T091 [US5] Reset usedClueIds when transitioning rounds in GameStateService
-- [ ] T092 [US5] Add visual round indicator (Round 1 / Double Jeopardy) in BoardComponent header
+- [X] T082 [P] [US5] Add round transition UI controls in HostComponent (Start Round 1, Start Round 2)
+- [X] T083 [P] [US5] Create RoundTransitionComponent for round change display in src/app/board/components/round-transition/round-transition.component.ts
+- [X] T084 [US5] Implement GameStateService.startRound(roundType) method to transition rounds
+- [X] T085 [US5] Implement round completion detection in GameStateService.isRoundComplete()
+- [X] T086 [US5] Load Round 2 categories and clues from gameSet.round2 in GameStateService
+- [X] T087 [US5] Update ClueBoardComponent to display current round's categories and values
+- [X] T088 [US5] Handle doubled values (400-2000) for Round 2 in ClueBoardComponent
+- [X] T089 [US5] Broadcast ROUND_CHANGED sync event in SyncService
+- [X] T090 [US5] Subscribe to onRoundChanged() in BoardComponent to update display
+- [X] T091 [US5] Reset usedClueIds when transitioning rounds in GameStateService
+- [X] T092 [US5] Add visual round indicator (Round 1 / Double Jeopardy) in BoardComponent header
 
 **Checkpoint**: Multiple rounds working - game now supports full 2-round progression
 
@@ -196,26 +196,26 @@
 
 ### Implementation for User Story 6
 
-- [ ] T093 [P] [US6] Create FinalJeopardyComponent for Final Jeopardy orchestration in src/app/host/components/final-jeopardy/final-jeopardy.component.ts
-- [ ] T094 [P] [US6] Create FinalJeopardyDisplayComponent for board display in src/app/board/components/final-jeopardy-display/final-jeopardy-display.component.ts
-- [ ] T095 [US6] Implement GameStateService.startFinalJeopardy() to transition to final-category phase
-- [ ] T096 [US6] Load Final Jeopardy category and clue from gameSet.final in GameStateService
-- [ ] T097 [US6] Implement wager collection UI in FinalJeopardyComponent (one input per contestant)
-- [ ] T098 [US6] Implement wager validation in ValidationService.validateFinalWager() (0 to player score)
-- [ ] T099 [US6] Wire wagers to GameStateService.setFinalWager(playerId, wager) in FinalJeopardyComponent
-- [ ] T100 [US6] Implement phase transitions: final-category → final-wager → final-clue → final-response → final-reveal
-- [ ] T101 [US6] Add response input fields in FinalJeopardyComponent for collecting contestant responses
-- [ ] T102 [US6] Wire responses to GameStateService.setFinalResponse(playerId, response) in FinalJeopardyComponent
-- [ ] T103 [US6] Implement adjudication UI in FinalJeopardyComponent (correct/incorrect per contestant)
-- [ ] T104 [US6] Wire adjudication to GameStateService.adjudicateFinalResponse(playerId, correct) in FinalJeopardyComponent
-- [ ] T105 [US6] Calculate final scores and determine winner in GameStateService.getWinner()
-- [ ] T106 [US6] Broadcast FINAL_PHASE_CHANGED sync events in SyncService for each Final Jeopardy phase
-- [ ] T107 [US6] Subscribe to onFinalPhaseChanged() in BoardComponent to update Final Jeopardy display
-- [ ] T108 [US6] Display category reveal in FinalJeopardyDisplayComponent
-- [ ] T109 [US6] Display final clue in FinalJeopardyDisplayComponent (hide responses until reveal)
-- [ ] T110 [US6] Implement final reveal display showing responses, wagers, and winner in FinalJeopardyDisplayComponent
-- [ ] T111 [US6] Broadcast WINNER_ANNOUNCED sync event in SyncService
-- [ ] T112 [US6] Subscribe to onWinnerAnnounced() in BoardComponent to highlight winner
+- [X] T093 [P] [US6] Create FinalJeopardyComponent for Final Jeopardy orchestration in src/app/host/components/final-jeopardy/final-jeopardy.component.ts
+- [X] T094 [P] [US6] Create FinalJeopardyDisplayComponent for board display in src/app/board/components/final-jeopardy-display/final-jeopardy-display.component.ts
+- [X] T095 [US6] Implement GameStateService.startFinalJeopardy() to transition to final-category phase
+- [X] T096 [US6] Load Final Jeopardy category and clue from gameSet.final in GameStateService
+- [X] T097 [US6] Implement wager collection UI in FinalJeopardyComponent (one input per contestant)
+- [X] T098 [US6] Implement wager validation in ValidationService.validateFinalWager() (0 to player score)
+- [X] T099 [US6] Wire wagers to GameStateService.setFinalWager(playerId, wager) in FinalJeopardyComponent
+- [X] T100 [US6] Implement phase transitions: final-category → final-wager → final-clue → final-response → final-reveal
+- [X] T101 [US6] Add response input fields in FinalJeopardyComponent for collecting contestant responses
+- [X] T102 [US6] Wire responses to GameStateService.setFinalResponse(playerId, response) in FinalJeopardyComponent
+- [X] T103 [US6] Implement adjudication UI in FinalJeopardyComponent (correct/incorrect per contestant)
+- [X] T104 [US6] Wire adjudication to GameStateService.adjudicateFinalResponse(playerId, correct) in FinalJeopardyComponent
+- [X] T105 [US6] Calculate final scores and determine winner in GameStateService.getWinner()
+- [X] T106 [US6] Broadcast FINAL_PHASE_CHANGED sync events in SyncService for each Final Jeopardy phase
+- [X] T107 [US6] Subscribe to onFinalPhaseChanged() in BoardComponent to update Final Jeopardy display
+- [X] T108 [US6] Display category reveal in FinalJeopardyDisplayComponent
+- [X] T109 [US6] Display final clue in FinalJeopardyDisplayComponent (hide responses until reveal)
+- [X] T110 [US6] Implement final reveal display showing responses, wagers, and winner in FinalJeopardyDisplayComponent
+- [X] T111 [US6] Broadcast WINNER_ANNOUNCED sync event in SyncService
+- [X] T112 [US6] Subscribe to onWinnerAnnounced() in BoardComponent to highlight winner
 
 **Checkpoint**: Full game now playable from setup through Final Jeopardy with winner determination
 
@@ -229,19 +229,19 @@
 
 ### Implementation for User Story 7
 
-- [ ] T113 [P] [US7] Create GameRulesComponent for rules configuration in src/app/host/components/game-rules/game-rules.component.ts
-- [ ] T114 [US7] Add rules configuration UI in GameRulesComponent (toggles for each rule setting)
-- [ ] T115 [US7] Implement GameStateService.updateRules(rules) to modify game configuration
-- [ ] T116 [US7] Add wrongAnswerPenalty rule check in ScoreAdjudicationComponent (conditionally subtract points)
-- [ ] T117 [US7] Add lockoutWrongResponder rule check in ScoreAdjudicationComponent (conditionally add to lockouts)
-- [ ] T118 [US7] Add showWagersOnBoard rule check in DailyDoubleWagerComponent and FinalJeopardyComponent
-- [ ] T119 [US7] Conditionally display wagers on board in ClueDisplayComponent and FinalJeopardyDisplayComponent based on rules
-- [ ] T120 [US7] Add autoRevealResponse rule to automatically show correct response on adjudication
+- [X] T113 [P] [US7] Create GameRulesComponent for rules configuration in src/app/host/components/game-rules/game-rules.component.ts
+- [X] T114 [US7] Add rules configuration UI in GameRulesComponent (toggles for each rule setting)
+- [X] T115 [US7] Implement GameStateService.updateRules(rules) to modify game configuration
+- [X] T116 [US7] Add wrongAnswerPenalty rule check in ScoreAdjudicationComponent (conditionally subtract points)
+- [X] T117 [US7] Add lockoutWrongResponder rule check in ScoreAdjudicationComponent (conditionally add to lockouts)
+- [X] T118 [US7] Add showWagersOnBoard rule check in DailyDoubleWagerComponent and FinalJeopardyComponent
+- [X] T119 [US7] Conditionally display wagers on board in ClueDisplayComponent and FinalJeopardyDisplayComponent based on rules
+- [X] T120 [US7] Add autoRevealResponse rule to automatically show correct response on adjudication
 - [ ] T121 [US7] Add buzzerTimerSeconds rule with countdown display in BuzzerPanelComponent (optional)
 - [ ] T122 [US7] Add responseTimerSeconds rule with countdown display (optional)
-- [ ] T123 [US7] Implement GameRules persistence to localStorage in GameStateService.saveRules() with JSON serialization
-- [ ] T124 [US7] Implement GameRules loading from localStorage in GameStateService.loadRules() on app initialization
-- [ ] T124a [US7] Wire rules loading to HostComponent.ngOnInit() to restore saved preferences
+- [X] T123 [US7] Implement GameRules persistence to localStorage in GameStateService.saveRules() with JSON serialization
+- [X] T124 [US7] Implement GameRules loading from localStorage in GameStateService.loadRules() on app initialization
+- [X] T124a [US7] Wire rules loading to HostComponent.ngOnInit() to restore saved preferences
 
 **Checkpoint**: Game rules fully configurable - system adaptable to different gameplay styles
 

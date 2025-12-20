@@ -1,6 +1,8 @@
 {
+  "id": "sample-game-001",
   "title": "Sample Jeopardy Game",
-  "description": "A sample game for testing the Jeopardy application",
+  "author": "Jeopardy App Team",
+  "createdAt": "2025-12-14T00:00:00Z",
   "round1": {
     "categories": [
       {
@@ -11,31 +13,36 @@
             "id": "clue-1-1-1",
             "clueText": "This is the capital of France",
             "correctResponse": "What is Paris?",
-            "value": 200
+            "value": 200,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-1-2",
             "clueText": "This mountain range separates Europe from Asia",
             "correctResponse": "What are the Urals?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-1-3",
             "clueText": "The longest river in the world",
             "correctResponse": "What is the Nile?",
-            "value": 600
+            "value": 600,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-1-4",
             "clueText": "This country has the most time zones",
             "correctResponse": "What is France?",
-            "value": 800
+            "value": 800,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-1-5",
             "clueText": "The deepest ocean trench",
             "correctResponse": "What is the Mariana Trench?",
-            "value": 1000
+            "value": 1000,
+            "dailyDouble": false
           }
         ]
       },
@@ -47,13 +54,15 @@
             "id": "clue-1-2-1",
             "clueText": "The chemical symbol for gold",
             "correctResponse": "What is Au?",
-            "value": 200
+            "value": 200,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-2-2",
             "clueText": "The speed of light in a vacuum",
             "correctResponse": "What is 299,792,458 meters per second?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-2-3",
@@ -66,13 +75,15 @@
             "id": "clue-1-2-4",
             "clueText": "The powerhouse of the cell",
             "correctResponse": "What is the mitochondria?",
-            "value": 800
+            "value": 800,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-2-5",
             "clueText": "Einstein's famous equation",
             "correctResponse": "What is E=mc²?",
-            "value": 1000
+            "value": 1000,
+            "dailyDouble": false
           }
         ]
       },
@@ -84,31 +95,36 @@
             "id": "clue-1-3-1",
             "clueText": "Year the Declaration of Independence was signed",
             "correctResponse": "What is 1776?",
-            "value": 200
+            "value": 200,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-3-2",
             "clueText": "The first President of the United States",
             "correctResponse": "Who is George Washington?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-3-3",
             "clueText": "The year World War II ended",
             "correctResponse": "What is 1945?",
-            "value": 600
+            "value": 600,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-3-4",
             "clueText": "The ancient wonder still standing today",
             "correctResponse": "What is the Great Pyramid of Giza?",
-            "value": 800
+            "value": 800,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-3-5",
             "clueText": "The year the Berlin Wall fell",
             "correctResponse": "What is 1989?",
-            "value": 1000
+            "value": 1000,
+            "dailyDouble": false
           }
         ]
       },
@@ -120,31 +136,36 @@
             "id": "clue-1-4-1",
             "clueText": "Author of 'Romeo and Juliet'",
             "correctResponse": "Who is William Shakespeare?",
-            "value": 200
+            "value": 200,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-4-2",
             "clueText": "The boy wizard who attended Hogwarts",
             "correctResponse": "Who is Harry Potter?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-4-3",
             "clueText": "The author of '1984' and 'Animal Farm'",
             "correctResponse": "Who is George Orwell?",
-            "value": 600
+            "value": 600,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-4-4",
             "clueText": "The epic poem about Odysseus' journey home",
             "correctResponse": "What is The Odyssey?",
-            "value": 800
+            "value": 800,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-4-5",
             "clueText": "The author of 'To Kill a Mockingbird'",
             "correctResponse": "Who is Harper Lee?",
-            "value": 1000
+            "value": 1000,
+            "dailyDouble": false
           }
         ]
       },
@@ -156,31 +177,36 @@
             "id": "clue-1-5-1",
             "clueText": "The number of players on a basketball team",
             "correctResponse": "What is 5?",
-            "value": 200
+            "value": 200,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-5-2",
             "clueText": "The sport associated with Wimbledon",
             "correctResponse": "What is tennis?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-5-3",
             "clueText": "The only sport played on the moon",
             "correctResponse": "What is golf?",
-            "value": 600
+            "value": 600,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-5-4",
             "clueText": "The country that won the 2018 FIFA World Cup",
             "correctResponse": "What is France?",
-            "value": 800
+            "value": 800,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-5-5",
             "clueText": "The record for most Olympic gold medals",
             "correctResponse": "Who is Michael Phelps?",
-            "value": 1000
+            "value": 1000,
+            "dailyDouble": false
           }
         ]
       },
@@ -192,31 +218,36 @@
             "id": "clue-1-6-1",
             "clueText": "The company that created the iPhone",
             "correctResponse": "What is Apple?",
-            "value": 200
+            "value": 200,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-6-2",
             "clueText": "WWW stands for this",
             "correctResponse": "What is World Wide Web?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-6-3",
             "clueText": "The social media platform with a bird logo",
             "correctResponse": "What is Twitter (or X)?",
-            "value": 600
+            "value": 600,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-6-4",
             "clueText": "The year the first iPhone was released",
             "correctResponse": "What is 2007?",
-            "value": 800
+            "value": 800,
+            "dailyDouble": false
           },
           {
             "id": "clue-1-6-5",
             "clueText": "The founder of Microsoft",
             "correctResponse": "Who is Bill Gates?",
-            "value": 1000
+            "value": 1000,
+            "dailyDouble": false
           }
         ]
       }
@@ -232,7 +263,8 @@
             "id": "clue-2-1-1",
             "clueText": "The 1994 film about a man with a low IQ who becomes a shrimp boat captain",
             "correctResponse": "What is Forrest Gump?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-1-2",
@@ -245,19 +277,22 @@
             "id": "clue-2-1-3",
             "clueText": "The director of 'Inception' and 'The Dark Knight'",
             "correctResponse": "Who is Christopher Nolan?",
-            "value": 1200
+            "value": 1200,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-1-4",
             "clueText": "The actor who played Iron Man in the MCU",
             "correctResponse": "Who is Robert Downey Jr.?",
-            "value": 1600
+            "value": 1600,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-1-5",
             "clueText": "The film that won Best Picture at the 2020 Oscars",
             "correctResponse": "What is Parasite?",
-            "value": 2000
+            "value": 2000,
+            "dailyDouble": false
           }
         ]
       },
@@ -269,31 +304,36 @@
             "id": "clue-2-2-1",
             "clueText": "The 'King of Pop'",
             "correctResponse": "Who is Michael Jackson?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-2-2",
             "clueText": "The band with members John, Paul, George, and Ringo",
             "correctResponse": "Who are The Beatles?",
-            "value": 800
+            "value": 800,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-2-3",
             "clueText": "The music festival held in 1969 in upstate New York",
             "correctResponse": "What is Woodstock?",
-            "value": 1200
+            "value": 1200,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-2-4",
             "clueText": "The artist with the most Grammy Awards",
             "correctResponse": "Who is Beyoncé?",
-            "value": 1600
+            "value": 1600,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-2-5",
             "clueText": "The classical composer who was deaf",
             "correctResponse": "Who is Ludwig van Beethoven?",
-            "value": 2000
+            "value": 2000,
+            "dailyDouble": false
           }
         ]
       },
@@ -305,19 +345,22 @@
             "id": "clue-2-3-1",
             "clueText": "The main ingredient in guacamole",
             "correctResponse": "What is avocado?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-3-2",
             "clueText": "The country where sushi originated",
             "correctResponse": "What is Japan?",
-            "value": 800
+            "value": 800,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-3-3",
             "clueText": "The most expensive spice by weight",
             "correctResponse": "What is saffron?",
-            "value": 1200
+            "value": 1200,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-3-4",
@@ -330,7 +373,8 @@
             "id": "clue-2-3-5",
             "clueText": "The chef with the most Michelin stars",
             "correctResponse": "Who is Alain Ducasse?",
-            "value": 2000
+            "value": 2000,
+            "dailyDouble": false
           }
         ]
       },
@@ -342,31 +386,36 @@
             "id": "clue-2-4-1",
             "clueText": "The largest land animal",
             "correctResponse": "What is the African elephant?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-4-2",
             "clueText": "The fastest land animal",
             "correctResponse": "What is the cheetah?",
-            "value": 800
+            "value": 800,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-4-3",
             "clueText": "The only mammal capable of true flight",
             "correctResponse": "What is the bat?",
-            "value": 1200
+            "value": 1200,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-4-4",
             "clueText": "The bird that can fly backwards",
             "correctResponse": "What is the hummingbird?",
-            "value": 1600
+            "value": 1600,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-4-5",
             "clueText": "The animal with the longest lifespan",
             "correctResponse": "What is the Greenland shark?",
-            "value": 2000
+            "value": 2000,
+            "dailyDouble": false
           }
         ]
       },
@@ -378,31 +427,36 @@
             "id": "clue-2-5-1",
             "clueText": "The artist who painted the Mona Lisa",
             "correctResponse": "Who is Leonardo da Vinci?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-5-2",
             "clueText": "The Dutch painter who cut off his own ear",
             "correctResponse": "Who is Vincent van Gogh?",
-            "value": 800
+            "value": 800,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-5-3",
             "clueText": "The Spanish painter famous for cubism",
             "correctResponse": "Who is Pablo Picasso?",
-            "value": 1200
+            "value": 1200,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-5-4",
             "clueText": "The ceiling Michelangelo painted",
             "correctResponse": "What is the Sistine Chapel?",
-            "value": 1600
+            "value": 1600,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-5-5",
             "clueText": "The museum that houses the Mona Lisa",
             "correctResponse": "What is the Louvre?",
-            "value": 2000
+            "value": 2000,
+            "dailyDouble": false
           }
         ]
       },
@@ -414,42 +468,52 @@
             "id": "clue-2-6-1",
             "clueText": "The first man on the moon",
             "correctResponse": "Who is Neil Armstrong?",
-            "value": 400
+            "value": 400,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-6-2",
             "clueText": "The planet known as the Red Planet",
             "correctResponse": "What is Mars?",
-            "value": 800
+            "value": 800,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-6-3",
             "clueText": "The year Pluto was reclassified as a dwarf planet",
             "correctResponse": "What is 2006?",
-            "value": 1200
+            "value": 1200,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-6-4",
             "clueText": "The galaxy that contains our solar system",
             "correctResponse": "What is the Milky Way?",
-            "value": 1600
+            "value": 1600,
+            "dailyDouble": false
           },
           {
             "id": "clue-2-6-5",
             "clueText": "The telescope launched in 1990 that revolutionized astronomy",
             "correctResponse": "What is the Hubble Space Telescope?",
-            "value": 2000
+            "value": 2000,
+            "dailyDouble": false
           }
         ]
       }
     ]
   },
   "final": {
-    "category": "U.S. Presidents",
-    "clue": {
-      "id": "final-clue",
-      "clueText": "This president served the shortest term, dying just 31 days after his inauguration",
-      "correctResponse": "Who is William Henry Harrison?"
+    "category": {
+      "id": "final-category",
+      "title": "U.S. Presidents",
+      "clue": {
+        "id": "final-clue",
+        "clueText": "This president served the shortest term, dying just 31 days after his inauguration",
+        "correctResponse": "Who is William Henry Harrison?",
+        "value": 1,
+        "dailyDouble": false
+      }
     }
   }
 }

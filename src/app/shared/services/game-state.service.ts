@@ -23,6 +23,9 @@ interface ISyncService {
   broadcastBuzzReset(): void;
   broadcastScoresUpdated(players: Player[]): void;
   broadcastDailyDoubleWager(wager: number, playerId: string, playerName: string): void;
+  broadcastRoundChanged(round: RoundType): void; // T089
+  broadcastFinalPhaseChanged(phase: string, data?: any): void; // T106
+  broadcastWinnerAnnounced(winnerId: string, winnerName: string, finalScore: number, allPlayers: Player[]): void; // T111
 }
 
 @Injectable({
@@ -89,15 +92,26 @@ export class GameStateService {
   /**
    * Update state and emit to subscribers
    */
-  private updateState(updater: (state: GameState) => Partial<GameState>): void {
+  private updateState(updater: (state: GameState) => Partial<GameState>, skipBroadcast: boolean = false): void {
     const currentState = this.getCurrentState();
     const updates = updater(currentState);
     const newState = { ...currentState, ...updates };
     this.stateSubject.next(newState);
-    
-    // Broadcast state sync if sync service is available (T042)
+
+    // Don't broadcast on every state change - only when explicitly needed
+    // State sync should only be sent when board requests it or on critical events
+    if (!skipBroadcast && this.syncService) {
+      // Removed automatic broadcast to avoid sending large GameSet repeatedly
+      // Individual events (clue selected, scores updated) are broadcast separately
+    }
+  }
+
+  /**
+   * Broadcast current state to board (used for board reconnection)
+   */
+  syncStateToBoard(): void {
     if (this.syncService) {
-      this.syncService.broadcastStateSync(newState);
+      this.syncService.broadcastStateSync(this.getCurrentState());
     }
   }
 
@@ -132,23 +146,33 @@ export class GameStateService {
       finalJeopardyState: null,
       rules: { ...DEFAULT_GAME_RULES, ...rules },
       winnerId: null,
-    }));
+    }), true); // Skip broadcast in updateState
+
+    // Broadcast state sync immediately after initialization
+    // This ensures board gets the update without waiting for BOARD_READY
+    this.syncStateToBoard();
   }
 
   /**
-   * Start a specific round
+   * Start a specific round (T084, T086, T089, T091)
    */
   startRound(round: RoundType): void {
     this.updateState(() => ({
       phase: round as GamePhase,
       currentRound: round,
-      usedClueIds: new Set<string>(),
+      usedClueIds: new Set<string>(), // T091: Reset usedClueIds when transitioning rounds
       activeClue: null,
       buzzerEnabled: false,
       buzzLocked: false,
       lockedPlayerId: null,
       lockedOutPlayerIds: new Set<string>(),
-    }));
+    }), true); // Skip broadcast in updateState
+
+    // T089: Broadcast ROUND_CHANGED sync event and full state
+    if (this.syncService) {
+      this.syncService.broadcastRoundChanged(round);
+      this.syncStateToBoard(); // Send full state so board can display new round
+    }
   }
 
   /**
@@ -183,17 +207,17 @@ export class GameStateService {
   addPlayer(playerData: Omit<Player, 'id'>): string {
     const playerId = generateUUID();
     const player: Player = { id: playerId, ...playerData };
-    
+
     const state = this.getCurrentState();
     const players = [...state.players, player];
-    
+
     this.updateState(() => ({ players }));
-    
+
     // Set as control player if first player
     if (players.length === 1) {
       this.setControlPlayer(playerId);
     }
-    
+
     return playerId;
   }
 
@@ -203,14 +227,14 @@ export class GameStateService {
   removePlayer(playerId: string): void {
     const state = this.getCurrentState();
     const players = state.players.filter(p => p.id !== playerId);
-    
+
     let updates: Partial<GameState> = { players };
-    
+
     // Update control player if removed
     if (state.controlPlayerId === playerId) {
       updates.controlPlayerId = players[0]?.id || null;
     }
-    
+
     this.updateState(() => updates);
   }
 
@@ -219,7 +243,7 @@ export class GameStateService {
    */
   updatePlayer(playerId: string, updates: Partial<Omit<Player, 'id'>>): void {
     const state = this.getCurrentState();
-    const players = state.players.map(p => 
+    const players = state.players.map(p =>
       p.id === playerId ? { ...p, ...updates } : p
     );
     this.updateState(() => ({ players }));
@@ -230,7 +254,7 @@ export class GameStateService {
    */
   updatePlayerScore(playerId: string, delta: number): void {
     const state = this.getCurrentState();
-    const players = state.players.map(p => 
+    const players = state.players.map(p =>
       p.id === playerId ? { ...p, score: p.score + delta } : p
     );
     this.updateState(() => ({ players }));
@@ -246,7 +270,7 @@ export class GameStateService {
    */
   setPlayerScore(playerId: string, score: number): void {
     const state = this.getCurrentState();
-    const players = state.players.map(p => 
+    const players = state.players.map(p =>
       p.id === playerId ? { ...p, score } : p
     );
     this.updateState(() => ({ players }));
@@ -271,7 +295,7 @@ export class GameStateService {
    */
   selectClue(categoryId: string, clueId: string): void {
     const state = this.getCurrentState();
-    
+
     if (!state.gameSet) {
       console.error('No game set loaded');
       return;
@@ -292,7 +316,7 @@ export class GameStateService {
     // Find the clue
     let foundClue: Clue | null = null;
     let categoryTitle = '';
-    
+
     for (const category of round.categories) {
       if (category.id === categoryId) {
         categoryTitle = category.title;
@@ -314,7 +338,7 @@ export class GameStateService {
       isDailyDouble: foundClue.dailyDouble,
     };
 
-    this.updateState(() => ({ 
+    this.updateState(() => ({
       activeClue,
       buzzerEnabled: !foundClue!.dailyDouble, // Enable buzzer unless Daily Double
       buzzLocked: false,
@@ -342,7 +366,7 @@ export class GameStateService {
    * Clear active clue and return to board
    */
   clearActiveClue(): void {
-    this.updateState(() => ({ 
+    this.updateState(() => ({
       activeClue: null,
       buzzerEnabled: false,
       buzzLocked: false,
@@ -374,7 +398,7 @@ export class GameStateService {
    * Enable buzzer
    */
   enableBuzzer(): void {
-    this.updateState(() => ({ 
+    this.updateState(() => ({
       buzzerEnabled: true,
       buzzLocked: false,
       lockedPlayerId: null,
@@ -403,13 +427,13 @@ export class GameStateService {
    */
   lockBuzz(playerId: string, timestamp: number): void {
     const state = this.getCurrentState();
-    
+
     // Check if player is locked out
     if (state.lockedOutPlayerIds.has(playerId)) {
       return;
     }
-    
-    this.updateState(() => ({ 
+
+    this.updateState(() => ({
       buzzLocked: true,
       lockedPlayerId: playerId,
       buzzerEnabled: false,
@@ -428,7 +452,7 @@ export class GameStateService {
    * Reset buzz state
    */
   resetBuzz(): void {
-    this.updateState(() => ({ 
+    this.updateState(() => ({
       buzzLocked: false,
       lockedPlayerId: null,
       buzzerEnabled: true,
@@ -447,7 +471,7 @@ export class GameStateService {
     const state = this.getCurrentState();
     const lockedOutPlayerIds = new Set(state.lockedOutPlayerIds);
     lockedOutPlayerIds.add(playerId);
-    this.updateState(() => ({ 
+    this.updateState(() => ({
       lockedOutPlayerIds,
       buzzLocked: false,
       lockedPlayerId: null,
@@ -459,7 +483,7 @@ export class GameStateService {
    * Clear all lockouts
    */
   clearLockouts(): void {
-    this.updateState(() => ({ 
+    this.updateState(() => ({
       lockedOutPlayerIds: new Set<string>(),
     }));
   }
@@ -468,7 +492,7 @@ export class GameStateService {
    * Set locked-out players
    */
   setLockedOutPlayers(playerIds: Set<string>): void {
-    this.updateState(() => ({ 
+    this.updateState(() => ({
       lockedOutPlayerIds: playerIds,
     }));
   }
@@ -480,7 +504,7 @@ export class GameStateService {
    */
   setDailyDoubleWager(wager: number): void {
     const state = this.getCurrentState();
-    
+
     // Broadcast Daily Double wager event (T080) before state update to avoid race conditions
     if (this.syncService && state.controlPlayerId) {
       const player = state.players.find(p => p.id === state.controlPlayerId);
@@ -488,8 +512,8 @@ export class GameStateService {
         this.syncService.broadcastDailyDoubleWager(wager, player.id, player.name);
       }
     }
-    
-    this.updateState(() => ({ 
+
+    this.updateState(() => ({
       dailyDoubleWager: wager,
       buzzerEnabled: true, // Enable buzzer after wager set
     }));
@@ -578,7 +602,7 @@ export class GameStateService {
     // Apply score change based on wager
     const wager = state.finalJeopardyState.wagers.get(playerId) || 0;
     const scoreDelta = correct ? wager : -wager;
-    
+
     const updatedPlayers = players.map(p => {
       if (p.id === playerId) {
         return { ...p, score: p.score + scoreDelta };
@@ -591,8 +615,73 @@ export class GameStateService {
       finalJeopardyState: {
         ...state.finalJeopardyState!,
         adjudications,
+        phase: 'adjudication',
       },
     }));
+
+    // Broadcast scores updated (T055)
+    if (this.syncService) {
+      this.syncService.broadcastScoresUpdated(updatedPlayers);
+    }
+  }
+
+  /**
+   * Transition Final Jeopardy phase (T100)
+   */
+  transitionFinalPhase(phase: 'category-reveal' | 'wager-collection' | 'clue-reveal' | 'response-collection' | 'adjudication'): void {
+    const state = this.getCurrentState();
+    if (!state.finalJeopardyState) return;
+
+    this.updateState(() => ({
+      finalJeopardyState: {
+        ...state.finalJeopardyState!,
+        phase,
+      },
+    }));
+
+    // Broadcast Final phase changed (T106)
+    if (this.syncService) {
+      const data: any = {};
+      if (phase === 'category-reveal' && state.gameSet?.final?.category) {
+        data.category = state.gameSet.final.category.title;
+      } else if (phase === 'clue-reveal' && state.gameSet?.final?.category?.clue) {
+        data.clue = state.gameSet.final.category.clue.clueText;
+      } else if (phase === 'adjudication') {
+        if (state.rules.showWagersOnBoard) {
+          data.wagers = state.finalJeopardyState!.wagers;
+        }
+        if (state.rules.showResponsesOnBoard) {
+          data.responses = state.finalJeopardyState!.responses;
+        }
+        data.adjudications = state.finalJeopardyState!.adjudications;
+      }
+      this.syncService.broadcastFinalPhaseChanged(phase, data);
+    }
+  }
+
+  /**
+   * Determine winner and announce (T105, T111)
+   */
+  determineWinner(): void {
+    const state = this.getCurrentState();
+    const winner = getWinner(state.players);
+
+    if (winner) {
+      this.updateState(() => ({
+        winnerId: winner.id,
+        phase: 'complete',
+      }));
+
+      // Broadcast winner announced (T111)
+      if (this.syncService) {
+        this.syncService.broadcastWinnerAnnounced(
+          winner.id,
+          winner.name,
+          winner.score,
+          state.players
+        );
+      }
+    }
   }
 
   /**
@@ -663,7 +752,7 @@ export class GameStateService {
   importGameState(json: string): ValidationResult {
     try {
       const importedState = JSON.parse(json);
-      
+
       // Convert Arrays back to Sets
       const state: GameState = {
         ...importedState,
@@ -676,7 +765,7 @@ export class GameStateService {
           adjudications: new Map(importedState.finalJeopardyState.adjudications || []),
         } : null,
       };
-      
+
       this.stateSubject.next(state);
       return { valid: true, errors: [] };
     } catch (error) {
