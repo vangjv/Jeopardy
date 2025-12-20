@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { GameStateService } from '../shared/services/game-state.service';
 import { BuzzerService } from '../shared/services/buzzer.service';
 import { SyncService } from '../shared/services/sync.service';
@@ -16,6 +17,8 @@ import { BuzzerPanelComponent } from './components/buzzer-panel/buzzer-panel.com
 import { ScoreAdjudicationComponent } from './components/score-adjudication/score-adjudication.component';
 import { GameImportComponent } from './components/game-import/game-import.component';
 import { DailyDoubleWagerComponent } from './components/daily-double-wager/daily-double-wager.component';
+import { FinalJeopardyComponent } from './components/final-jeopardy/final-jeopardy.component';
+import { GameRulesComponent } from './components/game-rules/game-rules.component';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -25,12 +28,15 @@ import { Subscription } from 'rxjs';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatCardModule,
     PlayerSetupComponent,
     GameBoardControlComponent,
     BuzzerPanelComponent,
     ScoreAdjudicationComponent,
     GameImportComponent,
-    DailyDoubleWagerComponent
+    DailyDoubleWagerComponent,
+    FinalJeopardyComponent,
+    GameRulesComponent
   ],
   templateUrl: './host.component.html',
   styleUrl: './host.component.scss'
@@ -118,5 +124,33 @@ export class HostComponent implements OnInit, OnDestroy {
    */
   protected startGame(): void {
     this.gameStateService.startRound('round1');
+  }
+
+  /**
+   * T082: Start Round 1
+   */
+  protected startRound1(): void {
+    this.gameStateService.startRound('round1');
+  }
+
+  /**
+   * T082: Start Round 2 (Double Jeopardy)
+   */
+  protected startRound2(): void {
+    this.gameStateService.startRound('round2');
+  }
+
+  /**
+   * T082: Advance to next round
+   */
+  protected advanceRound(): void {
+    this.gameStateService.advanceRound();
+  }
+
+  /**
+   * T082: Check if current round is complete
+   */
+  protected isRoundComplete(): boolean {
+    return this.gameStateService.isRoundComplete();
   }
 }

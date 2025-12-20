@@ -1,0 +1,80 @@
+<div class="final-jeopardy-display">
+
+  <!-- Category Reveal Phase -->
+  @if (isCategoryReveal || isWagerCollection) {
+    <div class="category-reveal">
+      <div class="final-jeopardy-title">FINAL JEOPARDY</div>
+      <div class="category-name">{{ categoryTitle }}</div>
+      @if (isWagerCollection) {
+        <div class="instruction">Make your wagers...</div>
+      }
+    </div>
+  }
+
+  <!-- Clue Reveal Phase -->
+  @if (isClueReveal || isResponseCollection) {
+    <div class="clue-reveal">
+      <div class="category-header">{{ categoryTitle }}</div>
+      <div class="clue-text">{{ clueText }}</div>
+      @if (isResponseCollection) {
+        <div class="instruction">Write your responses...</div>
+      }
+    </div>
+  }
+
+  <!-- Adjudication/Results Phase -->
+  @if (isAdjudication) {
+    <div class="results-display">
+      <div class="category-header">{{ categoryTitle }}</div>
+
+      <div class="correct-response-section">
+        <div class="correct-label">Correct Response:</div>
+        <div class="correct-text">{{ correctResponse }}</div>
+      </div>
+
+      <div class="players-results">
+        @for (player of players; track player.id) {
+          <div class="player-result" [style.border-color]="player.color">
+            <div class="player-name" [style.color]="player.color">
+              {{ player.name }}
+            </div>
+
+            @if (showResponses && getPlayerResponse(player.id)) {
+              <div class="player-response">
+                Response: {{ getPlayerResponse(player.id) }}
+              </div>
+            }
+
+            @if (showWagers && getPlayerWager(player.id) !== undefined) {
+              <div class="player-wager">
+                Wager: ${{ getPlayerWager(player.id) }}
+              </div>
+            }
+
+            @if (getPlayerAdjudication(player.id) !== undefined) {
+              <div class="player-adjudication" [class.correct]="getPlayerAdjudication(player.id)" [class.incorrect]="!getPlayerAdjudication(player.id)">
+                {{ getPlayerAdjudication(player.id) ? '✓ CORRECT' : '✗ INCORRECT' }}
+              </div>
+            }
+
+            <div class="player-final-score">
+              Final Score: ${{ player.score }}
+            </div>
+          </div>
+        }
+      </div>
+
+      @if (winner) {
+        <div class="winner-display">
+          <div class="winner-trophy">🏆</div>
+          <div class="winner-text">
+            <div class="winner-title">CHAMPION</div>
+            <div class="winner-name" [style.color]="winner.color">{{ winner.name }}</div>
+            <div class="winner-score">${{ winner.score }}</div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+</div>

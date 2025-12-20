@@ -1,0 +1,221 @@
+<div class="game-rules-container">
+  <mat-card class="rules-card">
+    <mat-card-header>
+      <mat-card-title>
+        <mat-icon>settings</mat-icon>
+        Game Rules Configuration
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <!-- Scoring Rules -->
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>calculate</mat-icon>
+            Scoring Rules
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="rules-section">
+          <div class="rule-item">
+            <div class="rule-info">
+              <label>Wrong Answer Subtracts Value</label>
+              <p class="rule-description">Incorrect responses subtract the clue value from player's score</p>
+            </div>
+            <mat-slide-toggle
+              [(ngModel)]="rules.wrongAnswerSubtractsValue"
+              color="primary"
+            ></mat-slide-toggle>
+          </div>
+
+          <mat-divider></mat-divider>
+
+          <div class="rule-item">
+            <div class="rule-info">
+              <label>Allow Negative Scores</label>
+              <p class="rule-description">Players can have negative scores during gameplay</p>
+            </div>
+            <mat-slide-toggle
+              [(ngModel)]="rules.allowNegativeScores"
+              color="primary"
+            ></mat-slide-toggle>
+          </div>
+        </div>
+      </mat-expansion-panel>
+
+      <!-- Buzzer Rules -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>gamepad</mat-icon>
+            Buzzer Rules
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="rules-section">
+          <div class="rule-item">
+            <div class="rule-info">
+              <label>Lock Out Wrong Responder</label>
+              <p class="rule-description">Players who answer incorrectly cannot buzz again for the same clue</p>
+            </div>
+            <mat-slide-toggle
+              [(ngModel)]="rules.lockoutWrongResponder"
+              color="primary"
+            ></mat-slide-toggle>
+          </div>
+
+          <mat-divider></mat-divider>
+
+          <div class="rule-item">
+            <div class="rule-info">
+              <label>Buzzer Timeout (seconds)</label>
+              <p class="rule-description">Time limit for contestants to buzz in (0 or empty = no limit)</p>
+            </div>
+            <mat-form-field appearance="outline">
+              <input
+                matInput
+                type="number"
+                [ngModel]="rules.buzzerTimeoutSeconds"
+                (ngModelChange)="onBuzzerTimeoutChange($event)"
+                min="0"
+                placeholder="No limit"
+              />
+            </mat-form-field>
+          </div>
+
+          <mat-divider></mat-divider>
+
+          <div class="rule-item">
+            <div class="rule-info">
+              <label>Response Timeout (seconds)</label>
+              <p class="rule-description">Time limit for player to respond after buzzing in (0 or empty = no limit)</p>
+            </div>
+            <mat-form-field appearance="outline">
+              <input
+                matInput
+                type="number"
+                [ngModel]="rules.responseTimeoutSeconds"
+                (ngModelChange)="onResponseTimeoutChange($event)"
+                min="0"
+                placeholder="No limit"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-expansion-panel>
+
+      <!-- Display Rules -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>visibility</mat-icon>
+            Display Rules
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="rules-section">
+          <div class="rule-item">
+            <div class="rule-info">
+              <label>Show Correct Response on Board</label>
+              <p class="rule-description">Automatically display correct response to audience after adjudication</p>
+            </div>
+            <mat-slide-toggle
+              [(ngModel)]="rules.showCorrectResponseOnBoard"
+              color="primary"
+            ></mat-slide-toggle>
+          </div>
+
+          <mat-divider></mat-divider>
+
+          <div class="rule-item">
+            <div class="rule-info">
+              <label>Show Wagers on Board</label>
+              <p class="rule-description">Display Daily Double and Final Jeopardy wagers to audience</p>
+            </div>
+            <mat-slide-toggle
+              [(ngModel)]="rules.showWagersOnBoard"
+              color="primary"
+            ></mat-slide-toggle>
+          </div>
+
+          <mat-divider></mat-divider>
+
+          <div class="rule-item">
+            <div class="rule-info">
+              <label>Show Responses on Board (Final Jeopardy)</label>
+              <p class="rule-description">Display contestant responses to audience during Final Jeopardy reveal</p>
+            </div>
+            <mat-slide-toggle
+              [(ngModel)]="rules.showResponsesOnBoard"
+              color="primary"
+            ></mat-slide-toggle>
+          </div>
+        </div>
+      </mat-expansion-panel>
+
+      <!-- Board Value Configuration -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>attach_money</mat-icon>
+            Board Values
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="rules-section">
+          <div class="values-config">
+            <h4>Round 1 Values</h4>
+            <div class="value-inputs">
+              @for (value of rules.round1Values; track $index; let i = $index) {
+                <mat-form-field appearance="outline">
+                  <mat-label>Row {{ i + 1 }}</mat-label>
+                  <input
+                    matInput
+                    type="number"
+                    [(ngModel)]="rules.round1Values[i]"
+                    min="100"
+                    step="100"
+                  />
+                </mat-form-field>
+              }
+            </div>
+          </div>
+
+          <mat-divider></mat-divider>
+
+          <div class="values-config">
+            <h4>Round 2 (Double Jeopardy) Values</h4>
+            <div class="value-inputs">
+              @for (value of rules.round2Values; track $index; let i = $index) {
+                <mat-form-field appearance="outline">
+                  <mat-label>Row {{ i + 1 }}</mat-label>
+                  <input
+                    matInput
+                    type="number"
+                    [(ngModel)]="rules.round2Values[i]"
+                    min="100"
+                    step="100"
+                  />
+                </mat-form-field>
+              }
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="applyRules()">
+        <mat-icon>check</mat-icon>
+        Apply Rules
+      </button>
+      <button mat-button (click)="resetToDefaults()">
+        <mat-icon>restart_alt</mat-icon>
+        Reset to Defaults
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,194 @@
+<div class="final-jeopardy-container">
+  <mat-card class="final-jeopardy-card">
+    <mat-card-header>
+      <mat-card-title>
+        <mat-icon>emoji_events</mat-icon>
+        Final Jeopardy
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      @if (!gameState?.finalJeopardyState) {
+        <!-- Start Final Jeopardy -->
+        <div class="start-section">
+          <p>Ready to begin Final Jeopardy?</p>
+          <button mat-raised-button color="primary" (click)="startFinalJeopardy()">
+            Start Final Jeopardy
+          </button>
+        </div>
+      } @else {
+        <mat-vertical-stepper [linear]="true">
+
+          <!-- Step 1: Category Reveal -->
+          <mat-step [completed]="categoryRevealed">
+            <ng-template matStepLabel>Reveal Category</ng-template>
+            <div class="step-content">
+              <h3>Category: {{ finalCategory }}</h3>
+              @if (!categoryRevealed) {
+                <p>Click below to reveal category to contestants</p>
+                <button mat-raised-button color="primary" (click)="revealCategory()" matStepperNext>
+                  Reveal Category
+                </button>
+              }
+            </div>
+          </mat-step>
+
+          <!-- Step 2: Collect Wagers -->
+          <mat-step [completed]="wagersCollected">
+            <ng-template matStepLabel>Collect Wagers</ng-template>
+            <div class="step-content">
+              <form [formGroup]="wagerForm">
+                @for (player of gameState?.players || []; track player.id) {
+                  <mat-form-field appearance="outline" class="wager-field">
+                    <mat-label>{{ player.name }} Wager (Max: ${{ getMaxWager(player) }})</mat-label>
+                    <input
+                      matInput
+                      type="number"
+                      [formControlName]="player.id"
+                      [min]="0"
+                      [max]="getMaxWager(player)"
+                    />
+                    <mat-hint>Score: ${{ player.score }}</mat-hint>
+                    @if (wagerForm.get(player.id)?.invalid && wagerForm.get(player.id)?.touched) {
+                      <mat-error>Invalid wager (0 to {{ getMaxWager(player) }})</mat-error>
+                    }
+                  </mat-form-field>
+                }
+              </form>
+              @if (!wagersCollected) {
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="collectWagers()"
+                  matStepperNext
+                  [disabled]="wagerForm.invalid"
+                >
+                  Confirm Wagers
+                </button>
+              }
+            </div>
+          </mat-step>
+
+          <!-- Step 3: Reveal Clue -->
+          <mat-step [completed]="clueRevealed">
+            <ng-template matStepLabel>Reveal Clue</ng-template>
+            <div class="step-content">
+              <div class="clue-section">
+                <h4>{{ finalCategory }}</h4>
+                <p class="clue-text">{{ finalClue }}</p>
+              </div>
+              @if (!clueRevealed) {
+                <button mat-raised-button color="primary" (click)="revealClue()" matStepperNext>
+                  Reveal Clue
+                </button>
+              }
+            </div>
+          </mat-step>
+
+          <!-- Step 4: Collect Responses -->
+          <mat-step [completed]="responsesCollected">
+            <ng-template matStepLabel>Collect Responses</ng-template>
+            <div class="step-content">
+              <form [formGroup]="responseForm">
+                @for (player of gameState?.players || []; track player.id) {
+                  <mat-form-field appearance="outline" class="response-field">
+                    <mat-label>{{ player.name }}'s Response</mat-label>
+                    <input
+                      matInput
+                      type="text"
+                      [formControlName]="player.id"
+                    />
+                  </mat-form-field>
+                }
+              </form>
+              @if (!responsesCollected) {
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="collectResponses()"
+                  matStepperNext
+                  [disabled]="responseForm.invalid"
+                >
+                  Confirm Responses
+                </button>
+              }
+            </div>
+          </mat-step>
+
+          <!-- Step 5: Adjudicate -->
+          <mat-step>
+            <ng-template matStepLabel>Adjudicate & Reveal</ng-template>
+            <div class="step-content">
+              <div class="correct-response-section">
+                <h4>Correct Response:</h4>
+                <p class="correct-response">{{ correctResponse }}</p>
+              </div>
+
+              <div class="adjudication-section">
+                @for (player of gameState?.players || []; track player.id) {
+                  <div class="player-adjudication">
+                    <h5>{{ player.name }}</h5>
+                    <p><strong>Response:</strong> {{ responseForm.get(player.id)?.value }}</p>
+                    <p><strong>Wager:</strong> ${{ wagerForm.get(player.id)?.value }}</p>
+
+                    <div class="adjudication-buttons">
+                      <button
+                        mat-raised-button
+                        color="primary"
+                        (click)="adjudicateResponse(player.id, true)"
+                        [disabled]="isAdjudicated(player.id)"
+                      >
+                        <mat-icon>check_circle</mat-icon>
+                        Correct
+                      </button>
+                      <button
+                        mat-raised-button
+                        color="warn"
+                        (click)="adjudicateResponse(player.id, false)"
+                        [disabled]="isAdjudicated(player.id)"
+                      >
+                        <mat-icon>cancel</mat-icon>
+                        Incorrect
+                      </button>
+                    </div>
+
+                    @if (isAdjudicated(player.id)) {
+                      <p class="adjudication-result">
+                        <mat-icon [class.correct]="getAdjudicationResult(player.id)" [class.incorrect]="!getAdjudicationResult(player.id)">
+                          {{ getAdjudicationResult(player.id) ? 'check_circle' : 'cancel' }}
+                        </mat-icon>
+                        {{ getAdjudicationResult(player.id) ? 'Correct' : 'Incorrect' }}
+                      </p>
+                    }
+
+                    <p><strong>Final Score:</strong> ${{ player.score }}</p>
+                  </div>
+                }
+              </div>
+
+              @if (winner) {
+                <div class="winner-announcement">
+                  <h2>
+                    <mat-icon>emoji_events</mat-icon>
+                    Winner: {{ winner.name }}
+                  </h2>
+                  <p class="winner-score">Final Score: ${{ winner.score }}</p>
+                </div>
+              }
+
+              <button
+                mat-raised-button
+                color="accent"
+                (click)="revealResults()"
+                [disabled]="!winner"
+              >
+                Show Winner on Board
+              </button>
+            </div>
+          </mat-step>
+
+        </mat-vertical-stepper>
+      }
+    </mat-card-content>
+  </mat-card>
+</div>
