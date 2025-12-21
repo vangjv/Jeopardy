@@ -1,24 +1,24 @@
 .game-board-control {
   margin: 1rem;
-  
+
   .no-game {
     color: var(--mat-sys-on-surface-variant, #666);
     font-style: italic;
     margin: 1rem 0;
   }
-  
+
   .board-grid {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    
+
     .category-row,
     .clue-row {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 0.5rem;
     }
-    
+
     .category-header {
       background: var(--mat-sys-primary, #1976d2);
       color: var(--mat-sys-on-primary, white);
@@ -32,7 +32,7 @@
       align-items: center;
       justify-content: center;
     }
-    
+
     .clue-cell {
       position: relative;
       min-height: 60px;
@@ -40,17 +40,17 @@
       font-weight: 600;
       background-color: var(--mat-sys-primary, #1976d2);
       color: var(--mat-sys-on-primary, #ffffff);
-      
+
       &.used {
         opacity: 0.6;
         cursor: not-allowed;
         background-color: #e0e0e0;
         color: #757575;
       }
-      
+
       &.daily-double:not(.used) {
         border: 2px solid gold;
-        
+
         .dd-indicator {
           position: absolute;
           top: 2px;
@@ -60,7 +60,7 @@
           font-weight: bold;
         }
       }
-      
+
       .value {
         display: block;
       }
