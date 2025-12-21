@@ -33,14 +33,31 @@
     }
   }
 
+  .host-shell {
+    flex: 1;
+    display: flex;
+    min-height: 0;
+    width: 100%;
+
+    .mat-drawer-content {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
   .session-bar {
     position: sticky;
-    top: 64px;
+    top: 0;
     z-index: 11;
     background: rgba(12, 18, 36, 0.94);
     backdrop-filter: blur(6px);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 0.65rem 1.25rem;
+    padding: 0.5rem 1rem;
     color: #e2e8f0;
 
     .session-actions {
@@ -49,6 +66,19 @@
       justify-content: space-between;
       gap: 1rem;
       flex-wrap: wrap;
+    }
+
+    .audio-group {
+      .button-row {
+        button {
+          background: #0f172a !important;
+          border-color: #0f172a !important;
+
+          &:hover:not([disabled]) {
+            background: #11182e !important;
+          }
+        }
+      }
     }
 
     .action-group {
@@ -111,15 +141,16 @@
   .host-content {
     flex: 1;
     display: grid;
-    grid-template-columns: 500px 1fr;
-    gap: 0;
+    grid-template-columns: minmax(340px, 420px) minmax(0, 1fr);
+    gap: 1rem;
     min-height: 0;
+    padding: 0 0.75rem 1rem;
 
     .left-column {
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
-      padding: 1.25rem;
+      gap: 1rem;
+      padding: 1rem 0.75rem 1rem 0.75rem;
       overflow-y: auto;
       background: #f8fafc;
       border-right: 1px solid #e2e8f0;
@@ -306,15 +337,27 @@
     .right-column {
       overflow-y: auto;
       background: linear-gradient(180deg, #edf2f7 0%, #e2e8f0 100%);
-      padding: 1.5rem;
+      padding: 0.75rem 1rem 1.25rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
+      min-width: 0;
 
       app-game-board-control {
         width: 100%;
-        max-width: 1280px;
+        max-width: none;
+        flex: 1;
+        min-width: 0;
       }
     }
+  }
+
+  .sound-drawer {
+    width: 380px;
+    max-width: 90vw;
+    padding-top: 1rem;
+    background: #f8fafc;
+    border-left: 1px solid #e2e8f0;
+    box-shadow: -4px 0 18px rgba(15, 23, 42, 0.1);
   }
 }

@@ -1,0 +1,26 @@
+<div class="soundboard">
+  <div class="header">
+    <div class="title-block">
+      <p class="eyebrow">Audio cues</p>
+      <h3>Soundboard</h3>
+    </div>
+    <button mat-icon-button color="primary" aria-label="Close soundboard" (click)="closePanel()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <p class="hint">Select a sound to stop any other playback and start the chosen cue.</p>
+
+  <div class="sound-grid">
+    <button
+      *ngFor="let sound of sounds"
+      mat-stroked-button
+      color="primary"
+      class="sound-button"
+      (click)="play(sound)"
+    >
+      <mat-icon>music_note</mat-icon>
+      <span>{{ sound.label }}</span>
+    </button>
+  </div>
+</div>

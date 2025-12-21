@@ -10,9 +10,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { GameStateService } from '../shared/services/game-state.service';
 import { BuzzerService } from '../shared/services/buzzer.service';
 import { SyncService } from '../shared/services/sync.service';
+import { AudioService } from '../shared/services/audio.service';
 import { PlayerSetupComponent } from './components/player-setup/player-setup.component';
 import { GameBoardControlComponent } from './components/game-board-control/game-board-control.component';
 import { BuzzerPanelComponent } from './components/buzzer-panel/buzzer-panel.component';
@@ -21,6 +23,7 @@ import { GameImportComponent } from './components/game-import/game-import.compon
 import { DailyDoubleWagerComponent } from './components/daily-double-wager/daily-double-wager.component';
 import { FinalJeopardyComponent } from './components/final-jeopardy/final-jeopardy.component';
 import { GameRulesComponent } from './components/game-rules/game-rules.component';
+import { SoundboardComponent } from './components/soundboard/soundboard.component';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -33,6 +36,7 @@ import { Subscription } from 'rxjs';
     MatCardModule,
     MatExpansionModule,
     MatDividerModule,
+    MatSidenavModule,
     PlayerSetupComponent,
     GameBoardControlComponent,
     BuzzerPanelComponent,
@@ -40,7 +44,8 @@ import { Subscription } from 'rxjs';
     GameImportComponent,
     DailyDoubleWagerComponent,
     FinalJeopardyComponent,
-    GameRulesComponent
+    GameRulesComponent,
+    SoundboardComponent
   ],
   templateUrl: './host.component.html',
   styleUrl: './host.component.scss'
@@ -49,11 +54,13 @@ export class HostComponent implements OnInit, OnDestroy {
   private buzzSubscription?: Subscription;
   private boardReadySubscription?: Subscription;
   private boardWindow: Window | null = null;
+  private lastDailyDoubleClueId: string | null = null;
 
   constructor(
     private readonly gameStateService: GameStateService,
     private readonly buzzerService: BuzzerService,
-    private readonly syncService: SyncService
+    private readonly syncService: SyncService,
+    private readonly audioService: AudioService
   ) {}
 
   ngOnInit(): void {
@@ -86,6 +93,15 @@ export class HostComponent implements OnInit, OnDestroy {
       // Lock buzzer if needed
       if (state.buzzLocked) {
         this.buzzerService.lockBuzzer();
+      }
+
+      // Play Daily Double sting once per clue when a Daily Double is opened
+      const activeClue = state.activeClue;
+      if (activeClue?.isDailyDouble && activeClue.clue.id !== this.lastDailyDoubleClueId) {
+        this.audioService.play('daily-double');
+        this.lastDailyDoubleClueId = activeClue.clue.id;
+      } else if (!activeClue) {
+        this.lastDailyDoubleClueId = null;
       }
     });
 
@@ -156,5 +172,13 @@ export class HostComponent implements OnInit, OnDestroy {
    */
   protected isRoundComplete(): boolean {
     return this.gameStateService.isRoundComplete();
+  }
+
+  protected pauseAllAudio(): void {
+    this.audioService.pauseAll();
+  }
+
+  protected resumeAudio(): void {
+    this.audioService.resumeAll();
   }
 }

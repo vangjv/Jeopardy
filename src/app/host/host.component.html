@@ -12,123 +12,150 @@
     </button>
   </mat-toolbar>
 
-  <div class="session-bar">
-    <div class="session-actions">
-      <div class="action-group">
-        <span class="label">Rounds</span>
-        <div class="button-row">
-          <button mat-flat-button color="primary" (click)="startRound1()">
-            <mat-icon>looks_one</mat-icon>
-            Round 1
-          </button>
-          <button mat-flat-button color="primary" (click)="startRound2()">
-            <mat-icon>looks_two</mat-icon>
-            Round 2
-          </button>
-          <button mat-flat-button color="warn" (click)="advanceRound()" [disabled]="!isRoundComplete()">
-            <mat-icon>skip_next</mat-icon>
-            Advance
-          </button>
+  <mat-drawer-container class="host-shell">
+    <mat-drawer-content>
+      <div class="session-bar">
+        <div class="session-actions">
+          <div class="action-group">
+            <span class="label">Rounds</span>
+            <div class="button-row">
+              <button mat-flat-button color="primary" (click)="startRound1()">
+                <mat-icon>looks_one</mat-icon>
+                Round 1
+              </button>
+              <button mat-flat-button color="primary" (click)="startRound2()">
+                <mat-icon>looks_two</mat-icon>
+                Round 2
+              </button>
+              <button mat-flat-button color="warn" (click)="advanceRound()" [disabled]="!isRoundComplete()">
+                <mat-icon>skip_next</mat-icon>
+                Advance
+              </button>
+            </div>
+          </div>
+
+          <div class="action-group audio-group">
+            <span class="label">Audio</span>
+            <div class="button-row">
+              <button mat-flat-button color="accent" (click)="soundDrawer.open()">
+                <mat-icon>queue_music</mat-icon>
+                Soundboard
+              </button>
+              <button mat-stroked-button color="primary" (click)="pauseAllAudio()">
+                <mat-icon>pause</mat-icon>
+                Pause
+              </button>
+              <button mat-stroked-button color="primary" (click)="resumeAudio()">
+                <mat-icon>play_arrow</mat-icon>
+                Resume
+              </button>
+            </div>
+          </div>
+
+          <div class="action-group status-hint" *ngIf="isRoundComplete()">
+            <mat-icon>task_alt</mat-icon>
+            <span>Round complete • Ready to advance</span>
+          </div>
         </div>
       </div>
-      <div class="action-group status-hint" *ngIf="isRoundComplete()">
-        <mat-icon>task_alt</mat-icon>
-        <span>Round complete • Ready to advance</span>
+
+      <div class="host-content">
+        <div class="left-column">
+          <section class="live-section">
+            <div class="section-heading">
+              <mat-icon>bolt</mat-icon>
+              <div>
+                <p class="eyebrow">High frequency</p>
+                <h3>Live Control</h3>
+              </div>
+            </div>
+            <div class="card-stack">
+              <app-buzzer-panel></app-buzzer-panel>
+              <app-score-adjudication></app-score-adjudication>
+              <app-daily-double-wager></app-daily-double-wager>
+            </div>
+          </section>
+
+          <section class="flow-section">
+            <div class="section-heading">
+              <mat-icon>timeline</mat-icon>
+              <div>
+                <p class="eyebrow">Per round</p>
+                <h3>Game Flow</h3>
+              </div>
+            </div>
+            <div class="card-stack">
+              <app-final-jeopardy></app-final-jeopardy>
+            </div>
+          </section>
+
+          <section class="setup-section">
+            <div class="section-heading">
+              <mat-icon>tune</mat-icon>
+              <div>
+                <p class="eyebrow">Set once</p>
+                <h3>Game Setup</h3>
+              </div>
+            </div>
+
+            <div class="setup-grid">
+              <mat-card class="setup-card">
+                <div class="card-title">
+                  <div class="title-left">
+                    <mat-icon>upload_file</mat-icon>
+                    <div>
+                      <p class="eyebrow">Content</p>
+                      <h4>Game Content</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <app-game-import></app-game-import>
+                </div>
+              </mat-card>
+
+              <mat-card class="setup-card">
+                <div class="card-title">
+                  <div class="title-left">
+                    <mat-icon>people</mat-icon>
+                    <div>
+                      <p class="eyebrow">Required</p>
+                      <h4>Players</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <app-player-setup></app-player-setup>
+                </div>
+              </mat-card>
+
+              <mat-card class="setup-card wide">
+                <div class="card-title">
+                  <div class="title-left">
+                    <mat-icon>settings</mat-icon>
+                    <div>
+                      <p class="eyebrow">Optional</p>
+                      <h4>Game Rules</h4>
+                    </div>
+                  </div>
+                  <span class="pill">Recommended before start</span>
+                </div>
+                <div class="card-body">
+                  <app-game-rules></app-game-rules>
+                </div>
+              </mat-card>
+            </div>
+          </section>
+        </div>
+
+        <div class="right-column">
+          <app-game-board-control></app-game-board-control>
+        </div>
       </div>
-    </div>
-  </div>
+    </mat-drawer-content>
 
-  <div class="host-content">
-    <div class="left-column">
-      <section class="live-section">
-        <div class="section-heading">
-          <mat-icon>bolt</mat-icon>
-          <div>
-            <p class="eyebrow">High frequency</p>
-            <h3>Live Control</h3>
-          </div>
-        </div>
-        <div class="card-stack">
-          <app-buzzer-panel></app-buzzer-panel>
-          <app-score-adjudication></app-score-adjudication>
-          <app-daily-double-wager></app-daily-double-wager>
-        </div>
-      </section>
-
-      <section class="flow-section">
-        <div class="section-heading">
-          <mat-icon>timeline</mat-icon>
-          <div>
-            <p class="eyebrow">Per round</p>
-            <h3>Game Flow</h3>
-          </div>
-        </div>
-        <div class="card-stack">
-          <app-final-jeopardy></app-final-jeopardy>
-        </div>
-      </section>
-
-      <section class="setup-section">
-        <div class="section-heading">
-          <mat-icon>tune</mat-icon>
-          <div>
-            <p class="eyebrow">Set once</p>
-            <h3>Game Setup</h3>
-          </div>
-        </div>
-
-        <div class="setup-grid">
-          <mat-card class="setup-card">
-            <div class="card-title">
-              <div class="title-left">
-                <mat-icon>upload_file</mat-icon>
-                <div>
-                  <p class="eyebrow">Content</p>
-                  <h4>Game Content</h4>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <app-game-import></app-game-import>
-            </div>
-          </mat-card>
-
-          <mat-card class="setup-card">
-            <div class="card-title">
-              <div class="title-left">
-                <mat-icon>people</mat-icon>
-                <div>
-                  <p class="eyebrow">Required</p>
-                  <h4>Players</h4>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <app-player-setup></app-player-setup>
-            </div>
-          </mat-card>
-
-          <mat-card class="setup-card wide">
-            <div class="card-title">
-              <div class="title-left">
-                <mat-icon>settings</mat-icon>
-                <div>
-                  <p class="eyebrow">Optional</p>
-                  <h4>Game Rules</h4>
-                </div>
-              </div>
-              <span class="pill">Recommended before start</span>
-            </div>
-            <div class="card-body">
-              <app-game-rules></app-game-rules>
-            </div>
-          </mat-card>
-        </div>
-      </section>
-    </div>
-
-    <div class="right-column">
-      <app-game-board-control></app-game-board-control>
-    </div>
-  </div>
+    <mat-drawer #soundDrawer class="sound-drawer" mode="over" position="end">
+      <app-soundboard (close)="soundDrawer.close()"></app-soundboard>
+    </mat-drawer>
+  </mat-drawer-container>
 </div>

@@ -1,5 +1,15 @@
 .game-board-control {
-  margin: 1rem;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  mat-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
   .no-game {
     color: var(--mat-sys-on-surface-variant, #666);
