@@ -38,10 +38,14 @@
       min-height: 60px;
       font-size: 1.2rem;
       font-weight: 600;
+      background-color: var(--mat-sys-primary, #1976d2);
+      color: var(--mat-sys-on-primary, #ffffff);
       
       &.used {
-        opacity: 0.3;
+        opacity: 0.6;
         cursor: not-allowed;
+        background-color: #e0e0e0;
+        color: #757575;
       }
       
       &.daily-double:not(.used) {
