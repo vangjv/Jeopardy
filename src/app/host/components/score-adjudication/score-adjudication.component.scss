@@ -1,53 +1,54 @@
 .score-adjudication {
   margin: 1rem;
-  
+
   .no-adjudication {
-    color: var(--mat-sys-on-surface-variant, #666);
-    font-style: italic;
+    color: var(--mat-sys-on-surface-variant, #4b5563);
+    font-style: normal;
+    font-weight: 500;
     margin: 1rem 0;
   }
-  
+
   .adjudication-info {
     margin-bottom: 1.5rem;
-    
+
     > div {
       display: flex;
       gap: 0.5rem;
       margin-bottom: 0.5rem;
-      
+
       .label {
         font-weight: 600;
         min-width: 150px;
       }
-      
+
       .player-name {
         font-size: 1.1rem;
         color: var(--mat-sys-primary, #1976d2);
       }
-      
+
       .value {
         font-size: 1.1rem;
         font-weight: 600;
       }
-      
+
       .response {
         font-style: italic;
       }
     }
   }
-  
+
   .actions {
     display: flex;
     gap: 0.5rem;
-    
+
     button {
       min-width: 120px;
-      
+
       mat-icon {
         margin-right: 0.5rem;
       }
     }
-    
+
     .correct-btn {
       background: var(--mat-sys-success, green) !important;
     }

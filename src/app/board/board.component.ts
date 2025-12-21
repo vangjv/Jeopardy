@@ -13,6 +13,7 @@ import { BuzzIndicatorComponent } from './components/buzz-indicator/buzz-indicat
 import { RoundTransitionComponent } from './components/round-transition/round-transition.component';
 import { FinalJeopardyDisplayComponent } from './components/final-jeopardy-display/final-jeopardy-display.component';
 import { RoundType } from '../shared/models/game-content.model';
+import { ActiveClue, GameState } from '../shared/models/game-state.model';
 import { Subscription } from 'rxjs';
 import { generateUUID } from '../shared/utils/game-helpers';
 
@@ -58,15 +59,71 @@ export class BoardComponent implements OnInit, OnDestroy {
     this.subscriptions.push(
       this.syncService.onStateSync().subscribe(gameState => {
         this.gameStateService.loadState(gameState);
-        this.lastSyncTimestamp = performance.now();
-        this.connectionStatus.set('connected');
+        this.markConnected();
       })
     );
 
-    // Note: Individual event subscriptions (T046, T048, T050, T052, T054, T056)
-    // are not needed because all state updates come through onStateSync() above.
-    // Child components (ClueDisplayComponent, BuzzIndicatorComponent, ScoreDisplayComponent)
-    // subscribe to GameStateService.getState() to render the synchronized state.
+    // Buzzer + clue events: patch local state immediately for low-latency UI
+    this.subscriptions.push(
+      this.syncService.onBuzzEnabled().subscribe(enabled => {
+        const state = this.gameStateService.getCurrentState();
+        this.applyPatch({
+          buzzerEnabled: enabled,
+          buzzLocked: enabled ? false : state.buzzLocked,
+          lockedPlayerId: enabled ? null : state.lockedPlayerId,
+        });
+      })
+    );
+
+    this.subscriptions.push(
+      this.syncService.onBuzzLocked().subscribe(({ playerId }) => {
+        this.applyPatch({
+          buzzLocked: true,
+          lockedPlayerId: playerId,
+          buzzerEnabled: false,
+        });
+      })
+    );
+
+    this.subscriptions.push(
+      this.syncService.onBuzzReset().subscribe(() => {
+        this.applyPatch({
+          buzzLocked: false,
+          lockedPlayerId: null,
+          buzzerEnabled: true,
+        });
+      })
+    );
+
+    this.subscriptions.push(
+      this.syncService.onClueSelected().subscribe((clue: ActiveClue) => {
+        this.applyPatch({
+          activeClue: clue,
+          buzzerEnabled: !clue.isDailyDouble,
+          buzzLocked: false,
+          lockedPlayerId: null,
+          lockedOutPlayerIds: new Set<string>(),
+        });
+      })
+    );
+
+    this.subscriptions.push(
+      this.syncService.onClueCleared().subscribe(() => {
+        this.applyPatch({
+          activeClue: null,
+          buzzerEnabled: false,
+          buzzLocked: false,
+          lockedPlayerId: null,
+          lockedOutPlayerIds: new Set<string>(),
+        });
+      })
+    );
+
+    this.subscriptions.push(
+      this.syncService.onScoresUpdated().subscribe(players => {
+        this.applyPatch({ players });
+      })
+    );
 
     // T090: Subscribe to onRoundChanged() to show transition
     this.subscriptions.push(
@@ -150,5 +207,22 @@ export class BoardComponent implements OnInit, OnDestroy {
         }, 2000);
       }
     }, 1000);
+  }
+
+  /**
+   * Apply a partial state update locally to minimize perceived latency.
+   */
+  private applyPatch(patch: Partial<GameState>): void {
+    const current = this.gameStateService.getCurrentState();
+    this.gameStateService.loadState({ ...current, ...patch });
+    this.markConnected();
+  }
+
+  /**
+   * Mark the board as connected and refresh last sync timestamp.
+   */
+  private markConnected(): void {
+    this.lastSyncTimestamp = performance.now();
+    this.connectionStatus.set('connected');
   }
 }

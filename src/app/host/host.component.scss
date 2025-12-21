@@ -2,10 +2,22 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: hidden;
+  background: #f3f4f6;
+  color: #0f172a;
 
   .host-toolbar {
-    flex-shrink: 0;
+    background: #0b1224;
+    color: #f8fafc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+    padding: 0 1.25rem;
+    position: sticky;
+    top: 0;
+    z-index: 12;
+
+    .title {
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
 
     .toolbar-spacer {
       flex: 1;
@@ -13,9 +25,85 @@
 
     button {
       margin-left: 0.5rem;
+      font-weight: 600;
 
       mat-icon {
-        margin-right: 0.25rem;
+        margin-right: 0.35rem;
+      }
+    }
+  }
+
+  .session-bar {
+    position: sticky;
+    top: 64px;
+    z-index: 11;
+    background: rgba(12, 18, 36, 0.94);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.65rem 1.25rem;
+    color: #e2e8f0;
+
+    .session-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+
+      .label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #cbd5e1;
+        letter-spacing: 0.04em;
+      }
+
+      .button-row {
+        display: flex;
+        gap: 0.5rem;
+
+        button {
+          min-height: 38px;
+          font-weight: 700;
+          letter-spacing: 0.01em;
+          color: #e2e8f0 !important;
+          background: #1e293b !important;
+          border: 1px solid #334155 !important;
+
+          &:hover:not([disabled]) {
+            background: #273449 !important;
+            border-color: #3b4b63 !important;
+          }
+
+          &.mat-warn {
+            color: #0b1224 !important;
+            background: #fbbf24 !important;
+            border-color: #f59e0b !important;
+
+            &:hover:not([disabled]) {
+              background: #f59e0b !important;
+            }
+          }
+
+          mat-icon {
+            margin-right: 0.25rem;
+          }
+        }
+      }
+
+      &.status-hint {
+        color: #bbf7d0;
+        font-weight: 600;
+        mat-icon {
+          color: #86efac;
+        }
       }
     }
   }
@@ -23,52 +111,209 @@
   .host-content {
     flex: 1;
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 500px 1fr;
     gap: 0;
-    overflow: hidden;
+    min-height: 0;
 
     .left-column {
       display: flex;
       flex-direction: column;
-      gap: 0;
+      gap: 1.25rem;
+      padding: 1.25rem;
       overflow-y: auto;
-      border-right: 1px solid var(--mat-sys-outline-variant, #e0e0e0);
-      background: #ffffff;
-      color: #212121;
-    }
+      background: #f8fafc;
+      border-right: 1px solid #e2e8f0;
+      box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.02);
 
-    .right-column {
-      overflow-y: auto;
-      background: var(--mat-sys-surface, white);
-    }
-  }
+      section {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+        padding: 1rem 1.1rem 1.25rem;
+      }
 
-  // T082: Round controls styling
-  .round-controls {
-    mat-card-content {
-      .round-buttons {
+      .section-heading {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.5rem;
+
+        mat-icon {
+          background: linear-gradient(135deg, #2563eb, #0ea5e9);
+          color: #ffffff;
+          border-radius: 10px;
+          padding: 0.35rem;
+          font-size: 1.25rem;
+          width: 32px;
+          height: 32px;
+        }
+
+        .eyebrow {
+          margin: 0;
+          font-size: 0.75rem;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: #64748b;
+        }
+
+        h3 {
+          margin: 0;
+          font-size: 1.05rem;
+          letter-spacing: -0.01em;
+          color: #0f172a;
+        }
+      }
+
+      .card-stack {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
+        gap: 0.75rem;
 
-        button {
-          width: 100%;
+        app-buzzer-panel,
+        app-score-adjudication,
+        app-daily-double-wager,
+        app-final-jeopardy {
+          ::ng-deep mat-card {
+            margin: 0;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+            background: #ffffff;
 
-          mat-icon {
-            margin-right: 0.5rem;
+            mat-card-header {
+              padding: 0.75rem 1rem 0.35rem;
+              mat-card-title {
+                font-size: 1rem;
+                font-weight: 700;
+                color: #0f172a;
+              }
+            }
+
+            mat-card-content {
+              padding: 0.75rem 1rem 1rem;
+              color: #1f2937;
+            }
           }
         }
       }
 
-      .round-complete-message {
-        margin-top: 1rem;
-        padding: 0.5rem;
-        background: var(--mat-sys-success-container, #e8f5e9);
-        color: var(--mat-sys-on-success-container, #1b5e20);
-        border-radius: 4px;
-        font-weight: 500;
-        text-align: center;
+      .setup-section {
+        .setup-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 1rem;
+        }
+
+        .setup-card {
+          border: 1px solid #e2e8f0;
+          border-radius: 14px;
+          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+          background: #ffffff;
+          padding: 0.5rem 0.75rem 0.75rem;
+
+          &.wide {
+            grid-column: 1 / -1;
+          }
+
+          .card-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding: 0.25rem 0.25rem 0.35rem 0.25rem;
+
+            .title-left {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+
+              mat-icon {
+                color: #2563eb;
+              }
+
+              h4 {
+                margin: 0;
+                font-size: 1rem;
+                color: #0f172a;
+              }
+
+              .eyebrow {
+                margin: 0;
+                font-size: 0.74rem;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: #64748b;
+              }
+            }
+
+            .pill {
+              padding: 0.2rem 0.55rem;
+              border-radius: 999px;
+              background: #e0f2fe;
+              color: #0f172a;
+              font-weight: 700;
+              font-size: 0.78rem;
+              letter-spacing: 0.02em;
+            }
+          }
+
+          .card-body {
+            padding: 0.35rem 0.25rem 0.5rem;
+
+            app-game-import,
+            app-player-setup,
+            app-game-rules {
+              display: block;
+            }
+
+            app-game-import {
+              ::ng-deep .game-import {
+                padding: 0.25rem;
+              }
+            }
+
+            app-player-setup {
+              ::ng-deep .player-setup {
+                padding: 0.25rem;
+              }
+            }
+
+            app-game-rules {
+              ::ng-deep .game-rules-container {
+                padding: 0.25rem;
+
+                .rules-card {
+                  border-radius: 10px;
+                  box-shadow: none;
+                  border: 1px solid #e5e7eb;
+
+                  mat-card-content {
+                    padding: 0.5rem;
+                  }
+
+                  mat-card-actions {
+                    padding: 0.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right-column {
+      overflow-y: auto;
+      background: linear-gradient(180deg, #edf2f7 0%, #e2e8f0 100%);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      app-game-board-control {
+        width: 100%;
+        max-width: 1280px;
       }
     }
   }

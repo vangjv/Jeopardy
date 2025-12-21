@@ -8,6 +8,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
 import { GameStateService } from '../shared/services/game-state.service';
 import { BuzzerService } from '../shared/services/buzzer.service';
 import { SyncService } from '../shared/services/sync.service';
@@ -29,6 +31,8 @@ import { Subscription } from 'rxjs';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
+    MatExpansionModule,
+    MatDividerModule,
     PlayerSetupComponent,
     GameBoardControlComponent,
     BuzzerPanelComponent,

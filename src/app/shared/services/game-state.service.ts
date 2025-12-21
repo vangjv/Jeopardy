@@ -366,6 +366,14 @@ export class GameStateService {
    * Clear active clue and return to board
    */
   clearActiveClue(): void {
+    const state = this.getCurrentState();
+    const usedClueIds = new Set(state.usedClueIds);
+
+    // When a clue is closed, mark it as used so it disappears from the board
+    if (state.activeClue) {
+      usedClueIds.add(state.activeClue.clue.id);
+    }
+
     this.updateState(() => ({
       activeClue: null,
       buzzerEnabled: false,
@@ -373,7 +381,11 @@ export class GameStateService {
       lockedPlayerId: null,
       lockedOutPlayerIds: new Set<string>(),
       dailyDoubleWager: null,
+      usedClueIds,
     }));
+
+    // Push latest state so board updates used clues immediately (reduces perceived lag)
+    this.syncStateToBoard();
 
     // Broadcast clue cleared event (T047)
     if (this.syncService) {

@@ -1,0 +1,8 @@
+name = "jeopardy"
+
+compatibility_date = "2025-12-20"
+
+[assets]
+directory = "dist/jeopardy/browser"
+# This is the key bit for Angular deep links:
+not_found_handling = "single-page-application"

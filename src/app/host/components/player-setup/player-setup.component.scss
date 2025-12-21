@@ -1,26 +1,29 @@
 .player-setup {
   margin: 1rem;
-  
+
   .no-players {
-    color: var(--mat-sys-on-surface-variant, #666);
-    font-style: italic;
+    color: var(--mat-sys-on-surface-variant, #4b5563);
+    font-style: normal;
+    font-weight: 500;
     margin: 1rem 0;
   }
-  
+
   .player-row {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.75rem;
     margin-bottom: 1rem;
-    
+
     .player-name {
-      flex: 1;
-      min-width: 200px;
+      flex: 1 1 240px;
+      min-width: 220px;
     }
-    
+
     .buzz-key {
-      width: 80px;
-      
+      width: 140px;
+      min-width: 120px;
+
       input.error {
         color: var(--mat-sys-error, red);
       }

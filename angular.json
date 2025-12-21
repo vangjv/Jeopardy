@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularSpecKitTemplate": {
+    "jeopardy": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "AngularSpecKitTemplate:build:production"
+              "buildTarget": "jeopardy:build:production"
             },
             "development": {
-              "buildTarget": "AngularSpecKitTemplate:build:development"
+              "buildTarget": "jeopardy:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,26 +1,27 @@
 .buzzer-panel {
   margin: 1rem;
-  
+
   .status-row {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
-    
+
     .status-label {
       font-weight: 600;
     }
-    
+
     .status-enabled {
       color: var(--mat-sys-success, green);
       font-weight: 600;
     }
-    
+
     .status-disabled {
-      color: var(--mat-sys-error, red);
+      color: var(--mat-sys-error, #b91c1c);
+      font-weight: 500;
     }
   }
-  
+
   .buzz-info {
     display: flex;
     align-items: center;
@@ -29,31 +30,31 @@
     background: var(--mat-sys-primary-container, #e3f2fd);
     border-radius: 4px;
     margin-bottom: 1rem;
-    
+
     .buzz-icon {
       color: var(--mat-sys-primary, #1976d2);
     }
-    
+
     .player-name {
       font-size: 1.1rem;
       font-weight: 600;
     }
   }
-  
+
   .lockout-info {
     margin-bottom: 1rem;
-    
+
     .lockout-label {
       font-weight: 600;
       display: block;
       margin-bottom: 0.5rem;
     }
-    
+
     .lockout-list {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      
+
       .lockout-player {
         padding: 0.25rem 0.5rem;
         background: var(--mat-sys-error-container, #ffebee);
@@ -63,7 +64,7 @@
       }
     }
   }
-  
+
   .controls {
     display: flex;
     gap: 0.5rem;
