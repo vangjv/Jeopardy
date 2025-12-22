@@ -6,15 +6,15 @@
           <h2>DAILY DOUBLE!</h2>
         </div>
       }
-      
+
       <div class="category">
         {{ clue()!.categoryTitle }}
       </div>
-      
+
       <div class="value">
         ${{ clue()!.value }}
       </div>
-      
+
       @if (!clue()!.waitingForWager) {
         <div class="clue-text">
           {{ clue()!.clueText }}
@@ -24,7 +24,7 @@
           Awaiting wager...
         </div>
       }
-      
+
       @if (clue()!.showResponse) {
         <div class="correct-response">
           {{ clue()!.correctResponse }}
