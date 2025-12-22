@@ -36,7 +36,6 @@ export class BoardComponent implements OnInit, OnDestroy {
   protected readonly showRoundTransition = signal(false);
   protected readonly showFinalJeopardy = signal(false);
   protected readonly currentRound = signal<RoundType>('round1');
-  protected readonly connectionStatus = signal<'connected' | 'disconnected' | 'connecting'>('connecting');
 
   private readonly boardInstanceId = generateUUID();
   private subscriptions: Subscription[] = [];
@@ -103,6 +102,7 @@ export class BoardComponent implements OnInit, OnDestroy {
           buzzLocked: false,
           lockedPlayerId: null,
           lockedOutPlayerIds: new Set<string>(),
+          dailyDoubleWager: null,
         });
       })
     );
@@ -115,6 +115,17 @@ export class BoardComponent implements OnInit, OnDestroy {
           buzzLocked: false,
           lockedPlayerId: null,
           lockedOutPlayerIds: new Set<string>(),
+          dailyDoubleWager: null,
+        });
+      })
+    );
+
+    // Daily Double wagers are broadcast after host input; sync locally so clue reveal waits for wager
+    this.subscriptions.push(
+      this.syncService.onDailyDoubleWager().subscribe(({ wager }) => {
+        this.applyPatch({
+          dailyDoubleWager: wager,
+          buzzerEnabled: true,
         });
       })
     );
@@ -193,18 +204,8 @@ export class BoardComponent implements OnInit, OnDestroy {
 
       // If no sync in 5 seconds during active game, mark as disconnected
       if (timeSinceLastSync > 5000 && this.lastSyncTimestamp > 0) {
-        this.connectionStatus.set('disconnected');
-
         // Try to reconnect
         this.syncService.requestStateSync(this.boardInstanceId);
-
-        // If no response after 2 more seconds, stay disconnected
-        setTimeout(() => {
-          const newTimeSinceLastSync = performance.now() - this.lastSyncTimestamp;
-          if (newTimeSinceLastSync > 7000) {
-            this.connectionStatus.set('disconnected');
-          }
-        }, 2000);
       }
     }, 1000);
   }
@@ -223,6 +224,5 @@ export class BoardComponent implements OnInit, OnDestroy {
    */
   private markConnected(): void {
     this.lastSyncTimestamp = performance.now();
-    this.connectionStatus.set('connected');
   }
 }

@@ -15,9 +15,15 @@
         ${{ clue()!.value }}
       </div>
       
-      <div class="clue-text">
-        {{ clue()!.clueText }}
-      </div>
+      @if (!clue()!.waitingForWager) {
+        <div class="clue-text">
+          {{ clue()!.clueText }}
+        </div>
+      } @else {
+        <div class="clue-text awaiting-wager">
+          Awaiting wager...
+        </div>
+      }
       
       @if (clue()!.showResponse) {
         <div class="correct-response">

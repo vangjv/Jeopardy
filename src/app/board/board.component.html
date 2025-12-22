@@ -1,17 +1,4 @@
 <div class="board-container">
-  <!-- Connection status indicator (T060) -->
-  <div class="connection-status" [class.connected]="connectionStatus() === 'connected'"
-       [class.disconnected]="connectionStatus() === 'disconnected'"
-       [class.connecting]="connectionStatus() === 'connecting'">
-    @if (connectionStatus() === 'connected') {
-      <span class="status-icon">●</span> Connected
-    } @else if (connectionStatus() === 'disconnected') {
-      <span class="status-icon">●</span> Disconnected - Refresh to reconnect
-    } @else {
-      <span class="status-icon">●</span> Connecting...
-    }
-  </div>
-
   <!-- T083, T090: Show round transition overlay when round changes -->
   @if (showRoundTransition()) {
     <app-round-transition [round]="currentRound()"></app-round-transition>

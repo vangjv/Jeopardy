@@ -14,6 +14,7 @@ interface ClueDisplay {
   correctResponse: string;
   showResponse: boolean;
   dailyDouble: boolean;
+   waitingForWager: boolean;
 }
 
 @Component({
@@ -30,13 +31,15 @@ export class ClueDisplayComponent implements OnInit {
   ngOnInit(): void {
     this.gameStateService.getState().subscribe(state => {
       if (state.activeClue) {
+        const waitingForWager = state.activeClue.isDailyDouble && state.dailyDoubleWager === null;
         this.clue.set({
           categoryTitle: state.activeClue.categoryTitle,
           clueText: state.activeClue.clue.clueText,
           value: state.dailyDoubleWager || state.activeClue.clue.value,
           correctResponse: state.activeClue.clue.correctResponse,
           showResponse: false, // For Phase 3, don't show response yet
-          dailyDouble: state.activeClue.isDailyDouble
+          dailyDouble: state.activeClue.isDailyDouble,
+          waitingForWager,
         });
       } else {
         this.clue.set(null);
