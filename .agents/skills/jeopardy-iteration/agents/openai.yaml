@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jeopardy Iteration"
+  short_description: "Iterate gameplay with visual quality gates"
+  default_prompt: "Use $jeopardy-iteration to improve and verify the next incomplete Jeopardy game criterion."

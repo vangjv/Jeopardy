@@ -1,15 +1,24 @@
 <div class="host-container">
   <mat-toolbar class="host-toolbar">
-    <span class="title">Jeopardy Host Console</span>
+    <div class="brand">
+      <span class="title">Jeopardy Host Console</span>
+      @if (gameLoaded()) {
+        <span class="round-chip">
+          {{ currentRound() === 'round1' ? 'Round 1' : currentRound() === 'round2' ? 'Double Jeopardy' : 'Final Jeopardy' }}
+        </span>
+      }
+    </div>
     <span class="toolbar-spacer"></span>
     <button mat-stroked-button color="accent" (click)="openBoard()">
       <mat-icon>open_in_new</mat-icon>
       Open Board
     </button>
-    <button mat-flat-button color="primary" (click)="startGame()">
-      <mat-icon>play_arrow</mat-icon>
-      Start Game
-    </button>
+    @if (!gameLoaded()) {
+      <button mat-flat-button color="primary" (click)="startGame()">
+        <mat-icon>play_arrow</mat-icon>
+        Start Game
+      </button>
+    }
   </mat-toolbar>
 
   <mat-drawer-container class="host-shell">
@@ -19,14 +28,30 @@
           <div class="action-group">
             <span class="label">Rounds</span>
             <div class="button-row">
-              <button mat-flat-button color="primary" (click)="startRound1()">
+              <button
+                mat-flat-button
+                color="primary"
+                (click)="startRound1()"
+                [class.current-round]="currentRound() === 'round1'"
+              >
                 <mat-icon>looks_one</mat-icon>
                 Round 1
               </button>
-              <button mat-flat-button color="primary" (click)="startRound2()">
+              <button
+                mat-flat-button
+                color="primary"
+                (click)="startRound2()"
+                [class.current-round]="currentRound() === 'round2'"
+              >
                 <mat-icon>looks_two</mat-icon>
                 Round 2
               </button>
+              @if (gameLoaded() && currentRound() !== 'final') {
+                <button mat-flat-button color="primary" (click)="startFinalJeopardy()">
+                  <mat-icon>emoji_events</mat-icon>
+                  Start Final Jeopardy
+                </button>
+              }
               <button mat-flat-button color="warn" (click)="advanceRound()" [disabled]="!isRoundComplete()">
                 <mat-icon>skip_next</mat-icon>
                 Advance
@@ -70,81 +95,87 @@
               </div>
             </div>
             <div class="card-stack">
-              <app-buzzer-panel></app-buzzer-panel>
               <app-score-adjudication></app-score-adjudication>
               <app-daily-double-wager></app-daily-double-wager>
+              <app-buzzer-panel></app-buzzer-panel>
             </div>
           </section>
 
           <section class="flow-section">
-            <div class="section-heading">
-              <mat-icon>timeline</mat-icon>
-              <div>
-                <p class="eyebrow">Per round</p>
-                <h3>Game Flow</h3>
-              </div>
-            </div>
-            <div class="card-stack">
+            <mat-expansion-panel class="flow-panel" [expanded]="finalActive()">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon>emoji_events</mat-icon>
+                  Final Jeopardy
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{ finalActive() ? 'In progress' : 'Open when needed' }}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
               <app-final-jeopardy></app-final-jeopardy>
-            </div>
+            </mat-expansion-panel>
           </section>
 
           <section class="setup-section">
-            <div class="section-heading">
-              <mat-icon>tune</mat-icon>
-              <div>
-                <p class="eyebrow">Set once</p>
-                <h3>Game Setup</h3>
+            <mat-expansion-panel class="setup-panel" [expanded]="!gameLoaded()">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon>tune</mat-icon>
+                  Game setup
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{ gameLoaded() ? 'Game loaded · click to edit' : 'Complete before play' }}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              <div class="setup-grid">
+                <mat-card class="setup-card">
+                  <div class="card-title">
+                    <div class="title-left">
+                      <mat-icon>upload_file</mat-icon>
+                      <div>
+                        <p class="eyebrow">Content</p>
+                        <h4>Game Content</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <app-game-import></app-game-import>
+                  </div>
+                </mat-card>
+
+                <mat-card class="setup-card">
+                  <div class="card-title">
+                    <div class="title-left">
+                      <mat-icon>people</mat-icon>
+                      <div>
+                        <p class="eyebrow">Required</p>
+                        <h4>Players</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <app-player-setup></app-player-setup>
+                  </div>
+                </mat-card>
+
+                <mat-card class="setup-card wide">
+                  <div class="card-title">
+                    <div class="title-left">
+                      <mat-icon>settings</mat-icon>
+                      <div>
+                        <p class="eyebrow">Optional</p>
+                        <h4>Game Rules</h4>
+                      </div>
+                    </div>
+                    <span class="pill">Recommended before start</span>
+                  </div>
+                  <div class="card-body">
+                    <app-game-rules></app-game-rules>
+                  </div>
+                </mat-card>
               </div>
-            </div>
-
-            <div class="setup-grid">
-              <mat-card class="setup-card">
-                <div class="card-title">
-                  <div class="title-left">
-                    <mat-icon>upload_file</mat-icon>
-                    <div>
-                      <p class="eyebrow">Content</p>
-                      <h4>Game Content</h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <app-game-import></app-game-import>
-                </div>
-              </mat-card>
-
-              <mat-card class="setup-card">
-                <div class="card-title">
-                  <div class="title-left">
-                    <mat-icon>people</mat-icon>
-                    <div>
-                      <p class="eyebrow">Required</p>
-                      <h4>Players</h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <app-player-setup></app-player-setup>
-                </div>
-              </mat-card>
-
-              <mat-card class="setup-card wide">
-                <div class="card-title">
-                  <div class="title-left">
-                    <mat-icon>settings</mat-icon>
-                    <div>
-                      <p class="eyebrow">Optional</p>
-                      <h4>Game Rules</h4>
-                    </div>
-                  </div>
-                  <span class="pill">Recommended before start</span>
-                </div>
-                <div class="card-body">
-                  <app-game-rules></app-game-rules>
-                </div>
-              </mat-card>
-            </div>
+            </mat-expansion-panel>
           </section>
         </div>
 

@@ -19,6 +19,37 @@
         <div class="clue-text">
           {{ clue()!.clueText }}
         </div>
+        @if (clue()!.media && !mediaFailed()) {
+          <div class="clue-media">
+            @switch (clue()!.media!.type) {
+              @case ('image') {
+                <img
+                  [src]="clue()!.media!.url"
+                  [alt]="clue()!.media!.altText || 'Clue media'"
+                  (error)="handleMediaError()"
+                />
+              }
+              @case ('audio') {
+                <audio
+                  controls
+                  [src]="clue()!.media!.url"
+                  aria-label="Clue audio"
+                  (error)="handleMediaError()"
+                ></audio>
+              }
+              @case ('video') {
+                <video
+                  controls
+                  [src]="clue()!.media!.url"
+                  aria-label="Clue video"
+                  (error)="handleMediaError()"
+                ></video>
+              }
+            }
+          </div>
+        } @else if (clue()!.media && mediaFailed()) {
+          <div class="media-fallback" role="status">Clue media is unavailable.</div>
+        }
       } @else {
         <div class="clue-text awaiting-wager">
           Awaiting wager...

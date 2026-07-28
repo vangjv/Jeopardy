@@ -1,8 +1,17 @@
 <div class="score-display">
   @for (player of players(); track player.id) {
-    <div class="player-score" [class.locked-out]="isLockedOut(player.id)">
+    <div
+      class="player-score"
+      [class.locked-out]="isLockedOut(player.id)"
+      [class.control]="hasControl(player.id)"
+      [attr.data-player-id]="player.id"
+      [attr.aria-label]="player.name + (hasControl(player.id) ? ', has board control' : '')"
+    >
       <div class="player-name">
         {{ player.name }}
+        @if (hasControl(player.id)) {
+          <span class="control-badge">CONTROL</span>
+        }
         @if (isLockedOut(player.id)) {
           <span class="lockout-badge">🚫</span>
         }

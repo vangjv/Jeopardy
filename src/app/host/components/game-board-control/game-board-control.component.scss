@@ -11,6 +11,54 @@
     flex-direction: column;
   }
 
+  mat-card-header {
+    display: block;
+    padding: 1rem 1rem 0.3rem;
+  }
+
+  mat-card-content {
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .board-heading {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+
+    .eyebrow {
+      color: #64748b;
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.2rem;
+      text-transform: uppercase;
+    }
+
+    mat-card-title {
+      color: #0f172a;
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .board-progress {
+      background: #e2e8f0;
+      border-radius: 999px;
+      color: #475569;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.35rem 0.65rem;
+    }
+  }
+
+  .selection-hint {
+    color: #64748b;
+    font-size: 0.78rem;
+    margin: 0 0 0.65rem;
+  }
+
   .no-game {
     color: var(--mat-sys-on-surface-variant, #666);
     font-style: italic;
@@ -66,7 +114,10 @@
           top: 2px;
           right: 2px;
           font-size: 0.6rem;
-          color: gold;
+          padding: 1px 3px;
+          border-radius: 3px;
+          background: #07123f;
+          color: #ffd84d;
           font-weight: bold;
         }
       }

@@ -6,7 +6,14 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "npm run test:unit",
+    "test:unit": "ng test --watch=false",
+    "test:e2e": "node scripts/run-playwright.mjs --project=chromium",
+    "test:visual": "node scripts/run-playwright.mjs e2e/visual.spec.ts --project=chromium",
+    "test:visual:update": "node scripts/run-playwright.mjs e2e/visual.spec.ts --project=chromium --update-snapshots",
+    "test:receipt": "node scripts/run-playwright.mjs --project=receipt",
+    "verify:quick": "npm run build && npm run test:unit",
+    "verify": "npm run verify:quick && npm run test:e2e && npm run test:receipt"
   },
   "prettier": {
     "printWidth": 100,
@@ -23,29 +30,27 @@
   "private": true,
   "dependencies": {
     "@angular/cdk": "^20.2.14",
-    "@angular/common": "^20.3.0",
-    "@angular/compiler": "^20.3.0",
-    "@angular/core": "^20.3.0",
-    "@angular/forms": "^20.3.0",
+    "@angular/common": "^20.3.26",
+    "@angular/compiler": "^20.3.26",
+    "@angular/core": "^20.3.26",
+    "@angular/forms": "^20.3.26",
     "@angular/material": "^20.2.14",
-    "@angular/platform-browser": "^20.3.0",
-    "@angular/router": "^20.3.0",
-    "ajv": "^8.17.1",
+    "@angular/platform-browser": "^20.3.26",
+    "@angular/router": "^20.3.26",
+    "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
+    "material-icons": "^1.13.14",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/build": "^20.3.7",
-    "@angular/cli": "^20.3.7",
-    "@angular/compiler-cli": "^20.3.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine-core": "~5.9.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.9.2"
+    "@angular/build": "^20.3.32",
+    "@angular/cli": "^20.3.32",
+    "@angular/compiler-cli": "^20.3.26",
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.55.0",
+    "jsdom": "^26.1.0",
+    "typescript": "~5.9.2",
+    "vitest": "^3.2.4"
   }
 }

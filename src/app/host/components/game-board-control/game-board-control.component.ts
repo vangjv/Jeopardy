@@ -29,6 +29,8 @@ export class GameBoardControlComponent implements OnInit {
   protected readonly clueGrid = signal<ClueCell[][]>([]);
   protected readonly currentRound = signal<string>('round1');
   protected readonly canSelectClues = signal(false);
+  protected readonly usedClueCount = signal(0);
+  protected readonly totalClueCount = signal(0);
 
   constructor(private readonly gameStateService: GameStateService) {}
 
@@ -36,14 +38,19 @@ export class GameBoardControlComponent implements OnInit {
     this.gameStateService.getState().subscribe(state => {
       this.currentRound.set(state.currentRound);
       this.canSelectClues.set(
-        state.phase === 'round1' || state.phase === 'round2'
+        (state.phase === 'round1' || state.phase === 'round2') &&
+        state.activeClue === null
       );
+      this.usedClueCount.set(state.usedClueIds.size);
 
       // Load current round categories
       if (state.gameSet) {
         const round = state.gameSet[state.currentRound];
         if (round && isRound(round)) {
           this.categories.set(round.categories);
+          this.totalClueCount.set(
+            round.categories.reduce((total, category) => total + category.clues.length, 0)
+          );
           this.buildClueGrid(round.categories, state.usedClueIds);
         }
       }

@@ -22,6 +22,8 @@ export class BuzzerPanelComponent implements OnInit {
   protected readonly buzzLocked = signal(false);
   protected readonly lockedPlayer = signal<Player | null>(null);
   protected readonly lockedOutPlayers = signal<Player[]>([]);
+  protected readonly players = signal<Player[]>([]);
+  protected readonly controlPlayerId = signal<string | null>(null);
 
   constructor(private readonly gameStateService: GameStateService) {}
 
@@ -29,6 +31,8 @@ export class BuzzerPanelComponent implements OnInit {
     this.gameStateService.getState().subscribe(state => {
       this.buzzerEnabled.set(state.buzzerEnabled);
       this.buzzLocked.set(state.buzzLocked);
+      this.players.set(state.players);
+      this.controlPlayerId.set(state.controlPlayerId);
 
       // Find locked player
       if (state.lockedPlayerId) {
@@ -58,5 +62,9 @@ export class BuzzerPanelComponent implements OnInit {
    */
   protected clearLockouts(): void {
     this.gameStateService.clearLockouts();
+  }
+
+  protected setControl(playerId: string): void {
+    this.gameStateService.setControlPlayer(playerId);
   }
 }

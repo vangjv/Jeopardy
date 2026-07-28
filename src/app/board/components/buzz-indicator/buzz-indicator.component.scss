@@ -3,10 +3,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 215, 0, 0.95);
-  padding: 3rem 4rem;
-  border-radius: 1rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  min-width: 520px;
+  background: linear-gradient(145deg, #f9d56b, #d99b16);
+  padding: 2.6rem 4.5rem;
+  border: 5px solid #fff1b8;
+  border-radius: 1.25rem;
+  box-shadow:
+    0 0 0 12px rgba(4, 12, 48, 0.82),
+    0 24px 70px rgba(0, 0, 0, 0.68);
   z-index: 1000;
   animation: buzzIn 0.3s ease-out;
   
@@ -23,8 +27,8 @@
     
     .player-name {
       font-size: 4rem;
-      font-weight: 700;
-      color: #000;
+      font-weight: 900;
+      color: #07123f;
       text-align: center;
     }
   }

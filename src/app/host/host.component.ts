@@ -2,7 +2,7 @@
  * HostComponent - Main container for host control interface
  */
 
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -53,8 +53,12 @@ import { Subscription } from 'rxjs';
 export class HostComponent implements OnInit, OnDestroy {
   private buzzSubscription?: Subscription;
   private boardReadySubscription?: Subscription;
+  private stateSubscription?: Subscription;
   private boardWindow: Window | null = null;
   private lastDailyDoubleClueId: string | null = null;
+  protected readonly gameLoaded = signal(false);
+  protected readonly currentRound = signal<'round1' | 'round2' | 'final'>('round1');
+  protected readonly finalActive = signal(false);
 
   constructor(
     private readonly gameStateService: GameStateService,
@@ -71,7 +75,11 @@ export class HostComponent implements OnInit, OnDestroy {
     this.gameStateService.setSyncService(this.syncService);
 
     // Subscribe to game state to configure buzzer keys
-    this.gameStateService.getState().subscribe(state => {
+    this.stateSubscription = this.gameStateService.getState().subscribe(state => {
+      this.gameLoaded.set(state.gameSet !== null);
+      this.currentRound.set(state.currentRound);
+      this.finalActive.set(state.currentRound === 'final');
+
       const keyMap = new Map<string, string>();
       state.players.forEach(player => {
         if (player.buzzerKey) {
@@ -120,6 +128,7 @@ export class HostComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.buzzSubscription?.unsubscribe();
     this.boardReadySubscription?.unsubscribe();
+    this.stateSubscription?.unsubscribe();
     this.syncService.destroy();
   }
 
@@ -165,6 +174,10 @@ export class HostComponent implements OnInit, OnDestroy {
    */
   protected advanceRound(): void {
     this.gameStateService.advanceRound();
+  }
+
+  protected startFinalJeopardy(): void {
+    this.gameStateService.startFinalJeopardy();
   }
 
   /**

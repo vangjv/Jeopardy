@@ -1,57 +1,145 @@
 <mat-card class="score-adjudication">
   <mat-card-header>
-    <mat-card-title>Score Adjudication</mat-card-title>
+    <div class="card-heading">
+      <div>
+        <span class="eyebrow">Current clue</span>
+        <mat-card-title>Response desk</mat-card-title>
+      </div>
+      @if (activeClue()) {
+        <span
+          class="status-pill"
+          [class.open]="buzzerEnabled()"
+          [class.locked]="buzzLocked()"
+          [class.daily-double]="activeClue()?.isDailyDouble"
+        >
+          @if (activeClue()?.isDailyDouble) {
+            Daily Double
+          } @else if (buzzLocked()) {
+            Buzz locked
+          } @else if (buzzerEnabled()) {
+            Buzzer open
+          } @else {
+            Buzzer closed
+          }
+        </span>
+      }
+    </div>
   </mat-card-header>
-  
+
   <mat-card-content>
-    @if (!canAdjudicate()) {
-      <p class="no-adjudication">Waiting for player to buzz in...</p>
+    @if (!activeClue()) {
+      <div class="empty-state">
+        <mat-icon>touch_app</mat-icon>
+        <div>
+          <strong>Choose the next clue</strong>
+          <span>The clue, answer, and scoring controls will appear here.</span>
+        </div>
+      </div>
     } @else {
-      <div class="adjudication-info">
-        <div class="player-info">
-          <span class="label">Player:</span>
-          <span class="player-name">{{ lockedPlayer()?.name }}</span>
+      <div class="clue-context">
+        <div class="clue-meta">
+          <span>{{ activeClue()?.categoryTitle }}</span>
+          <strong>${{ activeClue()?.value }}</strong>
         </div>
-        
-        <div class="clue-info">
-          <span class="label">Value:</span>
-          <span class="value">${{ activeClue()?.value }}</span>
-        </div>
-        
-        <div class="correct-response">
-          <span class="label">Correct Response:</span>
-          <span class="response">{{ activeClue()?.correctResponse }}</span>
-        </div>
+        <p class="clue-text">{{ activeClue()?.clueText }}</p>
       </div>
-      
-      <div class="actions">
-        <button
-          mat-raised-button
-          color="primary"
-          (click)="markCorrect()"
-          class="correct-btn"
-        >
-          <mat-icon>check_circle</mat-icon>
-          Correct
-        </button>
-        
-        <button
-          mat-raised-button
-          color="warn"
-          (click)="markIncorrect()"
-          class="incorrect-btn"
-        >
-          <mat-icon>cancel</mat-icon>
-          Incorrect
-        </button>
-        
-        <button
-          mat-button
-          (click)="skipClue()"
-        >
-          Skip
-        </button>
+
+      <div class="answer-key" data-testid="host-answer-key">
+        <span class="answer-label">
+          <mat-icon>visibility</mat-icon>
+          Host answer
+        </span>
+        <strong class="response">{{ activeClue()?.correctResponse }}</strong>
       </div>
+
+      @if (lockedOutPlayers().length > 0) {
+        <div class="lockout-summary">
+          <mat-icon>lock</mat-icon>
+          <span>
+            Cannot rebuzz:
+            @for (player of lockedOutPlayers(); track player.id; let last = $last) {
+              <strong class="lockout-player">{{ player.name }}</strong>{{ last ? '' : ', ' }}
+            }
+          </span>
+        </div>
+      }
+
+      @if (canAdjudicate()) {
+        <div class="responder-banner">
+          <div class="responder-icon">
+            <mat-icon>campaign</mat-icon>
+          </div>
+          <div>
+            <span>{{ activeClue()?.isDailyDouble ? 'Responding contestant' : 'Buzzed first' }}</span>
+            <strong>{{ lockedPlayer()?.name }}</strong>
+          </div>
+        </div>
+
+        <div class="primary-actions">
+          <button
+            mat-flat-button
+            (click)="markCorrect()"
+            class="correct-btn"
+            aria-label="Correct"
+          >
+            <mat-icon>check_circle</mat-icon>
+            <span>
+              <strong>Correct</strong>
+              <small>+${{ activeClue()?.value }} · close clue</small>
+            </span>
+          </button>
+
+          <button
+            mat-flat-button
+            (click)="markIncorrect()"
+            class="incorrect-btn"
+            aria-label="Incorrect"
+          >
+            <mat-icon>cancel</mat-icon>
+            <span>
+              <strong>Incorrect</strong>
+              <small>
+                @if (wrongAnswerSubtractsValue()) {
+                  −${{ activeClue()?.value }} ·
+                }
+                {{ activeClue()?.isDailyDouble ? 'close clue' : 'reopen buzzer' }}
+              </small>
+            </span>
+          </button>
+        </div>
+
+        <div class="secondary-actions">
+          @if (!activeClue()?.isDailyDouble) {
+            <button mat-button (click)="resetBuzz()" aria-label="Reset Buzzer">
+              <mat-icon>replay</mat-icon>
+              Release buzz without scoring
+            </button>
+          }
+          <button mat-button (click)="skipClue()" aria-label="Skip">
+            <mat-icon>skip_next</mat-icon>
+            No response · close clue
+          </button>
+        </div>
+      } @else if (activeClue()?.isDailyDouble) {
+        <div class="waiting-state wager">
+          <mat-icon>payments</mat-icon>
+          <div>
+            <strong>Set the wager to continue</strong>
+            <span>The contestant in control answers this clue.</span>
+          </div>
+        </div>
+      } @else {
+        <div class="waiting-state">
+          <span class="pulse" aria-hidden="true"></span>
+          <div>
+            <strong>Listening for a buzz</strong>
+            <span>The first eligible contestant will appear here.</span>
+          </div>
+          <button mat-button (click)="skipClue()" aria-label="Skip">
+            No response
+          </button>
+        </div>
+      }
     }
   </mat-card-content>
 </mat-card>

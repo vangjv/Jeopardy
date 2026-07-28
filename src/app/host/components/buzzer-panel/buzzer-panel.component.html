@@ -1,54 +1,69 @@
 <mat-card class="buzzer-panel">
   <mat-card-header>
-    <mat-card-title>Buzzer Status</mat-card-title>
-  </mat-card-header>
-  
-  <mat-card-content>
-    <div class="status-row">
-      <span class="status-label">Buzzer:</span>
-      <span [class]="buzzerEnabled() ? 'status-enabled' : 'status-disabled'">
-        {{ buzzerEnabled() ? 'ENABLED' : 'DISABLED' }}
+    <div class="panel-heading">
+      <div>
+        <span class="eyebrow">Players</span>
+        <mat-card-title>Score & control</mat-card-title>
+      </div>
+      <span class="buzzer-state" [class.open]="buzzerEnabled()" [class.locked]="buzzLocked()">
+        <span class="state-dot" aria-hidden="true"></span>
+        {{ buzzLocked() ? 'Locked' : buzzerEnabled() ? 'Open' : 'Closed' }}
       </span>
     </div>
-    
-    @if (buzzLocked() && lockedPlayer()) {
-      <div class="buzz-info">
-        <mat-icon class="buzz-icon">campaign</mat-icon>
-        <span class="player-name">{{ lockedPlayer()?.name }} buzzed in!</span>
+  </mat-card-header>
+
+  <mat-card-content>
+    @if (players().length > 0) {
+      <div class="player-list" aria-label="Contestant scores and board control">
+        @for (player of players(); track player.id) {
+          <button
+            type="button"
+            class="player-row"
+            (click)="setControl(player.id)"
+            [class.active-control]="controlPlayerId() === player.id"
+            [class.buzzed]="lockedPlayer()?.id === player.id"
+            [class.locked-out]="lockedOutPlayers().includes(player)"
+            [attr.aria-pressed]="controlPlayerId() === player.id"
+            [attr.aria-label]="'Give board control to ' + player.name"
+          >
+            <span class="player-color" [style.background]="player.color" aria-hidden="true"></span>
+            <span class="player-name">{{ player.name }}</span>
+            @if (lockedPlayer()?.id === player.id) {
+              <span class="player-state">Buzzed</span>
+            } @else if (lockedOutPlayers().includes(player)) {
+              <span class="player-state locked-label">Locked out</span>
+            } @else if (controlPlayerId() === player.id) {
+              <span class="player-state">Control</span>
+            }
+            <strong class="player-score">{{ player.score < 0 ? '-$' : '$' }}{{ player.score < 0 ? -player.score : player.score }}</strong>
+          </button>
+        }
       </div>
     }
-    
-    @if (lockedOutPlayers().length > 0) {
-      <div class="lockout-info">
-        <span class="lockout-label">Locked Out:</span>
-        <div class="lockout-list">
-          @for (player of lockedOutPlayers(); track player.id) {
-            <span class="lockout-player">{{ player.name }}</span>
-          }
-        </div>
+
+    @if (buzzLocked() || lockedOutPlayers().length > 0) {
+      <div class="controls">
+        @if (buzzLocked()) {
+          <button mat-stroked-button (click)="resetBuzz()" aria-label="Reset Buzzer">
+            <mat-icon>replay</mat-icon>
+            Release buzz
+          </button>
+        }
+        @if (lockedOutPlayers().length > 0) {
+          <span class="lockout-count">
+            <mat-icon>lock</mat-icon>
+            {{ lockedOutPlayers().length }} locked out
+          </span>
+        }
+        @if (lockedOutPlayers().length > 0) {
+          <span class="control-spacer"></span>
+        }
+        @if (lockedOutPlayers().length > 0) {
+          <button mat-button (click)="clearLockouts()">
+            Clear lockouts
+          </button>
+        }
       </div>
     }
-    
-    <div class="controls">
-      <button
-        mat-raised-button
-        color="accent"
-        (click)="resetBuzz()"
-        [disabled]="!buzzLocked()"
-      >
-        <mat-icon>refresh</mat-icon>
-        Reset Buzzer
-      </button>
-      
-      @if (lockedOutPlayers().length > 0) {
-        <button
-          mat-raised-button
-          (click)="clearLockouts()"
-        >
-          <mat-icon>lock_open</mat-icon>
-          Clear Lockouts
-        </button>
-      }
-    </div>
   </mat-card-content>
 </mat-card>

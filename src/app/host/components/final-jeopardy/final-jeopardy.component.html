@@ -17,7 +17,7 @@
           </button>
         </div>
       } @else {
-        <mat-vertical-stepper [linear]="true">
+        <mat-vertical-stepper [linear]="false" [selectedIndex]="selectedStepIndex">
 
           <!-- Step 1: Category Reveal -->
           <mat-step [completed]="categoryRevealed">
@@ -180,7 +180,7 @@
                 mat-raised-button
                 color="accent"
                 (click)="revealResults()"
-                [disabled]="!winner"
+                [disabled]="!allPlayersAdjudicated"
               >
                 Show Winner on Board
               </button>

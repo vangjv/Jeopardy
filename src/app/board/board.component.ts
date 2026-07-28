@@ -36,6 +36,7 @@ export class BoardComponent implements OnInit, OnDestroy {
   protected readonly showRoundTransition = signal(false);
   protected readonly showFinalJeopardy = signal(false);
   protected readonly currentRound = signal<RoundType>('round1');
+  protected readonly gameState = signal<GameState | null>(null);
 
   private readonly boardInstanceId = generateUUID();
   private subscriptions: Subscription[] = [];
@@ -50,9 +51,6 @@ export class BoardComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // Initialize SyncService as board (T041)
     this.syncService.initialize('board');
-
-    // Request initial state sync (T058)
-    this.syncService.requestStateSync(this.boardInstanceId);
 
     // Subscribe to state sync events (T044)
     this.subscriptions.push(
@@ -152,6 +150,7 @@ export class BoardComponent implements OnInit, OnDestroy {
     // Subscribe to game state for local display updates
     this.subscriptions.push(
       this.gameStateService.getState().subscribe(state => {
+        this.gameState.set(state);
         // Show clue display if there's an active clue
         this.showClue.set(state.activeClue !== null);
 
@@ -168,20 +167,33 @@ export class BoardComponent implements OnInit, OnDestroy {
 
     // T107: Subscribe to Final Phase Changed events
     this.subscriptions.push(
-      this.syncService.onFinalPhaseChanged().subscribe(() => {
-        // State is already updated via onStateSync, just ensure display is shown
+      this.syncService.onFinalPhaseChanged().subscribe(({ phase }) => {
         const state = this.gameStateService.getCurrentState();
+        if (state.finalJeopardyState) {
+          this.applyPatch({
+            finalJeopardyState: {
+              ...state.finalJeopardyState,
+              phase,
+            },
+          });
+        }
         this.showFinalJeopardy.set(state.finalJeopardyState !== null);
       })
     );
 
     // T112: Subscribe to Winner Announced events
     this.subscriptions.push(
-      this.syncService.onWinnerAnnounced().subscribe(() => {
-        // Winner display is handled by FinalJeopardyDisplayComponent
-        // which subscribes to game state
+      this.syncService.onWinnerAnnounced().subscribe(({ winnerId, allPlayers }) => {
+        this.applyPatch({
+          phase: 'complete',
+          winnerId,
+          players: allPlayers,
+        });
       })
     );
+
+    // Subscribe before requesting state so an immediate host response cannot be lost.
+    this.syncService.requestStateSync(this.boardInstanceId);
 
     // Start connection health monitoring (T060)
     this.startConnectionMonitoring();

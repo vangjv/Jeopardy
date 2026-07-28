@@ -17,7 +17,12 @@
     @for (row of clueGrid(); track $index) {
       <div class="clue-row">
         @for (cell of row; track cell.id) {
-          <div class="clue-cell" [class.used]="cell.used">
+          <div
+            class="clue-cell"
+            [class.used]="cell.used"
+            [attr.data-clue-id]="cell.id"
+            [attr.aria-label]="cell.used ? 'Used clue' : '$' + cell.value + ' clue'"
+          >
             @if (!cell.used) {
               <span class="value">${{ cell.value }}</span>
             }

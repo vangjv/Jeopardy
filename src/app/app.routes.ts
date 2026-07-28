@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { HostComponent } from './host/host.component';
-import { BoardComponent } from './board/board.component';
 import { canDeactivateGuard } from './shared/guards/can-deactivate.guard';
 
 export const routes: Routes = [
@@ -11,12 +9,12 @@ export const routes: Routes = [
   },
   {
     path: 'host',
-    component: HostComponent,
+    loadComponent: () => import('./host/host.component').then(module => module.HostComponent),
     canDeactivate: [canDeactivateGuard]
   },
   {
     path: 'board',
-    component: BoardComponent
+    loadComponent: () => import('./board/board.component').then(module => module.BoardComponent)
   },
   {
     path: '**',

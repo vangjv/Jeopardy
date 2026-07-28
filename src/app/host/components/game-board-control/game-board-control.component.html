@@ -1,12 +1,27 @@
 <mat-card class="game-board-control">
   <mat-card-header>
-    <mat-card-title>Game Board - {{ currentRound() === 'round1' ? 'Jeopardy' : 'Double Jeopardy' }}</mat-card-title>
+    <div class="board-heading">
+      <div>
+        <span class="eyebrow">Clue selection</span>
+        <mat-card-title>
+          {{ currentRound() === 'round1' ? 'Jeopardy' : 'Double Jeopardy' }} board
+        </mat-card-title>
+      </div>
+      @if (totalClueCount() > 0) {
+        <span class="board-progress">
+          {{ usedClueCount() }} / {{ totalClueCount() }} played
+        </span>
+      }
+    </div>
   </mat-card-header>
   
   <mat-card-content>
     @if (categories().length === 0) {
       <p class="no-game">No game loaded. Import game content to start.</p>
     } @else {
+      <p class="selection-hint">
+        {{ canSelectClues() ? 'Select the clue called by the contestant.' : 'Finish the active clue to choose again.' }}
+      </p>
       <div class="board-grid">
         <!-- Category headers -->
         <div class="category-row">
@@ -24,6 +39,13 @@
               <button
                 mat-raised-button
                 [class]="getCellClass(cell)"
+                [attr.data-clue-id]="cell.clue.id"
+                [attr.aria-label]="
+                  (cell.dailyDouble ? 'Daily Double, ' : '') +
+                  '$' +
+                  cell.clue.value +
+                  ' clue'
+                "
                 [disabled]="cell.used || !canSelectClues()"
                 (click)="selectClue(cell)"
               >

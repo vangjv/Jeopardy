@@ -46,8 +46,8 @@ export function isRound(round: Round | FinalRound): round is Round {
  * Check if a string is a valid keyboard event code
  */
 export function isValidKeyboardCode(code: string): boolean {
-  // Basic validation - starts with Key, Digit, Space, or special keys
-  return /^(Key[A-Z]|Digit[0-9]|Space|Enter|Arrow(Up|Down|Left|Right))$/.test(code);
+  // The buzzer service compares KeyboardEvent.key values, normalized to uppercase.
+  return /^[A-Z0-9]$/.test(code) || /^(SPACE|ENTER|ARROW(UP|DOWN|LEFT|RIGHT))$/.test(code);
 }
 
 /**

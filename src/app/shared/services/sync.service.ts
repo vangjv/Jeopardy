@@ -29,9 +29,21 @@ import { RoundType } from '../models/game-content.model';
 })
 export class SyncService {
   private readonly CHANNEL_NAME = 'jeopardy-sync';
+  private readonly STATE_STORAGE_KEY = 'jeopardy-authoritative-state';
   private channel: BroadcastChannel | null = null;
   private role: 'host' | 'board' | null = null;
   private eventSubject = new Subject<SyncEvent>();
+  private readonly storageListener = (event: StorageEvent): void => {
+    if (event.key !== this.STATE_STORAGE_KEY || !event.newValue) return;
+    const gameState = this.deserializeState(event.newValue);
+    if (gameState) {
+      this.handleMessage({
+        type: 'STATE_SYNC',
+        timestamp: performance.now(),
+        payload: { gameState },
+      });
+    }
+  };
 
   constructor() {}
 
@@ -40,6 +52,7 @@ export class SyncService {
    */
   initialize(role: 'host' | 'board'): void {
     this.role = role;
+    window.addEventListener('storage', this.storageListener);
     
     try {
       this.channel = new BroadcastChannel(this.CHANNEL_NAME);
@@ -63,6 +76,7 @@ export class SyncService {
    * Clean up channel on service destruction
    */
   destroy(): void {
+    window.removeEventListener('storage', this.storageListener);
     if (this.channel) {
       this.channel.close();
       this.channel = null;
@@ -115,6 +129,11 @@ export class SyncService {
    * Broadcast full state sync
    */
   broadcastStateSync(gameState: GameState): void {
+    try {
+      localStorage.setItem(this.STATE_STORAGE_KEY, this.serializeState(gameState));
+    } catch (error) {
+      console.error('Failed to persist synchronized game state:', error);
+    }
     this.sendEvent<StateSyncPayload>('STATE_SYNC', { gameState });
   }
 
@@ -209,6 +228,17 @@ export class SyncService {
    * Request sync from host (Board sends this)
    */
   requestStateSync(boardInstanceId: string): void {
+    const persistedState = localStorage.getItem(this.STATE_STORAGE_KEY);
+    if (persistedState) {
+      const gameState = this.deserializeState(persistedState);
+      if (gameState) {
+        this.handleMessage({
+          type: 'STATE_SYNC',
+          timestamp: performance.now(),
+          payload: { gameState },
+        });
+      }
+    }
     this.sendEvent<BoardReadyPayload>('BOARD_READY', { 
       requestSync: true, 
       boardInstanceId 
@@ -322,5 +352,34 @@ export class SyncService {
    */
   onWinnerAnnounced(): Observable<WinnerAnnouncedPayload> {
     return this.getEventObservable<WinnerAnnouncedPayload>('WINNER_ANNOUNCED');
+  }
+
+  private serializeState(gameState: GameState): string {
+    return JSON.stringify(gameState, (_key, value) => {
+      if (value instanceof Set) {
+        return { __syncType: 'Set', values: Array.from(value) };
+      }
+      if (value instanceof Map) {
+        return { __syncType: 'Map', values: Array.from(value.entries()) };
+      }
+      return value;
+    });
+  }
+
+  private deserializeState(serialized: string): GameState | null {
+    try {
+      return JSON.parse(serialized, (_key, value) => {
+        if (value?.__syncType === 'Set') {
+          return new Set(value.values);
+        }
+        if (value?.__syncType === 'Map') {
+          return new Map(value.values);
+        }
+        return value;
+      }) as GameState;
+    } catch (error) {
+      console.error('Failed to restore synchronized game state:', error);
+      return null;
+    }
   }
 }

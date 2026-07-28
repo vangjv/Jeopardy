@@ -75,7 +75,7 @@ export class FinalJeopardyComponent implements OnInit, OnDestroy {
     const phase = state.finalJeopardyState.phase;
     this.categoryRevealed = phase !== 'category-reveal';
     this.wagersCollected = phase !== 'category-reveal' && phase !== 'wager-collection';
-    this.clueRevealed = phase === 'clue-reveal' || phase === 'response-collection' || phase === 'adjudication';
+    this.clueRevealed = phase === 'response-collection' || phase === 'adjudication';
     this.responsesCollected = phase === 'adjudication';
   }
 
@@ -141,9 +141,9 @@ export class FinalJeopardyComponent implements OnInit, OnDestroy {
       return;
     }
 
-    // Save all wagers
-    Object.keys(this.wagerForm.value).forEach(playerId => {
-      const wager = this.wagerForm.value[playerId];
+    const wagers = { ...this.wagerForm.getRawValue() };
+    Object.keys(wagers).forEach(playerId => {
+      const wager = wagers[playerId];
       this.gameStateService.setFinalWager(playerId, wager);
     });
 
@@ -164,9 +164,9 @@ export class FinalJeopardyComponent implements OnInit, OnDestroy {
       return;
     }
 
-    // Save all responses
-    Object.keys(this.responseForm.value).forEach(playerId => {
-      const response = this.responseForm.value[playerId];
+    const responses = { ...this.responseForm.getRawValue() };
+    Object.keys(responses).forEach(playerId => {
+      const response = responses[playerId];
       this.gameStateService.setFinalResponse(playerId, response);
     });
 
@@ -199,6 +199,28 @@ export class FinalJeopardyComponent implements OnInit, OnDestroy {
   get winner(): Player | null {
     if (!this.gameState?.winnerId) return null;
     return this.gameState.players.find(p => p.id === this.gameState?.winnerId) || null;
+  }
+
+  get allPlayersAdjudicated(): boolean {
+    return (
+      (this.gameState?.players.length ?? 0) > 0 &&
+      this.gameState?.finalJeopardyState?.adjudications.size === this.gameState?.players.length
+    );
+  }
+
+  get selectedStepIndex(): number {
+    switch (this.gameState?.finalJeopardyState?.phase) {
+      case 'wager-collection':
+        return 1;
+      case 'clue-reveal':
+        return 2;
+      case 'response-collection':
+        return 3;
+      case 'adjudication':
+        return 4;
+      default:
+        return 0;
+    }
   }
 
   /**

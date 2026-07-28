@@ -19,6 +19,24 @@
       letter-spacing: 0.01em;
     }
 
+    .brand {
+      align-items: center;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .round-chip {
+      background: rgba(59, 130, 246, 0.18);
+      border: 1px solid rgba(147, 197, 253, 0.35);
+      border-radius: 999px;
+      color: #bfdbfe;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0.55rem;
+      text-transform: uppercase;
+    }
+
     .toolbar-spacer {
       flex: 1;
     }
@@ -68,19 +86,6 @@
       flex-wrap: wrap;
     }
 
-    .audio-group {
-      .button-row {
-        button {
-          background: #0f172a !important;
-          border-color: #0f172a !important;
-
-          &:hover:not([disabled]) {
-            background: #11182e !important;
-          }
-        }
-      }
-    }
-
     .action-group {
       display: flex;
       align-items: center;
@@ -112,6 +117,11 @@
             border-color: #3b4b63 !important;
           }
 
+          &[disabled] {
+            cursor: not-allowed;
+            opacity: 0.42;
+          }
+
           &.mat-warn {
             color: #0b1224 !important;
             background: #fbbf24 !important;
@@ -122,26 +132,25 @@
             }
           }
 
+          &.current-round {
+            background: #1d4ed8 !important;
+            border-color: #60a5fa !important;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+          }
+
           mat-icon {
             margin-right: 0.25rem;
           }
         }
       }
 
-      &.status-hint {
-        color: #bbf7d0;
-        font-weight: 600;
-        mat-icon {
-          color: #86efac;
-        }
-      }
     }
   }
 
   .host-content {
     flex: 1;
     display: grid;
-    grid-template-columns: minmax(340px, 420px) minmax(0, 1fr);
+    grid-template-columns: minmax(430px, 480px) minmax(0, 1fr);
     gap: 1rem;
     min-height: 0;
     padding: 0 0.75rem 1rem;
@@ -162,6 +171,20 @@
         border-radius: 16px;
         box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
         padding: 1rem 1.1rem 1.25rem;
+      }
+
+      .live-section {
+        border-top: 4px solid #2563eb;
+        padding-top: 0.8rem;
+      }
+
+      .flow-section,
+      .setup-section {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
       }
 
       .section-heading {
@@ -229,7 +252,57 @@
         }
       }
 
+      .flow-panel,
+      .setup-panel {
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+
+        mat-expansion-panel-header {
+          min-height: 52px;
+          padding: 0 0.9rem;
+        }
+
+        mat-panel-title {
+          align-items: center;
+          color: #0f172a;
+          font-size: 0.9rem;
+          font-weight: 800;
+          gap: 0.45rem;
+
+          mat-icon {
+            color: #2563eb;
+            font-size: 1.15rem;
+            height: 1.15rem;
+            width: 1.15rem;
+          }
+        }
+
+        mat-panel-description {
+          color: #64748b;
+          font-size: 0.72rem;
+          justify-content: flex-end;
+        }
+      }
+
+      .flow-panel {
+        ::ng-deep .mat-expansion-panel-body {
+          padding: 0 0.75rem 0.75rem;
+        }
+
+        app-final-jeopardy {
+          ::ng-deep mat-card {
+            box-shadow: none;
+            margin: 0;
+          }
+        }
+      }
+
       .setup-section {
+        ::ng-deep .mat-expansion-panel-body {
+          padding: 0 0.75rem 0.9rem;
+        }
+
         .setup-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -296,38 +369,6 @@
             app-player-setup,
             app-game-rules {
               display: block;
-            }
-
-            app-game-import {
-              ::ng-deep .game-import {
-                padding: 0.25rem;
-              }
-            }
-
-            app-player-setup {
-              ::ng-deep .player-setup {
-                padding: 0.25rem;
-              }
-            }
-
-            app-game-rules {
-              ::ng-deep .game-rules-container {
-                padding: 0.25rem;
-
-                .rules-card {
-                  border-radius: 10px;
-                  box-shadow: none;
-                  border: 1px solid #e5e7eb;
-
-                  mat-card-content {
-                    padding: 0.5rem;
-                  }
-
-                  mat-card-actions {
-                    padding: 0.5rem;
-                  }
-                }
-              }
             }
           }
         }

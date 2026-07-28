@@ -98,11 +98,11 @@ export class GameStateService {
     const newState = { ...currentState, ...updates };
     this.stateSubject.next(newState);
 
-    // Don't broadcast on every state change - only when explicitly needed
-    // State sync should only be sent when board requests it or on critical events
     if (!skipBroadcast && this.syncService) {
-      // Removed automatic broadcast to avoid sending large GameSet repeatedly
-      // Individual events (clue selected, scores updated) are broadcast separately
+      // Keep the audience display authoritative even for state transitions that do
+      // not have a dedicated incremental event (control, lockouts and Final phases).
+      // BroadcastChannel uses structured cloning, so Sets and Maps remain intact.
+      this.syncService.broadcastStateSync(newState);
     }
   }
 
@@ -298,6 +298,10 @@ export class GameStateService {
 
     if (!state.gameSet) {
       console.error('No game set loaded');
+      return;
+    }
+
+    if (state.activeClue || state.usedClueIds.has(clueId)) {
       return;
     }
 
@@ -527,7 +531,10 @@ export class GameStateService {
 
     this.updateState(() => ({
       dailyDoubleWager: wager,
-      buzzerEnabled: true, // Enable buzzer after wager set
+      // A Daily Double is answered only by the contestant in control.
+      buzzerEnabled: false,
+      buzzLocked: false,
+      lockedPlayerId: null,
     }));
   }
 
@@ -599,6 +606,7 @@ export class GameStateService {
   adjudicateFinalResponse(playerId: string, correct: boolean): void {
     const state = this.getCurrentState();
     if (!state.finalJeopardyState) return;
+    if (state.finalJeopardyState.adjudications.has(playerId)) return;
 
     const adjudications = new Map(state.finalJeopardyState.adjudications);
     adjudications.set(playerId, correct);
@@ -676,6 +684,12 @@ export class GameStateService {
    */
   determineWinner(): void {
     const state = this.getCurrentState();
+    if (
+      !state.finalJeopardyState ||
+      state.finalJeopardyState.adjudications.size !== state.players.length
+    ) {
+      return;
+    }
     const winner = getWinner(state.players);
 
     if (winner) {

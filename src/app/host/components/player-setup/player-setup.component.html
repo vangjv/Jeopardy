@@ -29,9 +29,10 @@
             maxlength="1"
             placeholder="Key"
             [class.error]="hasKeyConflict(player.buzzerKey)"
+            [attr.aria-invalid]="hasKeyConflict(player.buzzerKey)"
           />
           @if (hasKeyConflict(player.buzzerKey)) {
-            <mat-error>Key conflict!</mat-error>
+            <mat-hint class="key-conflict" role="alert">Key conflict!</mat-hint>
           }
         </mat-form-field>
         

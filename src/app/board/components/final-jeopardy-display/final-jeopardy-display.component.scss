@@ -186,6 +186,18 @@
   text-align: center;
   box-shadow: 0 10px 50px rgba(251, 191, 36, 0.5);
   animation: scaleIn 0.8s ease-out, glow 2s ease-in-out infinite;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .winner-trophy,
+  .winner-title,
+  .winner-name,
+  .winner-score {
+    color: #07123f !important;
+    text-shadow: none !important;
+  }
 
   .winner-trophy {
     font-size: clamp(4rem, 10vw, 8rem);
@@ -197,7 +209,7 @@
     .winner-title {
       font-size: clamp(1.5rem, 4vw, 3rem);
       font-weight: 900;
-      color: white;
+      color: #07123f;
       letter-spacing: 0.2em;
       margin-bottom: 0.5rem;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -213,7 +225,7 @@
     .winner-score {
       font-size: clamp(1.5rem, 4vw, 3rem);
       font-weight: 700;
-      color: white;
+      color: #07123f;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
   }

@@ -56,6 +56,15 @@ export class GameImportComponent {
           { id: crypto.randomUUID(), name: 'Player 3', score: 0, buzzerKey: 'D', color: '#10b981' }
         ];
 
+        const playerValidation = this.validationService.validatePlayers(players);
+        if (!playerValidation.valid) {
+          this.error.set(
+            `Player setup is invalid: ${playerValidation.errors.map(e => e.message).join(', ')}`,
+          );
+          this.loading.set(false);
+          return;
+        }
+
         this.gameStateService.initializeGame(players, gameSet);
         this.success.set(true);
         this.loading.set(false);
@@ -98,8 +107,11 @@ export class GameImportComponent {
 
         // Load game (players should already be set up)
         const state = this.gameStateService.getCurrentState();
-        if (state.players.length === 0) {
-          this.error.set('Please add players before loading game content');
+        const playerValidation = this.validationService.validatePlayers(state.players);
+        if (!playerValidation.valid) {
+          this.error.set(
+            `Player setup is invalid: ${playerValidation.errors.map(e => e.message).join(', ')}`,
+          );
           this.loading.set(false);
           return;
         }

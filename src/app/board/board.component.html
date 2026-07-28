@@ -6,7 +6,7 @@
 
   <!-- Show Final Jeopardy display when in Final Jeopardy phase (T108-T110) -->
   @if (showFinalJeopardy()) {
-    <app-final-jeopardy-display [gameState]="gameStateService.getCurrentState()"></app-final-jeopardy-display>
+    <app-final-jeopardy-display [gameState]="gameState()"></app-final-jeopardy-display>
   } @else if (showClue()) {
     <!-- Show clue display when a clue is active -->
     <app-clue-display></app-clue-display>
