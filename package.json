@@ -12,6 +12,7 @@
     "test:visual": "node scripts/run-playwright.mjs e2e/visual.spec.ts --project=chromium",
     "test:visual:update": "node scripts/run-playwright.mjs e2e/visual.spec.ts --project=chromium --update-snapshots",
     "test:receipt": "node scripts/run-playwright.mjs --project=receipt",
+    "record:game": "node scripts/record-game.mjs",
     "verify:quick": "npm run build && npm run test:unit",
     "verify": "npm run verify:quick && npm run test:e2e && npm run test:receipt"
   },

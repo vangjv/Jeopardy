@@ -190,6 +190,7 @@ npm run verify:quick
 npm run test:e2e
 npm run test:visual
 npm run test:receipt
+npm run record:game
 npm audit --audit-level=high
 npm run verify
 ```
@@ -203,6 +204,9 @@ npm run verify
   screenshots at the required viewports.
 - `test:receipt` plays all 60 clues and Final Jeopardy, announces a winner, and
   records screenshots, a trace, both page videos, and an HTML report.
+- `record:game` runs that same full episode with the bundled questions and three
+  default contestants. It saves named `game-board.webm` and `host-board.webm`
+  recordings and attaches both to the HTML report.
 - `npm audit --audit-level=high` is the online security check and fails for any
   unresolved high or critical finding.
 - `verify` runs the production build, unit tests, complete browser suite
@@ -220,6 +224,20 @@ The latest verification artifacts are written to:
 
 Playwright clears its generated output at the start of a run. Run
 `npm run test:receipt` last when you want the complete-game evidence to remain in
+`test-results/` and `playwright-report/`.
+
+To record a custom question pack and contestant roster, pass a valid game-set JSON
+file plus two or three comma-separated `Name:Key` pairs:
+
+```powershell
+npm run record:game -- --game-set .\src\assets\game-sets\sample-game.json --players "Ada:A,Grace:S,Linus:D"
+```
+
+The automation configures the contestants, imports the questions, explicitly
+starts Round 1, plays every regular clue and Daily Double through both rounds,
+completes Final Jeopardy, and shows the winner. The host and audience board share
+one browser context so synchronization matches production. The named videos,
+state assertions, screenshots, trace, and report are emitted beneath
 `test-results/` and `playwright-report/`.
 
 Only update visual baselines after reviewing the expected, actual, and diff

@@ -17,7 +17,9 @@ Last updated: 2026-07-28
 - Each Playwright command allocates and owns an isolated dynamic-port Angular
   server, preventing a stale process on port 4200 from contaminating a test run.
 - Receipt: a complete 60-clue, two-round game plus Final Jeopardy passes and emits
-  screenshots, a trace, videos for both pages, and an HTML report.
+  named screenshots, a trace, videos for both pages, and an HTML report. The
+  `record:game` wrapper accepts a custom game-set JSON path and two or three
+  `Name:Key` contestant pairs.
 - Visual review: ten approved baselines cover Round 1, a clue, buzz winner, Daily
   Double, Double Jeopardy, Final category/clue/results, winner, and the host
   console. The host baseline now captures a locked buzz with the host-only answer
@@ -64,5 +66,13 @@ incomplete acceptance rows.
 ## Artifact locations
 
 - HTML report: `playwright-report/index.html`
-- Test output, traces, screenshots, and videos: `test-results/`
+- Test output, traces, named state screenshots, `game-board.webm`, and
+  `host-board.webm`: `test-results/`
 - Committed visual baselines: adjacent `*-snapshots/` directories under `e2e/`
+
+## Latest configurable recording
+
+- Command: `npm run record:game -- --game-set
+  .\src\assets\game-sets\sample-game.json --players "Ada:A,Grace:S,Linus:D"`
+- Result: passed on 2026-07-28; both recordings are 1280x720 and cover the
+  complete synchronized journey through the winner display.

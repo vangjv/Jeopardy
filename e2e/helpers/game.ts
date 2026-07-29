@@ -1,7 +1,13 @@
 import { expect, Page } from '@playwright/test';
+import { resolve } from 'node:path';
 
 export interface BrowserDiagnostics {
   errors: string[];
+}
+
+export interface PlayerConfiguration {
+  name: string;
+  buzzerKey: string;
 }
 
 export function collectBrowserDiagnostics(page: Page): BrowserDiagnostics {
@@ -40,17 +46,81 @@ export async function loadSampleGame(host: Page): Promise<void> {
   ).toBeVisible();
 }
 
-export async function expectRoundOneBoard(board: Page, visibleValues = 30): Promise<void> {
-  await expect(board.getByText('World Geography')).toBeVisible();
+export async function configurePlayers(
+  host: Page,
+  players: PlayerConfiguration[],
+): Promise<void> {
+  for (const _player of players) {
+    await host.getByRole('button', { name: 'Add Player' }).click();
+  }
+
+  const names = host.getByRole('textbox', { name: 'Player Name' });
+  const keys = host.getByRole('textbox', { name: 'Buzzer Key' });
+
+  for (const [index, player] of players.entries()) {
+    await names.nth(index).fill(player.name);
+    await names.nth(index).press('Tab');
+    await keys.nth(index).fill(player.buzzerKey);
+  }
+}
+
+export async function loadGame(host: Page, gameSetPath?: string): Promise<void> {
+  if (gameSetPath) {
+    await host.locator('app-game-import input[type="file"]').setInputFiles(resolve(gameSetPath));
+  } else {
+    await host.getByRole('button', { name: 'Load Sample Game' }).click();
+  }
+
+  await expect(
+    host.getByRole('button', { name: /Game setup Game loaded · click to edit/ }),
+  ).toBeVisible();
+}
+
+export async function expectBoardGrid(board: Page, visibleValues = 30): Promise<void> {
   await expect(board.locator('.category-header')).toHaveCount(6);
   await expect(board.locator('.clue-cell')).toHaveCount(30);
   await expect(board.locator('.clue-cell .value')).toHaveCount(visibleValues);
+}
+
+export async function expectRoundOneBoard(board: Page, visibleValues = 30): Promise<void> {
+  await expect(board.getByText('World Geography')).toBeVisible();
+  await expectBoardGrid(board, visibleValues);
 }
 
 export async function selectFirstClue(host: Page, board: Page): Promise<void> {
   await host.locator('app-game-board-control .clue-cell').first().click();
   await expect(board.getByText('This is the capital of France')).toBeVisible();
   await expect(board.getByText('World Geography')).toBeVisible();
+}
+
+export async function selectFirstRegularClue(host: Page, board: Page): Promise<number> {
+  const availableClues = host.locator(
+    'app-game-board-control button.clue-cell:not([disabled])',
+  );
+  const clueCount = await availableClues.count();
+
+  for (let index = 0; index < clueCount; index += 1) {
+    const clue = availableClues.nth(index);
+    const label = (await clue.getAttribute('aria-label')) ?? '';
+    if (!label.startsWith('Daily Double')) {
+      const value = Number(label.match(/\$(\d+)/)?.[1]);
+      await clue.click();
+      await expect(board.locator('.clue-display .clue-text')).toBeVisible();
+      return value;
+    }
+  }
+
+  throw new Error('The current round does not contain an available regular clue.');
+}
+
+export async function selectDailyDouble(host: Page, board: Page): Promise<void> {
+  const dailyDouble = host
+    .locator('app-game-board-control button.clue-cell:not([disabled])')
+    .filter({ has: host.locator('.dd-indicator') })
+    .first();
+  await expect(dailyDouble).toBeVisible();
+  await dailyDouble.click();
+  await expect(board.getByText('DAILY DOUBLE')).toBeVisible();
 }
 
 export async function buzz(host: Page, board: Page, key: string, playerName: string): Promise<void> {
