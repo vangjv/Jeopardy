@@ -1,0 +1,519 @@
+{
+  "id": "archive-9544",
+  "title": "Show #9627 - Tuesday, September 29, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9544-J-category-1",
+        "title": "GLUTEN TAG!",
+        "clues": [
+          {
+            "id": "archive-9544-clue_J_1_1",
+            "clueText": "The traditional pretzels from this largest German state are a much welcomed part of second breakfast",
+            "correctResponse": "Bavaria",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_1_2",
+            "clueText": "Schnitzel makes a great entrée, & don't forget to dredge it in Paniermehl, these, before it gets a fry",
+            "correctResponse": "breadcrumbs",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_1_3",
+            "clueText": "Don't expect an extra 5 cents when you give us the name of this delicious bread seen here",
+            "correctResponse": "pumpernickel",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_1_4",
+            "clueText": "Perhaps named after Franz Joseph I, these rolls are traditionally designed to look like a crown",
+            "correctResponse": "Kaiser rolls",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_1_5",
+            "clueText": "This end-of-the-alphabet \"twice baked\" sweetened toast is a fun finger food for babies & also helps with teething",
+            "correctResponse": "zwieback",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9544-J-category-2",
+        "title": "A MONTH OF HISTORY",
+        "clues": [
+          {
+            "id": "archive-9544-clue_J_2_1",
+            "clueText": "Julius Caesar is ceased; the Boston Massacre riles New England",
+            "correctResponse": "March",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_2_2",
+            "clueText": "The Cuban Missile Crisis is exactly that, but the Great Chicago Fire ain't so great at all",
+            "correctResponse": "October",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_2_3",
+            "clueText": "Private George Elliott is told to disregard planes on radar, as U.S. planes were expected; South Carolina secedes",
+            "correctResponse": "December",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_2_4",
+            "clueText": "The Bounty deals with mutiny; \"Our American Cousin\" gets a horrific interruption",
+            "correctResponse": "April",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_2_5",
+            "clueText": "The Berlin Wall goes up to shut people in; \"I Have a Dream\" echoes out of D.C. across the world",
+            "correctResponse": "August",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9544-J-category-3",
+        "title": "I AM THE ONE WHO KNOCKS",
+        "clues": [
+          {
+            "id": "archive-9544-clue_J_3_1",
+            "clueText": "During Prohibition, a secret knock was a way to get into this type of illicit bar with a name that might refer to talking quietly",
+            "correctResponse": "a speakeasy",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_3_2",
+            "clueText": "Discard higher-value cards & knock early if you can in this game with a doubly boozy name",
+            "correctResponse": "gin rummy",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_3_3",
+            "clueText": "Dylan sang, \"It's getting dark, too dark to see, I feel I'm\" doing this, the title of the song",
+            "correctResponse": "\"Knockin' On Heaven's Door\"",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_3_4",
+            "clueText": "In Act I of this opera, Mimì knocks on Rodolfo's door to ask for a light for her candle",
+            "correctResponse": "La bohème",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_3_5",
+            "clueText": "On August 21, 1879 people saw the Virgin Mary, Joseph & this apostle \"the Evangelist\" at the Parish Church in Knock, Ireland",
+            "correctResponse": "John",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9544-J-category-4",
+        "title": "A MEDICAL \"DR\"",
+        "clues": [
+          {
+            "id": "archive-9544-clue_J_4_1",
+            "clueText": "During a heat wave, guard against this harmful reduction in the amount of water in the body by drinking fluids",
+            "correctResponse": "dehydration",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_4_2",
+            "clueText": "Natural or synthetic, this type of steroid hormone stimulates & controls the development of male characteristics",
+            "correctResponse": "androgen",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_4_3",
+            "clueText": "Medical detox can help mitigate symptoms of this; the nicer ones include tremors, sweating & anxiety",
+            "correctResponse": "withdrawal",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_4_4",
+            "clueText": "This brand of antihistamine is used to prevent motion sickness",
+            "correctResponse": "Dramamine",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_4_5",
+            "clueText": "It's an archaic 6-letter term for edema, the excessive accumulation of fluid in tissue or a cavity",
+            "correctResponse": "dropsy",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9544-J-category-5",
+        "title": "THINGS PEOPLE SAY",
+        "clues": [
+          {
+            "id": "archive-9544-clue_J_5_1",
+            "clueText": "\"Ripping off\" one of these Johnson & Johnson items has now become a metaphor for decisively dealing with a problem",
+            "correctResponse": "a Band-Aid",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_5_2",
+            "clueText": "People who have never played the game still say about a surprising event, \"I didn't have it on\" this object",
+            "correctResponse": "my bingo card",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_5_3",
+            "clueText": "A traditional hotel service, it's something that snaps you into a new awareness; good morning, this is yours",
+            "correctResponse": "a wake-up call",
+            "value": 600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9544-clue_J_5_4",
+            "clueText": "Someone who has made a mistake in plain view may say this, from a movie line by the \"Great & Powerful Oz\"",
+            "correctResponse": "\"pay no attention to the man behind the curtain\"",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_5_5",
+            "clueText": "Based on what he's doing, it's what the boy in the cap proverbially gets to do",
+            "correctResponse": "call the tune",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9544-J-category-6",
+        "title": "THE GOLF STREAM (CREEK, POND...)",
+        "clues": [
+          {
+            "id": "archive-9544-clue_J_6_1",
+            "clueText": "At this Southern tournament, you'll see a famous creek (Rae's) as well as a famous Brooks (Koepka, 2-time runner-up)",
+            "correctResponse": "the Masters",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_6_2",
+            "clueText": "In New Hampshire the 12th hole at Shattuck has a carry across a swamp of these toothy rodents",
+            "correctResponse": "beavers",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_6_3",
+            "clueText": "A formidable water hazard on the Old Course at this iconic venue, the Swilcan Burn is the stream guarding the first green",
+            "correctResponse": "St Andrews",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_6_4",
+            "clueText": "Steph Curry has been known to be a true \"Splash Brother\", leaping into this lake at the Edgewood course on the Nevada-California border",
+            "correctResponse": "Tahoe",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_J_6_5",
+            "clueText": "This double \"A\" golfer started a tradition when she jumped into Poppie's Pond at the then Nabisco Dinah Shore Open",
+            "correctResponse": "Amy Alcott",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9544-DJ-category-1",
+        "title": "CELLO FAME",
+        "clues": [
+          {
+            "id": "archive-9544-clue_DJ_1_1",
+            "clueText": "In 2018, two billion people watched Sheku Kanneh-Mason play a little Schubert at Windsor Castle while this couple signed the registry",
+            "correctResponse": "Harry & Meghan",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_1_2",
+            "clueText": "For '80s fans, it must mean Lori Singer, who attended this real New York City performing arts school as well as one on TV",
+            "correctResponse": "Juilliard",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_1_3",
+            "clueText": "In 2018 he began a project of playing Bach's Cello Suites in 36 locations worldwide, music he first played at age 4",
+            "correctResponse": "Yo-Yo Ma",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_1_4",
+            "clueText": "This 19th century French operetta composer was also the \"Liszt of the cello\", but his own full concerto wasn't recorded until 1995",
+            "correctResponse": "Jacques Offenbach",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_1_5",
+            "clueText": "This British musician's favorite cello concerto was Schumann's & she recorded it with her husband Daniel Barenboim",
+            "correctResponse": "Jacqueline du Pré",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9544-DJ-category-2",
+        "title": "TV EATERIES & HANGOUTS",
+        "clues": [
+          {
+            "id": "archive-9544-clue_DJ_2_1",
+            "clueText": "On this series, Leslie Knope got her favorite waffles at JJ's Diner",
+            "correctResponse": "Parks and Rec (Parks and Recreation)",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_2_2",
+            "clueText": "Rory & Lorelai Gilmore grabbed coffee & breakfast at the diner run by him, played by Scott Patterson",
+            "correctResponse": "Luke (Danes)",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_2_3",
+            "clueText": "This Nickelodeon series often found Sam & Freddie hanging out at Groovy Smoothie",
+            "correctResponse": "iCarly",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_2_4",
+            "clueText": "The worst bar in Philly, it's run by Mac, Dennis, Charlie, Dee & Frank",
+            "correctResponse": "Paddy's Pub",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_2_5",
+            "clueText": "On this spinoff, students of Hillman College hung out at the Pit, a vibrant campus eatery & social scene",
+            "correctResponse": "A Different World",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9544-DJ-category-3",
+        "title": "CHARACTERS IN POETRY",
+        "clues": [
+          {
+            "id": "archive-9544-clue_DJ_3_1",
+            "clueText": "In a Stephen Vincent Benét poem, his \"body lies a-mouldering in the grave... cotton will grow next year, in spite of the skull\"",
+            "correctResponse": "(John) Brown",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_3_2",
+            "clueText": "In a sporty work, he says, \"That ain't my style\" when the first \"leather-covered sphere came hurtling through the air\"",
+            "correctResponse": "Casey",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_3_3",
+            "clueText": "This title talker in a T.S. Eliot poem seems to be named after a St. Louis furniture dealer",
+            "correctResponse": "J. Alfred Prufrock",
+            "value": 1200,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9544-clue_DJ_3_4",
+            "clueText": "This Byron character gets shipwrecked, spends a night in a Turkish harem, joins the Russian army & woos a thirsty Catherine the Great",
+            "correctResponse": "Don Juan",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_3_5",
+            "clueText": "I wouldn't want to be at a party with Robert Browning's Duke of Ferrara after he hinted at killing his title ex in this work",
+            "correctResponse": "\"My Last Duchess\"",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9544-DJ-category-4",
+        "title": "WORD ORIGINS",
+        "clues": [
+          {
+            "id": "archive-9544-clue_DJ_4_1",
+            "clueText": "An Old French word meaning \"promise\" gives us a word for this person; it can end with one \"E\" or 2",
+            "correctResponse": "fiancé(e)",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_4_2",
+            "clueText": "Meaning fickle or erratic, this adjective comes to us from an association with a messenger god",
+            "correctResponse": "mercurial",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_4_3",
+            "clueText": "This word originally described Christ's sufferings, but now refers to any compelling emotion",
+            "correctResponse": "passion",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_4_4",
+            "clueText": "No horse reference, it was a female spirit that suffocated a sleeping person by sitting on their chest",
+            "correctResponse": "nightmare",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_4_5",
+            "clueText": "French for \"straight\" or \"direct\" gives us this 6-letter adjective meaning dextrous",
+            "correctResponse": "adroit",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9544-DJ-category-5",
+        "title": "RECEDING AIRLINES",
+        "clues": [
+          {
+            "id": "archive-9544-clue_DJ_5_1",
+            "clueText": "This U.S.-based budget airline gave up the ghost in 2026 after 34 years of business",
+            "correctResponse": "Spirit",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_5_2",
+            "clueText": "Fuel costs following the Gulf War partly caused this airline associated with the Jet Age to recede into history in 1991",
+            "correctResponse": "Pan Am",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_5_3",
+            "clueText": "A defunct company with yellow airplanes named for this aviator & filmmaker called itself \"The Top Banana in the West\"",
+            "correctResponse": "(Howard) Hughes",
+            "value": 1200,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9544-clue_DJ_5_4",
+            "clueText": "Known for its twin globe logo & red font, this company flew into the sunset in 2001",
+            "correctResponse": "TWA",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_5_5",
+            "clueText": "It felt like you were entering the club onboard this airline that had Richard Branson backing it--its last call was in 2018",
+            "correctResponse": "Virgin America",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9544-DJ-category-6",
+        "title": "GOING TO TURKEY",
+        "clues": [
+          {
+            "id": "archive-9544-clue_DJ_6_1",
+            "clueText": "The archaeological site of Hisarlik is the purported site of this city, razed in a battle around 1200 B.C.",
+            "correctResponse": "Troy",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_6_2",
+            "clueText": "The Gallipoli Peninsula lies along the western side of this strait once known as the Hellespont",
+            "correctResponse": "the Dardanelles",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_6_3",
+            "clueText": "A trip to Istanbul wouldn't be complete without a visit to the \"Grand\" this, one of the largest covered markets in the world",
+            "correctResponse": "Bazaar",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_6_4",
+            "clueText": "Once ruled by the Hospitallers, Bodrum is also the ancient site of this city that once had a \"Wonder\"-ful Mausoleum",
+            "correctResponse": "Halicarnassus",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9544-clue_DJ_6_5",
+            "clueText": "Churches & houses carved out of rock from the Byzantine era can be found in Göreme in this region of Anatolia",
+            "correctResponse": "Cappadocia",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9544-FJ-category",
+      "title": "PRE-CIVIL WAR AMERICA",
+      "clue": {
+        "id": "archive-9544-clue_FJ",
+        "clueText": "In charge of the U.S. Capitol's construction, in 1856 this secretary of war vetoed an emancipation symbol atop the dome",
+        "correctResponse": "(Jefferson) Davis",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

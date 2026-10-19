@@ -1,0 +1,519 @@
+{
+  "id": "archive-9548",
+  "title": "Show #9631 - Monday, October 5, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9548-J-category-1",
+        "title": "21st CENTURY WORLD NEWS",
+        "clues": [
+          {
+            "id": "archive-9548-clue_J_1_1",
+            "clueText": "10 ft. long & weighing 2,000 lbs., this NASA rover landed in Gale crater on Mars in 2012; luckily, no cat was below it",
+            "correctResponse": "Curiosity",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_1_2",
+            "clueText": "A 2017 addition to the Constitution of China: his \"Thought on Socialism with Chinese Characteristics for the New Era\"",
+            "correctResponse": "Xi (Jinping)",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_1_3",
+            "clueText": "\"Je Suis Charlie\" became a rallying cry after a terrorist attack on this French satire magazine",
+            "correctResponse": "Charlie Hebdo",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_1_4",
+            "clueText": "On this opposition leader's return to Russia in 2021, he was imprisoned & he died in custody in 2024 in a Siberian penal colony",
+            "correctResponse": "Navalny",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_1_5",
+            "clueText": "The Tapanuli, a new species of this great ape, was discovered in 2017 in Indonesia's North Sumatra province",
+            "correctResponse": "orangutan",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9548-J-category-2",
+        "title": "A CAPITAL IDEA",
+        "clues": [
+          {
+            "id": "archive-9548-clue_J_2_1",
+            "clueText": "Wadi Laban Bridge is a cable-stayed bridge in this Saudi capital",
+            "correctResponse": "Riyadh",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_2_2",
+            "clueText": "Victoria is the capital of this Canadian province",
+            "correctResponse": "BC",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_2_3",
+            "clueText": "This national capital is on the Red River, inland from the South China Sea",
+            "correctResponse": "Hanoi",
+            "value": 600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9548-clue_J_2_4",
+            "clueText": "Santa Cruz de Tenerife is the co-capital of these islands in the Atlantic",
+            "correctResponse": "the Canary Islands",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_2_5",
+            "clueText": "This administrative capital of South Africa was named by early president Marthinus for his father Andries",
+            "correctResponse": "Pretoria",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9548-J-category-3",
+        "title": "DURABILITY",
+        "clues": [
+          {
+            "id": "archive-9548-clue_J_3_1",
+            "clueText": "In the Bible, après le déluge, he lived \"three hundred and fifty years\"",
+            "correctResponse": "Noah",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_3_2",
+            "clueText": "Launched near the dawn of the 19th century, it's the oldest commissioned US naval vessel still floating around",
+            "correctResponse": "the Constitution (Old Ironsides)",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_3_3",
+            "clueText": "He set a record for consecutive Major League game appearances, but in a cruel twist of fate died just shy of his 38th birthday",
+            "correctResponse": "Gehrig",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_3_4",
+            "clueText": "\"Jake\" was the name on the first batch of sour mash from a Kentucky bourbon in 1795; it uses a different first name now as this brand",
+            "correctResponse": "Jim Beam",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_3_5",
+            "clueText": "Sorry, Charlie! The world's oldest hereditary monarchy is in this country, tracing back 2,600 years",
+            "correctResponse": "Japan",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9548-J-category-4",
+        "title": "REALITY TV SHOWS BY JUDGES",
+        "clues": [
+          {
+            "id": "archive-9548-clue_J_4_1",
+            "clueText": "Luke Bryan, Lionel Richie",
+            "correctResponse": "American Idol",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_4_2",
+            "clueText": "Heidi Klum, Law Roach & guest judges like Ice Spice",
+            "correctResponse": "Project Runway",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_4_3",
+            "clueText": "Bruno Tonioli, Carrie Ann Inaba",
+            "correctResponse": "Dancing with the Stars",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_4_4",
+            "clueText": "Under the tent: Paul Hollywood & Nigella Lawson, replacing the recently retired Prue Leith",
+            "correctResponse": "The Great British Baking Show (Bake Off)",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_4_5",
+            "clueText": "Gail Simmons, Tom Colicchio",
+            "correctResponse": "Top Chef",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9548-J-category-5",
+        "title": "8-LETTER VERBS",
+        "clues": [
+          {
+            "id": "archive-9548-clue_J_5_1",
+            "clueText": "It can mean to assert a legal right or to work out",
+            "correctResponse": "exercise",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_5_2",
+            "clueText": "To try out for a role",
+            "correctResponse": "audition",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_5_3",
+            "clueText": "Pedants argue about whether this verb should be used as a synonym of its 7-letter dictionary neighbor compose",
+            "correctResponse": "comprise",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_5_4",
+            "clueText": "To renounce a throne",
+            "correctResponse": "abdicate",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_5_5",
+            "clueText": "To put up with, or to manage to take a drug without having serious side effects",
+            "correctResponse": "tolerate",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9548-J-category-6",
+        "title": "ME LOVE COOKIES!",
+        "clues": [
+          {
+            "id": "archive-9548-clue_J_6_1",
+            "clueText": "(Cookie Monster presents the clue.) \"C\" is for this cookie, me favorite, invented in the 1930s by Ruth Wakefield, who added chopped pieces of a candy bar to the batter",
+            "correctResponse": "chocolate chip",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_6_2",
+            "clueText": "(Cookie Monster presents the clue.) Combining two flavors, vanilla & yummy cocoa, this cookie is named for it looking like a piece of game equipment",
+            "correctResponse": "chessboard (checkerboard)",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_6_3",
+            "clueText": "(Cookie Monster presents the clue.) Me love sledding in the winter, & these buttery cookies covered in powdered sugar remind me of what sleds glide along",
+            "correctResponse": "a snowball (snowball cookies)",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_6_4",
+            "clueText": "(Cookie Monster presents the clue.) Num num num num! Me Granny Monster always made these cookies that have cinnamon in them & are really fun to say",
+            "correctResponse": "a snickerdoodle",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_J_6_5",
+            "clueText": "(Cookie Monster presents the clue.) Me never been to Austria, but me hear that like a tasty torte, these cookies are filled with raspberry or other fruit jam--nummy, nummy, nummy; me might need to take a trip",
+            "correctResponse": "a Linzer",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9548-DJ-category-1",
+        "title": "BOATS IN BOOKS",
+        "clues": [
+          {
+            "id": "archive-9548-clue_DJ_1_1",
+            "clueText": "The USS Dallas, a submarine escorting a defecting Russian counterpart",
+            "correctResponse": "The Hunt for Red October",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_1_2",
+            "clueText": "The Fuwalda, a ship that maroons the title man's parents in Africa",
+            "correctResponse": "Tarzan of the Apes",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_1_3",
+            "clueText": "Piloted by John Blackthorne, the Erasmus, blown off course into Japanese waters",
+            "correctResponse": "Shōgun",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_1_4",
+            "clueText": "The USS Nathan James, the only known American Navy vessel to survive a nuclear war",
+            "correctResponse": "The Last Ship",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_1_5",
+            "clueText": "The We're Here, a fishing schooner that rescues a spoiled young boy",
+            "correctResponse": "Captains Courageous",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9548-DJ-category-2",
+        "title": "MURDER MOST FOUL",
+        "clues": [
+          {
+            "id": "archive-9548-clue_DJ_2_1",
+            "clueText": "The unsolved 1841 death of Mary Rogers might be forgotten had it not inspired this man's story \"The Mystery of Marie Roget\"",
+            "correctResponse": "(Edgar Allan) Poe",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_2_2",
+            "clueText": "Prosecutors said 4-time widow \"Flypaper\" Lyda Southard boiled the stuff to extract this poison, & with it, insurance money",
+            "correctResponse": "arsenic",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_2_3",
+            "clueText": "\"The Troubles\" come to life in the book \"Say Nothing\", about the 1972 abduction & murder of a widowed mother of 10 in this city",
+            "correctResponse": "Belfast",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_2_4",
+            "clueText": "Crime writer Michael Connelly thinks the 1960s Zodiac Killer also murdered Elizabeth Short, known as this, in L.A. in 1947",
+            "correctResponse": "the Black Dahlia",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_2_5",
+            "clueText": "This \"colorful\" district of London's East End became notorious for its association with Jack the Ripper's killings",
+            "correctResponse": "Whitechapel",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9548-DJ-category-3",
+        "title": "\"C\" IN SCIENCE",
+        "clues": [
+          {
+            "id": "archive-9548-clue_DJ_3_1",
+            "clueText": "As opposed to meteorology, this -ology studies the weather over extended periods of time",
+            "correctResponse": "climatology",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_3_2",
+            "clueText": "This class of about 45,000 creatures includes lobsters, yummy to humans, & tiny copepods, yummy to many fish species",
+            "correctResponse": "crustaceans",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_3_3",
+            "clueText": "This part of the eye covering the iris, pupil & lens has no blood vessels",
+            "correctResponse": "the cornea",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_3_4",
+            "clueText": "Scientists have stopped using this hyphenated term for skeletons from 40,000 years ago--they now prefer early modern humans",
+            "correctResponse": "Cro-Magnon",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_3_5",
+            "clueText": "Developed in your adrenal glands, it's your body's main stress hormone",
+            "correctResponse": "cortisol",
+            "value": 2000,
+            "dailyDouble": true
+          }
+        ]
+      },
+      {
+        "id": "archive-9548-DJ-category-4",
+        "title": "ROCK & ROLL HALL OF FAMERS",
+        "clues": [
+          {
+            "id": "archive-9548-clue_DJ_4_1",
+            "clueText": "All hail this 2026 inductee the Hall calls \"the original female superstar from hip-hop's golden age\"",
+            "correctResponse": "Queen Latifah",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_4_2",
+            "clueText": "Born William Broad in London, this 2026 inductee derived his stage name from a teacher's comment that he was lazy",
+            "correctResponse": "Billy Idol",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_4_3",
+            "clueText": "Kate Bush's 2023 induction tribute featured St. Vincent singing this song of Kate's",
+            "correctResponse": "\"Running Up That Hill\"",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_4_4",
+            "clueText": "After 6 previous nominations, in 2024 the Hall at last inducted this influential \"Kick Out the Jams\" Detroit quintet",
+            "correctResponse": "MC5",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_4_5",
+            "clueText": "Inducting this \"Mississippi Goddam\" singer in 2018, Mary J. Blige said her songs about injustice & struggle still resonated",
+            "correctResponse": "Nina Simone",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9548-DJ-category-5",
+        "title": "RELIGION",
+        "clues": [
+          {
+            "id": "archive-9548-clue_DJ_5_1",
+            "clueText": "Drop \"bar\" or \"bat\" from the name of a Jewish ceremony to get this, a good deed like giving to charity or helping those in need",
+            "correctResponse": "a mitzvah",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_5_2",
+            "clueText": "This son of Abraham & Hagar is considered a prophet by Muslims & a builder of the Kaaba",
+            "correctResponse": "Ishmael",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_5_3",
+            "clueText": "Many adherents of Rastafarianism believe that this Ethiopian emperor was the Messiah",
+            "correctResponse": "Haile Selassie",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_5_4",
+            "clueText": "The majority of the followers of this religion live in the Indian state of Punjab",
+            "correctResponse": "Sikhism",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9548-clue_DJ_5_5",
+            "clueText": "Pope Leo XIV is not only the first American pope but also the first of the Order of this saint of Hippo",
+            "correctResponse": "Augustine",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9548-DJ-category-6",
+        "title": "SHORT WORD, LONG WORD",
+        "clues": [
+          {
+            "id": "archive-9548-clue_DJ_6_1",
+            "clueText": "I'd be in a state of unease too if I was \"on\" these, the latter part being sharp, curved nails used to fasten cloth",
+            "correctResponse": "tenterhooks",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_6_2",
+            "clueText": "Infallible decrees from the pope are considered this, Latin for \"from the chair\"",
+            "correctResponse": "ex cathedra",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_6_3",
+            "clueText": "Completes the phrase capturing the YOLO mentality, \"as if there were...\"",
+            "correctResponse": "no tomorrow",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_6_4",
+            "clueText": "If you & someone else are \"at\" these, you may be visiting coastal turtles, or engaged in a dispute",
+            "correctResponse": "loggerheads",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9548-clue_DJ_6_5",
+            "clueText": "A legal term meaning \"forever\", or a Too Much Joy song title",
+            "correctResponse": "in perpetuity",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9548-FJ-category",
+      "title": "AMERICAN HISTORY & GEOGRAPHY",
+      "clue": {
+        "id": "archive-9548-clue_FJ",
+        "clueText": "In 2026 an annual 1,966-mile re-ride between these 2 cities took place June 15-25, passing through Lake Tahoe on the 24th",
+        "correctResponse": "St. Joseph & Sacramento",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

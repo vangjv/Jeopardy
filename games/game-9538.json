@@ -1,0 +1,519 @@
+{
+  "id": "archive-9538",
+  "title": "Show #9621 - Monday, September 21, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9538-J-category-1",
+        "title": "A YEAR ENDING IN 6",
+        "clues": [
+          {
+            "id": "archive-9538-clue_J_1_1",
+            "clueText": "The Chicago Cubs won the World Series for the first time in more than a century",
+            "correctResponse": "2016",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_1_2",
+            "clueText": "The Spanish Civil War began",
+            "correctResponse": "1936",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_1_3",
+            "clueText": "The 14th Amendment granting citizenship & privileges to all persons born or naturalized in the U.S. was passed by Congress",
+            "correctResponse": "1866",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_1_4",
+            "clueText": "Athens hosted the first modern-day Olympics",
+            "correctResponse": "1896",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_1_5",
+            "clueText": "The Great Fire of London broke out in a baker's shop on Pudding Lane",
+            "correctResponse": "1666",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9538-J-category-2",
+        "title": "U.S. CITIES",
+        "clues": [
+          {
+            "id": "archive-9538-clue_J_2_1",
+            "clueText": "This capital is on the Mississippi, near where it meets the Minnesota River",
+            "correctResponse": "St. Paul",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_2_2",
+            "clueText": "East of Louisville, this other \"L\" city in Kentucky has been called \"The Horse Capital of the World\"",
+            "correctResponse": "Lexington",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_2_3",
+            "clueText": "A 2025 headline: \"Once again, Alaska will study building a road to\" this capital, at a spot \"less avalanche-prone\"",
+            "correctResponse": "Juneau",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_2_4",
+            "clueText": "The Knights of Ak-Sar-Ben (a certain state spelled backwards) is a civic org. founded in this city on the Missouri",
+            "correctResponse": "Omaha",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_2_5",
+            "clueText": "This \"atomic\" city of Tennessee grew to 75,000 strong within 3 years of its establishment; today the population is around 34,000",
+            "correctResponse": "Oak Ridge",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9538-J-category-3",
+        "title": "ALPHABET SOUP",
+        "clues": [
+          {
+            "id": "archive-9538-clue_J_3_1",
+            "clueText": "T: Campbell's says the \"ultimate comfort food\" is this soup \"with grilled cheese\"",
+            "correctResponse": "tomato",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_3_2",
+            "clueText": "W: This Asian favorite",
+            "correctResponse": "wonton",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_3_3",
+            "clueText": "L: Yum, it's this rich, puréed seafood soup made with heavy cream & sherry",
+            "correctResponse": "lobster bisque",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_3_4",
+            "clueText": "B: On a Cuban menu, sopa de frijoles negros is this",
+            "correctResponse": "black bean soup",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_3_5",
+            "clueText": "V: A French chef in New York is said to have created this chilled potato & leek soup & named it for the town near where he grew up",
+            "correctResponse": "vichyssoise",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9538-J-category-4",
+        "title": "GOT A FEELING",
+        "clues": [
+          {
+            "id": "archive-9538-clue_J_4_1",
+            "clueText": "Try to make a good \"first\" one, the effect of your initial meeting",
+            "correctResponse": "impression",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_4_2",
+            "clueText": "It means a stab at an answer based on a certain amount of information, not necessarily having gotten a diploma",
+            "correctResponse": "educated guess",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_4_3",
+            "clueText": "It means an insight based on an immediate feeling, but it's from Latin for \"to contemplate\"",
+            "correctResponse": "intuition",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_4_4",
+            "clueText": "Andrej Karpathy coined this 2-word phrase for telling A.I. to write a program rather than doing line-by-line programming oneself",
+            "correctResponse": "vibe coding",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_4_5",
+            "clueText": "Philip K. Dick coined this shortened word for one who sees future events in \"A World of Talent\", before \"Minority Report\"",
+            "correctResponse": "precog",
+            "value": 1000,
+            "dailyDouble": true
+          }
+        ]
+      },
+      {
+        "id": "archive-9538-J-category-5",
+        "title": "PREPOSITIONS IN SONG TITLES",
+        "clues": [
+          {
+            "id": "archive-9538-clue_J_5_1",
+            "clueText": "The Drifters liked their prepositional song titles! They were \"Up On The Roof\" & in this hit, \"down by the sea\"",
+            "correctResponse": "\"Under The Boardwalk\"",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_5_2",
+            "clueText": "This debut single for Meghan Trainor proudly alerts us to the fact that she ain't \"no size 2\"",
+            "correctResponse": "\"All About That Bass\"",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_5_3",
+            "clueText": "Adele took the Grammy for Record of the Year for 2011 with this bluesy revenge number",
+            "correctResponse": "\"Rolling In The Deep\"",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_5_4",
+            "clueText": "\"Fire up that loud, another round of shots\" are 8 words in this DJ Snake & Lil Jon Top 5 2014 song; these 4 are the title question",
+            "correctResponse": "\"Turn Down For What\"",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_5_5",
+            "clueText": "This Marvin Gaye lament about a cheating girlfriend recounts how he became aware of his new tragic state of affairs",
+            "correctResponse": "\"I Heard It Through The Grapevine\"",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9538-J-category-6",
+        "title": "LOSE R",
+        "clues": [
+          {
+            "id": "archive-9538-clue_J_6_1",
+            "clueText": "Lose an R from the end of a potent potable to get this animal of the order Hymenoptera",
+            "correctResponse": "bee (from beer)",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_6_2",
+            "clueText": "Shed an R from a word for societal change & adapt to this word meaning biological change",
+            "correctResponse": "evolution (from revolution)",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_6_3",
+            "clueText": "Remove the first R from the team name on Cal Raleigh's jersey & Cal is playing for them, proud denizens of the 23rd state",
+            "correctResponse": "Mainers (from Mariners)",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_6_4",
+            "clueText": "A deep, desperate desire drops an R to become this action, giving in to a demand",
+            "correctResponse": "caving (from craving)",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_J_6_5",
+            "clueText": "A flavor loses its tangy R & becomes this former French coin of low value",
+            "correctResponse": "a sou (from sour)",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9538-DJ-category-1",
+        "title": "STARTS WITH 3 CONSONANTS",
+        "clues": [
+          {
+            "id": "archive-9538-clue_DJ_1_1",
+            "clueText": "It means to prevent something from happening, like an attack or an evil plan",
+            "correctResponse": "thwart",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_1_2",
+            "clueText": "The Old Testament book 1 this starts with 9 chapters of genealogies from the time of Adam",
+            "correctResponse": "Chronicles",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_1_3",
+            "clueText": "It's the title occupation of Melville's Bartleby, hired to work in a law office",
+            "correctResponse": "scrivener",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_1_4",
+            "clueText": "A song from \"Avenue Q\" says, \"When I see how sad you are it sort of makes me happy!... It's\" this! \"making me feel glad that I'm not you\"",
+            "correctResponse": "Schadenfreude",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9538-clue_DJ_1_5",
+            "clueText": "Platelets, which help the blood to clot, are also known by this name, from Greek",
+            "correctResponse": "thrombocytes",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9538-DJ-category-2",
+        "title": "TOGETHER FOREVER",
+        "clues": [
+          {
+            "id": "archive-9538-clue_DJ_2_1",
+            "clueText": "These 2 siblings who never married are buried on either side of their sister Katharine at Woodland Cemetery in Dayton, Ohio",
+            "correctResponse": "the Wright brothers",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_2_2",
+            "clueText": "Calamity Jane was buried next to this Wild West figure, though the nature of their relationship is murky--maybe just acquaintances",
+            "correctResponse": "Wild Bill Hickok",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_2_3",
+            "clueText": "Alice B. Toklas & this companion share a grave & a headstone at Père Lachaise Cemetery in Paris",
+            "correctResponse": "(Gertrude) Stein",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_2_4",
+            "clueText": "This existentialist and Simone de Beauvoir share a grave at Paris's Montparnasse Cemetery",
+            "correctResponse": "Sartre",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_2_5",
+            "clueText": "Wife Clara lived another 40 years after the death of this composer, before she was laid to rest beside him at a Bonn cemetery",
+            "correctResponse": "Schumann",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9538-DJ-category-3",
+        "title": "THEY WROTE IT",
+        "clues": [
+          {
+            "id": "archive-9538-clue_DJ_3_1",
+            "clueText": "C.S. Lewis: This Narnia book with a piece of colorful furniture in the title",
+            "correctResponse": "The Silver Chair",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_3_2",
+            "clueText": "The classic Southern Gothic short story \"A Rose for Emily\"",
+            "correctResponse": "William Faulkner",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_3_3",
+            "clueText": "\"Medea\", way back in the 400s B.C.",
+            "correctResponse": "Euripedes",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_3_4",
+            "clueText": "\"To Be Young, Gifted and Black\", an informal posthumous autobiography by this playwright who died tragically young",
+            "correctResponse": "Lorraine Hansberry",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9538-clue_DJ_3_5",
+            "clueText": "Someone unknown: This 14th century poem about one of King Arthur's guys & a mysterious visitor to Arthur's court",
+            "correctResponse": "Sir Gawain and the Green Knight",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9538-DJ-category-4",
+        "title": "THE PEABODY AWARDS",
+        "clues": [
+          {
+            "id": "archive-9538-clue_DJ_4_1",
+            "clueText": "This show's 2018 award \"was brought to you by the number 50, for 50 years of... educating & entertaining children\"",
+            "correctResponse": "Sesame Street",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_4_2",
+            "clueText": "A 2017 winner, the doc \"Last Men in Aleppo\" showcased the heroism of volunteer rescue workers in this warring country",
+            "correctResponse": "Syria",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_4_3",
+            "clueText": "This self-described \"Awkward Black Girl\" won the 2022 Trailblazer Award for her \"embrace of Black love and community\"",
+            "correctResponse": "Issa Rae",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_4_4",
+            "clueText": "This series, starring D'Pharaoh Woon-A-Tai, was recognized for showcasing \"the power of indigenous storytelling\"",
+            "correctResponse": "Reservation Dogs",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_4_5",
+            "clueText": "This legendary record label based in Memphis is the subject of a 4-part doc & 2024 winner subtitled \"Soulsville U.S.A.\"",
+            "correctResponse": "Stax (Records)",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9538-DJ-category-5",
+        "title": "JUNG",
+        "clues": [
+          {
+            "id": "archive-9538-clue_DJ_5_1",
+            "clueText": "The disputed nature of libido was one source of Jung's bitter schism with this fellow analyst to whom a cigar was rarely just a cigar",
+            "correctResponse": "Freud",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_5_2",
+            "clueText": "For indirectly helping a man known as Bill W., Jung is regarded as an important figure in the early history of this group",
+            "correctResponse": "Alcoholics Anonymous",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_5_3",
+            "clueText": "Chats with physicist Wolfgang Pauli informed Jung's idea of \"meaningful coincidences\", aka this word that's also a Police album",
+            "correctResponse": "synchronicity",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_5_4",
+            "clueText": "Jung titled a book for these 2-word phenomena, seeing them less as spacecraft than as psychic projections of a \"modern myth\"",
+            "correctResponse": "flying saucers",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_5_5",
+            "clueText": "Jung's theories of psychological types led a mom & daughter to create this eponymous test identifying 16 personality types",
+            "correctResponse": "Myers-Briggs",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9538-DJ-category-6",
+        "title": "OLD",
+        "clues": [
+          {
+            "id": "archive-9538-clue_DJ_6_1",
+            "clueText": "In the 2010s this grooming brand revamped an outdated image with offbeat slogans like \"Believe in your smellf\"",
+            "correctResponse": "Old Spice",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_6_2",
+            "clueText": "To qualify as one of these & be imported duty-free, U.S. Customs & Border Protection requires an object to be over 100 years old",
+            "correctResponse": "an antique",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_6_3",
+            "clueText": "Billboard said this 2014 Ed Sheeran song about growing old together \"defined the decade\"; we'll love it till we're 70",
+            "correctResponse": "\"Thinking Out Loud\"",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_6_4",
+            "clueText": "Time magazine popularized this term for folks born 1928-1945, after the Greatest Generation & before the boomers",
+            "correctResponse": "the Silent Generation",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9538-clue_DJ_6_5",
+            "clueText": "Living up to 11,000 years, Earth's oldest animals have geometric skeletons made of silica; hence their common name glass these",
+            "correctResponse": "glass sponges",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9538-FJ-category",
+      "title": "FAMOUS WOMEN",
+      "clue": {
+        "id": "archive-9538-clue_FJ",
+        "clueText": "On her 2025 passing she was called \"one of the world's most inspiring voices for animals\" & \"a beacon of compassion for all life\"",
+        "correctResponse": "Jane Goodall",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

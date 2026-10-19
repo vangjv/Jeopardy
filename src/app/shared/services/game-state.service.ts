@@ -128,7 +128,7 @@ export class GameStateService {
    * Initialize game with players and content
    */
   initializeGame(players: Player[], gameSet: GameSet, rules?: Partial<GameRules>): void {
-    this.updateState(() => ({
+    this.updateState(state => ({
       sessionId: generateUUID(),
       createdAt: new Date(),
       phase: 'round1',
@@ -144,7 +144,7 @@ export class GameStateService {
       activeClue: null,
       dailyDoubleWager: null,
       finalJeopardyState: null,
-      rules: { ...DEFAULT_GAME_RULES, ...rules },
+      rules: { ...DEFAULT_GAME_RULES, ...state.rules, ...rules },
       winnerId: null,
     }), true); // Skip broadcast in updateState
 
@@ -475,6 +475,28 @@ export class GameStateService {
     }));
 
     // Broadcast buzz reset event (T053)
+    if (this.syncService) {
+      this.syncService.broadcastBuzzReset();
+    }
+  }
+
+  /**
+   * Reset the active clue's buzzing state: clear lockouts and reopen the buzzer.
+   * Daily Doubles never open buzzing, so this is a no-op for them.
+   */
+  resetClue(): void {
+    const state = this.getCurrentState();
+    if (!state.activeClue || state.activeClue.isDailyDouble) {
+      return;
+    }
+
+    this.updateState(() => ({
+      buzzLocked: false,
+      lockedPlayerId: null,
+      buzzerEnabled: true,
+      lockedOutPlayerIds: new Set<string>(),
+    }));
+
     if (this.syncService) {
       this.syncService.broadcastBuzzReset();
     }

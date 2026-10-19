@@ -15,6 +15,7 @@ import { GameStateService } from '../shared/services/game-state.service';
 import { BuzzerService } from '../shared/services/buzzer.service';
 import { SyncService } from '../shared/services/sync.service';
 import { AudioService } from '../shared/services/audio.service';
+import { GameSet } from '../shared/models/game-content.model';
 import { PlayerSetupComponent } from './components/player-setup/player-setup.component';
 import { GameBoardControlComponent } from './components/game-board-control/game-board-control.component';
 import { BuzzerPanelComponent } from './components/buzzer-panel/buzzer-panel.component';
@@ -56,6 +57,8 @@ export class HostComponent implements OnInit, OnDestroy {
   private stateSubscription?: Subscription;
   private boardWindow: Window | null = null;
   private lastDailyDoubleClueId: string | null = null;
+  private lastBoardFillGameSet: GameSet | null = null;
+  private lastBoardFillRound: 'round1' | 'round2' | null = null;
   protected readonly gameLoaded = signal(false);
   protected readonly currentRound = signal<'round1' | 'round2' | 'final'>('round1');
   protected readonly finalActive = signal(false);
@@ -79,6 +82,20 @@ export class HostComponent implements OnInit, OnDestroy {
       this.gameLoaded.set(state.gameSet !== null);
       this.currentRound.set(state.currentRound);
       this.finalActive.set(state.currentRound === 'final');
+
+      if (state.gameSet && (state.currentRound === 'round1' || state.currentRound === 'round2')) {
+        if (
+          this.lastBoardFillGameSet !== state.gameSet ||
+          this.lastBoardFillRound !== state.currentRound
+        ) {
+          this.audioService.play('board-fill');
+          this.lastBoardFillGameSet = state.gameSet;
+          this.lastBoardFillRound = state.currentRound;
+        }
+      } else if (!state.gameSet) {
+        this.lastBoardFillGameSet = null;
+        this.lastBoardFillRound = null;
+      }
 
       const keyMap = new Map<string, string>();
       state.players.forEach(player => {

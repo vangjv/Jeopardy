@@ -96,6 +96,7 @@
               <input
                 matInput
                 type="number"
+                aria-label="Response Timeout (seconds)"
                 [ngModel]="rules.responseTimeoutSeconds"
                 (ngModelChange)="onResponseTimeoutChange($event)"
                 min="0"

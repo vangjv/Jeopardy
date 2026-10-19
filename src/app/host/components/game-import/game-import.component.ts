@@ -86,6 +86,8 @@ export class GameImportComponent {
     }
 
     const file = input.files[0];
+    // Allow selecting the same file again after validation fails or setup changes.
+    input.value = '';
     this.loading.set(true);
     this.error.set(null);
     this.success.set(false);

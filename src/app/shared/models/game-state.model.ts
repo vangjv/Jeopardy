@@ -106,7 +106,7 @@ export interface GameRules {
   // Buzzer rules
   lockoutWrongResponder: boolean;         // Default: true
   buzzerTimeoutSeconds: number | null;    // Default: null (no timeout)
-  responseTimeoutSeconds: number | null;  // Default: null (no timeout)
+  responseTimeoutSeconds: number | null;  // Default: 10 seconds
   
   // Display rules
   showCorrectResponseOnBoard: boolean;    // Default: false (host only)
@@ -126,7 +126,7 @@ export const DEFAULT_GAME_RULES: GameRules = {
   allowNegativeScores: true,
   lockoutWrongResponder: true,
   buzzerTimeoutSeconds: null,
-  responseTimeoutSeconds: null,
+  responseTimeoutSeconds: 10,
   showCorrectResponseOnBoard: false,
   showWagersOnBoard: false,
   showResponsesOnBoard: false,

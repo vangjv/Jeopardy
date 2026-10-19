@@ -1,0 +1,519 @@
+{
+  "id": "archive-9555",
+  "title": "Show #9638 - Wednesday, October 14, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9555-J-category-1",
+        "title": "THE BETTER-THAN-MID ATLANTIC STATES",
+        "clues": [
+          {
+            "id": "archive-9555-clue_J_1_1",
+            "clueText": "As on July 30, 1768, it often summoned Pennsylvanians to protest British policies, irritating loyalists with its clanging",
+            "correctResponse": "the Liberty Bell",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_1_2",
+            "clueText": "Delaware boasts the USA's most \"flexible business formation statute\"; 2/3 of cos. on this list begun in 1955 make it their legal home",
+            "correctResponse": "the Fortune 500",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_1_3",
+            "clueText": "Ruth Bader Ginsburg is one of the faces in the Million Dollar Staircase at the state capitol here, named for its cost long ago",
+            "correctResponse": "Albany",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_1_4",
+            "clueText": "At Monocacy Natl. Battlefield in Maryland, learn about Union Gen. Lew Wallace's stand in \"The Battle that Saved\" this city",
+            "correctResponse": "Washington",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_1_5",
+            "clueText": "A \"Real Housewives of N.J.\" landmark, Dr. Aydin's plastic surgery practice is in this place named from the Lenape \"Peramsepuss\"",
+            "correctResponse": "Paramus",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9555-J-category-2",
+        "title": "\"BIG\" STUFF",
+        "clues": [
+          {
+            "id": "archive-9555-clue_J_2_1",
+            "clueText": "It's the shared nickname of both the New York Giants & IBM",
+            "correctResponse": "Big Blue",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_2_2",
+            "clueText": "Theodore Roosevelt was referring to foreign policy when he said, \"Speak softly &\" do this",
+            "correctResponse": "carry a big stick",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_2_3",
+            "clueText": "In California, this stretch of coast south of Monterey has been called the greatest meeting of land & sea",
+            "correctResponse": "Big Sur",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_2_4",
+            "clueText": "Built by Krupp, the World War I Howitzer nicknamed this could fire 1,800-pound shells nearly 6 miles",
+            "correctResponse": "Big Bertha",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_2_5",
+            "clueText": "This national park was authorized in 1935 to protect an area of the Chihuahuan Desert along the Rio Grande",
+            "correctResponse": "Big Bend",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9555-J-category-3",
+        "title": "ADJECTIVES",
+        "clues": [
+          {
+            "id": "archive-9555-clue_J_3_1",
+            "clueText": "As a noun, it's an extinct pachyderm; as an adjective, it describes anything really big",
+            "correctResponse": "mammoth",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_3_2",
+            "clueText": "This 9-letter word for something hanging & swinging in a droopy way evokes a feature of a grandfather clock",
+            "correctResponse": "pendulous",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_3_3",
+            "clueText": "This hyphenated \"moment\" compares a shift in thinking to finding Christ",
+            "correctResponse": "a come-to-Jesus moment",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_3_4",
+            "clueText": "This adjective for something communicated clearly is also used in dentistry to mean related to the frontmost teeth",
+            "correctResponse": "incisive",
+            "value": 800,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9555-clue_J_3_5",
+            "clueText": "This word that ends with the sixth month describes something dull or lacking sophistication",
+            "correctResponse": "jejune",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9555-J-category-4",
+        "title": "HELLO, DOLLY",
+        "clues": [
+          {
+            "id": "archive-9555-clue_J_4_1",
+            "clueText": "Raquel Reyes, a 10-year-old who plays pickleball & loves to DJ, is this brand's 2026 (doll, not human) Girl of the Year",
+            "correctResponse": "American Girl",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_4_2",
+            "clueText": "Launched during the Cold War, this military-themed doll was marketed as an \"action figure\", not a doll, because guys blah blah blah",
+            "correctResponse": "G.I. Joe",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_4_3",
+            "clueText": "A 2006 New Yorker piece about these dolls said, \"They look like pole dancers on their way to work at a gentlemen's club\"",
+            "correctResponse": "Bratz",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_4_4",
+            "clueText": "Mini versions of monkey-like dolls called Monchhichi are sold as this alliterative type of toy, a surprise until it's opened",
+            "correctResponse": "a blind box",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_4_5",
+            "clueText": "These dolls based on Rose O'Neill's magazine drawings were all the rage in the 1910s & '20s",
+            "correctResponse": "Kewpies (Kewpie dolls)",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9555-J-category-5",
+        "title": "MASHED-UP BOOK TITLES",
+        "clues": [
+          {
+            "id": "archive-9555-clue_J_5_1",
+            "clueText": "\"Tender Is the Tycoon\"",
+            "correctResponse": "Tender Is the Night & The Last Tycoon",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_5_2",
+            "clueText": "\"The Lost Demons\"",
+            "correctResponse": "The Lost Symbol & Angels and Demons",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_5_3",
+            "clueText": "\"To Kill a Watchman\"",
+            "correctResponse": "To Kill a Mockingbird & Go Set a Watchman",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_5_4",
+            "clueText": "\"The Stepford Baby\"",
+            "correctResponse": "The Stepford Wives & Rosemary's Baby",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_5_5",
+            "clueText": "\"Tortilla Row\"",
+            "correctResponse": "Tortilla Flat & Cannery Row",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9555-J-category-6",
+        "title": "ETHAN HAWKE, AMERICAN ACTOR",
+        "clues": [
+          {
+            "id": "archive-9555-clue_J_6_1",
+            "clueText": "(Ethan Hawke presents the clue.) In 2022, I stepped into this entertainment universe playing a cult leader in \"Moon Knight\"",
+            "correctResponse": "the Marvel Cinematic Universe (the MCU)",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_6_2",
+            "clueText": "(Ethan Hawke presents the clue.) I dropped out of college to make this New England-set movie with Robin Williams as my teacher, & it launched my career--\"carpe diem\", right?",
+            "correctResponse": "Dead Poets Society",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_6_3",
+            "clueText": "(Ethan Hawke presents the clue.) When I read the novel \"The Good Lord Bird\", a totally original take on a tragic American story, I knew I had to bring it to the screen, go a little Nic Cage as this abolitionist",
+            "correctResponse": "John Brown",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_6_4",
+            "clueText": "(Ethan Hawke presents the clue.) I was a fresh-faced new kid & Denzel Washington showed me the ropes in this drama on the streets of L.A. directed by Antoine Fuqua",
+            "correctResponse": "Training Day",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_J_6_5",
+            "clueText": "(Ethan Hawke presents the clue.) I got to help contribute to the iconography of the American West in this remake that makes the title group more diverse; plus, I got to play a guy named Goodnight Robicheaux",
+            "correctResponse": "The Magnificent Seven",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9555-DJ-category-1",
+        "title": "REPORT CARDS OF MYTHIC FIGURES",
+        "clues": [
+          {
+            "id": "archive-9555-clue_DJ_1_1",
+            "clueText": "Though mortal, once as beautiful as Athena, but refuses to make eye contact",
+            "correctResponse": "Medusa",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_1_2",
+            "clueText": "Can't ever finish rolling that rock up the hill: needs improvement",
+            "correctResponse": "Sisyphus",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_1_3",
+            "clueText": "Excels in shop class: made a helmet & winged sandals for Hermes as well as Achilles' armor",
+            "correctResponse": "Hephaestus",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_1_4",
+            "clueText": "Absolutely inspiring to have in dance class! Acts as our muse",
+            "correctResponse": "Terpsichore",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9555-clue_DJ_1_5",
+            "clueText": "Can't seem to stay awake in class; would love to see him apart from his twin Thanatos",
+            "correctResponse": "Hypnos",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9555-DJ-category-2",
+        "title": "TV LOCALES",
+        "clues": [
+          {
+            "id": "archive-9555-clue_DJ_2_1",
+            "clueText": "The once-quiet Place de l'Estrapade has become a tourism magnet for beret-clad fans of this Netflix series & its title heroine",
+            "correctResponse": "Emily in Paris",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_2_2",
+            "clueText": "Keke Palmer has some cagey neighbors in her Hinkley Hills cul-de-sac on this TV series, a reboot of a Tom Hanks film",
+            "correctResponse": "The 'Burbs",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_2_3",
+            "clueText": "There's lots of cool, rich person stuff for Jon Hamm to steal in Westmont Village, the fictional suburb on this series",
+            "correctResponse": "Your Friends & Neighbors",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_2_4",
+            "clueText": "The title of this series refers (rather ironically, wethinks) to an underground bunker city inside a Colorado mountain",
+            "correctResponse": "Paradise",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_2_5",
+            "clueText": "Exteriors of the Salty Whale, a pub in this series, were shot in Rockport, Mass., sans creepy underground chamber",
+            "correctResponse": "Widow's Bay",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9555-DJ-category-3",
+        "title": "MEDIEVAL NAMES",
+        "clues": [
+          {
+            "id": "archive-9555-clue_DJ_3_1",
+            "clueText": "A future theologian born near Aquino around 1225 was given this first name",
+            "correctResponse": "Thomas",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_3_2",
+            "clueText": "His book was nicknamed \"Il milione\", possibly because the tales in his travelogue seemed like a million lies",
+            "correctResponse": "Marco Polo",
+            "value": 800,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9555-clue_DJ_3_3",
+            "clueText": "According to a saga, Leif converted his ma to Christianity & her chastity afterwards was a \"great trial\" to this dad's \"temper\"",
+            "correctResponse": "Erik the Red",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_3_4",
+            "clueText": "This dad & monarch was gracious after his son Pepin the Hunchback tried to have him killed--he just made him go to a monastery",
+            "correctResponse": "Charlemagne",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_3_5",
+            "clueText": "Medieval Muslim historians said this Malian ruler was so generous that he had to borrow money during his return from Mecca",
+            "correctResponse": "Mansa Musa",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9555-DJ-category-4",
+        "title": "COLLEGE RESPONSES",
+        "clues": [
+          {
+            "id": "archive-9555-clue_DJ_4_1",
+            "clueText": "If you're the ruler of not just a regular duchy, you might hold this title; the pope bestowed it on Cosimo de Medici",
+            "correctResponse": "a grand duke",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_4_2",
+            "clueText": "Ordinal term for a Jerusalem structure built starting in 20 B.C., with no Ark of the Covenant this time",
+            "correctResponse": "the Second Temple",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_4_3",
+            "clueText": "In a 2025 episode of \"The Morning Show\", Billy Crudup reminisces about this mail-order outfit that offered 8 CDs for a penny",
+            "correctResponse": "Columbia House",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_4_4",
+            "clueText": "This New England dish may get its name from its collegiately crimson color",
+            "correctResponse": "Harvard beets",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_4_5",
+            "clueText": "\"Jeopardy!\" clues & \"life, liberty & the pursuit of happiness\" lack this punctuation item, a Vampire Weekend song title",
+            "correctResponse": "an Oxford comma",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9555-DJ-category-5",
+        "title": "AROUND THE UNIVERSE",
+        "clues": [
+          {
+            "id": "archive-9555-clue_DJ_5_1",
+            "clueText": "Bursts of this Greek letter radiation from collapsing stars can release more energy in seconds than our sun in its existence",
+            "correctResponse": "gamma radiation",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_5_2",
+            "clueText": "Some of these 5-letter planets that are not tethered to a star may have \"gone\" that way via being hit like a billiard ball",
+            "correctResponse": "rogue",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_5_3",
+            "clueText": "Sometimes described as a \"featureless oval\", Cygnus A is this main type of galaxy named for its shape",
+            "correctResponse": "elliptical",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_5_4",
+            "clueText": "Despite their huge size, some of these objects discovered in 1967 spin & beep hundreds of times a second",
+            "correctResponse": "pulsars",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_5_5",
+            "clueText": "This middle layer of the Sun's atmosphere is known for its reddish tinge--it's a real sphere of color",
+            "correctResponse": "the chromosphere",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9555-DJ-category-6",
+        "title": "ENDS WITH A SILENT \"T\"",
+        "clues": [
+          {
+            "id": "archive-9555-clue_DJ_6_1",
+            "clueText": "When talking food it precedes mignon & O-Fish",
+            "correctResponse": "filet",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_6_2",
+            "clueText": "One time only, in 1900, this ball-&-mallet game was an official Olympic sport",
+            "correctResponse": "croquet",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_6_3",
+            "clueText": "I'm glad you & I have a good this, a feeling of mutual respect & understanding",
+            "correctResponse": "rapport",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_6_4",
+            "clueText": "In this type of flooring, strips or panels of wood are arranged in geometric patterns",
+            "correctResponse": "parquet",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9555-clue_DJ_6_5",
+            "clueText": "It's a light 2-wheeled, one-horse carriage, or, in Europe, another name for a high-end convertible",
+            "correctResponse": "a cabriolet",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9555-FJ-category",
+      "title": "FAMOUS BUILDINGS",
+      "clue": {
+        "id": "archive-9555-clue_FJ",
+        "clueText": "A replica of it was built for a 1912 exhibition in Earl's Court, 85 years before another opened on the other side of the river",
+        "correctResponse": "the Globe Theatre",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

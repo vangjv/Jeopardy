@@ -1,0 +1,519 @@
+{
+  "id": "archive-9552",
+  "title": "Show #9635 - Friday, October 9, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9552-J-category-1",
+        "title": "AFRICA",
+        "clues": [
+          {
+            "id": "archive-9552-clue_J_1_1",
+            "clueText": "Found at depths of 600 feet in this 2nd-longest river in Africa are blind & pale deepwater fish nicknamed \"white man in an office\"",
+            "correctResponse": "the Congo",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_1_2",
+            "clueText": "Praia is the capital of this island nation off Western Africa that made a splash at the 2026 World Cup",
+            "correctResponse": "Cape Verde",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_1_3",
+            "clueText": "The UNESCO Heritage Site of Stone Town on this island is a ferry trip away from Dar es Salaam",
+            "correctResponse": "Zanzibar",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_1_4",
+            "clueText": "This nationally named portion of the Sahara extends eastward into Egypt",
+            "correctResponse": "the Libyan Desert",
+            "value": 800,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9552-clue_J_1_5",
+            "clueText": "In 2019 this landlocked African country once known as Upper Volta unveiled a statue of the revolutionary Thomas Sankara",
+            "correctResponse": "Burkina Faso",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9552-J-category-2",
+        "title": "THIS IS \"IT\"",
+        "clues": [
+          {
+            "id": "archive-9552-clue_J_2_1",
+            "clueText": "It's a path for transmitting an electric current",
+            "correctResponse": "a circuit",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_2_2",
+            "clueText": "BHCC is short for Bunker Hill this type of learning institution, the largest of its type in Massachusetts",
+            "correctResponse": "a community college",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_2_3",
+            "clueText": "CNN calls this show with Wolf Blitzer \"the command center for\" breaking news & politics",
+            "correctResponse": "The Situation Room",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_2_4",
+            "clueText": "Louse eggs (blech) are referenced in this word for petty criticism",
+            "correctResponse": "nitpick",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_2_5",
+            "clueText": "Houdini took a break from getting out of handcuffs to expose the tricks of this metaphysical belief, calling it \"a fraud start to finish\"",
+            "correctResponse": "spiritualism",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9552-J-category-3",
+        "title": "SAILING",
+        "clues": [
+          {
+            "id": "archive-9552-clue_J_3_1",
+            "clueText": "This \"man\" is the guy who steers a ship; the first part of the word refers to the wheel or tiller being used",
+            "correctResponse": "the helmsman",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_3_2",
+            "clueText": "When these froth-topped waves start to form with the wind at around 14 knots, a newbie sailor may want to head for shore",
+            "correctResponse": "whitecaps",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_3_3",
+            "clueText": "Gybing is changing direction when sailing downwind & involves the danger of getting hit on the head by this as it crosses the boat",
+            "correctResponse": "the boom",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_3_4",
+            "clueText": "An early boat-owning decision: a small boat vs. this type that's longer & named for a structural piece down the centerline",
+            "correctResponse": "a keelboat",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_3_5",
+            "clueText": "East Coast sailing is fun along the Ditch, also called this, or the ICW for short; Ditch is also a navigation app to make it easier",
+            "correctResponse": "the Intracoastal Waterway",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9552-J-category-4",
+        "title": "I'D REALLY LOVE TO SEE YOU TONIGHT",
+        "clues": [
+          {
+            "id": "archive-9552-clue_J_4_1",
+            "clueText": "Ballroom time! Like the history of this dance itself, we'll start with the whirling Viennese version, then slow it down",
+            "correctResponse": "a waltz",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_4_2",
+            "clueText": "We're going to roll some dice & finally play \"The Curse of Strahd\", a module of this, your favorite game!",
+            "correctResponse": "Dungeons & Dragons",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_4_3",
+            "clueText": "I'll play your favorite song! This Beach Boys tune that begins, \"I may not always love you\"",
+            "correctResponse": "\"God Only Knows\"",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_4_4",
+            "clueText": "You'll look beautiful as your face is lit up by this meteor shower caused by Comet Swift-Tuttle",
+            "correctResponse": "the Perseids",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_4_5",
+            "clueText": "We're not going to the cleaners, but we are going to this world-renowned Napa Valley restaurant that used to be one",
+            "correctResponse": "The French Laundry",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9552-J-category-5",
+        "title": "WHAT A FOOL BELIEVES",
+        "clues": [
+          {
+            "id": "archive-9552-clue_J_5_1",
+            "clueText": "A saying in this Bible book: \"Fear of the lord is the beginning of knowledge; but fools despise wisdom & instruction\"",
+            "correctResponse": "Proverbs",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_5_2",
+            "clueText": "Be moderate, he said in \"Tom Jones\": \"The wise man gratifies every appetite... the fool sacrifices all the rest... to satiate one\"",
+            "correctResponse": "Fielding",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_5_3",
+            "clueText": "For 4/24/1859, his journal has nature notes & \"Fools stand on their island... & look toward another land. There is no other land\"",
+            "correctResponse": "Thoreau",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_5_4",
+            "clueText": "His \"Essay on Man\" says, \"The learn'd is happy nature to explore / The fool is happy that he knows no more\"",
+            "correctResponse": "(Alexander) Pope",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_5_5",
+            "clueText": "\"A learned fool is more of a fool than an ignorant one\" is from this Frenchman's 1672 comedy \"The Learned Women\"",
+            "correctResponse": "Molière",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9552-J-category-6",
+        "title": "YACHT ROCK",
+        "clues": [
+          {
+            "id": "archive-9552-clue_J_6_1",
+            "clueText": "This R&B group, EWF for short, has a yacht rocker with \"After The Love Has Gone\"",
+            "correctResponse": "Earth, Wind & Fire",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_6_2",
+            "clueText": "This familial group has an entry in the genre with their 1980 hit \"He's So Shy\"",
+            "correctResponse": "The Pointer Sisters",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_6_3",
+            "clueText": "This Toto song is named for Ms. Arquette, who was dating Toto's keyboardist at the time",
+            "correctResponse": "\"Rosanna\"",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_6_4",
+            "clueText": "Before we knew the term \"friends with benefits\", we had a song on the topic--\"Whenever I Call You 'Friend'\"--a duet by him & Stevie Nicks",
+            "correctResponse": "Kenny Loggins",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_J_6_5",
+            "clueText": "A litmus test--if the song has smooth vocals by this Doobie Brother as heard on \"You Belong To Me\", it's yacht rock",
+            "correctResponse": "Michael McDonald",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9552-DJ-category-1",
+        "title": "A LOOK AT HISTORICAL AMERICANS",
+        "clues": [
+          {
+            "id": "archive-9552-clue_DJ_1_1",
+            "clueText": "Here she is with her literal partner in crime; she was only 23 when she was escorted not so gently from our plane of existence",
+            "correctResponse": "Bonnie Parker",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_1_2",
+            "clueText": "For this American hero, earning degrees in both English & physics preceded leaving Earth's atmosphere in 1983",
+            "correctResponse": "Sally Ride",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_1_3",
+            "clueText": "Okay, he's not a ringer for Kevin Costner, but he is this man who, at just age 26, headed up the Prohibition Bureau in Chicago",
+            "correctResponse": "Eliot Ness",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_1_4",
+            "clueText": "He labored to run for president five times between 1900 & 1920; spoiler--he went 0 for 5",
+            "correctResponse": "(Eugene) Debs",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_1_5",
+            "clueText": "The first American to be convicted of a felony while holding a Cabinet post, he took a bribe as part of the Teapot Dome Scandal",
+            "correctResponse": "(Albert) Fall",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9552-DJ-category-2",
+        "title": "MAMMALS",
+        "clues": [
+          {
+            "id": "archive-9552-clue_DJ_2_1",
+            "clueText": "Arkansas & Nebraska are among the states to designate as their official mammal the white-tailed this",
+            "correctResponse": "a deer",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_2_2",
+            "clueText": "Ursus maritimus is the scientific name for this Arctic dweller",
+            "correctResponse": "a polar bear",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_2_3",
+            "clueText": "Found in the forests of Madagascar, the indri is the largest of these primates",
+            "correctResponse": "a lemur",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_2_4",
+            "clueText": "The name of this largest New World cat is said to come from an indigenous word meaning \"he who kills with one leap\"",
+            "correctResponse": "a jaguar",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9552-clue_DJ_2_5",
+            "clueText": "To protect against predators, this scale-covered, armadillo-like mammal rolls itself into a tight ball",
+            "correctResponse": "a pangolin",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9552-DJ-category-3",
+        "title": "MAPS & CHAPS",
+        "clues": [
+          {
+            "id": "archive-9552-clue_DJ_3_1",
+            "clueText": "Historians believe a 1491 map by Henricus Martellus was used by this man for his (mis-) calculations of the distance to Asia",
+            "correctResponse": "Columbus",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_3_2",
+            "clueText": "Housed at Stanford, the vast David Rumsey collection includes a 1981 map labeled this area, showing Intel, Apple & Sperry UNIVAC",
+            "correctResponse": "Siilicon Valley",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_3_3",
+            "clueText": "1740s colonial guys doing this job: George Washington & Peter Jefferson, whom his son Thomas credited with the first Virginia map",
+            "correctResponse": "surveying (surveyors)",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_3_4",
+            "clueText": "A French planetary scientist named John Carter is one of the people who used maps to analyze where water once was present here",
+            "correctResponse": "Mars",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_3_5",
+            "clueText": "Sebastian Münster's early 1500s map of Africa shows these nonexistent \"Mountains\" long thought to be the Nile's source",
+            "correctResponse": "the Mountains of the Moon",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9552-DJ-category-4",
+        "title": "FROM THE FRENCH",
+        "clues": [
+          {
+            "id": "archive-9552-clue_DJ_4_1",
+            "clueText": "It's a French word for \"word\" & can mean a prisoner's promise not to try to escape, as well as a conditional release",
+            "correctResponse": "parole",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_4_2",
+            "clueText": "Group noun for those who use one person's services; the one at my salon, Monsieur Ken, is extremely loyal",
+            "correctResponse": "the clientele (patronage)",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_4_3",
+            "clueText": "With accents on both its French words, this cultured product is delish spooned over berries",
+            "correctResponse": "crème fraîche",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_4_4",
+            "clueText": "It's a 7-letter heavy bombardment of artillery fire, or more broadly of anything not fun to be hit by",
+            "correctResponse": "a barrage",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_4_5",
+            "clueText": "Paris's Grande Halle de la Villette, a center for concerts & exhibitions, was once less cultured as this French-named last stop for cattle",
+            "correctResponse": "an abattoir",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9552-DJ-category-5",
+        "title": "JOURNALISM",
+        "clues": [
+          {
+            "id": "archive-9552-clue_DJ_5_1",
+            "clueText": "Today his name is linked with excellence, but this publisher's New York World didn't take such a high road in the 1890s",
+            "correctResponse": "Pulitzer",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_5_2",
+            "clueText": "She pretended to be mentally ill to be admitted to Blackwell's Insane Asylum in 1887 to write an exposé",
+            "correctResponse": "Nellie Bly",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_5_3",
+            "clueText": "\"Report of the Office of the Sec. of Defense Vietnam Task Force\" was the true name of these published in 1971 in several newspapers",
+            "correctResponse": "the Pentagon Papers",
+            "value": 1200,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9552-clue_DJ_5_4",
+            "clueText": "The creator of a unique style of journalism, he rose to prominence with his 1966 tell-all about the Hell's Angels",
+            "correctResponse": "Hunter Thompson",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_5_5",
+            "clueText": "For almost 20 years this independent news service with a Latin name meaning \"for the people\" has investigated power & its abuses",
+            "correctResponse": "ProPublica",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9552-DJ-category-6",
+        "title": "HOLLYWOOD IS SO COOKED",
+        "clues": [
+          {
+            "id": "archive-9552-clue_DJ_6_1",
+            "clueText": "In a 2009 film Amy Adams runs a blog & makes recipes from this woman's cookbook",
+            "correctResponse": "Julia Child",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_6_2",
+            "clueText": "In 2023 these 2 dudes returned as Ed & Dex to cook it up at Good Burger, home of the Good Burger",
+            "correctResponse": "Kenan & Kel",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_6_3",
+            "clueText": "In this Disney film, a restaurant named Tiana's Palace opens after a marriage to Prince Naveen",
+            "correctResponse": "The Princess and the Frog",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_6_4",
+            "clueText": "Keri Russell cooks up some clever names like \"I Hate My Husband Pie\" while working a shift in this 2007 film",
+            "correctResponse": "Waitress",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9552-clue_DJ_6_5",
+            "clueText": "Before Timothée Chalamet'd special chocolate, this actress made special \"Chocolat\"",
+            "correctResponse": "Juliette Binoche",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9552-FJ-category",
+      "title": "1990s NONFICTION BESTSELLERS",
+      "clue": {
+        "id": "archive-9552-clue_FJ",
+        "clueText": "This word began the titles of 2 bestsellers from the same man; one of the books is set in Alaska, the other in Nepal",
+        "correctResponse": "Into",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

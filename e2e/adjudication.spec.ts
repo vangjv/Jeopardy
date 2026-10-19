@@ -12,7 +12,16 @@ import {
 
 test('an incorrect response deducts, locks out, and reopens for another contestant', async ({
   page,
-}) => {
+}, testInfo) => {
+  await page.context().addInitScript(() => {
+    const playedSources: string[] = [];
+    Object.defineProperty(window, '__playedAudioSources', { value: playedSources });
+    HTMLMediaElement.prototype.play = function () {
+      playedSources.push(new URL(this.src, window.location.href).pathname);
+      return Promise.resolve();
+    };
+  });
+
   const hostDiagnostics = collectBrowserDiagnostics(page);
   await openHost(page);
   const board = await openBoardFromHost(page);
@@ -27,10 +36,31 @@ test('an incorrect response deducts, locks out, and reopens for another contesta
   await buzz(page, board, 'A', 'Player 1');
   await expect(page.getByText('Buzzed first')).toBeVisible();
   await expect(page.locator('.responder-banner')).toContainText('Player 1');
+  await page.screenshot({
+    path: testInfo.outputPath('host-current-clue-buzzed.png'),
+    fullPage: true,
+  });
   await expect(page.getByRole('button', { name: 'Incorrect', exact: true })).toContainText(
     'reopen buzzer',
   );
   await page.getByRole('button', { name: 'Incorrect', exact: true }).click();
+  await expect
+    .poll(() =>
+      page.evaluate(
+        () =>
+          (window as Window & { __playedAudioSources: string[] }).__playedAudioSources.filter(
+            source => source === '/sounds/correct.mp3' || source === '/sounds/incorrect.mp3',
+          ),
+      ),
+    )
+    .toContain('/sounds/incorrect.mp3');
+  await expect
+    .poll(() =>
+      board.evaluate(
+        () => (window as Window & { __playedAudioSources: string[] }).__playedAudioSources,
+      ),
+    )
+    .toEqual([]);
 
   await expect(page.getByText('Cannot rebuzz:')).toBeVisible();
   await expect(page.locator('.lockout-player')).toHaveText('Player 1');
@@ -41,6 +71,29 @@ test('an incorrect response deducts, locks out, and reopens for another contesta
 
   await buzz(page, board, 'S', 'Player 2');
   await page.getByRole('button', { name: 'Correct', exact: true }).click();
+  await expect
+    .poll(() =>
+      page.evaluate(
+        () => (window as Window & { __playedAudioSources: string[] }).__playedAudioSources,
+      ),
+    )
+    .toContain('/sounds/correct.mp3');
+  await expect
+    .poll(() =>
+      page.evaluate(() =>
+        (window as Window & { __playedAudioSources: string[] }).__playedAudioSources.filter(
+          source => source === '/sounds/correct.mp3' || source === '/sounds/incorrect.mp3',
+        ),
+      ),
+    )
+    .toEqual(['/sounds/incorrect.mp3', '/sounds/correct.mp3']);
+  await expect
+    .poll(() =>
+      board.evaluate(
+        () => (window as Window & { __playedAudioSources: string[] }).__playedAudioSources,
+      ),
+    )
+    .toEqual([]);
 
   await expectRoundOneBoard(board, 29);
   await expect(board.locator('.player-score').filter({ hasText: 'Player 1' })).toContainText(
@@ -54,6 +107,116 @@ test('an incorrect response deducts, locks out, and reopens for another contesta
   await expect(board.locator('.player-score').filter({ hasText: 'Player 1' })).toContainText(
     'CONTROL',
   );
+
+  expectNoBrowserErrors(hostDiagnostics, boardDiagnostics);
+  await board.close();
+});
+
+test('a timed-out response is penalized as incorrect and plays the incorrect sound', async ({
+  page,
+}) => {
+  await page.context().addInitScript(() => {
+    const playedSources: string[] = [];
+    Object.defineProperty(window, '__playedAudioSources', { value: playedSources });
+    HTMLMediaElement.prototype.play = function () {
+      playedSources.push(new URL(this.src, window.location.href).pathname);
+      return Promise.resolve();
+    };
+  });
+
+  const hostDiagnostics = collectBrowserDiagnostics(page);
+  await openHost(page);
+  await page.getByRole('button', { name: 'Buzzer Rules' }).click();
+  const responseTimeout = page.getByRole('spinbutton', { name: 'Response Timeout (seconds)' });
+  await expect(responseTimeout).toHaveValue('10');
+  await responseTimeout.fill('1');
+  await page.getByRole('button', { name: 'Apply Rules' }).click();
+
+  const board = await openBoardFromHost(page);
+  const boardDiagnostics = collectBrowserDiagnostics(board);
+  await loadSampleGame(page);
+  await selectFirstClue(page, board);
+  await buzz(page, board, 'A', 'Player 1');
+
+  await expect(page.locator('.lockout-player')).toHaveText('Player 1', { timeout: 3000 });
+  await expect(page.getByText('Listening for a buzz')).toBeVisible();
+  await expect(
+    page.locator('.player-row').filter({ hasText: 'Player 1' }),
+  ).toContainText('-$200');
+  await expect
+    .poll(() =>
+      page.evaluate(
+        () =>
+          (window as Window & { __playedAudioSources: string[] }).__playedAudioSources.filter(
+            source => source === '/sounds/correct.mp3' || source === '/sounds/incorrect.mp3',
+          ),
+      ),
+    )
+    .toEqual(['/sounds/incorrect.mp3']);
+
+  await buzz(page, board, 'S', 'Player 2');
+  await expect(page.locator('.responder-banner')).toContainText('Player 2');
+  expectNoBrowserErrors(hostDiagnostics, boardDiagnostics);
+  await board.close();
+});
+
+test('the clue closes automatically after every contestant answers incorrectly', async ({
+  page,
+}) => {
+  const hostDiagnostics = collectBrowserDiagnostics(page);
+  await openHost(page);
+  const board = await openBoardFromHost(page);
+  const boardDiagnostics = collectBrowserDiagnostics(board);
+  await loadSampleGame(page);
+
+  await selectFirstClue(page, board);
+  const incorrect = page.getByRole('button', { name: 'Incorrect', exact: true });
+  for (const [key, name] of [
+    ['A', 'Player 1'],
+    ['S', 'Player 2'],
+  ] as const) {
+    await buzz(page, board, key, name);
+    await incorrect.click();
+    await expect(page.getByText('Listening for a buzz')).toBeVisible();
+  }
+  await buzz(page, board, 'D', 'Player 3');
+  await incorrect.click();
+
+  await expect(page.getByText('Choose the next clue')).toBeVisible();
+  await expectRoundOneBoard(board, 29);
+  await expect(board.locator('[data-clue-id="clue-1-1-1"]')).toHaveClass(/used/);
+  for (const name of ['Player 1', 'Player 2', 'Player 3']) {
+    await expect(board.locator('.player-score').filter({ hasText: name })).toContainText('-$200');
+  }
+
+  expectNoBrowserErrors(hostDiagnostics, boardDiagnostics);
+  await board.close();
+});
+
+test('the host can reset or close a clue while listening for a buzz', async ({ page }) => {
+  const hostDiagnostics = collectBrowserDiagnostics(page);
+  await openHost(page);
+  const board = await openBoardFromHost(page);
+  const boardDiagnostics = collectBrowserDiagnostics(board);
+  await loadSampleGame(page);
+
+  await selectFirstClue(page, board);
+  const resetClue = page.getByRole('button', { name: 'Reset clue' });
+  await expect(resetClue).toBeDisabled();
+
+  await buzz(page, board, 'A', 'Player 1');
+  await page.getByRole('button', { name: 'Incorrect', exact: true }).click();
+  await expect(page.locator('.lockout-player')).toHaveText('Player 1');
+
+  await resetClue.click();
+  await expect(page.getByText('Cannot rebuzz:')).toBeHidden();
+  await buzz(page, board, 'A', 'Player 1');
+  await page.getByRole('button', { name: 'Reset Buzzer' }).first().click();
+  await expect(page.getByText('Listening for a buzz')).toBeVisible();
+
+  await page.getByRole('button', { name: 'Close clue' }).click();
+  await expect(page.getByText('Choose the next clue')).toBeVisible();
+  await expectRoundOneBoard(board, 29);
 
   expectNoBrowserErrors(hostDiagnostics, boardDiagnostics);
   await board.close();

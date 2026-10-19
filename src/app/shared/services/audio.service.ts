@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 export type SoundKey =
   | 'board-fill'
   | 'daily-double'
+  | 'correct'
+  | 'incorrect'
   | 'final-jeopardy'
   | 'jeopardy-think'
   | 'round-over'
@@ -18,6 +20,8 @@ export interface SoundDefinition {
 export const SOUND_LIBRARY: SoundDefinition[] = [
   { id: 'board-fill', label: 'Board Fill', src: '/sounds/board-fill.mp3' },
   { id: 'daily-double', label: 'Daily Double', src: '/sounds/daily-double.mp3' },
+  { id: 'correct', label: 'Correct Response', src: '/sounds/correct.mp3' },
+  { id: 'incorrect', label: 'Incorrect Response', src: '/sounds/incorrect.mp3' },
   { id: 'final-jeopardy', label: 'Final Jeopardy', src: '/sounds/final-jeopardy.mp3' },
   { id: 'jeopardy-think', label: 'Think Music', src: '/sounds/jeopardy-think-music.mp3', loop: true },
   { id: 'round-over', label: 'Round Over', src: '/sounds/round-over.mp3' },
@@ -44,7 +48,7 @@ export class AudioService {
 
     const playPromise = audio.play();
     if (playPromise && typeof playPromise.catch === 'function') {
-      playPromise.catch(err => console.error('[AudioService] Playback error', err));
+      playPromise.catch(err => this.reportPlaybackError('Playback', err));
     }
 
     this.currentSoundId = soundId;
@@ -70,7 +74,7 @@ export class AudioService {
     if (audio && audio.paused) {
       const playPromise = audio.play();
       if (playPromise && typeof playPromise.catch === 'function') {
-        playPromise.catch(err => console.error('[AudioService] Resume error', err));
+        playPromise.catch(err => this.reportPlaybackError('Resume', err));
       }
     }
   }
@@ -100,5 +104,18 @@ export class AudioService {
   private resolveSrc(soundId: SoundKey | string): string | undefined {
     const match = SOUND_LIBRARY.find(sound => sound.id === soundId);
     return match?.src;
+  }
+
+  private reportPlaybackError(action: 'Playback' | 'Resume', error: unknown): void {
+    if (
+      error !== null &&
+      typeof error === 'object' &&
+      'name' in error &&
+      error.name === 'AbortError'
+    ) {
+      return;
+    }
+
+    console.error(`[AudioService] ${action} error`, error);
   }
 }

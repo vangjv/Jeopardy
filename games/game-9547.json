@@ -1,0 +1,519 @@
+{
+  "id": "archive-9547",
+  "title": "Show #9630 - Friday, October 2, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9547-J-category-1",
+        "title": "RED TO BE READ",
+        "clues": [
+          {
+            "id": "archive-9547-clue_J_1_1",
+            "clueText": "In \"The Scarlet Letter\", this character \"sometimes burst into passionate tears\" looking upon her daughter Pearl",
+            "correctResponse": "Prynne",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_1_2",
+            "clueText": "\"The Cardinal of the Kremlin\" features not a priest but an exposed CIA spy in the USSR with this Tom Clancy man trying to save him",
+            "correctResponse": "Jack Ryan",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_1_3",
+            "clueText": "\"O my luve's like a red, red rose, that's newly sprung in June\" is from a poem by this amorous poet who died young at 37",
+            "correctResponse": "Burns",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_1_4",
+            "clueText": "A seamstress makes a rash bargain in \"The Crimson Thread\", a retelling of this Grimm tale with an evil imp asking for a severe fee",
+            "correctResponse": "\"Rumpelstiltskin\"",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_1_5",
+            "clueText": "One of the earliest tough guy private detectives, The Continental Op shows up in 1929's \"Red Harvest\" by this author",
+            "correctResponse": "Dashiell Hammett",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9547-J-category-2",
+        "title": "FROM \"A\" TO \"Y\"",
+        "clues": [
+          {
+            "id": "archive-9547-clue_J_2_1",
+            "clueText": "Leviticus says, \"The man that committeth\" this \"with another man's wife... shall surely be put to death\"",
+            "correctResponse": "adultery",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_2_2",
+            "clueText": "In 1705 Edmond Halley wrote a treatise on this \"of Comets\" (it was his field, after all)",
+            "correctResponse": "Astronomy",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_2_3",
+            "clueText": "The trachea, or a route for a 747",
+            "correctResponse": "airway",
+            "value": 600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9547-clue_J_2_4",
+            "clueText": "Adjective meaning based on a whim--at random",
+            "correctResponse": "arbitrary",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_2_5",
+            "clueText": "Peter Handke's bestseller from 1970 is titled \"The Goalie's\" this feeling \"at the Penalty Kick\"",
+            "correctResponse": "Anxiety",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9547-J-category-3",
+        "title": "JOIN THE CLUB",
+        "clues": [
+          {
+            "id": "archive-9547-clue_J_3_1",
+            "clueText": "In 2024 Sam's Club rolled out its A.I.-powered \"exit technology\" allowing customers to leave without showing one of these",
+            "correctResponse": "a receipt",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_3_2",
+            "clueText": "This organization, the world's largest group of volunteer service clubs, has a branch for younger members called Leos",
+            "correctResponse": "the Lions Club",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_3_3",
+            "clueText": "Annie Leibovitz shot the iconic poster of five very different teens for this '80s film",
+            "correctResponse": "The Breakfast Club",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_3_4",
+            "clueText": "This natl. nonprofit originated in 1860 when 4 Hartford women sought a positive alternative for kids who \"roamed the streets\"",
+            "correctResponse": "the Boys & Girls Clubs of America",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_3_5",
+            "clueText": "Known for its bawdy celebrity roasts, this private club for showbiz insiders lost its Manhattan headquarters in a 2024 foreclosure",
+            "correctResponse": "the Friars Club",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9547-J-category-4",
+        "title": "20th CENTURY AMERICA",
+        "clues": [
+          {
+            "id": "archive-9547-clue_J_4_1",
+            "clueText": "On May 26, 1927 the ceremonial 15 millionth & last one of these rolled off the assembly line in Michigan",
+            "correctResponse": "a Model T",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_4_2",
+            "clueText": "Though long known to be detrimental to public health, new pipes made of this metal weren't banned by the U.S. until 1986",
+            "correctResponse": "lead",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_4_3",
+            "clueText": "In 1959 Barbie made her debut, all dolled up in a black & white striped one of these",
+            "correctResponse": "swimsuit",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_4_4",
+            "clueText": "In 1924 Trinity College in Durham, North Carolina took this name as a memorial to its benefactor's father",
+            "correctResponse": "Duke",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_4_5",
+            "clueText": "Gerald Ford was on this body created in 1963 & co-authored the book \"Portrait of the Assassin\" about its finding",
+            "correctResponse": "the Warren Commission",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9547-J-category-5",
+        "title": "BIG THINGS",
+        "clues": [
+          {
+            "id": "archive-9547-clue_J_5_1",
+            "clueText": "The more than 1,500-foot-tall gas-drilling platform Troll A was towed from a fjord in this country to the North Sea",
+            "correctResponse": "Norway",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_5_2",
+            "clueText": "The Kingsmen wrote a Top 5 tune about this big, verdant veggie mascot that oddly describes him as sort of a mean incel",
+            "correctResponse": "the Jolly Green Giant",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_5_3",
+            "clueText": "A redwood with a red phase--this largest tree by volume was briefly named Karl Marx before returning to its General name",
+            "correctResponse": "General Sherman",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_5_4",
+            "clueText": "In 2026 scientists discovered that an ancient cephalopod that's called the Cretaceous this mythic creature stretched 60' long",
+            "correctResponse": "Kraken",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_5_5",
+            "clueText": "The 10.7-million sq. foot Inner Mongolia Information Park is called one of the largest of these facilities that gives AI its QI",
+            "correctResponse": "a data center",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9547-J-category-6",
+        "title": "MOVIE SEQUEL SUBTITLES",
+        "clues": [
+          {
+            "id": "archive-9547-clue_J_6_1",
+            "clueText": "\"Judgment Day\"",
+            "correctResponse": "Terminator",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_6_2",
+            "clueText": "\"Fire and Ash\"",
+            "correctResponse": "Avatar",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_6_3",
+            "clueText": "\"The Secret of the Ooze\"",
+            "correctResponse": "Teenage Mutant Ninja Turtles",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_6_4",
+            "clueText": "\"Tomb of the Dragon Emperor\"",
+            "correctResponse": "The Mummy",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_J_6_5",
+            "clueText": "\"The Quickening\"",
+            "correctResponse": "Highlander",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9547-DJ-category-1",
+        "title": "GEOGRAPHIC NAMES",
+        "clues": [
+          {
+            "id": "archive-9547-clue_DJ_1_1",
+            "clueText": "The name of Gustavia, capital of France's territory of St. Barthélemy, reflects its colonial past under this other country",
+            "correctResponse": "Sweden",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_1_2",
+            "clueText": "While under German occupation from 1884 to 1916, this African country's name was spelled with a \"K\" & a \"U\", not a \"C\" & 2 \"O\"s",
+            "correctResponse": "Cameroon",
+            "value": 800,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9547-clue_DJ_1_3",
+            "clueText": "This Alaskan island was named by a British naval expedition for the board of senior officers who were their bosses",
+            "correctResponse": "Admiralty Island",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_1_4",
+            "clueText": "The California peak that's formally Mount San Antonio is also called this, rather rudely referring to its bare top",
+            "correctResponse": "Old Baldy (Mount Baldy)",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_1_5",
+            "clueText": "The name of this Balkan capital city means wisdom to the Greeks",
+            "correctResponse": "Sofia",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9547-DJ-category-2",
+        "title": "FACES",
+        "clues": [
+          {
+            "id": "archive-9547-clue_DJ_2_1",
+            "clueText": "A face or babyface, such as Jeff Hardy, is a popular performer in this activity",
+            "correctResponse": "wrestling",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_2_2",
+            "clueText": "Named for this dangerous-when-angry character, the rock face seen here poses a climbing challenge in California's Sierras",
+            "correctResponse": "the (Incredible) Hulk",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_2_3",
+            "clueText": "Common term for prosopagnosia, a problem that makes social interaction difficult for many",
+            "correctResponse": "face blindness",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_2_4",
+            "clueText": "The typeface Avenir is French for this time-based word; a Spanish word for it is also a popular typeface",
+            "correctResponse": "future",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_2_5",
+            "clueText": "This title face card drives Hermann to madness in a Tchaikovsky opera",
+            "correctResponse": "the Queen of Spades",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9547-DJ-category-3",
+        "title": "DIPLOMACY",
+        "clues": [
+          {
+            "id": "archive-9547-clue_DJ_3_1",
+            "clueText": "A 1961 international agreement says, \"A diplomatic agent shall enjoy\" this \"from the criminal jurisdiction of the receiving state\"",
+            "correctResponse": "immunity",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_3_2",
+            "clueText": "The first word in this stretch of road in D.C. used to be Millionaires', but that changed starting when the Brits moved in",
+            "correctResponse": "Embassy Row",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_3_3",
+            "clueText": "Ambassador to England from this country, Eustace Chapuys defended Catherine of Aragon; his letters give a lot of Tudor history",
+            "correctResponse": "Spain",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_3_4",
+            "clueText": "With no ambassador, John Barrett is the top U.S. diplomat in Venezuela, using this French title meaning \"assigned to do business\"",
+            "correctResponse": "the chargé d'affaires",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_3_5",
+            "clueText": "Austria's Count von Trauttmansdorff got to know this German region over years negotiating the 1648 Peace of it",
+            "correctResponse": "Westphalia",
+            "value": 2000,
+            "dailyDouble": true
+          }
+        ]
+      },
+      {
+        "id": "archive-9547-DJ-category-4",
+        "title": "FOSSIL WORDS",
+        "clues": [
+          {
+            "id": "archive-9547-clue_DJ_4_1",
+            "clueText": "A summoning gesture, it stays relevant by preceding \"& call\" when one is ready to obey a command immediately",
+            "correctResponse": "beck",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_4_2",
+            "clueText": "Often following rough- & slip-, on its fossilized own, it describes one with footwear on",
+            "correctResponse": "shod",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_4_3",
+            "clueText": "How colorful! To cut a saw-toothed edge on material was to do this; today, there are special shears for that",
+            "correctResponse": "pinking",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_4_4",
+            "clueText": "I'll be in a fit of indignation if you don't know that also means I'll be in \"high\" this 7-letter word",
+            "correctResponse": "dudgeon",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_4_5",
+            "clueText": "Oh my heavens, the depravity! It oft followed \"moral\" regarding shocking social behavior; shocking, say I!",
+            "correctResponse": "turpitude",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9547-DJ-category-5",
+        "title": "SCIENCE ADJECTIVES",
+        "clues": [
+          {
+            "id": "archive-9547-clue_DJ_5_1",
+            "clueText": "It means so tiny & indistinguishable that you need the similarly named scientific instrument to see it",
+            "correctResponse": "microscopic",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_5_2",
+            "clueText": "Relating to heat, it often comes before energy, expansion & pollution",
+            "correctResponse": "thermal",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_5_3",
+            "clueText": "It means relating to the science & study of earthquakes, including their causes & effects",
+            "correctResponse": "seismological",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_5_4",
+            "clueText": "In everyday use, it means likely to change quickly & unexpectedly; in chemistry, it means changing easily, as from liquid to gas",
+            "correctResponse": "volatile",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_5_5",
+            "clueText": "When pertaining to a molecule created using DNA fragments from different sources, the r in rDNA stands for this (not ribosomal)",
+            "correctResponse": "recombinant",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9547-DJ-category-6",
+        "title": "ONE-SEASON WONDERS",
+        "clues": [
+          {
+            "id": "archive-9547-clue_DJ_6_1",
+            "clueText": "Poor \"Rubicon\" had no chance of impressing AMC's renewal gods: once this zombie show premiered in 2010, it got all the love",
+            "correctResponse": "The Walking Dead",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_6_2",
+            "clueText": "The cancellation of \"Pan Am\" after just 14 episodes freed up this actress for her big break in \"The Wolf of Wall Street\"",
+            "correctResponse": "(Margot) Robbie",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_6_3",
+            "clueText": "This teen drama was axed in 1995 & fans have quoted Jordan Catalano's ghostwritten letter to Angela ever since",
+            "correctResponse": "My So-Called Life",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_6_4",
+            "clueText": "From the creator of \"Gilmore Girls\", this series with a passionate fan base took its name from a slang term for ballet dancers",
+            "correctResponse": "Bunheads",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9547-clue_DJ_6_5",
+            "clueText": "Two series debuting in 2006 were set behind the scenes at an \"SNL\"-type show: \"30 Rock\" & this one that also had a number in the title",
+            "correctResponse": "Studio 60 on the Sunset Strip",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9547-FJ-category",
+      "title": "COLONIAL AMERICA",
+      "clue": {
+        "id": "archive-9547-clue_FJ",
+        "clueText": "After his malt house went bankrupt, he found his calling as a firebrand who kept \"citizens awake to their grievances\"",
+        "correctResponse": "Sam Adams",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

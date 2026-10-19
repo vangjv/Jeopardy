@@ -264,7 +264,10 @@ Add host-configurable options (defaults in parentheses):
 * Timeouts:
 
   * clue buzz window seconds (optional)
-  * response time seconds (optional)
+  * response time seconds (10-second default; 0 or empty disables the timeout)
+  * if a contestant does not answer before their response timeout, automatically
+    adjudicate the buzz as incorrect, including the configured score deduction,
+    wrong-responder lockout, and incorrect-response sound
 
 ---
 

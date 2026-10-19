@@ -59,6 +59,17 @@ describe('GameStateService', () => {
     service.initializeGame(createPlayers(), createGameSet());
   });
 
+  it('defaults the response timeout to 10 seconds', () => {
+    expect(service.getCurrentState().rules.responseTimeoutSeconds).toBe(10);
+  });
+
+  it('preserves configured game rules when game content is loaded', () => {
+    service.updateRules({ responseTimeoutSeconds: 3 });
+    service.initializeGame(createPlayers(), createGameSet());
+
+    expect(service.getCurrentState().rules.responseTimeoutSeconds).toBe(3);
+  });
+
   it('does not allow an already-used clue to be selected again', () => {
     service.selectClue('r1-category-0', 'r1-clue-0-0');
     service.clearActiveClue();
@@ -75,6 +86,22 @@ describe('GameStateService', () => {
     const state = service.getCurrentState();
     expect(state.dailyDoubleWager).toBe(100);
     expect(state.buzzerEnabled).toBe(false);
+    expect(state.lockedPlayerId).toBeNull();
+  });
+
+  it('resets an active clue by clearing lockouts and reopening the buzzer', () => {
+    service.selectClue('r1-category-0', 'r1-clue-0-0');
+    const [first, second] = service.getCurrentState().players;
+    service.lockBuzz(first.id, 1);
+    service.setLockedOutPlayers(new Set([first.id, second.id]));
+
+    service.resetClue();
+
+    const state = service.getCurrentState();
+    expect(state.activeClue?.clue.id).toBe('r1-clue-0-0');
+    expect(state.lockedOutPlayerIds.size).toBe(0);
+    expect(state.buzzerEnabled).toBe(true);
+    expect(state.buzzLocked).toBe(false);
     expect(state.lockedPlayerId).toBeNull();
   });
 

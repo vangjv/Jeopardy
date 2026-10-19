@@ -3,13 +3,16 @@
  * Provides correct/incorrect buttons for host to update player scores
  */
 
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { GameStateService } from '../../../shared/services/game-state.service';
+import { AudioService } from '../../../shared/services/audio.service';
 import { Player } from '../../../shared/models/player.model';
+import { GameState } from '../../../shared/models/game-state.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-score-adjudication',
@@ -17,7 +20,10 @@ import { Player } from '../../../shared/models/player.model';
   templateUrl: './score-adjudication.component.html',
   styleUrl: './score-adjudication.component.scss'
 })
-export class ScoreAdjudicationComponent implements OnInit {
+export class ScoreAdjudicationComponent implements OnInit, OnDestroy {
+  private stateSubscription?: Subscription;
+  private responseTimeout: ReturnType<typeof setTimeout> | null = null;
+  private responseTimeoutKey: string | null = null;
   protected readonly activeClue = signal<{
     categoryTitle: string;
     clueText: string;
@@ -32,10 +38,14 @@ export class ScoreAdjudicationComponent implements OnInit {
   protected readonly wrongAnswerSubtractsValue = signal(true);
   protected readonly canAdjudicate = signal(false);
 
-  constructor(private readonly gameStateService: GameStateService) {}
+  constructor(
+    private readonly gameStateService: GameStateService,
+    private readonly audioService: AudioService,
+  ) {}
 
   ngOnInit(): void {
-    this.gameStateService.getState().subscribe(state => {
+    this.stateSubscription = this.gameStateService.getState().subscribe(state => {
+      this.updateResponseTimeout(state);
       const dailyDoubleReady =
         state.activeClue?.isDailyDouble === true &&
         state.dailyDoubleWager !== null &&
@@ -77,6 +87,11 @@ export class ScoreAdjudicationComponent implements OnInit {
     });
   }
 
+  ngOnDestroy(): void {
+    this.clearResponseTimeout();
+    this.stateSubscription?.unsubscribe();
+  }
+
   /**
    * Mark response as correct
    */
@@ -86,6 +101,8 @@ export class ScoreAdjudicationComponent implements OnInit {
     const state = this.gameStateService.getCurrentState();
 
     if (!player || !clue) return;
+
+    this.audioService.play('correct');
 
     // Add points
     this.gameStateService.updatePlayerScore(player.id, clue.value);
@@ -110,6 +127,8 @@ export class ScoreAdjudicationComponent implements OnInit {
 
     if (!player || !clue) return;
 
+    this.audioService.play('incorrect');
+
     // Subtract points if rule is enabled
     if (state.rules.wrongAnswerSubtractsValue) {
       this.gameStateService.updatePlayerScore(player.id, -clue.value);
@@ -125,6 +144,15 @@ export class ScoreAdjudicationComponent implements OnInit {
       const newLockouts = new Set(state.lockedOutPlayerIds);
       newLockouts.add(player.id);
       this.gameStateService.setLockedOutPlayers(newLockouts);
+
+      // Nobody is left to buzz, so close the clue instead of waiting forever.
+      if (state.players.length > 0 && state.players.every(p => newLockouts.has(p.id))) {
+        if (state.rules.showCorrectResponseOnBoard) {
+          this.gameStateService.revealCorrectResponse();
+        }
+        this.gameStateService.clearActiveClue();
+        return;
+      }
     }
 
     // Reset buzzer to allow other players to buzz
@@ -140,5 +168,61 @@ export class ScoreAdjudicationComponent implements OnInit {
 
   protected resetBuzz(): void {
     this.gameStateService.resetBuzz();
+  }
+
+  /**
+   * Clear lockouts and reopen buzzing for the active clue
+   */
+  protected resetClue(): void {
+    this.gameStateService.resetClue();
+  }
+
+  private updateResponseTimeout(state: GameState): void {
+    const activeClue = state.activeClue;
+    const timeoutSeconds = state.rules.responseTimeoutSeconds;
+    const playerId = state.lockedPlayerId;
+    const timeoutKey =
+      activeClue &&
+      !activeClue.isDailyDouble &&
+      state.buzzLocked &&
+      playerId &&
+      timeoutSeconds !== null &&
+      timeoutSeconds > 0
+        ? `${activeClue.clue.id}:${playerId}:${timeoutSeconds}`
+        : null;
+
+    if (timeoutKey === this.responseTimeoutKey) {
+      return;
+    }
+
+    this.clearResponseTimeout();
+    if (!timeoutKey || !activeClue || !playerId || timeoutSeconds === null) {
+      return;
+    }
+
+    this.responseTimeoutKey = timeoutKey;
+    const clueId = activeClue.clue.id;
+    this.responseTimeout = setTimeout(() => {
+      this.responseTimeout = null;
+
+      const currentState = this.gameStateService.getCurrentState();
+      if (
+        currentState.activeClue?.clue.id === clueId &&
+        !currentState.activeClue.isDailyDouble &&
+        currentState.buzzLocked &&
+        currentState.lockedPlayerId === playerId &&
+        currentState.rules.responseTimeoutSeconds === timeoutSeconds
+      ) {
+        this.markIncorrect();
+      }
+    }, timeoutSeconds * 1000);
+  }
+
+  private clearResponseTimeout(): void {
+    if (this.responseTimeout !== null) {
+      clearTimeout(this.responseTimeout);
+      this.responseTimeout = null;
+    }
+    this.responseTimeoutKey = null;
   }
 }

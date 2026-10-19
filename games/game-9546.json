@@ -1,0 +1,519 @@
+{
+  "id": "archive-9546",
+  "title": "Show #9629 - Thursday, October 1, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9546-J-category-1",
+        "title": "MERRIAM-WEBSTER'S WORD OF THE YEAR",
+        "clues": [
+          {
+            "id": "archive-9546-clue_J_1_1",
+            "clueText": "For its first word, in 2003, Merriam-Webster chose this, government of the people, by the people & for the people",
+            "correctResponse": "democracy",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_1_2",
+            "clueText": "Opposing views during the election in 2012 led to 2 Words of the Year, big spikes in look-ups of socialism & this opposite",
+            "correctResponse": "capitalism",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_1_3",
+            "clueText": "Popularized by Stephen Colbert, this was the word for 2006, something seemingly accurate based on feelings rather than facts",
+            "correctResponse": "truthiness",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_1_4",
+            "clueText": "For 2008, it was this: \"A rescue from financial distress\", like the nearly $200 billion one of Fannie Mae & Freddie Mac",
+            "correctResponse": "bailout",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_1_5",
+            "clueText": "This adjective for a reasonable & practical way of dealing with things was the logical choice for 2011",
+            "correctResponse": "pragmatic",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9546-J-category-2",
+        "title": "SEMI-STUPID ANSWERS",
+        "clues": [
+          {
+            "id": "archive-9546-clue_J_2_1",
+            "clueText": "In 1982 the CG Corporation & the INA Corporation merged their businesses & letters to form this healthcare giant",
+            "correctResponse": "Cigna",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_2_2",
+            "clueText": "The Dempster brothers of Knoxville, Tennessee patented this type of trash bin in 1937",
+            "correctResponse": "a (Dempster) dumpster",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_2_3",
+            "clueText": "\"A Bore Is Starred\" was the Village Voice's take on the 1976 version of this film",
+            "correctResponse": "A Star Is Born",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_2_4",
+            "clueText": "The Feast of Saint Marinus, September 3, is a national holiday in this republic",
+            "correctResponse": "San Marino",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_2_5",
+            "clueText": "The first article of this 1789 declaration says, \"Men are born & remain free & equal in rights\"",
+            "correctResponse": "the Declaration of the Rights of Man",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9546-J-category-3",
+        "title": "GO TO YOUR ROOM",
+        "clues": [
+          {
+            "id": "archive-9546-clue_J_3_1",
+            "clueText": "At Kyoto's Katsura Imperial Villa, the Shōkin-tei Pavilion has hosted these traditional ceremonies since the 17th century",
+            "correctResponse": "tea ceremonies",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_3_2",
+            "clueText": "In 2024 tours of Buckingham Palace began to include the seldom-seen Centre Room, which leads onto this often-seen waving spot",
+            "correctResponse": "the balcony",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_3_3",
+            "clueText": "For the 50th anniversary of this Kubrick film, the National Air & Space Museum displayed a replica of its iconic hotel room",
+            "correctResponse": "2001",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_3_4",
+            "clueText": "The Germans got a good hard look at themselves, in every sense, while signing 1919's Treaty of Versailles in this opulent room",
+            "correctResponse": "the Hall of Mirrors",
+            "value": 800,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9546-clue_J_3_5",
+            "clueText": "Seen here in a 2011 photo, this White House room, actually a complex, recently got a $50 million upgrade",
+            "correctResponse": "the Situation Room",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9546-J-category-4",
+        "title": "YOU'RE GROUNDED",
+        "clues": [
+          {
+            "id": "archive-9546-clue_J_4_1",
+            "clueText": "Steppes & prairies are 2 temperate types of this ecosystem that's defined primarily by its ground vegetation",
+            "correctResponse": "grasslands",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_4_2",
+            "clueText": "Originally a trademark, it's what John Paul II is kissing as the first pope to visit Scotland",
+            "correctResponse": "the tarmac",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_4_3",
+            "clueText": "2 popular ground coverings: crushed stone, made of rocks broken down by man, & this, like the pea type, with rocks worn down by nature",
+            "correctResponse": "gravel",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_4_4",
+            "clueText": "Groundskeepers often apply this ground-up stuff to athletic fields; the calcium carbonate lowers soil acidity & can help turf stay lush",
+            "correctResponse": "lime",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_4_5",
+            "clueText": "Held in place by many-celled growths called rhizoids, a lush carpet of these rootless bryophytes can make for a low-maintenance lawn",
+            "correctResponse": "mosses",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9546-J-category-5",
+        "title": "WAIT UNTIL YOUR FATHER GETS HOME",
+        "clues": [
+          {
+            "id": "archive-9546-clue_J_5_1",
+            "clueText": "His early acts of disobedience as a boy in Porbandar, a town of British India, included stealing money for smokes & eating meat",
+            "correctResponse": "Gandhi",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_5_2",
+            "clueText": "This childless Founding Father often butted heads with stepson John Parke Custis over the boy's lackluster grades",
+            "correctResponse": "George Washington",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_5_3",
+            "clueText": "A recurring motif in ancient Greek art: a sandal as a whacking device; Aphrodite does it to this son, winged, but apparently no angel",
+            "correctResponse": "Eros",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_5_4",
+            "clueText": "More famous for his mom than dad, this painter was expelled in 1854 from West Point (Dad's alma mater)",
+            "correctResponse": "Whistler",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_5_5",
+            "clueText": "As a lad, this future inventor of the kinetoscope burned down a barn, not clear if for science or fun",
+            "correctResponse": "Edison",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9546-J-category-6",
+        "title": "BILLY CRYSTAL",
+        "clues": [
+          {
+            "id": "archive-9546-clue_J_6_1",
+            "clueText": "(Billy Crystal presents the clue.) Inspired by debonair actor Fernando Lamas, who I saw on \"The Tonight Show\", my character Fernando interviewed guests in his hideaway on this series where I tell them \"You look marvelous\"",
+            "correctResponse": "SNL",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_6_2",
+            "clueText": "(Billy Crystal presents the clue.) For the record, during a read-through of the script for this film, Meg Ryan suggested doing that thing she did in a restaurant & I came up with the line, \"I'll have what she's having\"",
+            "correctResponse": "When Harry Met Sally...",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_6_3",
+            "clueText": "(Billy Crystal presents the clue.) As Mike Wazowski talking about Boo in this movie, I got to sing [covering one eye], \"Put that thing back where it came from or so help me. So help me. So help me... and cut! [nervous laugh]\"",
+            "correctResponse": "Monsters, Inc.",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_6_4",
+            "clueText": "(Billy Crystal presents the clue.) In this fairy tale movie, I get to say the only thing that beats true love is a mutton, lettuce & tomato sandwich when the mutton is nice & lean; have fun storming the castle",
+            "correctResponse": "The Princess Bride",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_J_6_5",
+            "clueText": "(Billy Crystal presents the clue.) I've reflected on life & family in two very personal shows--my new Broadway play \"860\", the address of the home we lost in the 2025 California wildfires, & my 2005 Tony-winning one-man show about only \"700\" these",
+            "correctResponse": "Sundays",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9546-DJ-category-1",
+        "title": "19th CENTURY NOVELS",
+        "clues": [
+          {
+            "id": "archive-9546-clue_DJ_1_1",
+            "clueText": "Huckleberry Finn turns 150 in 2026, as he was introduced in this book first published in June 1876",
+            "correctResponse": "Tom Sawyer",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_1_2",
+            "clueText": "The first of the novel genre called by this price was 1860's \"Malaeska: The Indian Wife of the White Hunter\" by Ann S. Stephens",
+            "correctResponse": "dime",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_1_3",
+            "clueText": "Pearls, tasty boar & the Queen of Sheba are part of Flaubert's version of \"The Temptation of\" this saint",
+            "correctResponse": "St. Anthony",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_1_4",
+            "clueText": "In a Thomas Hardy novel, the future holder of this title office sells his wife--a real though rare thing in the 19th century",
+            "correctResponse": "the Mayor of Casterbridge",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9546-clue_DJ_1_5",
+            "clueText": "The charismatic Verena has as her menu options Basil & Olive in this New England-set novel by Henry James",
+            "correctResponse": "The Bostonians",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9546-DJ-category-2",
+        "title": "MUSICAL ANIMALS?",
+        "clues": [
+          {
+            "id": "archive-9546-clue_DJ_2_1",
+            "clueText": "Please allow me to spit some of his bars--\"Top dollar with the gold flea collar, dippin' in my blue Impala (it's still a G thang)\"",
+            "correctResponse": "Snoop Dogg",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_2_2",
+            "clueText": "Before her bloody terrific turn on Broadway, Nicole Scherzinger led this group who hit No. 2 with \"Don't Cha\"",
+            "correctResponse": "The Pussycat Dolls",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_2_3",
+            "clueText": "Burning bright, this West Coast MC knows how to \"Make It Nasty\" in \"Rack City\", but careful with your pronunciation",
+            "correctResponse": "Tyga",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_2_4",
+            "clueText": "allmusic.com calls this Vermont group \"the preeminent jam band of the 1990s & early 21st century\"",
+            "correctResponse": "Phish",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_2_5",
+            "clueText": "\"I Ran\" to get the hairstyle here that has the name of this '80s band that's still flying today",
+            "correctResponse": "A Flock of Seagulls",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9546-DJ-category-3",
+        "title": "BY THE NUMBERS",
+        "clues": [
+          {
+            "id": "archive-9546-clue_DJ_3_1",
+            "clueText": "This novel's protagonist is \"fairly sure that his age was 39, & he believed that he had been born in 1944 or 1945\"",
+            "correctResponse": "1984",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_3_2",
+            "clueText": "Winston Churchill ordered his cook into a shelter minutes before a bomb shattered the kitchen at this address",
+            "correctResponse": "10 Downing",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_3_3",
+            "clueText": "In Greek mythology, Capaneus & Amphiaraus are 2 members of the defeated septet of city besiegers known as this",
+            "correctResponse": "the Seven against Thebes",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_3_4",
+            "clueText": "Once a living organism dies, it ceases to absorb this radioactive isotope, making dating a lot less awkward",
+            "correctResponse": "carbon-14",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_3_5",
+            "clueText": "Jiang Qing & Wang Hongwen made up half of this notorious group",
+            "correctResponse": "the Gang of Four",
+            "value": 2000,
+            "dailyDouble": true
+          }
+        ]
+      },
+      {
+        "id": "archive-9546-DJ-category-4",
+        "title": "PLACES IN THEIR NATIVE LANGUAGE",
+        "clues": [
+          {
+            "id": "archive-9546-clue_DJ_4_1",
+            "clueText": "Headed to Magyarország? You're on your way to this nation that elected Péter Magyar as its new PM in 2026",
+            "correctResponse": "Hungary",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_4_2",
+            "clueText": "Originally the ancient settlement of Taurisia, the city that hosted the 2006 Winter Olympics is called this in Italian",
+            "correctResponse": "Torino",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_4_3",
+            "clueText": "This remote Himalayan kingdom impressively calls itself Druk Yul, \"Land of the Thunder Dragon\"",
+            "correctResponse": "Bhutan",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_4_4",
+            "clueText": "Faith & begorrah! Ireland gets reduced to this 4-letter name in Irish",
+            "correctResponse": "Eire",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_4_5",
+            "clueText": "Maps today may list New Zealand & this Maori name for the same nation",
+            "correctResponse": "Aotearoa",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9546-DJ-category-5",
+        "title": "THE SUPREME COURT",
+        "clues": [
+          {
+            "id": "archive-9546-clue_DJ_5_1",
+            "clueText": "One of 2 schools ruled against in a 2023 Supreme Court case challenging race-based affirmative action",
+            "correctResponse": "(1 of) Harvard (or UNC)",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_5_2",
+            "clueText": "In Brown v. Board of Education, the Court unanimously overturned this polarizing doctrine upheld in Plessy v. Ferguson",
+            "correctResponse": "separate but equal",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_5_3",
+            "clueText": "In the majority opinion in this case, Justice Samuel Alito wrote, \"We hold that Roe... must be overruled\"",
+            "correctResponse": "Dobbs (v. Jackson)",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_5_4",
+            "clueText": "A watershed ruling, the Supreme Court voted 5-4 in Obergefell v. Hodges to declare unconstitutional all state bans on this",
+            "correctResponse": "same-sex marriage",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_5_5",
+            "clueText": "A unanimous ruling, 1974's U.S. v. Nixon ordered the pres. to share secret audio tapes--a rejection of absolute this 2-word doctrine",
+            "correctResponse": "executive privilege",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9546-DJ-category-6",
+        "title": "NOT-SO-SILENT \"K\"",
+        "clues": [
+          {
+            "id": "archive-9546-clue_DJ_6_1",
+            "clueText": "An old Chinese custom, this rhyming verb means to show servile deference",
+            "correctResponse": "kowtow",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_6_2",
+            "clueText": "Want 1/100 of a ruble? You're in luck with this Russian monetary unit",
+            "correctResponse": "a kopeck",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_6_3",
+            "clueText": "This naval punishment is dragging a person who shouldn't have done that thing they did underneath the ship",
+            "correctResponse": "keelhauling",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_6_4",
+            "clueText": "This music, from a Yiddish contraction of \"vessel\" & \"song\", has its roots in the Jewish communities of Eastern Europe",
+            "correctResponse": "klezmer",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9546-clue_DJ_6_5",
+            "clueText": "Hold your horses! This kind of water spirit in Scottish folklore just loves to drown people",
+            "correctResponse": "a kelpie",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9546-FJ-category",
+      "title": "HISTORIC ZOOLOGY",
+      "clue": {
+        "id": "archive-9546-clue_FJ",
+        "clueText": "Described when first encountered in 1835, this species \"must have weighed at least 200 pounds... gave a deep hiss, & drew in its head\"",
+        "correctResponse": "the Galápagos tortoise",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

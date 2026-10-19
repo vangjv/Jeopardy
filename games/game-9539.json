@@ -1,0 +1,519 @@
+{
+  "id": "archive-9539",
+  "title": "Show #9622 - Tuesday, September 22, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9539-J-category-1",
+        "title": "BACK TO THE 1890s",
+        "clues": [
+          {
+            "id": "archive-9539-clue_J_1_1",
+            "clueText": "In 1899 this man successfully transmitted the first radio signal across the English Channel",
+            "correctResponse": "Marconi",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_1_2",
+            "clueText": "The IBEW, short for Intl. Brotherhood of these, was organized in a new industry said to have a 50% mortality rate in some areas",
+            "correctResponse": "Electrical Workers",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_1_3",
+            "clueText": "This U.S. race was first run in 1897 & won by John McDermott with a time of 2 hours, 55 min., 10 seconds to cover 24 1/2 miles",
+            "correctResponse": "the Boston Marathon",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_1_4",
+            "clueText": "An uprising against Spanish rule in these Asian islands in 1898 resulted in the short-lived Republic of Negros",
+            "correctResponse": "the Philippines",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_1_5",
+            "clueText": "This man's \"Also Sprach Zarathustra\" was first performed in Frankfurt in 1896 & conducted by the composer himself",
+            "correctResponse": "Richard Strauss",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9539-J-category-2",
+        "title": "\"OF\" BOOKS",
+        "clues": [
+          {
+            "id": "archive-9539-clue_J_2_1",
+            "clueText": "Early readers may have expected a catalog of dull paint colors, but this book, the first of a trilogy, is more about BDSM",
+            "correctResponse": "Fifty Shades of Grey",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_2_2",
+            "clueText": "Irma Rombauer self-published it in 1931; oddly, the first recipe was for a gin cocktail (during Prohibition!)",
+            "correctResponse": "The Joy of Cooking",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_2_3",
+            "clueText": "The opening line of this novel says Col. Aureliano Buendía (Claudio Cataño in the Netflix version) is facing a firing squad",
+            "correctResponse": "One Hundred Years of Solitude",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_2_4",
+            "clueText": "What some call \"In Search of Lost Time\", others call this; either way, it's a 7-part allegorical novel",
+            "correctResponse": "Remembrance of Things Past",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_2_5",
+            "clueText": "The title of this classic refers to the New England home of the mid-19th century Pyncheon family",
+            "correctResponse": "The House of the Seven Gables",
+            "value": 1000,
+            "dailyDouble": true
+          }
+        ]
+      },
+      {
+        "id": "archive-9539-J-category-3",
+        "title": "RESPOND WITH A MILD OATH",
+        "clues": [
+          {
+            "id": "archive-9539-clue_J_3_1",
+            "clueText": "The founder of Outback Steakhouse created the appetizer known as this Onion; it has 200 \"petals\"",
+            "correctResponse": "the Bloomin' Onion",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_3_2",
+            "clueText": "Edward Bear, a great lover of honey, also goes by this 4-letter name",
+            "correctResponse": "Pooh",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_3_3",
+            "clueText": "This song from 1938 asks, \"Where'd ya get those peepers?\"",
+            "correctResponse": "\"Jeepers Creepers\"",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_3_4",
+            "clueText": "This Marx Brothers film had Groucho as Professor Wagstaff trying to help his college win a big football game",
+            "correctResponse": "Horse Feathers",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_3_5",
+            "clueText": "Last name of Gilded Age industrialist Henry Clay, whose art collection is displayed in a townhouse that has a Fragonard Room",
+            "correctResponse": "Frick",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9539-J-category-4",
+        "title": "WHEELS UP",
+        "clues": [
+          {
+            "id": "archive-9539-clue_J_4_1",
+            "clueText": "Used by painters, the RYB color wheel gets its name from these 3 primary hues",
+            "correctResponse": "red, yellow & blue",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_4_2",
+            "clueText": "This compound word can refer to a potter's wheel as well as a piece of DJ equipment",
+            "correctResponse": "a turntable",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_4_3",
+            "clueText": "In an 1893 patent infringement suit, this man admitted to having ridden on an Atlantic City wheel designed by William Somers",
+            "correctResponse": "Ferris",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_4_4",
+            "clueText": "Lagkhor is the Tibetan word for the handheld type of this device; turning it releases the power of the mantra scroll inside",
+            "correctResponse": "a prayer wheel",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_4_5",
+            "clueText": "In an 1845 Royal Navy test, propeller-driven HMS Rattler won a tug of war with HMS Alecto, which used this type of drive",
+            "correctResponse": "a paddle wheel",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9539-J-category-5",
+        "title": "FAN THEORIES OF FILM",
+        "clues": [
+          {
+            "id": "archive-9539-clue_J_5_1",
+            "clueText": "Macaulay Culkin was a booby trap whiz in this film... but what if he grew up & used his talents for evil as Jigsaw from the \"Saw\" franchise?",
+            "correctResponse": "Home Alone",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_5_2",
+            "clueText": "It's Jack to the future! This actor tells Rose about a man-made lake not yet man-made in 1912... so he must be a time traveler",
+            "correctResponse": "DiCaprio",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_5_3",
+            "clueText": "Jiminy Crickets! Some think Donkey from \"Shrek\" is one of the boys turned into an ass from this Disney film's Pleasure Island",
+            "correctResponse": "Pinocchio",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_5_4",
+            "clueText": "A popular fan theory suggests this title character & his GF Sloane are figments of Cameron's imagination",
+            "correctResponse": "Ferris Bueller",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_5_5",
+            "clueText": "Since Sean Connery plays a former secret agent in this Alcatraz-set film, some fans took it to mean he was James Bond undercover",
+            "correctResponse": "The Rock",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9539-J-category-6",
+        "title": "MY WEEKEND PLANS",
+        "clues": [
+          {
+            "id": "archive-9539-clue_J_6_1",
+            "clueText": "I'm headed to a castle to catch dinner & a jousting tournament at this chain that originally opened in Spain",
+            "correctResponse": "Medieval Times",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_6_2",
+            "clueText": "I'm finally going to make these French-named treats using the Café du Monde baking mix from my trip to New Orleans",
+            "correctResponse": "beignets",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_6_3",
+            "clueText": "Like Eazy-E I'm going to cruise around in my \"6-4\"-- this Chevy passenger car beloved by lowrider culture",
+            "correctResponse": "a Chevy Impala",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_6_4",
+            "clueText": "Like every true Seattleite, I'm gonna hang during peak hours at this oldest continuously operating farmers market in the city",
+            "correctResponse": "Pike Place",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_J_6_5",
+            "clueText": "I'm going to use my athanor, also known as a furnace of arcana, & practice this golden oldie hobby/pseudoscience",
+            "correctResponse": "alchemy",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9539-DJ-category-1",
+        "title": "HOLD THE FORT!",
+        "clues": [
+          {
+            "id": "archive-9539-clue_DJ_1_1",
+            "clueText": "After a 34-hour siege, this fort in Charleston Harbor surrendered to Confederate forces on April 13, 1861",
+            "correctResponse": "Sumter",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_1_2",
+            "clueText": "Built in 1644 in Madras, which is now Chennai, Fort St. George was the first English fortress in this country",
+            "correctResponse": "India",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_1_3",
+            "clueText": "You can take the Dixie Highway from Louisville to Bullion Boulevard to the visitors gate at this site",
+            "correctResponse": "Fort Knox",
+            "value": 1200,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9539-clue_DJ_1_4",
+            "clueText": "Started as an Army post in 1838, this beach city grew as a spring break hot spot after the 1960 movie \"Where the Boys Are\"",
+            "correctResponse": "Fort Lauderdale",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_1_5",
+            "clueText": "Fort-de-France is the largest city on this island, a French overseas department",
+            "correctResponse": "Martinique",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9539-DJ-category-2",
+        "title": "WORLD TV COMES TO YOUR DEN",
+        "clues": [
+          {
+            "id": "archive-9539-clue_DJ_2_1",
+            "clueText": "What American viewers know as this show began in Japan with the investors billed as \"Money Tigers\"",
+            "correctResponse": "Shark Tank",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_2_2",
+            "clueText": "Thank the Dutch for this show, from the company Endemol; its terrors included the intestine chew",
+            "correctResponse": "Fear Factor",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_2_3",
+            "clueText": "Juana, the chaste heroine of the Venezuelan telenovela, is 17; the heroine of this U.S. version is 23",
+            "correctResponse": "Jane the Virgin",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_2_4",
+            "clueText": "On the Israeli original of this series, the Zendaya character was played by Roni Dalumi, winner of Israel's Idol show",
+            "correctResponse": "Euphoria",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_2_5",
+            "clueText": "The British show that became this U.S. one was set in Manchester & the Gallagher family included a Liam, like the musician",
+            "correctResponse": "Shameless",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9539-DJ-category-3",
+        "title": "MARINE LIFE",
+        "clues": [
+          {
+            "id": "archive-9539-clue_DJ_3_1",
+            "clueText": "The fried egg variety of this is found in the warm waters of the Mediterranean",
+            "correctResponse": "jellyfish",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_3_2",
+            "clueText": "In rare cases, these \"unicorns of the sea\" can grow 2 tusks instead of one",
+            "correctResponse": "a narwhal",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_3_3",
+            "clueText": "Averaging 3 to 4 feet long, bonnetheads are the smallest of this type of shark",
+            "correctResponse": "a hammerhead",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_3_4",
+            "clueText": "This mollusk with a chambered shell has the most tentacles of any cephalopod, with about 90",
+            "correctResponse": "a (chambered) nautilus",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_3_5",
+            "clueText": "One of the largest sea snails is the giant this, also the name of a moon and a son of Poseidon",
+            "correctResponse": "Triton",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9539-DJ-category-4",
+        "title": "DIFFERING BY A LETTER",
+        "clues": [
+          {
+            "id": "archive-9539-clue_DJ_4_1",
+            "clueText": "Noun describing your travel to work & to calculate",
+            "correctResponse": "commute & compute",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_4_2",
+            "clueText": "Material made from a tanned hide & a shrub known for its pink-purple flowers",
+            "correctResponse": "leather & heather",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_4_3",
+            "clueText": "Something that helps to keep your pool or aquarium clean & to hesitate",
+            "correctResponse": "filter & falter",
+            "value": 1200,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9539-clue_DJ_4_4",
+            "clueText": "A catch in football & the color of the skin & face",
+            "correctResponse": "completion & complexion",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_4_5",
+            "clueText": "Extremely lazy & extremely rude",
+            "correctResponse": "indolent & insolent",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9539-DJ-category-5",
+        "title": "A REAL ON-SCOTT",
+        "clues": [
+          {
+            "id": "archive-9539-clue_DJ_5_1",
+            "clueText": "This enslaved man who sued for his freedom unsuccessfully was eventually freed but died a year later from tuberculosis",
+            "correctResponse": "Dred Scott",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_5_2",
+            "clueText": "This composer's playing is preserved on a 1916 piano roll of \"Maple Leaf Rag\"",
+            "correctResponse": "Scott Joplin",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_5_3",
+            "clueText": "Now a retired Navy captain, he set a record for longest space flight by an American, 340 days from March 2015 to March 2016",
+            "correctResponse": "Scott Kelly",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_5_4",
+            "clueText": "Tim Scott of this state is the first African American popularly elected to both the House & Senate",
+            "correctResponse": "South Carolina",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_5_5",
+            "clueText": "In 1864 he didn't fuss but feathered a note to Ulysses S. Grant: \"From the oldest to the ablest general in the world\"",
+            "correctResponse": "Winfield Scott",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9539-DJ-category-6",
+        "title": "LUCAS MUSEUM OF NARRATIVE ART",
+        "clues": [
+          {
+            "id": "archive-9539-clue_DJ_6_1",
+            "clueText": "(George Lucas presents the clue.) The museum was designed by architect Ma Yansong, known for creating buildings that seem to float; he envisioned it as a cloud, but many people compare it to this type of vehicle found in my movies",
+            "correctResponse": "a spaceship",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_6_2",
+            "clueText": "(George Lucas presents the clue.) Ralph McQuarrie's concept art for \"Star Wars: Episode IV - A New Hope\" shows R2-D2 & C-3PO leaving their escape pod in the desert of this planet",
+            "correctResponse": "Tatooine",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_6_3",
+            "clueText": "(George Lucas presents the clue.) In 1969, Captain America burst onto a comic cover in a drawing by this mighty Marvel artist who helped create many of the greatest characters in comic history",
+            "correctResponse": "Jack Kirby",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_6_4",
+            "clueText": "(Museum co-founder Mellody Hobson presents the clue.) Cassius Marcellus Coolidge inaugurated the poker-playing dog genre with the 1894 oil painting \"A Pat Hand\", a classic work of this, a German word for something popular but lowbrow",
+            "correctResponse": "Kitsch",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9539-clue_DJ_6_5",
+            "clueText": "(Mellody Hobson presents the clue.) This American woman photographed the migrant mother living in a tent in a California field, having sold her car's tires to buy food for her desperate family",
+            "correctResponse": "Dorothea Lange",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9539-FJ-category",
+      "title": "17th CENTURY AUTHORS",
+      "clue": {
+        "id": "archive-9539-clue_FJ",
+        "clueText": "A Mayo Clinic study regarding this poet's health afflictions doubts glaucoma, suggesting retinal detachment instead",
+        "correctResponse": "John Milton",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

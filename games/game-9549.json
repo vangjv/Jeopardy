@@ -1,0 +1,519 @@
+{
+  "id": "archive-9549",
+  "title": "Show #9632 - Tuesday, October 6, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9549-J-category-1",
+        "title": "KENNY J: MULTI-INSTRUMENTALIST",
+        "clues": [
+          {
+            "id": "archive-9549-clue_J_1_1",
+            "clueText": "I'll put this instrument & its 47 strings to work playing Henriette Renié's 1901 concerto",
+            "correctResponse": "a harp",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_1_2",
+            "clueText": "Sorry, got to run to the amphitheater with this treble woodwind to play a piece from the soundtrack of \"The Mission\"",
+            "correctResponse": "an oboe",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_1_3",
+            "clueText": "I may or may not be on a \"Best of Russian Folk Songs\" album with a group called this stringed instrument Ensemble Wolga",
+            "correctResponse": "Balalaika",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_1_4",
+            "clueText": "It's the globular flute heard here that for entertainment purposes, I will say I'm playing",
+            "correctResponse": "an ocarina",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_1_5",
+            "clueText": "I don't know if it's the rhyming name or that it dates to the Middle Ages, but I can't stop cranking out tunes on this pear-shaped fiddle",
+            "correctResponse": "hurdy-gurdy",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9549-J-category-2",
+        "title": "POETRY IN MOTION",
+        "clues": [
+          {
+            "id": "archive-9549-clue_J_2_1",
+            "clueText": "This bird \"did follow, & every day, for food or play, came to the mariner's hollo!\"",
+            "correctResponse": "the albatross",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_2_2",
+            "clueText": "\"Into the jaws of Death, into the mouth of hell rode\" this number of people",
+            "correctResponse": "600",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_2_3",
+            "clueText": "\"I sprang to the stirrup, & Joris, & he / I\" did this, \"Dirck\" did this, \"We\" did this \"all three\" (they were in a hurry)",
+            "correctResponse": "galloped",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_2_4",
+            "clueText": "\"The woods are lovely, dark & deep, but I have promises to keep, &\" this line; unlike the poem's end, you only have to say it once",
+            "correctResponse": "\"miles to go before I sleep\"",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_2_5",
+            "clueText": "\"She\" does this \"like the night of cloudless climes & starry skies\"",
+            "correctResponse": "\"walks in beauty\"",
+            "value": 1000,
+            "dailyDouble": true
+          }
+        ]
+      },
+      {
+        "id": "archive-9549-J-category-3",
+        "title": "ANNUAL EVENTS",
+        "clues": [
+          {
+            "id": "archive-9549-clue_J_3_1",
+            "clueText": "A blend of elegance, Southern charm & just plain fun, hats are a part of the pageantry of this first Saturday in May event",
+            "correctResponse": "the Kentucky Derby",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_3_2",
+            "clueText": "Gilroy, California is famous for its festival of this, featured in all kinds of food, even ice cream, but bring some breath mints",
+            "correctResponse": "garlic",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_3_3",
+            "clueText": "Each year with a different theme, Venice has its own two-week carnival leading up to this 40-day period of fasting & penance",
+            "correctResponse": "Lent",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_3_4",
+            "clueText": "A nod to the hosting city's coat of arms, the Palme d'Or is the top prize at this festival",
+            "correctResponse": "Cannes",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_3_5",
+            "clueText": "Ireland rejoyces on June 16, called this in honor of a novel set on that date in 1904",
+            "correctResponse": "Bloomsday",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9549-J-category-4",
+        "title": "MOVIE TITLE CHARACTERS",
+        "clues": [
+          {
+            "id": "archive-9549-clue_J_4_1",
+            "clueText": "Near the start of a 2013 film, this title character takes command of the Maersk Alabama in Oman",
+            "correctResponse": "Captain Phillips",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_4_2",
+            "clueText": "Julia Roberts won an Oscar for playing a single mom in this 2000 film",
+            "correctResponse": "Erin Brockovich",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_4_3",
+            "clueText": "To protect his perm, Jon Heder in this role could hardly wash his hair for weeks while filming in the Idaho heat",
+            "correctResponse": "Napoleon Dynamite",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_4_4",
+            "clueText": "Denzel Washington said he regretted turning down the title role in this legal thriller that went to George Clooney",
+            "correctResponse": "Michael Clayton",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_4_5",
+            "clueText": "Jake Gyllenhaal talks to a giant bunny & later takes its advice to burn down Patrick Swayze's house in this cult classic",
+            "correctResponse": "Donnie Darko",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9549-J-category-5",
+        "title": "WITH A BANG",
+        "clues": [
+          {
+            "id": "archive-9549-clue_J_5_1",
+            "clueText": "The Bureau of Alcohol, Tobacco, Firearms & (since 2003) Explosives is part of this Cabinet department",
+            "correctResponse": "Justice",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_5_2",
+            "clueText": "\"And the fifth angel sounded, and I saw a star fall from heaven unto the earth\" is the first verse in chapter 9 of this Bible book",
+            "correctResponse": "Revelation",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_5_3",
+            "clueText": "Seen here imploding in 2004, Veterans Stadium in this city had a jail & even a real court for unruly fans--ah, memories",
+            "correctResponse": "Philadelphia",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_5_4",
+            "clueText": "\"M\" is for this unit of force which, if released as TNT goes boom, would equal 4.2 x 1022 ergs",
+            "correctResponse": "megaton",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_5_5",
+            "clueText": "In 2012, Big Bay Boom went bust after a planned 17 minutes of fireworks went off at once in this second largest SoCal city",
+            "correctResponse": "San Diego",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9549-J-category-6",
+        "title": "NOT A WHIMPER",
+        "clues": [
+          {
+            "id": "archive-9549-clue_J_6_1",
+            "clueText": "A sharp, fast & shrill cry, or a site where you can give a 5-star review",
+            "correctResponse": "yelp",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_6_2",
+            "clueText": "Cry out when you know in Appalachia, it's a small valley or basin; gimme one when you can, y'hear?",
+            "correctResponse": "holler",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_6_3",
+            "clueText": "From this category-appropriate poem: \"Miracles! Ecstasies! Gone down the / American river! / Dreams! Adorations!\"",
+            "correctResponse": "\"Howl\"",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_6_4",
+            "clueText": "Meaning to shriek like a feline in heat (& starting with the feline itself), it was used in lit as early as a Chaucer work",
+            "correctResponse": "caterwaul",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_J_6_5",
+            "clueText": "U is letters 1 & 3 in this word, a long, loud, high-pitched & rhythmic sound of sorrow or celebration",
+            "correctResponse": "ululation",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9549-DJ-category-1",
+        "title": "THE 1500s",
+        "clues": [
+          {
+            "id": "archive-9549-clue_DJ_1_1",
+            "clueText": "In 1547 16-year-old Grand Prince Ivan of Moscow was crowned the first holder of this title \"of all Russia\"",
+            "correctResponse": "Tsar",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_1_2",
+            "clueText": "Including within it reforms still used today, a new calendar was proclaimed in 1582 by the XIIIth pope of this name",
+            "correctResponse": "Gregory",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_1_3",
+            "clueText": "This Flemish artist, the Elder, was known for his landscapes & scenes of everyday life like \"Peasant Dance\" from around 1568",
+            "correctResponse": "(Pieter) Bruegel (the Elder)",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_1_4",
+            "clueText": "Sent as a missionary to Asia by King John III of Portugal c. 1540, St. Francis Xavier was an original member of this Catholic order",
+            "correctResponse": "the Jesuits",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_1_5",
+            "clueText": "A 1522 siege by the Ottoman Empire expelled the Knights Hospitaller from this Greek island where they had been based for 200 years",
+            "correctResponse": "Rhodes",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9549-DJ-category-2",
+        "title": "OUT OF THE MOUTHS OF BAYS",
+        "clues": [
+          {
+            "id": "archive-9549-clue_DJ_2_1",
+            "clueText": "After smashing a Spanish fleet inside this bay in May 1898, a U.S. fleet stuck around outside to blockade it",
+            "correctResponse": "Manila Bay",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_2_2",
+            "clueText": "To get from Dhaka to the Strait of Malacca, head south from this bay & make a hard left through the Andaman Sea",
+            "correctResponse": "Bengal",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_2_3",
+            "clueText": "This bay noted for heavy storms is the graveyard of ships including the Saint Esprit & the San Esteban",
+            "correctResponse": "the Bay of Biscay",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_2_4",
+            "clueText": "This big bay has 2 exits: the same-named strait into the Atlantic & the Foxe Channel into the Arctic Ocean",
+            "correctResponse": "the Hudson (Bay)",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9549-clue_DJ_2_5",
+            "clueText": "You'll pass the suburbs of Sydney on your way out of this alliterative bay into the Tasman Sea",
+            "correctResponse": "Botany Bay",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9549-DJ-category-3",
+        "title": "VIRUSES (THE MEDICAL KIND)",
+        "clues": [
+          {
+            "id": "archive-9549-clue_DJ_3_1",
+            "clueText": "The W.H.O. declared this disease caused by the variola virus officially eradicated in 1980",
+            "correctResponse": "smallpox",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_3_2",
+            "clueText": "Caused by a virus of the Filoviridae family, this fatal hemorrhagic disease takes its name from a river in the northern Congo Basin",
+            "correctResponse": "Ebola",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_3_3",
+            "clueText": "In the decade before a vaccine became available in 1963, nearly all kids in the U.S. got this rashy disease by age 15",
+            "correctResponse": "measles",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_3_4",
+            "clueText": "Though contained by 1906, an epidemic of this viral disease almost ended the Panama Canal project; malaria didn't help, either",
+            "correctResponse": "yellow fever",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9549-clue_DJ_3_5",
+            "clueText": "Most infected people show no symptoms, but this disease spread by mosquitoes can cause aches, hence the nickname \"break-bone fever\"",
+            "correctResponse": "dengue",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9549-DJ-category-4",
+        "title": "SO PREDICTABLE",
+        "clues": [
+          {
+            "id": "archive-9549-clue_DJ_4_1",
+            "clueText": "Years before Diners Club, in 1888 Edward Bellamy's \"Looking Backward\" had citizens using this alliterative item",
+            "correctResponse": "a credit card",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_4_2",
+            "clueText": "Not only did this guy come up with Scotty Scheffler's ATM PIN, it also matched the four clubs he had a caddy take out of a bag first",
+            "correctResponse": "Oz Pearlman",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_4_3",
+            "clueText": "Who else but this Frenchman? \"The dry earth will grow more parched, and there will be great floods when it is seen\"",
+            "correctResponse": "Nostradamus",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_4_4",
+            "clueText": "In myth she predicted the death of Agamemnon, but who'd believe a gal like her, anyway? I mean, c'mon! Her?!",
+            "correctResponse": "Cassandra",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_4_5",
+            "clueText": "Morgan Robertson's book \"Futility\", with an \"unsinkable\" ship hitting an iceberg, went out in this year, 14 pre-Titanic",
+            "correctResponse": "1898",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9549-DJ-category-5",
+        "title": "TV COME-BACKS",
+        "clues": [
+          {
+            "id": "archive-9549-clue_DJ_5_1",
+            "clueText": "(Jessica Williams presents the clue.) I was the youngest correspondent in the history of this show &, years after leaving, I still show up once in a while to visit my old boss, Jon, on Mondays",
+            "correctResponse": "The Daily Show",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_5_2",
+            "clueText": "The scenes had a McDreamy quality when this actor made a beach-scene return to \"Grey's Anatomy\"",
+            "correctResponse": "Patrick Dempsey",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_5_3",
+            "clueText": "She left \"SNL\" in 2022 after 10 years that included being the designated Hillary in 2016 & came back to host in 2023",
+            "correctResponse": "Kate McKinnon",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_5_4",
+            "clueText": "In 2022, after 11 years away, Patrick Duffy as Stephen Logan came back to this 2-adjective soap, on since 1987",
+            "correctResponse": "The Bold and the Beautiful",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_5_5",
+            "clueText": "Thanks to a hallucination, this actor got to return to \"The Walking Dead\" to be killed a second time",
+            "correctResponse": "Jon Bernthal",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9549-DJ-category-6",
+        "title": "\"POST\" SCRIPT",
+        "clues": [
+          {
+            "id": "archive-9549-clue_DJ_6_1",
+            "clueText": "Autopsy synonym",
+            "correctResponse": "postmortem",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_6_2",
+            "clueText": "I have this kind of suggestion, used in therapy to prevent possible future negative behaviors like cigarette smoking",
+            "correctResponse": "posthypnotic",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_6_3",
+            "clueText": "In sports, this action means to make a visually memorable play, typically against a dumbfounded opponent",
+            "correctResponse": "posterize",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_6_4",
+            "clueText": "This roasted grain beverage has been a popular coffee substitute since 1895",
+            "correctResponse": "Postum",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9549-clue_DJ_6_5",
+            "clueText": "This architectural construction method utilizes two upright sections that hold up a third laid horizontally across their tops",
+            "correctResponse": "post & lintel",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9549-FJ-category",
+      "title": "SNACKS",
+      "clue": {
+        "id": "archive-9549-clue_FJ",
+        "clueText": "First launched at Disneyland in the 1960s, this brand has a name that derives from the Spanish for \"gold\"",
+        "correctResponse": "Doritos",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

@@ -1,0 +1,519 @@
+{
+  "id": "archive-9540",
+  "title": "Show #9623 - Wednesday, September 23, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9540-J-category-1",
+        "title": "\"C\" BIRDS",
+        "clues": [
+          {
+            "id": "archive-9540-clue_J_1_1",
+            "clueText": "These black birds are intelligent--they've learned to count & mimic human voices, plus they can use tools",
+            "correctResponse": "crows",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_1_2",
+            "clueText": "In the 1990s, sexy syllables sung by male these birds were found to get females, let's say, in the mood",
+            "correctResponse": "canary",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_1_3",
+            "clueText": "Some species of these tall wading birds are endangered, including whooping",
+            "correctResponse": "crane",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_1_4",
+            "clueText": "California's commemorative quarter depicts Half Dome mountain, the naturalist John Muir & this bird",
+            "correctResponse": "a condor",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_1_5",
+            "clueText": "That thingy on the top of the head of this flightless bird is called a casque, the purpose of which is unknown",
+            "correctResponse": "cassowary",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9540-J-category-2",
+        "title": "THE (YOUR BUSINESS HERE) BOWL",
+        "clues": [
+          {
+            "id": "archive-9540-clue_J_2_1",
+            "clueText": "In the early 2000s the Citrus Bowl had this credit card company in its wallet",
+            "correctResponse": "Capital One",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_2_2",
+            "clueText": "In 2023, the Bad Boy Mowers Pinstripe Bowl was held at this venue; \"pinstripe\" may be more of a hint than the mowers",
+            "correctResponse": "Yankee Stadium",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_2_3",
+            "clueText": "Here's Minnesota coach P.J. Fleck getting a 2025 dousing after winning the Duke's this substance Bowl--uh, congrats",
+            "correctResponse": "Mayo",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_2_4",
+            "clueText": "In 2014 the Bahamas Bowl loved that chicken from this chain",
+            "correctResponse": "Popeyes",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_2_5",
+            "clueText": "After BYU won the 2025 this breakfast treat Bowl, 2 life-size ones with human limbs got sacrificed in a giant toaster on the field",
+            "correctResponse": "Pop-Tarts",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9540-J-category-3",
+        "title": "DUAL MEANINGS",
+        "clues": [
+          {
+            "id": "archive-9540-clue_J_3_1",
+            "clueText": "How bread starts off & something you need to pay your rent",
+            "correctResponse": "dough",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_3_2",
+            "clueText": "A tree part & a car part",
+            "correctResponse": "trunk",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_3_3",
+            "clueText": "Something one stands on in the bathroom & a ratio on a map",
+            "correctResponse": "scale",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_3_4",
+            "clueText": "A good fire starter & a pleasant surprise on a dating app such as Tinder",
+            "correctResponse": "a match",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_3_5",
+            "clueText": "Signals with a hand & things with crests & troughs",
+            "correctResponse": "waves",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9540-J-category-4",
+        "title": "HOW DO YOU DO",
+        "clues": [
+          {
+            "id": "archive-9540-clue_J_4_1",
+            "clueText": "A common Louisiana greeting asks \"How is\" this familial relation \"& them?\"",
+            "correctResponse": "mama",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_4_2",
+            "clueText": "La bise is a common French greeting of these affectionate gestures",
+            "correctResponse": "kisses on the cheek",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_4_3",
+            "clueText": "In Sanskrit this greeting means \"bowing to you\"",
+            "correctResponse": "namaste",
+            "value": 600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9540-clue_J_4_4",
+            "clueText": "Noses touch in the Hongi greeting which symbolizes sharing the breath of life in this Western Polynesian culture",
+            "correctResponse": "Maori",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_4_5",
+            "clueText": "The OED says this greeting created by Black soldiers is \"a casual gesture ...involving slapping palms... or snapping fingers\"",
+            "correctResponse": "dap",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9540-J-category-5",
+        "title": "FELLOW KIDS",
+        "clues": [
+          {
+            "id": "archive-9540-clue_J_5_1",
+            "clueText": "Pansy Parkinson & Draco Malfoy are but 2 of the kids sorted into this Hogwarts house",
+            "correctResponse": "Slytherin",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_5_2",
+            "clueText": "Percival, a kid in this William Golding tale, is one of the first to see \"the beast\"",
+            "correctResponse": "the Lord of the Flies",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_5_3",
+            "clueText": "Stanley Yelnats, X-Ray, Zero & the other kids at Camp Green Lake dig & dig & dig in this Louis Sachar book",
+            "correctResponse": "Holes",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_5_4",
+            "clueText": "One boy threatens to eat another unless he gets more gruel in this 1838 novel",
+            "correctResponse": "Oliver Twist",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_5_5",
+            "clueText": "In \"Charlie & the Chocolate Factory\", they're the 2 Golden Ticket kids whose first names start with \"V\"",
+            "correctResponse": "Violet & Veruca",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9540-J-category-6",
+        "title": "ARE YOU ON THE TIKTOK?",
+        "clues": [
+          {
+            "id": "archive-9540-clue_J_6_1",
+            "clueText": "This actor & artist formerly known as Childish Gambino posted a look-alike TikTok vid with fast food hacker Jordan the Stallion",
+            "correctResponse": "Donald Glover",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_6_2",
+            "clueText": "I saw Ryan Coogler say the DCOM \"The Luck of the Irish\" influenced this film of his--he also noted Bram Stoker was Irish",
+            "correctResponse": "Sinners",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_6_3",
+            "clueText": "In 2026, this artist who started off dancing on TikTok made her Coachella debut & invited Olivia Rodrigo as a special guest",
+            "correctResponse": "Addison Rae",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_6_4",
+            "clueText": "I saw this actor get interviewed by the \"How much do you pay for rent\" guy--they talked about \"Boogie Nights\" & \"Step Brothers\"",
+            "correctResponse": "John C. Reilly",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_J_6_5",
+            "clueText": "Over on the Tok, as the kids call it, I saw this Brit singer of \"Stateside\" & \"Illegal\" correctly identify a Hercules beetle from a photo",
+            "correctResponse": "PinkPantheress",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9540-DJ-category-1",
+        "title": "HISTORIC HEADGEAR",
+        "clues": [
+          {
+            "id": "archive-9540-clue_DJ_1_1",
+            "clueText": "Alberto Korda named his iconic 1960 photo of this man in his trademark beret \"Guerrillero Heroico\"",
+            "correctResponse": "Che Guevara",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_1_2",
+            "clueText": "The Smithsonian has the last of these tall top hats donned by Abe Lincoln; it added almost 8 inches to his 6'4\" frame",
+            "correctResponse": "a stovepipe",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_1_3",
+            "clueText": "Tutankhamen's headdress, the nemes, featured a cobra & this bird associated with death",
+            "correctResponse": "a vulture",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_1_4",
+            "clueText": "During World War II, Churchill was frequently seen wearing this type of hat with the name of a city he was at war with",
+            "correctResponse": "a Homburg",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_1_5",
+            "clueText": "Justice Scalia once donned a replica of the skullcap this English humanist wore in a painting by Hans Holbein the Younger",
+            "correctResponse": "(Thomas) More",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9540-DJ-category-2",
+        "title": "ISLANDS AREN'T FOREVER",
+        "clues": [
+          {
+            "id": "archive-9540-clue_DJ_2_1",
+            "clueText": "Peninsula to island to mainland again, per UNESCO Schokland shows the heroic struggle with encroaching waters by this country",
+            "correctResponse": "the Netherlands",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_2_2",
+            "clueText": "Coronado's history includes being sort of an island & sort of linked to this California city by the Silver Strand",
+            "correctResponse": "San Diego",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_2_3",
+            "clueText": "This 5-letter word is used for the tip of a peninsula, so it makes sense that Newfoundland's island Sandy this was a peninsula",
+            "correctResponse": "Point",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_2_4",
+            "clueText": "Connecting Hunter Island to the Bronx mainland was one of the many bold and/or brazen projects of this public works titan",
+            "correctResponse": "Robert Moses",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_2_5",
+            "clueText": "Just down the coast from Cancun, Mexico is this country's biggest & funnest island, Ambergris Caye, formerly a peninsula",
+            "correctResponse": "Belize",
+            "value": 2000,
+            "dailyDouble": true
+          }
+        ]
+      },
+      {
+        "id": "archive-9540-DJ-category-3",
+        "title": "PART THIS, PART THAT",
+        "clues": [
+          {
+            "id": "archive-9540-clue_DJ_3_1",
+            "clueText": "Its resistance to corrosion makes this substance, part copper & part zinc, ideal for use in plumbing",
+            "correctResponse": "brass",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_3_2",
+            "clueText": "Straddling the Bosporus Strait, this world city is a little bit Europe & a little bit Asia",
+            "correctResponse": "Istanbul",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_3_3",
+            "clueText": "This Hugh Lofting character befriends a pushmi-pullyu: part unicorn, part gazelle & chamois, with no tail & a head on each end",
+            "correctResponse": "Doctor Dolittle",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_3_4",
+            "clueText": "Most pregnant mammals have this vascular organ made up of part fetal tissue & part maternal tissue",
+            "correctResponse": "the placenta",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_3_5",
+            "clueText": "Both were part woman & part bird, but these 2 types of creatures from Greek mythology had very different love languages",
+            "correctResponse": "harpies & sirens",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9540-DJ-category-4",
+        "title": "THINK FAST",
+        "clues": [
+          {
+            "id": "archive-9540-clue_DJ_4_1",
+            "clueText": "Japanese scientists with no complaints about slow Internet get 4 million times your home speed using these cables with special cores",
+            "correctResponse": "fiber optics",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_4_2",
+            "clueText": "Named for its notable dorsal fin, it can reach speeds of nearly 70 mph",
+            "correctResponse": "a sailfish",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_4_3",
+            "clueText": "A landmark space probe of the 1970s that orbited the Sun at a record setting 148,000 mph bore the name of this mythic titan",
+            "correctResponse": "Helios",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_4_4",
+            "clueText": "The Formula Rossa roller coaster in this UAE capital's Ferrari World goes from 0 to 149 mph in less than 5 seconds",
+            "correctResponse": "Abu Dhabi",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_4_5",
+            "clueText": "In 2012, this late Austrian skydiver reached more than 840 mph, plummeting in a historic freefall from the edge of space",
+            "correctResponse": "Felix Baumgartner",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9540-DJ-category-5",
+        "title": "'60s MOVIE LINES",
+        "clues": [
+          {
+            "id": "archive-9540-clue_DJ_5_1",
+            "clueText": "\"Do you mean to tell me that my children have been roaming about Salzburg dressed up in nothing but some old drapes?!\"",
+            "correctResponse": "The Sound of Music",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_5_2",
+            "clueText": "\"The whole point of the doomsday machine is lost if you keep it a secret!\"",
+            "correctResponse": "Dr. Strangelove",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_5_3",
+            "clueText": "A diva, to herself: \"Hello, gorgeous\"",
+            "correctResponse": "Funny Girl",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_5_4",
+            "clueText": "Jack Nicholson, in a breakout role: \"This used to be a helluva good country. I can't understand what's gone wrong with it\"",
+            "correctResponse": "Easy Rider",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_5_5",
+            "clueText": "\"I think you are another of these desert-loving English\"",
+            "correctResponse": "Lawrence of Arabia",
+            "value": 2000,
+            "dailyDouble": true
+          }
+        ]
+      },
+      {
+        "id": "archive-9540-DJ-category-6",
+        "title": "IN DEFENSIBLE",
+        "clues": [
+          {
+            "id": "archive-9540-clue_DJ_6_1",
+            "clueText": "It can mean small & mischievous or suggestive of one of Santa's helpers",
+            "correctResponse": "elfin",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_6_2",
+            "clueText": "It's a shelter or den for concealing hunters or wildlife observers",
+            "correctResponse": "blind",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_6_3",
+            "clueText": "The flax plant produces this oil useful as a preservative & as an ingredient in paints & varnishes",
+            "correctResponse": "linseed",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_6_4",
+            "clueText": "This word for a large fishing net is spelled (& pronounced) like a river of Western Europe",
+            "correctResponse": "a seine",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9540-clue_DJ_6_5",
+            "clueText": "A synonym for dregs, this plural noun refers to sediment that settles during fermentation",
+            "correctResponse": "the lees",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9540-FJ-category",
+      "title": "2026 COMMENCEMENT SPEECHES",
+      "clue": {
+        "id": "archive-9540-clue_FJ",
+        "clueText": "After a tough year, she told grads one guarantee in life is that you're going to fall, it's going to hurt & to fight on, your mountain awaits",
+        "correctResponse": "Lindsey Vonn",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

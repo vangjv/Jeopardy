@@ -29,8 +29,9 @@
         Load Sample Game
       </button>
       
-      <label class="file-upload-btn">
+      <div class="file-upload-btn">
         <input
+          #gameFileInput
           type="file"
           accept=".json"
           (change)="onFileSelected($event)"
@@ -39,13 +40,14 @@
         />
         <button
           mat-raised-button
+          (click)="gameFileInput.click()"
           [disabled]="loading()"
           type="button"
         >
           <mat-icon>upload_file</mat-icon>
           Import JSON File
         </button>
-      </label>
+      </div>
     </div>
   </mat-card-content>
 </mat-card>

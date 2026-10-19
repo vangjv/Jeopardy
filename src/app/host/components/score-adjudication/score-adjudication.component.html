@@ -135,8 +135,21 @@
             <strong>Listening for a buzz</strong>
             <span>The first eligible contestant will appear here.</span>
           </div>
-          <button mat-button (click)="skipClue()" aria-label="Skip">
-            No response
+        </div>
+        <div class="secondary-actions listening-actions">
+          <button
+            mat-button
+            (click)="resetClue()"
+            aria-label="Reset clue"
+            data-testid="reset-clue"
+            [disabled]="lockedOutPlayers().length === 0"
+          >
+            <mat-icon>restart_alt</mat-icon>
+            Reset clue · clear lockouts
+          </button>
+          <button mat-button (click)="skipClue()" aria-label="Close clue" data-testid="close-clue">
+            <mat-icon>close</mat-icon>
+            No response · close clue
           </button>
         </div>
       }

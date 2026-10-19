@@ -13,7 +13,9 @@
     "test:visual:update": "node scripts/run-playwright.mjs e2e/visual.spec.ts --project=chromium --update-snapshots",
     "test:receipt": "node scripts/run-playwright.mjs --project=receipt",
     "record:game": "node scripts/record-game.mjs",
-    "verify:quick": "npm run build && npm run test:unit",
+    "import:archive": "node scripts/archive-import.mjs",
+    "test:archive": "vitest run scripts/archive-import.spec.mjs --environment node",
+    "verify:quick": "npm run build && npm run test:unit && npm run test:archive",
     "verify": "npm run verify:quick && npm run test:e2e && npm run test:receipt"
   },
   "prettier": {

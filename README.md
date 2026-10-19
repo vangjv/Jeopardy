@@ -103,6 +103,64 @@ A valid game set contains:
 Invalid JSON or content displays a validation message in the host rather than
 starting a partial game.
 
+### Convert J-Archive HTML (developer CLI)
+
+With the project development dependencies installed (`npm ci`), run from the
+repository root:
+
+```powershell
+npm run import:archive -- --help
+npm run import:archive -- --game-id 9553 --output ".\games\game-9553.json"
+npm run import:archive -- --game-id 9555 --output ".\games\game-9555.json"
+npm run import:archive -- --input ".\games\saved-game.html" --output ".\games\saved-game.json"
+```
+
+Use either `--game-id` or `--input`, not both. Output parents are created;
+existing output files are never overwritten. Choose a new filename for another
+conversion. Invalid/incomplete content fails without publishing a partial JSON
+file. Then create contestants and use **Import JSON File** in the host.
+
+This tool uses the existing jsdom parser (no page scripts or external resources
+execute), the app's AJV schema, and additional archive coordinate, value, ID, and
+Daily Double checks. It extracts visible clue text by board coordinate and only
+`em.correct_response` from the matching hidden response node—not contestant
+responses, results tables, commentary, play order, or Daily Double wagers.
+Final Jeopardy is emitted with `value: 1` and `dailyDouble: false`.
+
+Supported input is a complete modern game: six categories of five clues in each
+round, exactly one/two Daily Doubles, $200–$1000/$400–$2000 value ladders, and one
+Final clue. Historical hover-JavaScript-only answers, older value ladders,
+incomplete boards, and fields exceeding the app limits are rejected, never
+guessed or truncated. Category/clue/response limits are 50/500/200 characters;
+the game title limit is 100. Whitespace and HTML entities are normalized.
+
+**Media review is required where warnings identify links or embedded media.**
+Nothing is downloaded or attached as `media`. Category notes/instructions and
+all clue/response/category links are explicitly reported on stderr, including
+links that might merely be references. Review them and prepare any necessary
+permitted local assets/instructions before offline play; generated JSON alone
+may not be playable for media-dependent clues. Save stderr separately if you
+need a lasting source/notes report:
+
+```powershell
+npm run import:archive -- --input ".\games\saved-game.html" --output ".\games\review.json" 2> ".\games\review-report.txt"
+```
+
+The title retains the source episode title/date and `author` identifies
+J-Archive. The source URL/path is reported separately to avoid invalid extra
+schema properties. `createdAt` uses the deterministic sentinel
+`1970-01-01T00:00:00.000Z` (not the episode date); live IDs use the game ID,
+while saved-input IDs use a hash of the HTML. Repeating the same input produces
+identical JSON, independent of conversion time.
+
+Live mode makes one ordinary HTTPS request with a 15-second total timeout and
+5 MiB response limit. It does not follow redirects, retry, evade HTTP denials,
+or bypass access controls; failures explain how to use legitimately saved HTML
+instead. Use only content you have permission to access and reuse, follow site
+terms, retain appropriate attribution, and do not commit archive clues/media
+to this repository. Automated tests use only original synthetic content and
+stub/local-server networking.
+
 ## How the game works
 
 ### Regular clues
@@ -119,9 +177,13 @@ starting a partial game.
    the clue used, and return to the board.
 5. Select **Incorrect** to apply the configured penalty. With the default rules,
    the clue value is deducted, that contestant is locked out for the clue, and
-   buzzing reopens for another contestant in the same action.
-6. Use **No response · close clue** to mark a clue used without changing a score.
-   Use **Release buzz**, **Clear lockouts**, or a contestant row under
+   buzzing reopens for another contestant in the same action. When every
+   contestant has been locked out, the clue closes automatically and is marked
+   used.
+6. Use **No response · close clue** to mark a clue used without changing a score;
+   it is available both after a buzz and while listening for one. While
+   listening, **Reset clue · clear lockouts** lets locked-out contestants buzz
+   again. Use **Release buzz**, **Clear lockouts**, or a contestant row under
    **Score & control** when the host needs to correct the live state.
 
 Correct responses stay visible to the host in **Response desk** for the entire
@@ -187,6 +249,7 @@ browser profile, keep the host open, and reopen the audience window with
 
 ```powershell
 npm run verify:quick
+npm run test:archive
 npm run test:e2e
 npm run test:visual
 npm run test:receipt
@@ -195,11 +258,14 @@ npm audit --audit-level=high
 npm run verify
 ```
 
-- `verify:quick` creates a production build and runs 8 non-interactive Vitest
-  tests in jsdom.
-- `test:e2e` runs 15 Playwright tests covering setup, popup synchronization,
+- `verify:quick` creates a production build and runs the app Vitest tests in
+  jsdom and deterministic archive-tooling tests in Node.
+- `test:archive` covers original HTML conversion, validation failures, CLI
+  arguments, safe file publication, and bounded network failures.
+- `test:e2e` runs 16 Playwright tests covering setup, popup synchronization,
   reload recovery, scoring, control, Daily Doubles, round transitions, Final
-  Jeopardy, media fallbacks, accessibility, and the approved presentation states.
+  Jeopardy, media fallbacks, original archive-CLI file import, accessibility, and
+  the approved presentation states.
 - `test:visual` compares ten named host and board states with committed
   screenshots at the required viewports.
 - `test:receipt` plays all 60 clues and Final Jeopardy, announces a winner, and

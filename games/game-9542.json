@@ -1,0 +1,519 @@
+{
+  "id": "archive-9542",
+  "title": "Show #9625 - Friday, September 25, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9542-J-category-1",
+        "title": "INSIDE BOSTON",
+        "clues": [
+          {
+            "id": "archive-9542-clue_J_1_1",
+            "clueText": "Bein' green is easy during a tour of Fenway Park when you're atop the 37-foot left field wall in these scary seats installed in 2003",
+            "correctResponse": "the Green Monster",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_1_2",
+            "clueText": "Head to the North End for great Italian food & to see the home of this patriot; he took off from there the night of April 18, 1775",
+            "correctResponse": "Paul Revere",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_1_3",
+            "clueText": "Dating to 1826, this food hall is named for Boston's mayor at that time; locals pronounce it with a \"Z\" sound",
+            "correctResponse": "Quincy Market",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_1_4",
+            "clueText": "Check out the Mapparium, showing the world in 1935, at this religion's Mother Church in Boston",
+            "correctResponse": "Christian Science",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_1_5",
+            "clueText": "Boston's Public Garden is home to the famed Swan Boats which were inspired by this Wagner opera",
+            "correctResponse": "Lohengrin",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9542-J-category-2",
+        "title": "RESTRICTED READING IN AMERICA",
+        "clues": [
+          {
+            "id": "archive-9542-clue_J_2_1",
+            "clueText": "East Knoxville has a statue of Alex Haley, but in 2026, Knox County School libraries planned to remove this Pulitzer winning book of his",
+            "correctResponse": "Roots",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_2_2",
+            "clueText": "\"Born a Crime\" by this ex-\"Daily Show\" host was challenged for anti-religious views",
+            "correctResponse": "Trevor Noah",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_2_3",
+            "clueText": "Utah had issues with \"Oryx & Crake\" by this Canadian woman who's unafraid to confront (or create) harsh realities",
+            "correctResponse": "(Margaret) Atwood",
+            "value": 600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9542-clue_J_2_4",
+            "clueText": "This author's \"Looking for Alaska\" made the A.L.A.'s \"Most Challenged Books of 2025\"",
+            "correctResponse": "John Green",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_2_5",
+            "clueText": "Barnes & Noble's list of books that have been banned & censored includes this Bradbury novel that took things to the next level",
+            "correctResponse": "Fahrenheit 451",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9542-J-category-3",
+        "title": "GOATS, GOATS, GOATS",
+        "clues": [
+          {
+            "id": "archive-9542-clue_J_3_1",
+            "clueText": "Before accepting her 2024 Olympic all-around gold, this gymnast put on a diamond-encrusted GOAT necklace, & who's arguing?",
+            "correctResponse": "Simone Biles",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_3_2",
+            "clueText": "\"She's the GOAT\", said Michael Phelps of this U.S. swimmer at the Tokyo Olympics in 2021, & he should know",
+            "correctResponse": "Ledecky",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_3_3",
+            "clueText": "LeBron? Jordan? Wilt? Russell? Or is the NBA GOAT this 7'2\" legend, a 6-time NBA MVP & 4-time \"Celebrity Jeopardy!\" player",
+            "correctResponse": "Kareem Abdul-Jabbar",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_3_4",
+            "clueText": "In 2021 this 4-time Super Bowl-winning QB said Tom Brady had surpassed him as the NFL's GOAT; Niners fans may still disagree",
+            "correctResponse": "Joe Montana",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_3_5",
+            "clueText": "MLB GOAT debates often involve Shohei Ohtani vs. this legend, the last before Ohtani to star as both a hitter & a pitcher",
+            "correctResponse": "Babe Ruth",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9542-J-category-4",
+        "title": "FOWL LANGUAGE",
+        "clues": [
+          {
+            "id": "archive-9542-clue_J_4_1",
+            "clueText": "Varivax is a vaccine that protects against this disease that often strikes in childhood",
+            "correctResponse": "chicken pox",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_4_2",
+            "clueText": "This term can refer to a lively dance of bygone days or a footrace held on Thanksgiving Day",
+            "correctResponse": "a turkey trot",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_4_3",
+            "clueText": "The first Englishman to sail around the world, this explorer & military leader was born near the port of Plymouth around 1540",
+            "correctResponse": "Drake",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_4_4",
+            "clueText": "Piloerection is a technical name for this skin reaction that may be caused by chills or a strong emotion like fear",
+            "correctResponse": "goosebumps",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_4_5",
+            "clueText": "The last reported use of this two-word punishment device on a woman considered to be a scold was on Jenny Pipes in 1809",
+            "correctResponse": "a ducking stool",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9542-J-category-5",
+        "title": "POLLY",
+        "clues": [
+          {
+            "id": "archive-9542-clue_J_5_1",
+            "clueText": "Pollywood is the term used for cinema in this language of India, like 2025's \"Raavi de Kande\" starring Pankaj Kapur",
+            "correctResponse": "Punjabi",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_5_2",
+            "clueText": "Chris Wiggs created this tiny toy line for his daughter by repurposing a compact as a miniature dollhouse",
+            "correctResponse": "Polly Pocket",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_5_3",
+            "clueText": "Polly is the first name of this British rocker whose hits include \"Sheila-Na-Gig\" & \"Down By The Water\"",
+            "correctResponse": "PJ Harvey",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_5_4",
+            "clueText": "Polly Cooper was an Oneida woman who helped Continental Army soldiers after the harsh winter of 1777-78 at this site",
+            "correctResponse": "Valley Forge",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_5_5",
+            "clueText": "Secretly married Polly Peachum is a character in this 1728 John Gay work, a satire of Italian opera then popular in England",
+            "correctResponse": "The Beggar's Opera",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9542-J-category-6",
+        "title": "WANNA CRACKER?",
+        "clues": [
+          {
+            "id": "archive-9542-clue_J_6_1",
+            "clueText": "The original logo of this cracker brand was inspired by a hat, not a fancy hotel",
+            "correctResponse": "Ritz",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_6_2",
+            "clueText": "These crackers made with whole wheat flour are named for a 19th century minister",
+            "correctResponse": "graham crackers",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_6_3",
+            "clueText": "These small hexagonal crackers are served with (not made with) the shellfish in their name",
+            "correctResponse": "oyster crackers",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_6_4",
+            "clueText": "Dating to 1921, this brand of square orange crackers was originally marketed as baked rarebit in the form of a cracker",
+            "correctResponse": "Cheez-It",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_J_6_5",
+            "clueText": "This circus name precedes \"Animals\" & \"Crackers\" in a brand of zoo animal-shaped crackers",
+            "correctResponse": "Barnum",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9542-DJ-category-1",
+        "title": "NAME THE U.K. PRIME MINISTER",
+        "clues": [
+          {
+            "id": "archive-9542-clue_DJ_1_1",
+            "clueText": "On her CV: 1947--research chemist; 1954--tax lawyer; 1959--Conservative in the House of Commons",
+            "correctResponse": "Thatcher",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_1_2",
+            "clueText": "A 1940 article called him a \"statesman of a vanished era of appeasement\"",
+            "correctResponse": "Chamberlain",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_1_3",
+            "clueText": "While he was mayor of Manchester, this new PM waged a DJ battle with the mayor of Liverpool",
+            "correctResponse": "(Andy) Burnham",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_1_4",
+            "clueText": "Kim Kardashian's marriage to Kris Humphries lasted longer than the tenure of this woman as prime minister",
+            "correctResponse": "Liz Truss",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_1_5",
+            "clueText": "After an 1815 battle he wrote, \"Nothing except a battle lost can be half so melancholy as a battle won\"",
+            "correctResponse": "Wellington",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9542-DJ-category-2",
+        "title": "THEIR MONA LISA",
+        "clues": [
+          {
+            "id": "archive-9542-clue_DJ_2_1",
+            "clueText": "Their Mona Lisa is a Mona Lisa; this museum in Spain has a copy of da Vinci's dame that may have been painted by one of his pupils",
+            "correctResponse": "the Prado",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_2_2",
+            "clueText": "A portrait of dancer Alexander Sakharoff has been called the \"Mona Lisa of the Lenbachhaus\" in this Bavarian city",
+            "correctResponse": "Munich",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_2_3",
+            "clueText": "MoMA has a 1962 silkscreen of this woman The New York Times called the \"Movies' Mona Lisa\"",
+            "correctResponse": "Marilyn Monroe",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_2_4",
+            "clueText": "Who needs Paris? The Worcester Art Museum in Mass. has \"The Brooding Woman\", a work produced in Tahiti by this man",
+            "correctResponse": "Gauguin",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_2_5",
+            "clueText": "A painting by this man at the Mauritshuis that depicts a girl in a turban is sometimes called \"The Mona Lisa of the North\"",
+            "correctResponse": "Vermeer",
+            "value": 2000,
+            "dailyDouble": true
+          }
+        ]
+      },
+      {
+        "id": "archive-9542-DJ-category-3",
+        "title": "SCIENTIFIC ADVENTURERS",
+        "clues": [
+          {
+            "id": "archive-9542-clue_DJ_3_1",
+            "clueText": "While searching for the source of this river, Sir Richard Burton got a Somali javelin thrust through both cheeks",
+            "correctResponse": "the Nile",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_3_2",
+            "clueText": "Indiana Jones, uh, excuse me, Roy Chapman Andrews led a 1920s expedition across this Mongolian desert",
+            "correctResponse": "the Gobi Desert",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_3_3",
+            "clueText": "Even with scuba gear, he nearly died diving 150 feet to explore a freshwater cave in France in 1946",
+            "correctResponse": "Cousteau",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_3_4",
+            "clueText": "On July 20, 1969, Neil Armstrong photographed this man taking a lunar core sample",
+            "correctResponse": "(Buzz) Aldrin",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_3_5",
+            "clueText": "Before he built his thermometer, he took part in a 1736 expedition to N. Sweden that helped prove the flattening of the Earth's poles",
+            "correctResponse": "Celsius",
+            "value": 2000,
+            "dailyDouble": true
+          }
+        ]
+      },
+      {
+        "id": "archive-9542-DJ-category-4",
+        "title": "QUESTIONABLE POP CULTURE",
+        "clues": [
+          {
+            "id": "archive-9542-clue_DJ_4_1",
+            "clueText": "Bollywood legend Amitabh Bachchan is the longtime host of the Hindi version of this game show",
+            "correctResponse": "Who Wants to Be a Millionaire?",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_4_2",
+            "clueText": "This actress had chemistry with Chris Noth & John Corbett, but many felt none with Hugh Grant in \"Did You Hear About the Morgans?\"",
+            "correctResponse": "Sarah Jessica Parker",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_4_3",
+            "clueText": "Trying to manifest a partner, it's the question Raye asks in the title of her 2025 viral hit",
+            "correctResponse": "\"Where Is My Husband!\"",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_4_4",
+            "clueText": "In \"Can You Ever Forgive Me?\" this actress played forger Lee Israel",
+            "correctResponse": "Melissa McCarthy",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_4_5",
+            "clueText": "The title \"Why\" has been used by Donny Osmond, Jon Bellion with Luke Combs & this Scottish woman, who made the word about 15 syllables",
+            "correctResponse": "Annie Lennox",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9542-DJ-category-5",
+        "title": "HOUSES WITH NAMES",
+        "clues": [
+          {
+            "id": "archive-9542-clue_DJ_5_1",
+            "clueText": "Now Utah Historical Sites, the Beehive House & the Lion House were once residences of this former governor & his large family",
+            "correctResponse": "Brigham Young",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_5_2",
+            "clueText": "At Woolsthorpe Manor, home of this 17th c. genius, you can see scientific drawings on the walls--oh, & some old apple tree",
+            "correctResponse": "Newton",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_5_3",
+            "clueText": "This future first lady summered at Lasata, the Hamptons estate of John Bouvier Jr. with a name meaning \"place of peace\"",
+            "correctResponse": "Jackie Kennedy",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_5_4",
+            "clueText": "This birthplace & stomping ground of Winston Churchill is the only non-royal palace in England",
+            "correctResponse": "Blenheim Palace",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_5_5",
+            "clueText": "This late designer lived in Villa Oasis & turned the Jardin Majorelle, its gardens, into one of the biggest tourist spots in Marrakesh",
+            "correctResponse": "Yves Saint Laurent",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9542-DJ-category-6",
+        "title": "\"FRONT\" OR \"BACK\"",
+        "clues": [
+          {
+            "id": "archive-9542-clue_DJ_6_1",
+            "clueText": "Davy Crockett & Kit Carson fit the category twice--as backwoodsmen & as this, which Britannica uses of both",
+            "correctResponse": "frontiersmen",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_6_2",
+            "clueText": "Pocket Books was one of the first successful publishers of these in the United States",
+            "correctResponse": "paperbacks",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_6_3",
+            "clueText": "The running game & the holding game are basic strategies in this board game",
+            "correctResponse": "backgammon",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_6_4",
+            "clueText": "Blood pressure, brain waves & muscle tension are all monitored during this behavioral therapy",
+            "correctResponse": "biofeedback",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9542-clue_DJ_6_5",
+            "clueText": "Easy to see due to their prominent spots, these U.K. Parliamentarians are government ministers or opposition shadows",
+            "correctResponse": "frontbenchers",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9542-FJ-category",
+      "title": "COINAGES OF THE 1980s",
+      "clue": {
+        "id": "archive-9542-clue_FJ",
+        "clueText": "Marc Kelly Smith had Cubs slugger Ernie Banks in mind when he chose a name for these literary events he had \"invented\"",
+        "correctResponse": "poetry slams",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

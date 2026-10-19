@@ -1,0 +1,519 @@
+{
+  "id": "archive-9551",
+  "title": "Show #9634 - Thursday, October 8, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9551-J-category-1",
+        "title": "HISTORICAL HODGEPODGE",
+        "clues": [
+          {
+            "id": "archive-9551-clue_J_1_1",
+            "clueText": "Cosimo I of this family took up residence in Florence's Pitti Palace around 1550",
+            "correctResponse": "de' Medici",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_1_2",
+            "clueText": "During the Revolutionary War, this general went from hero to being compared to Lucifer for his betrayal",
+            "correctResponse": "Benedict Arnold",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_1_3",
+            "clueText": "No Kaiserschnitt or caesarean for Kaiser Wilhelm II--a withered arm was thought to be from nerve damage in this kind of birth",
+            "correctResponse": "a breech birth",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_1_4",
+            "clueText": "This defensive barrier protected the northern frontier of Britain from invaders",
+            "correctResponse": "Hadrian's Wall",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_1_5",
+            "clueText": "This defendant had no lawyer in one of history's most famous trials, held in Rouen in 1431",
+            "correctResponse": "Joan of Arc",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9551-J-category-2",
+        "title": "BIBLE \"D\"ICTIONARY",
+        "clues": [
+          {
+            "id": "archive-9551-clue_J_2_1",
+            "clueText": "It's the bird mentioned in Genesis 8:8",
+            "correctResponse": "a dove",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_2_2",
+            "clueText": "She says, \"Hitherto thou hast mocked me, & told me lies: tell me wherewith thou mightest be bound\"",
+            "correctResponse": "Delilah",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_2_3",
+            "clueText": "This Old Testament heroine & prophet inspired a victory over the Canaanites & a song in Judges 5",
+            "correctResponse": "Deborah",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_2_4",
+            "clueText": "A blind Saul had the scales fall from his eyes in this city",
+            "correctResponse": "Damascus",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_2_5",
+            "clueText": "Shadrach, Meshach & Abednego appear in his Bible book",
+            "correctResponse": "Daniel",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9551-J-category-3",
+        "title": "FIRST NAME HOMOPHONES",
+        "clues": [
+          {
+            "id": "archive-9551-clue_J_3_1",
+            "clueText": "A paint variety that dries to a dull finish",
+            "correctResponse": "matte",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_3_2",
+            "clueText": "One of the steps on the way to becoming a feudal man-at-arms",
+            "correctResponse": "page",
+            "value": 400,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9551-clue_J_3_3",
+            "clueText": "One does this reverentially before entering a pew",
+            "correctResponse": "kneel",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_3_4",
+            "clueText": "A circular current moving in contrast to the main one",
+            "correctResponse": "eddy",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_3_5",
+            "clueText": "To decrease gradually in strength or intensity",
+            "correctResponse": "wane",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9551-J-category-4",
+        "title": "HEALTH & FITNESS",
+        "clues": [
+          {
+            "id": "archive-9551-clue_J_4_1",
+            "clueText": "A standing row exercise can help strengthen this ball-&-socket joint, which has more mobility than any other in humans",
+            "correctResponse": "your shoulder",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_4_2",
+            "clueText": "In the 1830s a Belgian statistician developed this, BMI for short; many today are moving away from it as a measure of fitness",
+            "correctResponse": "body mass index",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_4_3",
+            "clueText": "It's the 12-letter word for standard exercises like push-ups & chin-ups",
+            "correctResponse": "calisthenics",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_4_4",
+            "clueText": "Whole grains are part of the diet called DASH--dietary approaches to stop this, abnormally high blood pressure",
+            "correctResponse": "hypertension",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_4_5",
+            "clueText": "The bench press works muscles including the anterior deltoids & the largest, aka major, of this chest muscle group",
+            "correctResponse": "pectorals",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9551-J-category-5",
+        "title": "DAYTIME TV",
+        "clues": [
+          {
+            "id": "archive-9551-clue_J_5_1",
+            "clueText": "She told People magazine that being a family court judge is more meaningful, but TV judging is easier, & \"you take a lot fewer Tylenol\"",
+            "correctResponse": "(Judge) Judy Sheindlin",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_5_2",
+            "clueText": "In the first-ever daytime talk visit by a sitting pres., Barack Obama told the ladies of this show he didn't know who Snooki was",
+            "correctResponse": "The View",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_5_3",
+            "clueText": "Before bringing his gap-toothed grin to \"Good Morning America\", he won 2 Daytime Emmys for his gig co-hosting with Kelly Ripa",
+            "correctResponse": "(Michael) Strahan",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_5_4",
+            "clueText": "The 19th time's the charm! Just ask Susan Lucci--after 18 losses, she finally won a Daytime Emmy for her work on this soap",
+            "correctResponse": "All My Children",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_5_5",
+            "clueText": "Before it was an app that got us all holding smartphones to our foreheads, this game was played on \"The Ellen DeGeneres Show\"",
+            "correctResponse": "Heads Up!",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9551-J-category-6",
+        "title": "INSIDE PHOENIX",
+        "clues": [
+          {
+            "id": "archive-9551-clue_J_6_1",
+            "clueText": "For a unique experience, take in one of this team's home games from an outfield suite with a swimming pool at Chase Field",
+            "correctResponse": "the (Arizona) Diamondbacks",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_6_2",
+            "clueText": "Tovrea Castle, private property until the 1990s, is nicknamed this Castle, but couples aren't allowed to tie the knot there",
+            "correctResponse": "Wedding Cake Castle",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_6_3",
+            "clueText": "Hit the trails on this iconic mountain, & you'll encounter all kinds of wildlife, just not the humped mammal in its name",
+            "correctResponse": "Camelback",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_6_4",
+            "clueText": "About 15 miles from his Taliesin West is the Norman Lykes House, one of the last residential designs by this famed architect",
+            "correctResponse": "Frank Lloyd Wright",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_J_6_5",
+            "clueText": "Enjoy fine dining & spectacular views in the Phoenix foothills at the mansion built by this chewing gum magnate in the 1930s",
+            "correctResponse": "(William) Wrigley (Jr.)",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9551-DJ-category-1",
+        "title": "BODIES OF WATER",
+        "clues": [
+          {
+            "id": "archive-9551-clue_DJ_1_1",
+            "clueText": "Andrew Jackson crossed this large lake at Madisonville before the Battle of New Orleans",
+            "correctResponse": "Lake Pontchartrain",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_1_2",
+            "clueText": "You won't need to buy a strobe light if you have a party on this Venezuelan lake; lightning often strikes 30 times per minute",
+            "correctResponse": "Maracaibo",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_1_3",
+            "clueText": "This bay at Cape Town shares its name with a nearby flat-topped mountain",
+            "correctResponse": "Table Bay",
+            "value": 1200,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9551-clue_DJ_1_4",
+            "clueText": "Off the shin of Italy, you'll find this arm of the Mediterranean that contains the island of Elba",
+            "correctResponse": "the Tyrrhenian Sea",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_1_5",
+            "clueText": "The site of a famous 1240 battle, this river flows into the Gulf of Finland",
+            "correctResponse": "the Neva River",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9551-DJ-category-2",
+        "title": "WORKIN' A GOVERNESS JOB",
+        "clues": [
+          {
+            "id": "archive-9551-clue_DJ_2_1",
+            "clueText": "Governess Anna Leonowens is mentioned only by pronoun in the title of this Rodgers & Hammerstein musical",
+            "correctResponse": "The King and I",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_2_2",
+            "clueText": "This Austen novel opens in the wake of ex-governess Mrs. Weston's marriage; a former charge did the matchmaking",
+            "correctResponse": "Emma",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_2_3",
+            "clueText": "Many versions exist across time & space of this companion on \"Doctor Who\" played by Jenna Coleman, introduced as a Victorian governess",
+            "correctResponse": "Clara",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_2_4",
+            "clueText": "Mrs. General is the dour governess of this newly rich Dickens title heroine, who's a legit adult, by the way",
+            "correctResponse": "Little Dorrit",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9551-clue_DJ_2_5",
+            "clueText": "Hate your job? At least you're not a nameless governess for 2 kids haunted by hostile spirits, like in this novella by Henry James",
+            "correctResponse": "The Turn of the Screw",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9551-DJ-category-3",
+        "title": "ALL IN THE FAMILY",
+        "clues": [
+          {
+            "id": "archive-9551-clue_DJ_3_1",
+            "clueText": "A quarterback for the Saints, Oilers & Vikings, Archie is the patriarch of this football family",
+            "correctResponse": "Manning",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_3_2",
+            "clueText": "In 2001 she hosted a Travel Channel special, \"Secrets of San Simeon\"",
+            "correctResponse": "Patty Hearst",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_3_3",
+            "clueText": "She said the first one of her grandfather's books she read in school was \"The Old Man and the Sea\"",
+            "correctResponse": "Mariel Hemingway",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_3_4",
+            "clueText": "In 2025 Cécile & Annette, the last 2 siblings of this group of 5, both passed away at 91",
+            "correctResponse": "the Dionne quintuplets",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_3_5",
+            "clueText": "Queen Elizabeth II & Prince Philip were cousins related through both Queen Victoria & King Christian IX of this country",
+            "correctResponse": "Denmark",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9551-DJ-category-4",
+        "title": "TITLE SONG PEOPLE",
+        "clues": [
+          {
+            "id": "archive-9551-clue_DJ_4_1",
+            "clueText": "In an Eminem song this guy addresses the rapper with \"Dear Slim, I wrote you, but you still ain't callin'\"",
+            "correctResponse": "Stan",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_4_2",
+            "clueText": "Fall Out Boy titled a song for this actress of \"Kill Bill\" & \"Pulp Fiction\" fame",
+            "correctResponse": "Uma Thurman",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_4_3",
+            "clueText": "It's all right now, but this guy from a Rolling Stones hit was \"born in a crossfire hurricane\"",
+            "correctResponse": "Jumpin' Jack Flash",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_4_4",
+            "clueText": "Erykah Badu spontaneously came up with this song on stage in 1997; \"I think you better call\" him",
+            "correctResponse": "Tyrone",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_4_5",
+            "clueText": "Vampire Weekend named a 2024 song for this Big Apple art scene queen",
+            "correctResponse": "Mary Boone",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9551-DJ-category-5",
+        "title": "I'VE GOT YOUR BACK",
+        "clues": [
+          {
+            "id": "archive-9551-clue_DJ_5_1",
+            "clueText": "Mark Rothko often did this on the back of his paintings, which can help when it's not clear which way they should hang",
+            "correctResponse": "sign them",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_5_2",
+            "clueText": "In Rosa Parks' memory, this \"was filled up with people standing in the aisle\"; it's now symbolic as where she wouldn't go",
+            "correctResponse": "the back of the bus",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_5_3",
+            "clueText": "These are just below your rib cage, so while back pain is often attributed to them, they're too high for that to be true in many cases",
+            "correctResponse": "the kidneys",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_5_4",
+            "clueText": "This common style of spindled chair with a name possibly linked to a castle inspired George Nakashima's 1944 straight-back chair",
+            "correctResponse": "Windsor",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_5_5",
+            "clueText": "The white dorsal area gives this species of duck its name",
+            "correctResponse": "a canvasback",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9551-DJ-category-6",
+        "title": "LET'S TALK ABOUT IT",
+        "clues": [
+          {
+            "id": "archive-9551-clue_DJ_6_1",
+            "clueText": "In a redundant greeting, this plural word for greetings is often paired with \"greetings\"",
+            "correctResponse": "salutations",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_6_2",
+            "clueText": "It means \"talking nonsense\" & can precede idiot, as in the name of a British-style craft beer",
+            "correctResponse": "blithering",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_6_3",
+            "clueText": "From French for \"retort\", this type of conversation is characterized by clever quips; Dorothy Parker had a knack for it",
+            "correctResponse": "repartee",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_6_4",
+            "clueText": "From the Portuguese for \"word\", this former bit of nautical slang now refers to pointless chatter or fuss",
+            "correctResponse": "palaver",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9551-clue_DJ_6_5",
+            "clueText": "Long-winded Warren G. Harding is associated with this \"B\" word meaning to talk at great length using empty rhetoric",
+            "correctResponse": "bloviate",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9551-FJ-category",
+      "title": "THE 15th CENTURY",
+      "clue": {
+        "id": "archive-9551-clue_FJ",
+        "clueText": "\"The eye of the east & of all Christendom has been destroyed ... O lady of the 7 hills\" is from a Greek poem in the wake of this event",
+        "correctResponse": "the fall of Constantinople (sacking of Byzantium)",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

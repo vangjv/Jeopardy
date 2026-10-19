@@ -1,0 +1,519 @@
+{
+  "id": "archive-9541",
+  "title": "Show #9624 - Thursday, September 24, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9541-J-category-1",
+        "title": "D.C.'s BLACK HERITAGE",
+        "clues": [
+          {
+            "id": "archive-9541-clue_J_1_1",
+            "clueText": "This abolitionist who escaped slavery as a young man was known as \"The Sage of Anacostia\" during his time in D.C.",
+            "correctResponse": "Douglass",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_1_2",
+            "clueText": "In a 2016 speech President Obama called this D.C. university \"a centerpiece of African-American intellectual life\"",
+            "correctResponse": "Howard",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_1_3",
+            "clueText": "Wormley's Hotel was the scene of a deal after 1876's election & James Wormley made his famed beef tea for this president shot in 1881",
+            "correctResponse": "Garfield",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_1_4",
+            "clueText": "Also the name of a Parliament song, this \"sweet\" nickname was given to D.C. after it had a majority Black pop. in the 1970s",
+            "correctResponse": "Chocolate City",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_1_5",
+            "clueText": "A high school in Northwest D.C. is named for this jazz bandleader who grew up in the Shaw/Uptown area",
+            "correctResponse": "Duke Ellington",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9541-J-category-2",
+        "title": "J.LO, J-LAW & JHUD",
+        "clues": [
+          {
+            "id": "archive-9541-clue_J_2_1",
+            "clueText": "Podster & interviewer to the stars Jay Shetty officiated J.Lo's second wedding to him",
+            "correctResponse": "Ben Affleck",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_2_2",
+            "clueText": "Though Ms. Hudson didn't win \"American Idol\", she did bag an Oscar for her role as Effie in this movie",
+            "correctResponse": "Dreamgirls",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_2_3",
+            "clueText": "In the 2010s, J-Law did muse duty for this director in films like \"American Hustle\"",
+            "correctResponse": "(David O.) Russell",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_2_4",
+            "clueText": "In this film, Ms. Lopez was Marisa, a hotel cleaning woman in New York City with whom a Senate candidate falls in love",
+            "correctResponse": "Maid in Manhattan",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_2_5",
+            "clueText": "Ms. Lawrence & her art dealer husband named their first child this, after American painter Twombly",
+            "correctResponse": "Cy",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9541-J-category-3",
+        "title": "WORLD GEOGRAPHY",
+        "clues": [
+          {
+            "id": "archive-9541-clue_J_3_1",
+            "clueText": "Just south of the Lagunas de Montebello National Park in southeastern Chiapas is this Central American country",
+            "correctResponse": "Guatemala",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_3_2",
+            "clueText": "Baby boys' names in the early 2000s saw a sharp increase in names that rhyme with this gulf off Yemen",
+            "correctResponse": "Aden",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_3_3",
+            "clueText": "This 500-mile river empties into the Mediterranean in France, just west of Marseille",
+            "correctResponse": "the Rhône",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_3_4",
+            "clueText": "Hong Kong & Guangzhou are on this river delta that shares its name with an off-white shade",
+            "correctResponse": "Pearl",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_3_5",
+            "clueText": "Known as the \"Door to Africa\", this city on the Strait of Gibraltar lends its name to a type of citrus fruit",
+            "correctResponse": "Tangiers",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9541-J-category-4",
+        "title": "WHERE DID I LEAVE MY WALLET?!",
+        "clues": [
+          {
+            "id": "archive-9541-clue_J_4_1",
+            "clueText": "Oh, crud! I dropped my wallet in this waterway of myth whose name means \"the hateful\"; I'm not gettin' that back, am I?",
+            "correctResponse": "the Styx",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_4_2",
+            "clueText": "I left my money at the bank! Specifically, this bank, founded in 1852 & known for its iconic stagecoach",
+            "correctResponse": "Wells Fargo",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_4_3",
+            "clueText": "The night man at this title place in song said relax, the wallet's here & \"you can check out any time you like, but you can never leave\"",
+            "correctResponse": "\"Hotel California\"",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_4_4",
+            "clueText": "Mon portefeuille is at this university in Paris whose namesake, a master of theology, began teaching there in 1253",
+            "correctResponse": "the Sorbonne",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_4_5",
+            "clueText": "Don't ask me how my wallet ended up on this consonant-less moon that takes 1.77 Earth days to go around Jupiter; it was a crazy weekend",
+            "correctResponse": "Io",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9541-J-category-5",
+        "title": "ORGANIZATIONS",
+        "clues": [
+          {
+            "id": "archive-9541-clue_J_5_1",
+            "clueText": "Focusing on women & cardiovascular disease, Go Red for Women is an initiative of this organization",
+            "correctResponse": "the American Heart Association",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_5_2",
+            "clueText": "Founded in 1910, the Green Mountain Club manages & maintains some 500 miles of hiking trails in this state",
+            "correctResponse": "Vermont",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_5_3",
+            "clueText": "While the FFA is aimed at Future Farmers of America, the FBLA helps inspire students to become these, the B-L",
+            "correctResponse": "Business Leaders",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_5_4",
+            "clueText": "Rex Stout, Mary Higgins Clark & Lisa Scottoline have all been president of this, the MWA",
+            "correctResponse": "Mystery Writers of America",
+            "value": 800,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9541-clue_J_5_5",
+            "clueText": "An organization dedicated to protecting Africa's gorillas is named for & carries on the work of this woman murdered in 1985",
+            "correctResponse": "Dian Fossey",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9541-J-category-6",
+        "title": "WORD PUZZLES",
+        "clues": [
+          {
+            "id": "archive-9541-clue_J_6_1",
+            "clueText": "Part of a morning repast: GEGS SEGG",
+            "correctResponse": "scrambled eggs",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_6_2",
+            "clueText": "A way of submitting your preference without being there: QRS UVWXYZ",
+            "correctResponse": "absentee",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_6_3",
+            "clueText": "Disassembling a product's construction in order to build a similar one: GNIREENIGNE",
+            "correctResponse": "reverse engineering",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_6_4",
+            "clueText": "A pun may be one: \"Othello\" bilateral bilberry bile",
+            "correctResponse": "a play on words",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_J_6_5",
+            "clueText": "To earnestly pledge you are telling the truth: Dang it! Vulgate King James Version American Standard",
+            "correctResponse": "to swear on a stack of Bibles",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9541-DJ-category-1",
+        "title": "ANCIENT \"H\"ISTORY",
+        "clues": [
+          {
+            "id": "archive-9541-clue_DJ_1_1",
+            "clueText": "Nebuchadnezzar II is said to have built this Wonder of the Ancient World for his wife, who missed the greenery of her homeland",
+            "correctResponse": "the Hanging Gardens of Babylon",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_1_2",
+            "clueText": "This nomadic group of the 4th & 5th centuries is thought to have come from a region roughly corresponding to modern Kazakhstan",
+            "correctResponse": "the Huns",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_1_3",
+            "clueText": "It's the historical period that began in 323 B.C. with the death of Alexander the Great",
+            "correctResponse": "the Hellenistic period",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_1_4",
+            "clueText": "One in London & one in NYC, the obelisks known as Cleopatra's Needles once stood in this Egyptian \"City of the Sun\"",
+            "correctResponse": "Heliopolis",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9541-clue_DJ_1_5",
+            "clueText": "Played by Rachel Weisz in a 2009 biopic, this Egyptian philosopher & mathematician was killed in the 5th c. by a Christian mob",
+            "correctResponse": "Hypatia",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9541-DJ-category-2",
+        "title": "QUASI-RELATED PAIRS",
+        "clues": [
+          {
+            "id": "archive-9541-clue_DJ_2_1",
+            "clueText": "Citrus peel cocktail garnish & \"triple-acting\" fabric cleaner",
+            "correctResponse": "twist & Shout",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_2_2",
+            "clueText": "Transition zone edge where 2 air masses meet in meteorology & the guy who snaps the football",
+            "correctResponse": "front & center",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_2_3",
+            "clueText": "A measurement of grams or pounds & the seat of a bishop's office",
+            "correctResponse": "weight & see",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_2_4",
+            "clueText": "Acronym for nuke-limiting agreements from the 1970s & to beat with repeated punches",
+            "correctResponse": "SALT & pepper",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9541-clue_DJ_2_5",
+            "clueText": "To pathetically complain & vital energies studied in Eastern medicines",
+            "correctResponse": "whine & qis",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9541-DJ-category-3",
+        "title": "I SPEAK FOR THE TREES",
+        "clues": [
+          {
+            "id": "archive-9541-clue_DJ_3_1",
+            "clueText": "Oak trees produce nuts in a \"boom & bust\" cycle, with boom periods, or mast years, yielding up to 10,000 of these",
+            "correctResponse": "acorns",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_3_2",
+            "clueText": "These drought resistant trees with oily fruit can live for centuries; Ano Vuves in Greece has one that's at least 2,000 years old",
+            "correctResponse": "an olive",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_3_3",
+            "clueText": "Maples reproduce by generating winged seeds that scatter via this means of dispersal also known as anemochory",
+            "correctResponse": "they scatter by the wind (wind dispersal)",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_3_4",
+            "clueText": "For its ability to create & maintain its own ecosystem in arid regions, this odd-shaped African tree is known as the \"tree of life\"",
+            "correctResponse": "the baobob",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_3_5",
+            "clueText": "Central Park's Mall is home to one of North America's largest and last remaining stands of the American species of this tree",
+            "correctResponse": "elm tree",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9541-DJ-category-4",
+        "title": "LITERATURE: REVISITED",
+        "clues": [
+          {
+            "id": "archive-9541-clue_DJ_4_1",
+            "clueText": "A man reinvents himself & falls in love with a TV star in Salman Rushdie's \"Quichotte\", inspired by this classic",
+            "correctResponse": "Don Quixote",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_4_2",
+            "clueText": "In Christopher Moore's \"Fool\", the jester of this Shakespeare king gets the limelight & shows Goneril a real good time",
+            "correctResponse": "King Lear",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_4_3",
+            "clueText": "Sandra Newman wrote a retelling of \"1984\" from the perspective of this character, Winston Smith's lover",
+            "correctResponse": "Julia",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_4_4",
+            "clueText": "This Madeline Miller novel tells the story of the \"Iliad\" from the perspective of the doomed Patroclus",
+            "correctResponse": "Song of Achilles",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_4_5",
+            "clueText": "\"The Chosen and the Beautiful\" reimagines this golfer from \"The Great Gatsby\" as a Vietnamese woman",
+            "correctResponse": "Jordan Baker",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9541-DJ-category-5",
+        "title": "MOVIE ROLE, TV ROLE",
+        "clues": [
+          {
+            "id": "archive-9541-clue_DJ_5_1",
+            "clueText": "White man Billy Hoyle in \"White Men Can't Jump\" & \"True Detective\" Marty Hart",
+            "correctResponse": "Woody Harrelson",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_5_2",
+            "clueText": "Sarah Connor in a film series & Catherine on \"Beauty and the Beast\"",
+            "correctResponse": "Linda Hamilton",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_5_3",
+            "clueText": "Alma in \"Brokeback Mountain\" & Jen Lindley on \"Dawson's Creek\"",
+            "correctResponse": "Michelle Williams",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_5_4",
+            "clueText": "Barbarella & Grace Hanson",
+            "correctResponse": "Jane Fonda",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_5_5",
+            "clueText": "Tang Lung in 1972's \"The Way of the Dragon\" & Kato on \"The Green Hornet\"",
+            "correctResponse": "Bruce Lee",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9541-DJ-category-6",
+        "title": "7-LETTER WORDS",
+        "clues": [
+          {
+            "id": "archive-9541-clue_DJ_6_1",
+            "clueText": "Spooky term for what you did if you cut off contact with someone without notice or explanation",
+            "correctResponse": "ghosted",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_6_2",
+            "clueText": "As a verb, it means to give something up; as a noun, to give in to impulses, as to behave with wild...",
+            "correctResponse": "abandon",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_6_3",
+            "clueText": "The surface of an escritoire, or a computer feature",
+            "correctResponse": "a desktop",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_6_4",
+            "clueText": "An act of pardon granted to a large group, perhaps political prisoners",
+            "correctResponse": "amnesty",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9541-clue_DJ_6_5",
+            "clueText": "From French, it's a naive young woman, particularly in film",
+            "correctResponse": "ingénue",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9541-FJ-category",
+      "title": "U.S. GEOGRAPHY",
+      "clue": {
+        "id": "archive-9541-clue_FJ",
+        "clueText": "Meaning \"endless\" & \"grassy open place\", this name for a region of thousands of square miles first appeared on a map in 1823",
+        "correctResponse": "the Everglades",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}

@@ -1,0 +1,519 @@
+{
+  "id": "archive-9533",
+  "title": "Show #9616 - Monday, September 14, 2026",
+  "author": "J-Archive (source transcription)",
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "round1": {
+    "categories": [
+      {
+        "id": "archive-9533-J-category-1",
+        "title": "OPERA CHARACTERS",
+        "clues": [
+          {
+            "id": "archive-9533-clue_J_1_1",
+            "clueText": "Jacques Offenbach took a myth about this hero & musician & made it not just an opera but a farce & set it partly \"in the Underworld\"",
+            "correctResponse": "Orpheus",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_1_2",
+            "clueText": "Wagner's opera named for one of these Norse handmaidens rode triumphantly into Munich in 1870",
+            "correctResponse": "a valkyrie",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_1_3",
+            "clueText": "Carmen, the title character of a Bizet opera, works in a factory that makes these--scandalous to 1875 theatergoers",
+            "correctResponse": "cigars (cigarettes)",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_1_4",
+            "clueText": "This Ethiopian princess sings a duet with Radamès at an opera's end, \"The fatal stone now closes over me\"",
+            "correctResponse": "Aida",
+            "value": 800,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9533-clue_J_1_5",
+            "clueText": "Suzuki is the servant who waits on her, the title character of a Puccini opera",
+            "correctResponse": "Madame Butterfly",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9533-J-category-2",
+        "title": "I SAW IT ON A T-SHIRT",
+        "clues": [
+          {
+            "id": "archive-9533-clue_J_2_1",
+            "clueText": "On a classic T, these 3 words are found above an arrow that points sideways to identify your less-than-brilliant companion",
+            "correctResponse": "I'm with stupid",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_2_2",
+            "clueText": "Where my '80s kids at? This 4-letter acronym preceded \"to keep kids off drugs\"",
+            "correctResponse": "D.A.R.E.",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_2_3",
+            "clueText": "We're not for this; just noting punk rock helped put the symbol on T-shirts & the words in the title of the first Sex Pistols single",
+            "correctResponse": "anarchy",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_2_4",
+            "clueText": "Trying to rebuild a city's image from the 1970s, Milton Glaser sketched this logo/phrase with a crayon during a taxi ride",
+            "correctResponse": "I Heart New York",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_2_5",
+            "clueText": "A crown is found above this British slogan of self-maintenance; it was coined by the Ministry of Information in 1939",
+            "correctResponse": "Keep calm and carry on",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9533-J-category-3",
+        "title": "BUSINESS ABBREV.",
+        "clues": [
+          {
+            "id": "archive-9533-clue_J_3_1",
+            "clueText": "Better get that order in before C.O.B., this, or it won't get processed until Monday",
+            "correctResponse": "close of business",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_3_2",
+            "clueText": "I am IAM, this; I'll get back to you when it's over",
+            "correctResponse": "in a meeting",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_3_3",
+            "clueText": "Son, we're looking for steady growth MoM, this ongoing interval",
+            "correctResponse": "month-over-month",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_3_4",
+            "clueText": "Before investing in a company, you might want to check out its P/E, this ratio",
+            "correctResponse": "price-to-earnings",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_3_5",
+            "clueText": "R.O.I. is return on investment; R.O.A. is this measure of profit from stuff that's owned",
+            "correctResponse": "return on assets",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9533-J-category-4",
+        "title": "DUNGEONS & DRAG QUEENS",
+        "clues": [
+          {
+            "id": "archive-9533-clue_J_4_1",
+            "clueText": "Onya Nurve, Acacia Forgot & Jane Don't were contestants on what else but this show that roared to life in 2009",
+            "correctResponse": "RuPaul's Drag Race",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_4_2",
+            "clueText": "Dealing with Gurkhan as one does, this \"Warrior Princess\" spent some time hanging around a dungeon (upside down)",
+            "correctResponse": "Xena",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_4_3",
+            "clueText": "In 2026 our YouTube pal Monét X Change dealt with mahrdahr--sorry, I meant murder--in Scotland on this competition show",
+            "correctResponse": "The Traitors",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_4_4",
+            "clueText": "In a \"Game of Thrones\" dungeon, this royal played by Lena Headey gives a literal, poisonous kiss of death to a daughter of an enemy",
+            "correctResponse": "Cersei Lannister",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_4_5",
+            "clueText": "Cahir knows far too much about dungeon doings in the Academy in Aretuza on this monster-hunting Netflix series",
+            "correctResponse": "The Witcher",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9533-J-category-5",
+        "title": "ALLITERATIVE AMERICA",
+        "clues": [
+          {
+            "id": "archive-9533-clue_J_5_1",
+            "clueText": "One definition of it is a region of the southern U.S. & Midwest noted for its religious fundamentalism",
+            "correctResponse": "the Bible Belt",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_5_2",
+            "clueText": "More than 100,000 vehicles & 28,000 pedestrians travel across it each day",
+            "correctResponse": "the Brooklyn Bridge",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_5_3",
+            "clueText": "Bugsy Siegel's sunglasses & an original \"Godfather\" script are on display at this place, a popular Las Vegas attraction",
+            "correctResponse": "The Mob Museum",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_5_4",
+            "clueText": "The Kennedy Space Center isn't actually located on this promontory, but adjacent to it",
+            "correctResponse": "Cape Canaveral",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_5_5",
+            "clueText": "This body of water forms part of the Texas-Oklahoma border before flowing through Arkansas & into Louisiana",
+            "correctResponse": "the Red River",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9533-J-category-6",
+        "title": "CURT OR BURN-Y",
+        "clues": [
+          {
+            "id": "archive-9533-clue_J_6_1",
+            "clueText": "If you're curt in conversation you may be this, also preceding \"instrument\" to describe a heavy club",
+            "correctResponse": "blunt",
+            "value": 200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_6_2",
+            "clueText": "Let's avoid a long discussion & keep it this n' this, also a Sabrina Carpenter album title",
+            "correctResponse": "short n' sweet",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_6_3",
+            "clueText": "It's a 4-letter mound used for burning a dead body",
+            "correctResponse": "a pyre",
+            "value": 600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_6_4",
+            "clueText": "Enjoy the sweet smell of this synonym for curt that has 3 C's",
+            "correctResponse": "succinct",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_J_6_5",
+            "clueText": "An intense fire, or the first part of a 100-canto poem",
+            "correctResponse": "inferno",
+            "value": 1000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "categories": [
+      {
+        "id": "archive-9533-DJ-category-1",
+        "title": "HISTORIC DAYS OF THE WEEK",
+        "clues": [
+          {
+            "id": "archive-9533-clue_DJ_1_1",
+            "clueText": "She orchestrated several escapes of the enslaved on Saturday nights, since notices of runaways wouldn't be placed until Monday",
+            "correctResponse": "Harriet Tubman",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_1_2",
+            "clueText": "He asked Congress to declare war after an \"unprovoked & dastardly attack... on Sunday\"",
+            "correctResponse": "FDR",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_1_3",
+            "clueText": "During the civil rights movement, WIMS, or Wednesdays in this state, was an interracial & interfaith activist group",
+            "correctResponse": "Mississippi",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_1_4",
+            "clueText": "Recently it's opened on Wednesday, but the famous \"Long\" one opened on Tuesday, Nov. 3, 1640",
+            "correctResponse": "(the British) Parliament",
+            "value": 1600,
+            "dailyDouble": true
+          },
+          {
+            "id": "archive-9533-clue_DJ_1_5",
+            "clueText": "A lot of the violence during this massacre occurred on Sunday, August 24, 1572",
+            "correctResponse": "St. Bartholomew's Day",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9533-DJ-category-2",
+        "title": "THAT SONG'S A CRIME",
+        "clues": [
+          {
+            "id": "archive-9533-clue_DJ_2_1",
+            "clueText": "In the Jane's Addiction song \"Been Caught\" doing this, the first offense happens at age 5",
+            "correctResponse": "Stealing",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_2_2",
+            "clueText": "Taylor Swift's \"No Body, No Crime\" features this trio of sisters & namechecks Este",
+            "correctResponse": "Haim",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_2_3",
+            "clueText": "A stone cold criminal recounts his career in \"America's Most Wanted\"--the debut solo single from this guy",
+            "correctResponse": "Ice Cube",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_2_4",
+            "clueText": "Bob Marley & the Wailers' 1973 version of this tale of gun violence wasn't a hit, but Eric Clapton's 1974 cover went to No. 1",
+            "correctResponse": "\"I Shot The Sheriff\"",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_2_5",
+            "clueText": "\"I shot a man in Reno just to watch him die\", he sang, explaining the cause of his \"Folsom Prison Blues\"",
+            "correctResponse": "Cash",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9533-DJ-category-3",
+        "title": "LITERATURE",
+        "clues": [
+          {
+            "id": "archive-9533-clue_DJ_3_1",
+            "clueText": "Bram Stoker included the new communication technology of a phonograph diary in this 1897 novel",
+            "correctResponse": "Dracula",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_3_2",
+            "clueText": "This novel by James Joyce ends with the first half of the first sentence of the book, so it has no real start or finish",
+            "correctResponse": "Finnegans Wake",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_3_3",
+            "clueText": "This Ovid work begins with chaos transformed into the ordered universe & ends with Julius Caesar becoming a star",
+            "correctResponse": "Metamorphoses",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_3_4",
+            "clueText": "\"Or, A Vision in a Dream. A Fragment\" is the subtitle of this Coleridge poem, itself a fragment of a dream",
+            "correctResponse": "Kubla Khan",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_3_5",
+            "clueText": "Spoiler alert: An escaped convict murders an entire family in her short story \"A Good Man Is Hard to Find\"",
+            "correctResponse": "Flannery O'Connor",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9533-DJ-category-4",
+        "title": "COLLEGES YOU COULD APPLY TO IN 1895",
+        "clues": [
+          {
+            "id": "archive-9533-clue_DJ_4_1",
+            "clueText": "A Palo Alto, California stock farm became its campus, which opened in 1891",
+            "correctResponse": "Stanford",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_4_2",
+            "clueText": "Students have been standing shoulder to shoulder at the University of Colorado, located in this city, since 1877",
+            "correctResponse": "Boulder",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_4_3",
+            "clueText": "To combat disease in New Orleans, in 1834 a group of doctors founded the Medical College of Louisiana, now called this",
+            "correctResponse": "Tulane",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_4_4",
+            "clueText": "This Jesuit university in the Bronx got its start in 1841 when it was called St. John's College",
+            "correctResponse": "Fordham",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_4_5",
+            "clueText": "Chartered in 1800, this Vermont school is in a town named for its location between 2 others",
+            "correctResponse": "Middlebury (College)",
+            "value": 2000,
+            "dailyDouble": true
+          }
+        ]
+      },
+      {
+        "id": "archive-9533-DJ-category-5",
+        "title": "PEOPLE & PLACES",
+        "clues": [
+          {
+            "id": "archive-9533-clue_DJ_5_1",
+            "clueText": "The Flemings live in the Flanders region of this country & make up about 60% of the population",
+            "correctResponse": "Belgium",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_5_2",
+            "clueText": "Carioca is a Brazilian Portuguese word for a native of this city",
+            "correctResponse": "Rio de Janeiro",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_5_3",
+            "clueText": "The majority of Greenland's population of roughly 57,000 people are of this indigenous group",
+            "correctResponse": "Inuits",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_5_4",
+            "clueText": "Members of Egypt's largest Christian denomination, they descend from converts after St. Mark's arrival in the 1st century",
+            "correctResponse": "Copts",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_5_5",
+            "clueText": "This biblical people that included Ruth disappeared from the Dead Sea region after they were conquered by the Babylonians",
+            "correctResponse": "the Moabites",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      },
+      {
+        "id": "archive-9533-DJ-category-6",
+        "title": "BLANK \"UM\"",
+        "clues": [
+          {
+            "id": "archive-9533-clue_DJ_6_1",
+            "clueText": "Japan's highest & most prestigious order is the Order of this flower",
+            "correctResponse": "Chrysanthemum",
+            "value": 400,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_6_2",
+            "clueText": "It's the sunny room seen here; come sit",
+            "correctResponse": "a solarium",
+            "value": 800,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_6_3",
+            "clueText": "Atomic No. 96, this radioactive element was named for the discoverers of 2 earlier elements",
+            "correctResponse": "curium",
+            "value": 1200,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_6_4",
+            "clueText": "It's one of the bones of the pelvis & the Latin name for the ancient city of Troy",
+            "correctResponse": "ilium",
+            "value": 1600,
+            "dailyDouble": false
+          },
+          {
+            "id": "archive-9533-clue_DJ_6_5",
+            "clueText": "It's Latin for the period of time during which a throne is vacant or a government is without a leader",
+            "correctResponse": "interregnum",
+            "value": 2000,
+            "dailyDouble": false
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "category": {
+      "id": "archive-9533-FJ-category",
+      "title": "TRANSPORTATION",
+      "clue": {
+        "id": "archive-9533-clue_FJ",
+        "clueText": "Bearing the name of an arthropod genus, this iconic vehicle first sold after WWII was designed by Italian engineer Corradino D'Ascanio",
+        "correctResponse": "the Vespa",
+        "value": 1,
+        "dailyDouble": false
+      }
+    }
+  }
+}
