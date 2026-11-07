@@ -12,7 +12,13 @@ export default defineConfig({
   retries: isCI ? 1 : 0,
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    [
+      'html',
+      {
+        outputFolder: process.env['PLAYWRIGHT_HTML_OUTPUT_DIR'] ?? 'playwright-report',
+        open: 'never',
+      },
+    ],
   ],
   expect: {
     timeout: 10_000,

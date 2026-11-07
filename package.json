@@ -5,6 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy": "node scripts/deploy.mjs",
+    "deploy:preview": "node scripts/deploy.mjs --preview",
+    "deploy:dry-run": "node scripts/deploy.mjs --dry-run",
+    "test:deploy": "vitest run scripts/deploy.spec.mjs --environment node",
     "watch": "ng build --watch --configuration development",
     "test": "npm run test:unit",
     "test:unit": "ng test --watch=false",
@@ -15,7 +19,8 @@
     "record:game": "node scripts/record-game.mjs",
     "import:archive": "node scripts/archive-import.mjs",
     "test:archive": "vitest run scripts/archive-import.spec.mjs --environment node",
-    "verify:quick": "npm run build && npm run test:unit && npm run test:archive",
+    "test:library": "node scripts/check-game-library.mjs",
+    "verify:quick": "npm run build && npm run test:unit && npm run test:library && npm run test:archive && npm run test:deploy",
     "verify": "npm run verify:quick && npm run test:e2e && npm run test:receipt"
   },
   "prettier": {
@@ -54,6 +59,7 @@
     "@playwright/test": "^1.55.0",
     "jsdom": "^26.1.0",
     "typescript": "~5.9.2",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "wrangler": "^4.158.0"
   }
 }

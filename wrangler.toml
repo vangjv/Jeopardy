@@ -1,8 +1,10 @@
 name = "jeopardy"
-
 compatibility_date = "2025-12-20"
+workers_dev = true
+preview_urls = true
 
+# Static assets only; no Worker script or backend is needed.
 [assets]
 directory = "dist/jeopardy/browser"
-# This is the key bit for Angular deep links:
+# Serve index.html for Angular deep links such as /host and /board.
 not_found_handling = "single-page-application"

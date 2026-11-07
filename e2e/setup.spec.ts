@@ -26,12 +26,14 @@ test('host configures two contestants and resolves a duplicate buzzer key before
   await keys.nth(1).fill('Q');
   await expect(page.getByText('Key conflict!')).toHaveCount(2);
 
-  await page.getByRole('button', { name: 'Load Sample Game' }).click();
+  await page.locator('.library-entry').filter({ hasText: 'Sample' }).click();
+  await expect(page.getByText('Preview only · not shown on the audience board')).toBeVisible();
+  await page.getByRole('button', { name: 'Load game' }).click();
   await expect(page.getByText(/Player setup is invalid: All players must have unique buzzer keys/)).toBeVisible();
 
   await keys.nth(1).fill('W');
   await expect(page.getByText('Key conflict!')).not.toBeVisible();
-  await page.getByRole('button', { name: 'Load Sample Game' }).click();
+  await page.getByRole('button', { name: 'Load game' }).click();
   await expect(
     page.getByRole('button', { name: /Game setup Game loaded · click to edit/ }),
   ).toBeVisible();

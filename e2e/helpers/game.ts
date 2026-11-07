@@ -40,7 +40,16 @@ export async function openBoardFromHost(host: Page): Promise<Page> {
 }
 
 export async function loadSampleGame(host: Page): Promise<void> {
-  await host.getByRole('button', { name: 'Load Sample Game' }).click();
+  if ((await host.getByRole('textbox', { name: 'Player Name' }).count()) === 0) {
+    await configurePlayers(host, [
+      { name: 'Player 1', buzzerKey: 'A' },
+      { name: 'Player 2', buzzerKey: 'S' },
+      { name: 'Player 3', buzzerKey: 'D' },
+    ]);
+  }
+  await host.locator('.library-entry').filter({ hasText: 'Sample' }).click();
+  await expect(host.getByText('Preview only · not shown on the audience board')).toBeVisible();
+  await host.getByRole('button', { name: 'Load game' }).click();
   await expect(
     host.getByRole('button', { name: /Game setup Game loaded · click to edit/ }),
   ).toBeVisible();
@@ -67,8 +76,10 @@ export async function configurePlayers(
 export async function loadGame(host: Page, gameSetPath?: string): Promise<void> {
   if (gameSetPath) {
     await host.locator('app-game-import input[type="file"]').setInputFiles(resolve(gameSetPath));
+    await expect(host.getByRole('button', { name: 'Load game' })).toBeVisible();
+    await host.getByRole('button', { name: 'Load game' }).click();
   } else {
-    await host.getByRole('button', { name: 'Load Sample Game' }).click();
+    await loadSampleGame(host);
   }
 
   await expect(

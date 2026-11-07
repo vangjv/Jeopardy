@@ -1,6 +1,107 @@
 # Verification status
 
-Last updated: 2026-10-19
+Last updated: 2026-11-06
+
+## Cloudflare static SPA deployment (2026-11-06)
+
+- Followed the sibling `WhoWantsToBeARich` repository's Workers static-assets
+  pattern: a production Angular build, output validation, and local Wrangler
+  deployment. Added production, preview-version, dry-run, and skip-build modes.
+  Uploads check authentication with `whoami --json` (which fails when not
+  authenticated); dry runs need no account. Local JS CLI entry points avoid
+  Windows shell/shim issues. Unknown and conflicting flags fail before execution.
+- Installed Wrangler 4.158.0 as a locked development dependency. Deployment
+  requires Node 22.12+ or 24+. Existing dependency versions in the lockfile were
+  not upgraded.
+- Real initial dry run caught the unused 53 MiB
+  `public/jeopardy-dataset/200k_questions.json`, exceeding Cloudflare's 25 MiB
+  per-file limit. `public/.assetsignore` excludes only that dataset from uploads
+  and local Wrangler serving; Angular copies the ignore file into the asset
+  root. The local dataset and bundled playable library remain unchanged.
+- `npm run deploy:dry-run` passed: production build and actual Wrangler asset
+  validation, with no login or upload. `npm run test:deploy` passed 20 tests:
+  command ordering, production/preview/dry-run/skip-build, strict flags,
+  authentication/build/upload failures, missing output, shell-free execution,
+  output configuration, and the precise dataset exclusion. This test command
+  is included in `npm run verify:quick`.
+- `npm run verify` passed: production build, 20 Angular unit tests, library
+  registration check, 49 archive tests, 20 deployment tests, 21 Chromium
+  journeys (including unchanged visual baselines), and 1 full-game receipt.
+- Cloudflare-local production verification:
+  - Started `node node_modules\wrangler\bin\wrangler.js dev --local --ip
+    127.0.0.1 --port 0` with `WRANGLER_SEND_METRICS=false`; allocated origin was
+    `http://127.0.0.1:62024`.
+  - Direct navigation requests to `/host` and `/board` returned HTTP 200 HTML.
+  - With `PLAYWRIGHT_BASE_URL=http://127.0.0.1:62024` and
+    `PLAYWRIGHT_HTML_OUTPUT_DIR=build\cloudflare-report`,
+    `node scripts\run-playwright.mjs sync.spec.ts --project=chromium
+    --output=build\cloudflare-verification` passed both popup/reload tests:
+    initial board, active clue, buzz winner, and Daily Double recovery.
+    No unexpected console/page errors occurred. Report:
+    `build\cloudflare-report\index.html`.
+  - Captured and inspected `build\cloudflare-verification\cloudflare-board.png`
+    at 1920x1080 and `cloudflare-host.png` at 1440x900 through standalone
+    Playwright in one context. Board had 30 clues and exactly 1920x1080 document
+    dimensions (no scrolling); console/page error collection was empty.
+- Live production deployment and preview upload were deliberately not attempted;
+  they require the operator's Cloudflare account and publish public resources.
+  README includes OAuth/CI setup, commands, domain/origin constraints, and
+  hosted verification instructions with links to Cloudflare documentation.
+- `npm install` reported 42 dependency audit findings (23 moderate, 14 high,
+  5 critical). Wrangler was not among the reported vulnerable packages.
+  No unrelated dependency remediation was performed; the historical OPS-03
+  audit evidence below should not be read as a current clean audit.
+
+## Built-in library, question preview, and staged loading (2026-10-19)
+
+- Root cause: the 22 JSON files under repository `games/` were not packaged
+  into the browser app. The sample was fetched separately and immediately
+  initialized a game, implicitly creating three players when none were set up;
+  file imports also initialized immediately after validation.
+- All 22 root game JSON files are now static imports in the lazy host bundle,
+  with the standalone sample included as a separate labeled library entry.
+  `scripts/check-game-library.mjs` fails if any root JSON file is omitted or an
+  unexpected file is registered. The component unit suite validates every
+  static game plus sample: all have 6x5 clues in both rounds, 61 questions
+  including Final, unique clue IDs and prompts, and the expected 1/2 Daily
+  Doubles. No selection-time HTTP request is used.
+- Library selection and JSON import both validate and stage pending question
+  content. Search covers titles and category names. A host-only six-column
+  board preview supports Round 1, Double Jeopardy, Final Jeopardy, clue
+  inspection, and explicit response reveal. Staging, preview, invalid input,
+  and preview cancellation do not initialize or broadcast a game. Only
+  **Load game** validates the existing roster and commits content; an invalid
+  roster preserves the preview, player names/keys/scores/rules remain host
+  controlled, and replacing progressed gameplay requires confirmation.
+- Focused checks:
+  - `npm run test:unit` — 20 passed, including all 23 static library entries,
+    no implicit player creation, staging/cancel, response reveal, invalid
+    roster, explicit roster-preserving commit, and replacement guard.
+  - `npm run test:library` — verified all 22 `games/*.json` registrations and
+    the standalone sample.
+  - `node scripts/run-playwright.mjs e2e/game-library.spec.ts e2e/import-picker.spec.ts --project=chromium --output=build/game-library-verification --reporter=list,html`
+    with `$env:PLAYWRIGHT_HTML_OUTPUT_DIR='build\game-library-report'` — 2
+    passed. Covers built-in search, 1366x768 host-only preview/answer reveal,
+    no-player preview followed by invalid-load error and explicit successful
+    load, native mouse/keyboard picker activation, cancellation, malformed
+    import preserving pending and live data, valid same-file retry, and an
+    Axe scan with zero violations scoped to the content/preview surface.
+- Inspected screenshots:
+  `build\game-library-verification\game-library-built-in-libr-88f72-e-state-until-explicit-load-chromium\host-library-preview-1366x768.png`,
+  plus `host-import-ready.png` and `host-import-loaded.png` in the matching
+  import-picker result folder. The preview remains within the 1366px host
+  viewport without horizontal page overflow; the clue board and selected
+  question/response appear only in the host. No visual baselines changed.
+- Full verification: `npm run verify` passed on 2026-10-19: production build,
+  20 unit tests, all-library registration check, 49 archive tests, 21 Chromium
+  tests, and 1 canonical full-game receipt. A separate complete browser run
+  (`node scripts/run-playwright.mjs --project=chromium
+  --output=build/full-e2e-verification --reporter=list,html`) also passed all
+  21 journeys. Reports: `build\game-library-report\index.html`,
+  `build\full-e2e-report\index.html`, and the full-verify
+  `playwright-report\index.html`. Receipt videos and evidence:
+  `test-results\full-episode-canonical-pla-eb99c-oduces-a-reviewable-receipt-receipt\game-board.webm`,
+  `host-board.webm`, screenshots, and trace.
 
 ## Native JSON import picker regression (2026-10-19)
 

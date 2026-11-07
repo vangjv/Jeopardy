@@ -1,0 +1,2 @@
+# Reference dataset; unused by the app and larger than Workers' 25 MiB asset limit.
+/jeopardy-dataset/200k_questions.json

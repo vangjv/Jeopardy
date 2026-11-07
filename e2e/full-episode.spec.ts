@@ -82,7 +82,7 @@ test('canonical playable journey produces a reviewable receipt', async ({ page }
 
   await configurePlayers(page, players);
   await loadGame(page, process.env['JEOPARDY_GAME_SET']);
-  await page.getByRole('button', { name: 'Round 1', exact: true }).click();
+  await page.locator('.session-bar').getByRole('button', { name: 'Round 1', exact: true }).click();
 
   const board = await openBoardFromHost(page);
   const boardDiagnostics = collectBrowserDiagnostics(board);

@@ -38,7 +38,9 @@ test('clue images have accessible alternatives and failed media shows a stable f
     mimeType: 'application/json',
     buffer: Buffer.from(JSON.stringify(game)),
   });
-  await expect(page.getByText('Game loaded successfully!')).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Load game' })).toBeVisible();
+  await page.getByRole('button', { name: 'Load game' }).click();
+  await expect(page.getByText(/Game loaded successfully\./)).toBeVisible();
 
   const board = await openBoardFromHost(page);
   const boardDiagnostics = collectBrowserDiagnostics(board);

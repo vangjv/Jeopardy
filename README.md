@@ -65,21 +65,138 @@ The **Open Board** button requests a 1920x1080 popup. Browser and operating-syst
 window chrome may affect its initial size, so full-screen the audience window for
 the intended presentation.
 
+## Deploy to Cloudflare
+
+This follows the `WhoWantsToBeARich` repository's deployment pattern:
+**Cloudflare Workers static assets**, not Pages or an Angular SSR server.
+Cloudflare's [Angular guide](https://developers.cloudflare.com/workers/framework-guides/web-apps/more-web-frameworks/angular/)
+supports this approach. No Worker script, database, or runtime backend is needed.
+The existing [`wrangler.toml`](wrangler.toml) publishes only
+`dist/jeopardy/browser`, not source files or the parent build directory.
+Its [SPA routing setting](https://developers.cloudflare.com/workers/static-assets/routing/single-page-application/)
+serves `index.html` for deep links, including direct navigation and reloads at
+`/host` and `/board`.
+
+Cloudflare limits each static asset to **25 MiB**. The unused 53 MiB reference
+dataset `public/jeopardy-dataset/200k_questions.json` exceeds this limit.
+[`public/.assetsignore`](public/.assetsignore) excludes just that file from
+Cloudflare uploads (and local Wrangler serving); it remains available locally.
+The playable built-in library is bundled separately and is still deployed.
+See Cloudflare's [asset exclusion documentation](https://developers.cloudflare.com/workers/static-assets/binding/#ignoring-assets).
+
+### Build, validate, and publish
+
+Use Node.js **22.12+ or 24+** for deployment: the locally installed Wrangler 4
+requires Node 22+, even though Angular itself also supports Node 20.19.
+Install dependencies with `npm ci`, then run:
+
+```powershell
+# Safe local check: production build + Wrangler validation, no login/upload
+npm run deploy:dry-run
+
+# One-time Cloudflare authentication (opens a browser)
+npx wrangler login
+
+# Production build + live deployment
+npm run deploy
+
+# Production build + version upload, without shifting production traffic
+npm run deploy:preview
+
+# Advanced: publish already-built output; ensure it is current first
+npm run deploy -- --skip-build
+
+# Options and deployment-script tests
+node scripts\deploy.mjs --help
+npm run test:deploy
+```
+
+[`scripts/deploy.mjs`](scripts/deploy.mjs) checks authentication for uploads,
+runs Angular's production build (which cleans its own output), checks for
+`index.html`, and invokes the project-local Wrangler CLI. Failed commands stop
+the script with a nonzero exit code. Unknown flags and combining `--preview`
+with `--dry-run` are rejected before any commands run. `--skip-build` also works
+with preview/dry-run commands but may publish stale output.
+
+Production is served at `https://jeopardy.<your-subdomain>.workers.dev`;
+Wrangler prints the actual URL. Configure your account's Workers subdomain on
+first use if prompted. Preview uploads use a
+[version URL](https://developers.cloudflare.com/workers/versions-and-deployments/version-urls/)
+and do not replace the live version. Make the first production deployment before
+using preview uploads for an existing Worker. Version URLs are explicitly enabled
+in the configuration and are public; use Cloudflare Access if access restriction
+is needed. Add an optional custom domain through **Workers & Pages → jeopardy →
+Settings → Domains & Routes**. No domain is required for `workers.dev`.
+
+### CI and Cloudflare Workers Builds
+
+Store `CLOUDFLARE_API_TOKEN` (Cloudflare's **Edit Cloudflare Workers** token
+template, scoped to the target account) and `CLOUDFLARE_ACCOUNT_ID` in your CI
+secret store, not in source control. Use Node 22.12+ or 24+, then run:
+
+```powershell
+npm ci
+npm run deploy
+```
+
+For Cloudflare Workers Builds, set the build command to `npm run build` and the
+deploy command to `npm run deploy -- --skip-build` to avoid building twice.
+For another CI provider, see Cloudflare's
+[external CI/CD guidance](https://developers.cloudflare.com/workers/ci-cd/external-cicd/).
+Local `.wrangler/`, `.dev.vars*`, and environment secret files are ignored.
+
+### Verify the hosted game
+
+Open the deployed `/host`, select **Open Board**, load the sample game, select a
+clue, and reload the audience popup to check state recovery. Keep host and board
+on the **same origin** (including preview/custom domain) and browser profile;
+hosting does not add cross-device synchronization. Existing browser checks can
+also target the deployment or a local Wrangler static-assets server:
+
+```powershell
+# Local Cloudflare runtime, after building; leave running in another terminal
+npx wrangler dev --ip 127.0.0.1 --port 8787
+
+# Run against that server, or replace with the deployed HTTPS origin
+$env:PLAYWRIGHT_BASE_URL='http://127.0.0.1:8787'
+node scripts\run-playwright.mjs sync.spec.ts --project=chromium
+Remove-Item Env:\PLAYWRIGHT_BASE_URL
+```
+
+Cloudflare serves the application files; gameplay still runs locally in the
+browser. Bundled games, fonts, and icons need no external runtime downloads.
+This does not install a service worker or enable a fresh offline page load:
+load both windows before disconnecting. Imported content and any external clue
+media retain their existing behavior.
+
 ## Set up a game
 
-### Use the included sample
+### Browse and preview games
 
-The quickest playable setup is:
+**Game Content** contains the offline built-in library: all 22 JSON files in the
+repository's `games/` folder, plus the separately labeled **Sample Jeopardy
+Game**. These are statically included in the host bundle; choosing a game does
+not fetch it from a server. Search by title or Round 1 category, then select a
+result to stage it.
 
-1. Select **Load Sample Game** under **Game Content**. If no contestants exist,
-   this creates Player 1, Player 2, and Player 3 with the `A`, `S`, and `D` buzz
-   keys.
-2. In **Player Setup**, edit the names and one-character buzz keys as needed.
-   Each game requires two or three contestants and every key must be unique.
+The Round 1, Double Jeopardy, and Final Jeopardy tabs show a host-only preview.
+Select any clue to read the question; its response stays hidden until **Reveal
+answer** is selected. Preview content is not sent to the audience display and
+does not alter the live game. **Cancel preview** discards the staged selection.
+
+Both a built-in selection and **Import JSON file** follow the same workflow:
+
+1. Select or import content to validate and stage it. No contestants are
+   created or changed, and preview is available before player setup.
+2. Configure two or three contestants with unique buzzer keys in **Player
+   Setup**. Names, keys, and existing scores remain host-controlled.
 3. Review **Game Rules Configuration** and select **Apply Rules** after making
    changes.
-4. Select **Open Board**, then **Start Game**. Starting the game returns the
-   session to a fresh Round 1 board.
+4. Select **Load game** to commit the staged question content. An invalid
+   roster blocks the load; the staged preview remains available. Replacing a
+   game that has progressed asks for confirmation.
+5. Select **Open Board**, then **Start Game** when ready. Loading prepares a
+   fresh Round 1; it does not start play.
 
 After content loads, **Game setup** collapses so the live controls stay prominent.
 Select its summary at any time to reopen the content, contestant, and rules
@@ -87,8 +204,11 @@ controls.
 
 ### Import custom game content
 
-Create two or three contestants before selecting **Import JSON File**. Imported
-content is validated before it replaces the current game. Use
+Select **Import JSON file** to choose a local JSON game set. A valid file is
+staged for the same preview and explicit **Load game** commit as built-in
+content. Invalid files report validation details and do not discard a valid
+staged game or replace the live game. The input resets after selection so the
+same file can be selected again. Picker cancellation has no effect. Use
 `src/assets/game-sets/sample-game.json` as the reference format.
 
 A valid game set contains:

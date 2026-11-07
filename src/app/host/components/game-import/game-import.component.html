@@ -1,53 +1,146 @@
 <mat-card class="game-import">
   <mat-card-header>
-    <mat-card-title>Game Content</mat-card-title>
+    <mat-card-title>Browse or import questions</mat-card-title>
   </mat-card-header>
-  
+
   <mat-card-content>
+    <p class="intro">
+      Choose a built-in game or import JSON to preview its questions. Loading changes question content
+      only; contestants, keys, scores, and game rules stay under host control.
+    </p>
+
     @if (success()) {
-      <div class="success-message">
+      <div class="success-message" role="status">
         <mat-icon>check_circle</mat-icon>
-        <span>Game loaded successfully!</span>
+        <span>Game loaded successfully. The live board is ready; gameplay has not started.</span>
       </div>
     }
-    
     @if (error()) {
-      <div class="error-message">
+      <div class="error-message" role="alert">
         <mat-icon>error</mat-icon>
         <span>{{ error() }}</span>
       </div>
     }
-    
-    <div class="actions">
-      <button
-        mat-raised-button
-        color="primary"
-        (click)="loadSampleGame()"
-        [disabled]="loading()"
-      >
-        <mat-icon>download</mat-icon>
-        Load Sample Game
-      </button>
-      
-      <div class="file-upload-btn">
+
+    <div class="library-tools">
+      <label for="game-search">Search titles and category names</label>
+      <input
+        id="game-search"
+        type="search"
+        [value]="search()"
+        (input)="onSearchInput($event)"
+        autocomplete="off"
+      />
+      <div class="actions">
         <input
           #gameFileInput
+          class="file-input"
           type="file"
           accept=".json"
           (change)="onFileSelected($event)"
-          style="display: none"
+          tabindex="-1"
+          aria-hidden="true"
           [disabled]="loading()"
         />
-        <button
-          mat-raised-button
-          (click)="gameFileInput.click()"
-          [disabled]="loading()"
-          type="button"
-        >
+        <button mat-stroked-button type="button" (click)="gameFileInput.click()" [disabled]="loading()">
           <mat-icon>upload_file</mat-icon>
-          Import JSON File
+          Import JSON file
         </button>
       </div>
     </div>
+
+    <div class="library-list" role="group" aria-label="Built-in game library">
+      @for (item of filteredLibrary(); track item.id) {
+        <button
+          class="library-entry"
+          type="button"
+          [class.selected]="pendingGame()?.id === item.id"
+          [attr.aria-pressed]="pendingGame()?.id === item.id"
+          (click)="stageLibraryGame(item)"
+        >
+          <span class="entry-title">
+            {{ item.title }}
+            @if (item.isSample) { <span class="sample-tag">Sample</span> }
+          </span>
+          <span class="entry-identity">Game ID: {{ item.id }}</span>
+          <span class="entry-categories">{{ categorySummary(item) }}</span>
+        </button>
+      } @empty {
+        <p class="empty-library">No games match that title or category.</p>
+      }
+    </div>
+
+    @if (pendingGame(); as game) {
+      <section class="preview" aria-labelledby="preview-title">
+        <div class="preview-heading">
+          <div>
+            <p class="eyebrow">Preview only · not shown on the audience board</p>
+            <h3 id="preview-title">{{ game.title }}</h3>
+            <p class="source">{{ pendingSource() }} · {{ game.id }}</p>
+          </div>
+          <div class="preview-actions">
+            <button mat-button type="button" (click)="cancelPreview()">Cancel preview</button>
+            <button mat-flat-button color="primary" type="button" (click)="loadGame()" [disabled]="loading()">
+              <mat-icon>download</mat-icon>
+              Load game
+            </button>
+          </div>
+        </div>
+
+        <div class="round-tabs" role="group" aria-label="Preview round">
+          <button type="button" [attr.aria-pressed]="previewRound() === 'round1'"
+            [class.active]="previewRound() === 'round1'" (click)="setPreviewRound('round1')">Round 1</button>
+          <button type="button" [attr.aria-pressed]="previewRound() === 'round2'"
+            [class.active]="previewRound() === 'round2'" (click)="setPreviewRound('round2')">Double Jeopardy</button>
+          <button type="button" [attr.aria-pressed]="previewRound() === 'final'"
+            [class.active]="previewRound() === 'final'" (click)="setPreviewRound('final')">Final Jeopardy</button>
+        </div>
+
+        @if (previewRound() !== 'final') {
+          <div class="preview-board" role="group" aria-label="Question board preview">
+            @for (category of previewCategories(); track category.id) {
+              <section class="category-column">
+                <h4>{{ category.title }}</h4>
+                @for (clue of category.clues; track clue.id) {
+                  <button
+                    class="clue-preview"
+                    type="button"
+                    [class.daily-double]="clue.dailyDouble"
+                    [attr.aria-label]="category.title + ', ' + clue.value + ' points' + (clue.dailyDouble ? ', Daily Double' : '')"
+                    (click)="inspectClue(category.title, clue)"
+                  >
+                    {{ clue.value }}
+                    @if (clue.dailyDouble) { <span aria-hidden="true">DD</span> }
+                  </button>
+                }
+              </section>
+            }
+          </div>
+        } @else {
+          <section class="final-preview">
+            <h4>{{ game.final.category.title }}</h4>
+            <button type="button" class="clue-preview final-clue"
+              [attr.aria-label]="game.final.category.title + ', preview Final Jeopardy question'"
+              (click)="inspectClue(game.final.category.title, game.final.category.clue)">
+              Preview Final Jeopardy question
+            </button>
+          </section>
+        }
+
+        @if (selectedClue(); as selection) {
+          <section class="clue-detail" aria-live="polite" aria-label="Question preview">
+            <p class="eyebrow">{{ selection.categoryTitle }} @if (selection.clue.dailyDouble) { · Daily Double }</p>
+            <p class="question">{{ selection.clue.clueText }}</p>
+            @if (answerRevealed()) {
+              <p class="answer"><strong>Response:</strong> {{ selection.clue.correctResponse }}</p>
+            } @else {
+              <button mat-stroked-button type="button" (click)="revealAnswer()">Reveal answer</button>
+            }
+          </section>
+        }
+      </section>
+    } @else {
+      <p class="empty-preview">Select a game above to stage it and preview categories and questions.</p>
+    }
   </mat-card-content>
 </mat-card>
